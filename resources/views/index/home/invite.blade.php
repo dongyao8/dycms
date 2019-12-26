@@ -6,25 +6,38 @@
             <div class="row">
             @include('index.common.homeleft')
               <div class="col-lg-9">
-              <form class="card" action="{{ url('/home/mima') }}" method="post">
-              @csrf
+              <div class="card">
                   <div class="card-body">
                     <h3 class="card-title">邀请好友</h3>
-                    @include('index.common.error')
-                    @include('index.common.success')
                     <div class="row">
                       <div class="col-12">
                         <div class="form-group">
-                          <label class="form-label">邀请链接</label>
+                        <div class="alert alert-icon alert-primary" role="alert">
+                          <i class="fe fe-bell mr-2" aria-hidden="true"></i> 复制下方邀请链接，邀请好友注册，将会获得积分奖励！ 
+                        </div>
                           <input type="text" class="form-control" placeholder="邀请链接" value="{{ url('reg') }}/{{ Auth::user()->id }}">
                         </div>
-                        <div class="alert alert-icon alert-primary" role="alert">
-                          <i class="fe fe-bell mr-2" aria-hidden="true"></i> 复制上方邀请链接，邀请好友注册，将会获得积分奖励！ 
-                        </div>
+                        
                       </div>
                     </div>
                   </div>
-                </form>
+                  
+                  <div class="card-footer">
+                  
+
+                  <span class="tag tag-dark">共计邀请：{{ count($friends) }}位好友<span class="tag-addon tag-danger">下方仅显示最新邀请的10位好友信息</span>
+</span><br><br>
+
+
+                  @foreach($friends as $friend)
+                      <span class="tag">
+                        <span class="tag-avatar avatar" style="background-image: url({{asset('uploads')}}/{{ $friend->avatar }})"></span>
+                        {{ $friend->name }}
+                      </span>
+                      @endforeach
+                </div>
+                </div>
+
               </div>
             </div>
           </div>

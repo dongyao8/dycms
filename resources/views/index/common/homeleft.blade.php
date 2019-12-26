@@ -26,7 +26,7 @@
                         <a href="{{ url('/home') }}" class="list-group-item list-group-item-action d-flex align-items-center">
                           <span class="icon mr-3"><i class="fe fe-send"></i></span>信息中心
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <a href="{{ url('/home/invite') }}" class="list-group-item list-group-item-action d-flex align-items-center">
                           <span class="icon mr-3"><i class="fe fe-star"></i></span>邀请好友
                         </a>
                         <a href="{{ url('/home/mima') }}" class="list-group-item list-group-item-action d-flex align-items-center">

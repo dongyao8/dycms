@@ -29,7 +29,7 @@ class IndexController extends BaseController
         return view('index.index.links',compact('links'));
     }
 
-    public function reg(){
+    public function reg($source=0){
         return view('index.index.reg');
     }
 

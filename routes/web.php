@@ -16,7 +16,7 @@ Route::get('/', 'Index\IndexController@index')->name('index');
 Route::get('/urls/{id}', 'Index\IndexController@urls');
 Route::get('/links', 'Index\IndexController@links');
 // 注册
-Route::get('/reg', 'Index\IndexController@reg')->name('reg');
+Route::get('/reg/{source?}', 'Index\IndexController@reg')->name('reg');
 Route::post('/reg', 'Index\IndexController@checkReg');
 // 登录
 Route::get('/login', 'Index\IndexController@login')->name('login');
@@ -43,6 +43,7 @@ Route::middleware('auth')->group(function(){
     Route::get('/home/mima', 'Index\HomeController@mima'); //修改密码
     Route::post('/home/mima', 'Index\HomeController@cheangeMima')->middleware('throttle:10'); //修改密码
 
+    Route::get('/home/invite', 'Index\InviteController@index'); //邀请好友
 
     // 文章评论
     Route::post('/comment', 'Index\CommentController@comment');

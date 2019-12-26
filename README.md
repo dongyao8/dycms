@@ -1,4 +1,4 @@
-<p align="center"><img src="https://images.gitee.com/uploads/images/2019/1212/102222_03d55ecf_977589.png" width="400"></p>
+<p align="center"><img src="./public/uploads/sys_img/logo.png" width="400"></p>
 
 
 ## 关于本网站

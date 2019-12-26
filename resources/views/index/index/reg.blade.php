@@ -7,7 +7,7 @@
               <div class="text-center mb-6">
                 <a href="{{ url('/') }}"><img src="{{asset('uploads')}}/{{ $sys_info->web_logo }}" class="h-6" alt=""></a>
               </div>
-              <form class="card" action="" method="post">
+              <form class="card" action="{{ route('reg') }}" method="post">
               @csrf
                 <div class="card-body p-6">
                   <div class="card-title">注册新的账号</div>

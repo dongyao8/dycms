@@ -10,6 +10,11 @@ class WaterController extends Controller
 {
     // 积分日志流水记录
     public function jifen($type,$uid,$amout,$content){
+        // 判断用户是否存在
+        $check_user = DB::table('users')->where('id',$uid)->first();
+        if(!$check_user){
+            return 'false';
+        }
         switch ($type) {
             case "1":
                 $koufei = DB::table('users')->where('id',$uid)->decrement('integral', $amout);
@@ -37,6 +42,11 @@ class WaterController extends Controller
 
     // 现金日志流水记录
     public function money($type,$uid,$amout,$content){
+        // 判断用户是否存在
+        $check_user = DB::table('users')->where('id',$uid)->first();
+        if(!$check_user){
+            return 'false';
+        }
         switch ($type) {
             case "1":
                 $koufei = DB::table('users')->where('id',$uid)->decrement('amount', $amout);

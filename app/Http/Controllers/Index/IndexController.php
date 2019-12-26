@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Index;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Cookie;
+use App\Http\Controllers\Common\WaterController;
 use Illuminate\Http\Request;
 use App\User;
 
@@ -30,6 +32,13 @@ class IndexController extends BaseController
     }
 
     public function reg($source=0){
+        if($source!=0){
+            Cookie::queue('source', $source, 60);
+        }else{
+            if(Cookie::get('source')=="" || Cookie::get('source')==null){
+                Cookie::queue('source', 0, 60);
+            }
+        }
         return view('index.index.reg');
     }
 
@@ -62,14 +71,25 @@ class IndexController extends BaseController
         $user->email = $request->email;
         $user->avatar = 'head_img/default/'.rand(1,39).".jpg";
         $user->password = Hash::make($request->password);
-        // 默认头像素材后续添加
-        
         $user->active = 1; //默认用户状态为1
         $user->amount = 0; //默认余额为0
         $user->integral = 0; //默认用户积分为0
+        // 邀请用户判断
+        $father_id = Cookie::get('source');
+        if($father_id=="" || $father_id==null || $father_id==0){
+            $user->source = 0;
+        }else{
+            $user->source = $father_id;
+        }
         //添加用户
         $add_user = $user->save();
         if($add_user){
+            if($father_id!=0){
+                // 邀请好友上级奖励
+                $score = config('score.invite');
+                $water = new WaterController();
+                $water->jifen('2',$father_id,$score,'邀请好友奖励，ID:'.$request->name);
+            }
             return redirect('login')->with('success_msg', '注册成功，请登录！');
         }else{
             return back()->withInput();

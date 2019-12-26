@@ -16,7 +16,7 @@ Route::get('/', 'Index\IndexController@index')->name('index');
 Route::get('/urls/{id}', 'Index\IndexController@urls');
 Route::get('/links', 'Index\IndexController@links');
 // 注册
-Route::get('/reg/{source?}', 'Index\IndexController@reg')->name('reg');
+Route::get('/reg/{source?}', 'Index\IndexController@reg')->where('source', '[0-9]+')->name('reg');
 Route::post('/reg', 'Index\IndexController@checkReg');
 // 登录
 Route::get('/login', 'Index\IndexController@login')->name('login');
@@ -25,7 +25,7 @@ Route::post('/login', 'Index\IndexController@checkLogin')->middleware('throttle:
 Route::get('/daily', 'Index\IndexController@daily')->name('daily');
 // 资讯信息
 Route::get('/article/{id?}', 'Index\ArticleController@index')->name('article');
-Route::get('/article/info/{id}', 'Index\ArticleController@show');
+Route::get('/article/info/{id}', 'Index\ArticleController@show')->where('id', '[0-9]+');
 
 // 申请收录
 Route::get('/shoulu', 'Index\ShouluController@index');

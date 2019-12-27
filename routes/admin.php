@@ -3,6 +3,7 @@
 // 用户中心
 Route::namespace('Admin')->prefix('admin')->group(function(){
     Route::get('/', 'IndexController@index'); //管理员登录页
+    Route::get('/clean', 'HomeController@clean_cache'); //清理缓存
     Route::post('/', 'IndexController@check_admin'); //管理员验证
 
     // 后台权限

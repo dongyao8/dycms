@@ -8,6 +8,8 @@
 		  <div class="col-md-12 grid-margin">
 			<div class="card">
 			  <div class="card-body">
+			  @include('admin.common.error')
+              @include('admin.common.success')
 				<div class="row">
 				  <div class="col-lg-3 col-md-6">
 					<div class="d-flex">

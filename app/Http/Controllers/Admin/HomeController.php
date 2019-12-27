@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\OfficeController;
 
@@ -22,6 +23,14 @@ class HomeController extends Controller
         return view('admin.home.index',compact('new_article','num','new_user','new_comment'));
     }
 
+    // 清理系统缓存
+    public function clean_cache(){
+        Artisan::call('cache:clear');
+        Artisan::call('config:clear');
+        Artisan::call('route:clear');
+        Artisan::call('view:clear');
+        return redirect('admin/home')->with('success_msg', '缓存清理成功');
+    }
 
     // 导出示例
     public function exportdemo(){

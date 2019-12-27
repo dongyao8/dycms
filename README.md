@@ -30,16 +30,6 @@
 
 如果您不需要新版增加的这些功能模块，只需要简单的导航页面的话，推荐您使用第一版[Thinkphp版网址导航](https://gitee.com/dongyao/web_site_navigation)版本的(不再维护);
 
-## 特别鸣谢
-
-这款导航内容网站的制作，离不开网络上其他开源产品的支持，这里特别鸣谢以下开源产品，如果遗漏，请联系我们及时补充.
-
-- **[laravel](https://laravel.com/)**
-- **[bootstrap](https://getbootstrap.com/)**
-- **[tabler](https://github.com/tabler/tabler)**
-- **[PhpSpreadsheet](https://phpspreadsheet.readthedocs.io)**
-
-
 ## 开发计划
 
 - 会员积分模块
@@ -65,6 +55,16 @@
 > composer install
 
 如果您对程序核心进行过手动修改，可能导致git拉取冲突失败，无法成功下载最新版，此时可尝试手动更新
+
+## 特别鸣谢
+
+这款导航内容网站的制作，离不开网络上其他开源产品的支持，这里特别鸣谢以下开源产品，如果遗漏，请联系我们及时补充.
+
+- **[laravel](https://laravel.com/)**
+- **[bootstrap](https://getbootstrap.com/)**
+- **[tabler](https://github.com/tabler/tabler)**
+- **[PhpSpreadsheet](https://phpspreadsheet.readthedocs.io)**
+
 
 ## 友情赞助
 

@@ -33,7 +33,7 @@
                     <li class="list-inline-item"><a href="{{ url('/shoulu') }}">申请收录</a></li>
                     <li class="list-inline-item"><a href="#">使用协议</a></li>
                     <!-- 统计代码 -->
-                    <li class="list-inline-item"><a href="{{ url('/shoulu') }}">统计代码</a></li>
+                    <li class="list-inline-item">{!! $sys_info->tongji !!}</li>
                     <!-- 统计代码 -->
                   </ul>
                 </div>
@@ -43,7 +43,7 @@
               </div>
             </div>
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-              Copyright © 2019 <a href=".">clark</a>. Design by <a href="https://www.dongyao.ren" target="_blank">www.dongyao.ren</a> All rights reserved.
+              Copyright © 2019 <a href="https://www.dongyao.ren">clark</a>. Design by <a href="https://github.com/dongyao8/dycms" target="_blank">DYCMS</a> All rights reserved.
             </div>
           </div>
         </div>

@@ -35,9 +35,10 @@ class SystemInfoController extends Controller
             $imgpath = $request->file('web_logo')->store('sys_img/'.date('Ymd'));
             $sys['web_logo'] = $imgpath;
         }
-        $sys['web_title'] = $request->web_title;
-        $sys['web_desc'] = $request->web_desc;
-        $sys['web_url'] = $request->web_url;
+        $sys->web_title = $request->web_title;
+        $sys->web_desc = $request->web_desc;
+        $sys->web_url = $request->web_url;
+        $sys->tongji = $request->tongji;
         $sys->save();
         if($sys){
             return redirect('admin/system')->with('success_msg', '修改成功');

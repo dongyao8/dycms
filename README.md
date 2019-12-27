@@ -1,4 +1,4 @@
-<p align="center"><img src="./public/uploads/sys_img/logo.png" width="400"></p>
+<p align="center"><img src="public/uploads/sys_img/logo.png" width="400"></p>
 
 
 ## 关于本网站
@@ -68,5 +68,5 @@
 
 ## 友情赞助
 
-<img src="./public/uploads/wechat.JPG" width="400">
-<img src="./public/uploads/alipay.JPG" width="400">
+<img src="public/uploads/wechat.JPG" width="400">
+<img src="public/uploads/alipay.JPG" width="400">

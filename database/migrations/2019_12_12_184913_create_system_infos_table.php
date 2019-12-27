@@ -19,6 +19,7 @@ class CreateSystemInfosTable extends Migration
             $table->string('web_desc');  //网站介绍
             $table->string('web_url'); //网站域名
             $table->string('web_logo'); //logo图片路径
+            $table->text('tongji');  //统计代码
             $table->timestamps();
         });
     }

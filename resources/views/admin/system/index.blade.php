@@ -25,6 +25,10 @@
                                 <input type="text" class="form-control" id="exampleInputPassword1" placeholder="网站域名地址" name="web_url" value="{{ $sys->web_url }}">
                             </div>
                             <div class="form-group">
+                              <label for="exampleTextarea1">统计代码</label>
+                              <textarea class="form-control" id="exampleTextarea1" rows="2" name="tongji">{{ $sys->tongji }}</textarea>
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleInputPassword1">网站logo图</label><br>
                                 <img src="{{ asset('uploads') }}/{{ $sys->web_logo }}" alt="image">
                                 <input type="file" class="form-control" id="exampleInputPassword1" placeholder="网站logo图" name="web_logo" value="{{ $sys->web_logo }}">

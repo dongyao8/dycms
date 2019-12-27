@@ -13,10 +13,11 @@ class SystemInfosTableSeeder extends Seeder
     {
         DB::table('system_infos')->truncate();
         DB::table('system_infos')->insert([
-            'web_title' => '我的网站',
-            'web_desc' => '免费开源的网址导航内容网站',
+            'web_title' => 'DYCMS内容导航',
+            'web_desc' => '内容导航平台第一站',
             'web_url' => 'http://www.dongyao.ren',
-            'web_logo'    => 'sys_img/tabler.svg',
+            'web_logo'    => 'sys_img/logo.png',
+            'tongji'    => '<script type="text/javascript" src="https://s11.cnzz.com/z_stat.php?id=1257015062&web_id=1257015062"></script>',
             'created_at'    => date('Y-m-d H:i:s'),
             'updated_at'    => date('Y-m-d H:i:s'),
         ]);

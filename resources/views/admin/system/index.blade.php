@@ -30,7 +30,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">网站logo图</label><br>
-                                <img src="{{ asset('uploads') }}/{{ $sys->web_logo }}" alt="image">
+                                <img src="{{ asset('uploads') }}/{{ $sys->web_logo }}" alt="image" style="max-height:80px">
                                 <input type="file" class="form-control" id="exampleInputPassword1" placeholder="网站logo图" name="web_logo" value="{{ $sys->web_logo }}">
                             </div>
                             <button type="submit" class="btn btn-success mr-2">修改</button>

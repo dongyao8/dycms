@@ -68,12 +68,5 @@
 
 ## 友情赞助
 
-<img src="public/uploads/wechat.JPG" width="220">
-<img src="public/uploads/alipay.JPG" width="220">
-
-## 部分截图演示
-<img src="public/uploads/demo/index.png">
-<img src="public/uploads/demo/show.png">
-<img src="public/uploads/demo/user.png">
-<img src="public/uploads/demo/admin.png">
-<img src="public/uploads/demo/manage.png">
+<img src="public/uploads/wechat.JPG" width="250">
+<img src="public/uploads/alipay.JPG" width="250">

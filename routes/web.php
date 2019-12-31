@@ -40,9 +40,13 @@ Route::post('/shoulu', 'Index\ShouluController@store')->middleware('auth'); //�
 // 用户中心
 Route::middleware('auth')->group(function(){
     Route::get('/home', 'Index\HomeController@index'); //用户中心首页
+    Route::post('/home', 'Index\HomeController@attendance'); //签到
     Route::get('/home/mima', 'Index\HomeController@mima'); //修改密码
     Route::post('/home/mima', 'Index\HomeController@cheangeMima')->middleware('throttle:10'); //修改密码
+    // 流水日志
+    Route::get('/water', 'Index\WaterController@index'); //流水日志
 
+    
     Route::get('/home/invite', 'Index\InviteController@index'); //邀请好友
 
     // 文章评论

@@ -14,10 +14,26 @@ class HomeController extends BaseController
     
     // 用户中心
     public function index(){
-        // $water = new WaterController();
-        // $water->money('2','3','1','测试积分');
         $note = \App\Model\Note::where('user_id',Auth::id())->orderBy('id','desc')->paginate(10);
         return view('index.home.index',compact('note'));
+    }
+
+    // 签到
+    public function attendance(Request $request){
+        $data = \App\Model\Attendance::where('user_id',Auth::id())->whereDate('created_at', date('Y-m-d'))->first();
+        if($data){
+            return back()->withErrors('您今天已经签过了，请明天再来');
+        }else{
+            // 添加签到记录
+            $att = new \App\Model\Attendance();
+            $att->user_id = Auth::id();
+            $att->save();
+            // 积分奖励
+            $score = config('score.attendance');
+            $water = new WaterController();
+            $water->jifen('2',Auth::id(),$score,'签到奖励');
+            return back()->with('success_msg', '签到成功,奖励+'.$score."分");
+        }
     }
 
     // 密码修改

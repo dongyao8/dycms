@@ -7,9 +7,12 @@
                     <p class="mb-4">
                     一个人即使已登上顶峰，也仍要自强不息
                     </p>
+                    <form action="" method="post">
+                    @csrf
                     <button class="btn btn-outline-primary btn-sm">
                       <span class="fa fa-card"></span> 打卡签到
                     </button>
+                    </form>
                   </div>
                 </div>
                 <div class="card">
@@ -23,8 +26,8 @@
                         <a href="{{ url('/home') }}" class="list-group-item list-group-item-action d-flex align-items-center">
                           <span class="icon mr-3"><i class="fe fe-inbox"></i></span>用户首页
                         </a>
-                        <a href="{{ url('/home') }}" class="list-group-item list-group-item-action d-flex align-items-center">
-                          <span class="icon mr-3"><i class="fe fe-send"></i></span>信息中心
+                        <a href="{{ url('/water') }}" class="list-group-item list-group-item-action d-flex align-items-center">
+                          <span class="icon mr-3"><i class="fe fe-send"></i></span>积分流水
                         </a>
                         <a href="{{ url('/home/invite') }}" class="list-group-item list-group-item-action d-flex align-items-center">
                           <span class="icon mr-3"><i class="fe fe-star"></i></span>邀请好友
@@ -32,16 +35,16 @@
                         <a href="{{ url('/home/mima') }}" class="list-group-item list-group-item-action d-flex align-items-center">
                           <span class="icon mr-3"><i class="fe fe-file"></i></span>安全中心
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <!-- <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
                           <span class="icon mr-3"><i class="fe fe-tag"></i></span>个人信息
-                        </a>
+                        </a> -->
                         <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
                           <span class="icon mr-3"><i class="fe fe-trash-2"></i></span>退出登录
                         </a>
                       </div>
-                      <div class="mt-6">
+                      <!-- <div class="mt-6">
                         <a href="#" class="btn btn-info btn-block">积分商城</a>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>

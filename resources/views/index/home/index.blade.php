@@ -11,10 +11,16 @@
                   <div class="card-body">
                     <h3 class="card-title">个人中心</h3>
                     <div class="row">
-                      <div class="col-md-5">
+                      <div class="col-md-3">
                         <div class="form-group">
                           <label class="form-label">积分值</label>
                           <input type="text" class="form-control" disabled="" placeholder="积分值" value="{{ Auth::user()->integral }}">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="form-label">现金余额</label>
+                          <input type="text" class="form-control" disabled="" placeholder="现金余额" value="{{ Auth::user()->amount }}">
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-3">
@@ -23,7 +29,7 @@
                           <input type="text" class="form-control" placeholder="Username" value="{{ Auth::user()->name }}" disabled="">
                         </div>
                       </div>
-                      <div class="col-sm-6 col-md-4">
+                      <div class="col-sm-6 col-md-3">
                         <div class="form-group">
                           <label class="form-label">邮件地址</label>
                           <input type="email" class="form-control" placeholder="Email" value="{{ Auth::user()->email }}" disabled="">

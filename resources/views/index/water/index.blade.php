@@ -22,7 +22,7 @@
                     <tbody>
                     @foreach($datas as $data)
                     <tr>
-                      <td width="1"><i class="fa fa-chrome text-muted"></i></td>
+                      <td width="1"><i class="fa fa-diamond text-muted"></i></td>
                       <td>{{ $data->content }}</td>
                       <td>{{ $data->integral }}</td>
                       <td>{{ $data->amount }}</td>

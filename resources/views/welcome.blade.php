@@ -92,8 +92,12 @@
                   </div>
                 </div>
               </div>
-
+                
                 <div class="col-lg-3" id="remen" style="display:block">
+                <!-- 广告位预留 -->
+                <div class="card">
+                      <img src="{{ asset('assets') }}/ad.jpg">
+                </div>
                     <div class="card">
                       <div class="card-header">
                         <h4 class="card-title">精选推荐</h4>

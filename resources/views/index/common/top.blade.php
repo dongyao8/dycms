@@ -93,7 +93,6 @@
                   </div>
                 </div> -->
                 
-
                 @if (Route::has('login'))
                     @auth
                     <div class="dropdown">

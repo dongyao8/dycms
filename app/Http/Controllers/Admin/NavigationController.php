@@ -47,11 +47,13 @@ class NavigationController extends Controller
     
         $navigation = new Navigation;
         $navigation->title= $request->title;
-        $navigation->user_id= $request->title;
+        $navigation->user_id= 0;
+        $navigation->title= $request->title;
         $navigation->sort = $request->sort;
         $navigation->navigation_category_id = $request->navigation_category_id;
         $navigation->url = $request->url;
         $navigation->views = 0; //点击次数默认为0
+        $navigation->status= 1;  //管理员添加，直接通过
         $navigation->save();
         if($navigation){
             return redirect('admin/navigation')->with('success_msg', '提交成功！');

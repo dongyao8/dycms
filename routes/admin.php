@@ -20,7 +20,7 @@ Route::namespace('Admin')->prefix('admin')->group(function(){
 
         // 修改密码
         Route::get('/mima', 'SysteminfoController@mima'); //修改密码
-        Route::post('//mima', 'SysteminfoController@cheangeMima'); //修改密码
+        Route::post('/mima', 'SysteminfoController@cheangeMima'); //修改密码
 
 
         // 评论管理

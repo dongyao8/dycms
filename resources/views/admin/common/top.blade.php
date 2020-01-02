@@ -19,11 +19,11 @@
 			  <p class="mb-1 mt-3 font-weight-semibold">管理员</p>
 			  <p class="font-weight-light text-muted mb-0">欢迎访问</p>
 			</div>
-			<a class="dropdown-item">管理首页<i class="dropdown-item-icon ti-dashboard"></i></a>
-			<a class="dropdown-item">信息中心<i class="dropdown-item-icon ti-comment-alt"></i></a>
+			<a href="{{ url('admin/home') }}" class="dropdown-item">管理首页<i class="dropdown-item-icon ti-dashboard"></i></a>
+			<!-- <a class="dropdown-item">信息中心<i class="dropdown-item-icon ti-comment-alt"></i></a>
 			<a class="dropdown-item">用户操作<i class="dropdown-item-icon ti-location-arrow"></i></a>
-			<a class="dropdown-item">帮助中心<i class="dropdown-item-icon ti-help-alt"></i></a>
-			<a class="dropdown-item">退出登录<i class="dropdown-item-icon ti-power-off"></i></a>
+			<a class="dropdown-item">帮助中心<i class="dropdown-item-icon ti-help-alt"></i></a> -->
+			<a href="{{ url('admin/gout') }}" class="dropdown-item">退出登录<i class="dropdown-item-icon ti-power-off"></i></a>
 		  </div>
 		</li>
 	  </ul>

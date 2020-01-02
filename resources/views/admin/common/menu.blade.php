@@ -94,18 +94,18 @@
 			  <li class="nav-item">
 				<a class="nav-link" href="{{ url('admin/system') }}"> 基本信息 </a>
 			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="{{ url('admin/mima') }}"> 修改密码 </a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#"> 邮件配置[待完成] </a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#"> 短信配置[待完成] </a>
+			  </li>
 			  
 			  <li class="nav-item">
-				<a class="nav-link" href="pages/samples/login.html"> 邮件配置 </a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="pages/samples/register.html"> 短信配置 </a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="pages/samples/error-404.html"> 404 </a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="pages/samples/error-500.html"> 500 </a>
+				<a class="nav-link" href="#"> 支付配置[待完成] </a>
 			  </li>
 			</ul>
 		  </div>

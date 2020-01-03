@@ -26,21 +26,38 @@
 
 ## 安装说明
 
-<a href="https://www.kancloud.cn/dongyao123/dycms" target="_blank">[使用文档(完善中……)]</a>
+点击此处查看：<a href="https://www.kancloud.cn/dongyao123/dycms" target="_blank">[使用文档]</a>
 
 本次版本是基于laravel框架基础开发，安装过程中，会大量使用到[composer](https://baike.baidu.com/item/composer/3351208?fr=aladdin) 和 [Git命令](https://baike.baidu.com/item/GIT/12647237) ，以及一些基本的命令行命令，为了方便各位使用，我们会录制一个详细的安装教程来说明！
 
-如果您不需要新版增加的这些功能模块，只需要简单的导航页面的话，推荐您使用第一版[Thinkphp版网址导航](https://gitee.com/dongyao/web_site_navigation)版本的(不再维护){:target="_blank"};
+如果您不需要新版增加的这些功能模块，只需要简单的导航页面的话，推荐您使用第一版<a href="https://gitee.com/dongyao/web_site_navigation" target="_blank">[Thinkphp版网址导航]</a>(不再维护);
 
-## 开发计划
+## 主要特性
 
-- 会员积分模块
-- 积分商城模块
-- 公众号移植
-- 小程序移植
-- 支付充值
-- 付费内容
-- ……
+DYCMS的主要特性包括：
+
+*   纯净的导航界面（去繁求简）
+*   响应式设计的前端设计
+*   聚合式搜索框（一键切换百度， 搜狗，360，必应搜索平台）
+*   用户可自行**申请收录**，由管理员后台审核
+*   文章管理发布功能
+*   每篇文章均有评论功能
+*   首页引用热门和推荐榜单
+*   每日一文阅读
+*   用户注册登录
+*   用户积分制
+*   用户便签
+*   邀请好友
+*  ……
+
+
+后续开发计划
+*   绑定微信公众号
+*   收费阅读
+*   支付接口
+*   积分商城
+*   适配小程序
+* ……
 ## 版权说明
 
 长期以来，通过开源社区的朋友帮助，从开源平台学习了不少东西，特此开放本套代码，作为对开源平台的一份小贡献,如果你是开发新手，也可以借此来当做练手案例，里面都是基础功能运用！[本套程序遵循[Apache2.0开放协议](http://www.apache.org/licenses/LICENSE-2.0.html)]

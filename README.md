@@ -26,6 +26,8 @@
 
 ## 安装说明
 
+[使用文档(完善中……)](https://baike.baidu.com/item/composer/3351208?fr=aladdin)
+
 本次版本是基于laravel框架基础开发，安装过程中，会大量使用到[composer](https://baike.baidu.com/item/composer/3351208?fr=aladdin) 和 [Git命令](https://baike.baidu.com/item/GIT/12647237) ，以及一些基本的命令行命令，为了方便各位使用，我们会录制一个详细的安装教程来说明！
 
 如果您不需要新版增加的这些功能模块，只需要简单的导航页面的话，推荐您使用第一版[Thinkphp版网址导航](https://gitee.com/dongyao/web_site_navigation)版本的(不再维护);
@@ -65,6 +67,10 @@
 - **[tabler](https://github.com/tabler/tabler)**
 - **[PhpSpreadsheet](https://phpspreadsheet.readthedocs.io)**
 
+## 微信公众号
+不定时会在公众号聊一些闲言碎语，欢迎关注！
+
+<img src="public/uploads/sys_img/wechat.jpg" width="250">
 
 ## 友情赞助
 

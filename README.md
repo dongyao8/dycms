@@ -5,7 +5,7 @@
 
 - 当前为bate版，请在正式版发布后下载使用!
 
-本站是[网址导航1.0](https://gitee.com/dongyao/web_site_navigation)的重构版本，并将维持长期更新，旧版本将停止更新维护！
+本站是<a href="https://gitee.com/dongyao/web_site_navigation" target="_blank">网址导航1.0</a>的重构版本，并将维持长期更新，旧版本将停止更新维护！
 
 #### 使用前确认您的服务器满足以下条件
 
@@ -26,11 +26,11 @@
 
 ## 安装说明
 
-[使用文档(完善中……)](https://baike.baidu.com/item/composer/3351208?fr=aladdin)
+<a href="https://www.kancloud.cn/dongyao123/dycms" target="_blank">[使用文档(完善中……)]</a>
 
 本次版本是基于laravel框架基础开发，安装过程中，会大量使用到[composer](https://baike.baidu.com/item/composer/3351208?fr=aladdin) 和 [Git命令](https://baike.baidu.com/item/GIT/12647237) ，以及一些基本的命令行命令，为了方便各位使用，我们会录制一个详细的安装教程来说明！
 
-如果您不需要新版增加的这些功能模块，只需要简单的导航页面的话，推荐您使用第一版[Thinkphp版网址导航](https://gitee.com/dongyao/web_site_navigation)版本的(不再维护);
+如果您不需要新版增加的这些功能模块，只需要简单的导航页面的话，推荐您使用第一版[Thinkphp版网址导航](https://gitee.com/dongyao/web_site_navigation)版本的(不再维护){:target="_blank"};
 
 ## 开发计划
 

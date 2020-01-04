@@ -25,8 +25,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
         if(Schema::hasTable('system_infos')){
-            Schema::defaultStringLength(191);
             $sys_info = \App\Model\SystemInfo::find(1);
             View::share(compact('sys_info'));
         }

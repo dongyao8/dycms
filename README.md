@@ -3,8 +3,6 @@
 
 ## 关于本网站
 
-- 当前为bate版，请在正式版发布后下载使用!
-
 本站是<a href="https://gitee.com/dongyao/web_site_navigation" target="_blank">网址导航1.0</a>的重构版本，并将维持长期更新，旧版本将停止更新维护！
 
 #### 使用前确认您的服务器满足以下条件
@@ -26,11 +24,13 @@
 
 ## 安装说明
 
-点击此处查看：<a href="https://www.kancloud.cn/dongyao123/dycms" target="_blank">[使用文档]</a>
+点击此处查看：<a href="https://www.kancloud.cn/dongyao123/dycms/content" target="_blank">使用文档：https://www.kancloud.cn/dongyao123/dycms/content</a>
 
-本次版本是基于laravel框架基础开发，安装过程中，会大量使用到[composer](https://baike.baidu.com/item/composer/3351208?fr=aladdin) 和 [Git命令](https://baike.baidu.com/item/GIT/12647237) ，以及一些基本的命令行命令，为了方便各位使用，我们会录制一个详细的安装教程来说明！
+> 本次版本是基于laravel框架基础开发，安装过程中，会大量使用到[composer](https://baike.baidu.com/item/composer/3351208?fr=aladdin) 和 [Git命令](https://baike.baidu.com/item/GIT/12647237) ，以及一些基本的命令行命令，为了方便各位使用，我们会录制了一个基于宝塔面板的演示视频，请使用高清模式观看！
 
-如果您不需要新版增加的这些功能模块，只需要简单的导航页面的话，推荐您使用第一版<a href="https://gitee.com/dongyao/web_site_navigation" target="_blank">[Thinkphp版网址导航]</a>(不再维护);
+- 宝塔安装演示视频：https://www.bilibili.com/video/av82044659/
+
+> 如果您不需要新版增加的这些功能模块，只需要简单的导航页面的话，推荐您使用第一版<a href="https://gitee.com/dongyao/web_site_navigation" target="_blank">[Thinkphp版网址导航]</a>(不再维护);
 
 ## 主要特性
 

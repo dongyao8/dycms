@@ -19,8 +19,8 @@ Route::namespace('Admin')->prefix('admin')->group(function(){
         Route::resource('/link', 'LinkController');  //友情链接
 
         // 修改密码
-        Route::get('/mima', 'SysteminfoController@mima'); //修改密码
-        Route::post('/mima', 'SysteminfoController@cheangeMima'); //修改密码
+        Route::get('/mima', 'SystemInfoController@mima'); //修改密码
+        Route::post('/mima', 'SystemInfoController@cheangeMima'); //修改密码
 
 
         // 评论管理

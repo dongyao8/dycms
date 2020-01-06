@@ -20,6 +20,7 @@ class SystemInfoController extends Controller
         $validatedData = $request->validate([
             'web_title' => 'required',
             'web_logo' => 'image',
+            'tongji' => 'required',
             'web_desc' => 'required',
             'web_url' => 'required|url',
         ]);

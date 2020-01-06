@@ -15,7 +15,7 @@ class CreateWatersTable extends Migration
     {
         Schema::create('waters', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id')->default(0)->comment('用户ID');
+            $table->integer('user_id')->default(0)->index()->comment('用户ID');
             $table->integer('type')->default(1)->comment('消费类型，1消费，2扣除');
             $table->integer('method')->default(1)->comment('消费种类，1积分，2现金');
             $table->decimal('amount', 8, 2)->default(0)->comment('消费金积分');

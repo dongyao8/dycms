@@ -48,44 +48,6 @@
                         
                     </div>
                 </form>
-                
-                <hr>
-                <!-- 热门网址 -->
-                <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
-                      <tbody>
-                        <tr>
-                          @foreach($majors as $key=>$major)
-                          @if($key<=5)
-                          <td style="text-align:center">
-                              <a href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
-                              <div>{{ $major->title}}</div></a>
-                          </td>
-                          @endif
-                          @endforeach
-                        </tr>
-                        <tr>
-                          @foreach($majors as $key=>$major)
-                          @if($key>5 && $key<='11')
-                          <td style="text-align:center">
-                          <a href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
-                              <div>{{ $major->title}}</div></a>
-                          </td>
-                          @endif
-                          @endforeach
-                        </tr>
-                        <tr>
-                          @foreach($majors as $key=>$major)
-                          @if($key>11)
-                          <td style="text-align:center">
-                          <a href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
-                              <div>{{ $major->title}}</div></a>
-                          </td>
-                          @endif
-                          @endforeach
-                        </tr>
-                      </tbody>
-                    </table>
-                    <!-- 热门网址 -->
                 </div>
             </div>
             <!-- END搜索框 -->
@@ -93,7 +55,7 @@
             <div class="row row-cards row-deck">
 
             <!-- 用户自定义网址预留Start -->
-              <!-- <div class="col-12">
+              <div class="col-12">
 
                 <div class="card">
                   <div class="table-responsive">
@@ -135,7 +97,7 @@
 
                   </div>
                 </div>
-              </div> -->
+              </div>
               <!-- 用户自定义网址预留END -->
                 
                 <div class="col-lg-3" id="remen" style="display:block">

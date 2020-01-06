@@ -2,7 +2,7 @@
 
 // 用户中心
 Route::namespace('Admin')->prefix('admin')->group(function(){
-    Route::get('/', 'IndexController@index')->middleware('throttle:10'); //管理员登录页
+    Route::get('/', 'IndexController@index'); //管理员登录页
     Route::get('/clean', 'HomeController@clean_cache'); //清理缓存
     Route::post('/', 'IndexController@check_admin')->middleware('throttle:10'); //管理员验证
 

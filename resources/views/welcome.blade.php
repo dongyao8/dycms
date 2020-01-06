@@ -11,45 +11,89 @@
                     </div>
                     <form action="http://www.baidu.com/s" method="get" target="_blank" id="ss">
                     <div class="card-body">
-                      
                         <div class="input-group col-lg-8 col-md-10 m-auto">
+                        <div class="input-group-prepend">
+                            <button type="button" id="anniu" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-paw text-muted"></i> 百度</button>
+                            <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+                              <a class="dropdown-item" onclick="sousuo(1)"><i class="fa fa-paw text-muted"></i> 百度</a>
+                              <a class="dropdown-item" onclick="sousuo(2)"><i class="fa fa fa-scribd text-muted"></i> 搜狗</a>
+                              <a class="dropdown-item" onclick="sousuo(3)"><i class="fa fa-eercast text-muted"></i> 360</a>
+                              <a class="dropdown-item" onclick="sousuo(4)"><i class="fa fa-send-o text-muted"></i> 必应</a>
+                            </div>
+                          </div>
                             <input type="text" name="word" baiduSug="2" class="form-control" id="tt" placeholder="安全搜索，一键直达">
                             
                             <span class="input-group-append">
                                 <button class="btn btn-primary" type="submit">搜索</button>
                             </span>
                         </div>
-                        <div class="card-body text-center ss_con">
-                          <div class="custom-controls-stacked">
-                            <label class="custom-control custom-radio custom-control-inline">
-                              <input type="radio" class="custom-control-input" id="ss_type" name="ss_type" value="1" checked="checked">
-                              <span class="custom-control-label ss_type">百度</span>
-                            </label>
-                            <label class="custom-control custom-radio custom-control-inline">
-                              <input type="radio" class="custom-control-input" id="ss_type" name="ss_type" value="2">
-                              <span class="custom-control-label ss_type">搜狗</span>
-                            </label>
-                            <label class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="ss_type" name="ss_type" value="3">
-                                <span class="custom-control-label ss_type">360</span>
-                              </label>
-                            <label class="custom-control custom-radio custom-control-inline">
-                              <input type="radio" class="custom-control-input" id="ss_type" name="ss_type" value="4">
-                              <span class="custom-control-label ss_type">必应</span>
-                            </label>
-                          </div>
-                        </div>
-                        
-                        
 
+                        <!-- 热门工具(待后续各项工具功能上线后开放) -->
+                        <!-- <div class="card-body text-center ss_con">
+                                    <div class="tags">
+                                    <div class="tag tag-primary">热门工具<span class="tag-addon"><i class="fe fe-activity"></i></span></div>
+                                      <span class="tag">One</span>
+                                      <span class="tag">Two</span>
+                                      <span class="tag">Three</span>
+                                      <span class="tag">Four</span>
+                                      <span class="tag">Five</span>
+                                      <span class="tag">Six</span>
+                                      <span class="tag">Seven</span>
+                                      <span class="tag">Eight</span>
+                                      <span class="tag">Nine</span>
+                                      <span class="tag">Ten</span>
+                                    </div>
+                        </div> -->
+                        <!-- 工具预留 -->
+                        
                     </div>
                 </form>
+                
+                <hr>
+                <!-- 热门网址 -->
+                <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+                      <tbody>
+                        <tr>
+                          @foreach($majors as $key=>$major)
+                          @if($key<=5)
+                          <td style="text-align:center">
+                              <a href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
+                              <div>{{ $major->title}}</div></a>
+                          </td>
+                          @endif
+                          @endforeach
+                        </tr>
+                        <tr>
+                          @foreach($majors as $key=>$major)
+                          @if($key>5 && $key<='11')
+                          <td style="text-align:center">
+                          <a href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
+                              <div>{{ $major->title}}</div></a>
+                          </td>
+                          @endif
+                          @endforeach
+                        </tr>
+                        <tr>
+                          @foreach($majors as $key=>$major)
+                          @if($key>11)
+                          <td style="text-align:center">
+                          <a href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
+                              <div>{{ $major->title}}</div></a>
+                          </td>
+                          @endif
+                          @endforeach
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- 热门网址 -->
                 </div>
             </div>
             <!-- END搜索框 -->
 
             <div class="row row-cards row-deck">
-              <div class="col-12">
+
+            <!-- 用户自定义网址预留Start -->
+              <!-- <div class="col-12">
 
                 <div class="card">
                   <div class="table-responsive">
@@ -91,7 +135,8 @@
 
                   </div>
                 </div>
-              </div>
+              </div> -->
+              <!-- 用户自定义网址预留END -->
                 
                 <div class="col-lg-3" id="remen" style="display:block">
                 <!-- 广告位预留 -->
@@ -168,24 +213,27 @@
 <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 <!-- 搜索方式 -->
 <script type="text/javascript">
-    $("input:radio[name='ss_type']").change(function (){
-    var ss = $(this).val();
+    function sousuo(ss){
     if(ss==1){ //百度
         $('#ss').attr('action','http://wwww.baidu.com/s');
         $('#tt').attr('name','word');
+        $('#anniu').text('百度');
     }
     else if(ss==2){ //搜狗
         $('#ss').attr('action','http://www.sogou.com/web');
         $('#tt').attr('name','query');
+        $('#anniu').text('搜狗');
     }
     else if(ss==3){ //360
         $('#ss').attr('action','https://www.so.com/s');
         $('#tt').attr('name','q');
+        $('#anniu').text('360');
     }
     else if(ss==4){ //必应
         $('#ss').attr('action','https://cn.bing.com/search');
         $('#tt').attr('name','q');
+        $('#anniu').text('必应');
     }
-    });
+    };
 </script>
 @endsection

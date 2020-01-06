@@ -8,6 +8,7 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#4188c9">
     <meta name="description" content="{{ $sys_info->web_desc }}">
+    <meta name="keywords" content="网站导航,绿色安全,内容导航,开源无弹窗">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">

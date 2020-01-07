@@ -1,13 +1,6 @@
 @extends('admin.common.header')
 @section('title', '后台管理')
 @section('content')
-<!-- 引入富文本编辑器 -->
-<script src="https://cdn.bootcss.com/tinymce/4.7.13/tinymce.min.js"></script>
-        <script>
-            tinymce.init({
-                selector: 'textarea'
-            });
-        </script>
 <div class="content-wrapper">
             <div class="row">
 
@@ -59,4 +52,21 @@
             </div>
           </div>
           <!-- content-wrapper ends -->
+          <!-- 引入富文本编辑器 -->
+          <link rel="stylesheet" href="{{asset('static/editor')}}/themes/default/default.css"/>
+          <script charset="utf-8" src="{{asset('static/editor')}}/kindeditor-all.js"></script>
+            <!-- 初始化KindEditor编辑器 -->
+            <script type="text/javascript">
+                var editor;
+                KindEditor.ready(function (K) {
+                    editor = K.create('textarea[name="content"]', {
+                        //否允许浏览服务器已上传文件,默认是false
+                        allowFileManager: true,
+                        allowFlashUpload: false,
+                        allowMediaUpload:false,
+                        allowFileUpload: false,
+                        allowFileManager: false,
+                    });
+                });
+            </script>
       @endsection 

@@ -22,7 +22,7 @@ class IndexController extends BaseController
         $admin['name'] = $request->name;
         $admin['password'] = $request->password;
         //验证登录
-        if (Auth::guard('admin')->attempt($admin)) {
+        if (Auth::guard('admin')->attempt($admin,true)) {
             //验证处于激活状态，并且存在的用户
             return redirect()->action('Admin\HomeController@index');
         }else{

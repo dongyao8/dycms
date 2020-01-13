@@ -25,12 +25,12 @@
                     </label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input"/>
                       <span class="custom-control-label">记住登录</span>
                     </label>
-                  </div>
+                  </div> -->
                   <div class="form-footer">
                     <button type="submit" class="btn btn-primary btn-block">登录</button>
                   </div>

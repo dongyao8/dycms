@@ -107,7 +107,7 @@ class IndexController extends BaseController
         $user['password'] = $request->password;
         $user['active'] = 1;
         //验证登录
-        if (Auth::attempt($user)) {
+        if (Auth::attempt($user,true)) {
             //验证处于激活状态，并且存在的用户
             return redirect()->action('Index\HomeController@index');
         }else{

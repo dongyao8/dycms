@@ -14,7 +14,7 @@ class CommentController extends Controller
     public function comment(Request $request){
         $validatedData = $request->validate([
             'id' => 'required',
-            'c_content' => 'required',
+            'c_content' => 'required|min:10|max:500',
         ]);
         $comment = new Comment;
         $comment->user_id = Auth::id();

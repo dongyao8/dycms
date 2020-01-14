@@ -153,6 +153,7 @@ return [
         'first_name'            => '名',
         'last_name'             => '姓',
         'password'              => '密码',
+        'c_content'             => '评论内容',
         'password2'              => '新密码',
         'password_confirmation' => '确认密码',
         'city'                  => '城市',

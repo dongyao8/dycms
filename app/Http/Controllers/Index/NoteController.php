@@ -39,7 +39,7 @@ class NoteController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'notes' => 'required|min:1|max:500',
+            'notes' => 'required|min:10|max:500',
         ]);
         $note = new Note;
         $note->notes = strip_tags( $request->notes);

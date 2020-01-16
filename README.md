@@ -7,7 +7,7 @@
 
 #### 使用前确认您的服务器满足以下条件
 
-- PHP >= 7.2.0
+- PHP >= 7.2.5 （建议最低7.3）
 - BCMath PHP 拓展
 - Ctype PHP 拓展
 - JSON PHP 拓展

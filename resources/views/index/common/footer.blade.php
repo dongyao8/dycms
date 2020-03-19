@@ -31,14 +31,14 @@
                 <div class="col-auto">
                   <ul class="list-inline list-inline-dots mb-0">
                     <li class="list-inline-item"><a href="{{ url('/shoulu') }}">申请收录</a></li>
-                    <li class="list-inline-item"><a href="#">使用协议</a></li>
+                    <li class="list-inline-item"><a target="_blank" href="https://gitee.com/dongyao/dycms/blob/master/LICENSE">使用协议</a></li>
                     <!-- 统计代码 -->
                     <li class="list-inline-item">{!! $sys_info->tongji !!}</li>
                     <!-- 统计代码 -->
                   </ul>
                 </div>
                 <div class="col-auto">
-                  <a href="https://www.dongyao.ren" class="btn btn-outline-primary btn-sm">版权所有</a>
+                  <!-- <a href="https://www.dongyao.ren" class="btn btn-outline-primary btn-sm">版权所有</a> -->
                 </div>
               </div>
             </div>

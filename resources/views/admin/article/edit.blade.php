@@ -36,12 +36,6 @@
                                     @endforeach
                                 </select>
                             </div>
-
-                            <div class="form-group">
-                                <label for="exampleTextarea1">文章正文(在线上传图片暂未完成，当前仅可实现在线图片地址引用)</label>
-                                <textarea class="form-control" id="editor" name="content" rows="6" style="height:400px;visibility:hidden;">{{ $article->content }}</textarea>
-                            </div>
-
                             <div class="form-group">
                                 <label for="exampleInputEmail1">热门推荐</label>
                                 <select class="form-control" name="is_hot">
@@ -52,10 +46,14 @@
                                         <option value="0">普通</option>
                                         <option value="1">推荐</option>
                                       @endif
-                                    
-                                    
                                 </select>
                             </div>
+                            <div class="form-group">
+                                <label for="exampleTextarea1">文章正文</label>
+                                <textarea class="form-control" id="content" name="content" rows="6" style="height:400px;visibility:hidden;">{{ $article->content }}</textarea>
+                            </div>
+
+                            
                             <button type="submit" class="btn btn-success mr-2">修改</button>
                             <a href="{{ url('admin/article') }}" class="btn btn-dark">返回</a>
                             </form>
@@ -66,22 +64,23 @@
               
             </div>
           </div>
-          <!-- 引入富文本编辑器 -->
-          <link rel="stylesheet" href="{{asset('static/editor')}}/themes/default/default.css"/>
-          <script charset="utf-8" src="{{asset('static/editor')}}/kindeditor-all.js"></script>
-      <!-- 初始化KindEditor编辑器 -->
-      <script type="text/javascript">
-          var editor;
-          KindEditor.ready(function (K) {
-              editor = K.create('textarea[name="content"]', {
-                  //否允许浏览服务器已上传文件,默认是false
-                  allowFileManager: true,
-                  allowFlashUpload: false,
-                  allowMediaUpload:false,
-                  allowFileUpload: false,
-                  allowFileManager: false,
-              });
-          });
-      </script>
+          <!-- 富文本编辑器 -->
+          <script src="{{asset('static/editor')}}/tinymce/js/tinymce/tinymce.min.js"></script>
+          <script>
+            tinymce.init({
+                selector: '#content',
+                language:'zh_CN',//注意大小写
+                height: 300,
+                plugins: 'preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template code codesample table charmap hr nonbreaking anchor advlist lists wordcount imagetools textpattern help emoticons autosave bdmap indent2em autoresize lineheight formatpainter axupimgs',
+                toolbar: 'code undo redo restoredraft | pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
+                styleselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
+                table image media charmap emoticons hr preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs',
+                height: 650, //编辑器高度
+                min_height: 400,
+                toolbar_mode : 'wrap',
+                fontsize_formats: '12px 14px 16px 18px 24px 36px 48px 56px 72px',
+                font_formats: '微软雅黑=Microsoft YaHei,Helvetica Neue,PingFang SC,sans-serif;苹果苹方=PingFang SC,Microsoft YaHei,sans-serif;宋体=simsun,serif;仿宋体=FangSong,serif;黑体=SimHei,sans-serif;Arial=arial,helvetica,sans-serif;Arial Black=arial black,avant garde;Book Antiqua=book antiqua,palatino;',
+            });
+            </script>
       @endsection 
       

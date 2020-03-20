@@ -81,6 +81,7 @@ DYCMS的主要特性包括：
 
 - **[laravel](https://laravel.com/)**
 - **[bootstrap](https://getbootstrap.com/)**
+- **[tinymce](https://www.tiny.cloud/)**
 - **[tabler](https://github.com/tabler/tabler)**
 - **[PhpSpreadsheet](https://phpspreadsheet.readthedocs.io)**
 

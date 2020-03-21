@@ -103,7 +103,7 @@
                 <div class="col-lg-3" id="remen" style="display:block">
                 <!-- 广告位功能后续将扩展到管理后台控制 -->
                 <div class="card">
-                      <img src="http://q7g3pogw7.bkt.clouddn.com/ad.png">
+                      <img src="http://cdn.dongyao.ren/ad.png">
                 </div>
                     <div class="card">
                       <div class="card-header">

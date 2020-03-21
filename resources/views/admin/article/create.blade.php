@@ -55,11 +55,14 @@
             tinymce.init({
                 selector: '#content',
                 language:'zh_CN',//注意大小写
+                images_upload_url: "{{ url('admin/upload/img')}}",
+                images_upload_base_path: "{{ url('/') }}/uploads/",
                 height: 300,
-                plugins: 'preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template code codesample table charmap hr nonbreaking anchor advlist lists wordcount imagetools textpattern help emoticons autosave bdmap indent2em autoresize lineheight formatpainter axupimgs',
+                toolbar_items_size: 'small',
+                plugins: 'preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template code codesample table charmap hr nonbreaking anchor advlist lists wordcount imagetools textpattern help emoticons autosave autoresize',
                 toolbar: 'code undo redo restoredraft | pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
                 styleselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
-                table image media charmap emoticons hr preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs',
+                table image media charmap emoticons hr preview | fullscreen',
                 height: 650, //编辑器高度
                 min_height: 400,
                 toolbar_mode : 'wrap',

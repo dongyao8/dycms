@@ -136,4 +136,20 @@ class ArticleController extends Controller
             return back()->withInput();
         }
     }
+
+    // 文章内容图片插件
+    public function conImg(Request $request){
+        $validatedData = $request->validate([
+            'file' => 'required|image',
+        ]);
+        if ($validatedData->fails())
+        {
+            //  给定的数据未通过验证 
+            $messages = $validatedData->messages();
+            return response()->json(['msg' => $messages]);
+
+        }
+        $imgpath = $request->file('file')->store('con_img/'.date('Ymd'));
+        return response()->json(['location' => $imgpath]);
+    }
 }

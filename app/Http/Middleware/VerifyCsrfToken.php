@@ -19,6 +19,7 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        //解除CSRF限制路由
+        '/admin/upload/img',
     ];
 }

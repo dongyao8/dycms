@@ -66,7 +66,7 @@
                           @foreach($majors as $key=>$major)
                           @if($key<=5)
                           <td style="text-align:center">
-                              <a href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
+                              <a rel="nofollow"  href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
                               <div>{{ $major->title}}</div></a>
                           </td>
                           @endif
@@ -76,7 +76,7 @@
                           @foreach($majors as $key=>$major)
                           @if($key>5 && $key<='11')
                           <td style="text-align:center">
-                          <a href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
+                          <a rel="nofollow"  href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
                               <div>{{ $major->title}}</div></a>
                           </td>
                           @endif
@@ -86,7 +86,7 @@
                           @foreach($majors as $key=>$major)
                           @if($key>11)
                           <td style="text-align:center">
-                          <a href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
+                          <a rel="nofollow"  href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
                               <div>{{ $major->title}}</div></a>
                           </td>
                           @endif
@@ -148,7 +148,7 @@
                           <td><span class="text-success"><a style="color:green" href="{{ url('/urls') }}/{{ $navigation->id }}">[{{$navigation->name}}]</a></span></td>
                             
                           @foreach(\App\Model\NavigationCategory::find($navigation->id)->navigation->where('status',1)->take(6) as $url)
-                          <td><a target="_blank" href="{{$url->url}}" class="text-primary">{{$url->title}}</a></td>
+                          <td><a rel="nofollow"  target="_blank" href="{{$url->url}}" class="text-primary">{{$url->title}}</a></td>
                           @endforeach
                           <td><a target="_blank" href="{{ url('/urls') }}/{{ $navigation->id }}" class="text-success">更多...</a></td>
                         </tr>

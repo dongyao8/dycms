@@ -107,7 +107,7 @@
                 </div>
                 <div class="card">
                       <div class="card-header">
-                        <h4 class="card-title">热门关注</h4><span class="text-muted">test</span>
+                        <h4 class="card-title">热门关注</h4>
                       </div>
                       <table class="table card-table">
                         <tbody>

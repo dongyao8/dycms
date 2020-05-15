@@ -1,5 +1,7 @@
 /node_modules
 /public/hot
+/public/uploads/ar_img/
+/public/uploads/logo_img/
 /public/storage
 /storage/*.key
 /vendor

@@ -130,7 +130,7 @@
                         @foreach($main_article as $ma)
                          <tr>
                           <td width="1"><i class="fe fe-thumbs-up text-muted"></i></td>
-                          <td> <a style="font-size:12px" target="_blank" href="{{ url('article/info') }}/{{$ma->id}}">{{ Str::limit($ma->titlee,22,'…') }}</a></td>
+                          <td> <a style="font-size:12px" target="_blank" href="{{ url('article/info') }}/{{$ma->id}}">{{ Str::limit($ma->title,22,'…') }}</a></td>
                           <!-- <td class="text-right"><span class="text-muted">[阅读:{{ $ma->views }}]</span></td> -->
                         </tr>
                         @endforeach

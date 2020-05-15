@@ -2,6 +2,7 @@
 /public/hot
 /public/uploads/ar_img/
 /public/uploads/logo_img/
+/public/uploads/con_img/
 /public/storage
 /storage/*.key
 /vendor

@@ -1,6 +1,14 @@
 @extends('index.common.top')
 @section('title',$sys_info->web_title)
 @section('content')
+<style>
+.card-header {
+    min-height: 0;
+}
+body {
+    font-weight: 500;
+}
+</style>
           <div class="container">
                 <!-- 搜索框 -->
             <div>
@@ -67,7 +75,7 @@
                           @if($key<=5)
                           <td style="text-align:center">
                               <a rel="nofollow"  href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
-                              <div>{{ $major->title}}</div></a>
+                              <div style="color: black;"><strong>{{ $major->title}}</strong></div></a>
                           </td>
                           @endif
                           @endforeach
@@ -77,7 +85,7 @@
                           @if($key>5 && $key<='11')
                           <td style="text-align:center">
                           <a rel="nofollow"  href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
-                              <div>{{ $major->title}}</div></a>
+                              <div style="color: black;"><strong>{{ $major->title}}</strong></div></a>
                           </td>
                           @endif
                           @endforeach
@@ -87,7 +95,7 @@
                           @if($key>11)
                           <td style="text-align:center">
                           <a rel="nofollow"  href="{{ $major->url}}" target="_blank"> <div class="avatar d-block;center-block" style="background-image: url({{ asset('uploads') }}/{{$major->imgurl}})"></div>
-                              <div>{{ $major->title}}</div></a>
+                          <div style="color: black;"><strong>{{ $major->title}}</strong></div></a>
                           </td>
                           @endif
                           @endforeach
@@ -114,8 +122,8 @@
                         @foreach($news_data as $key=>$news)
                          <tr>
                           <td width="1"><small>{{ $key+1 }}</small></td>
-                          <td> <a style="font-size:12px" target="_blank"  href="http://wwww.baidu.com/s?word={{ $news['key'] }}">{{ Str::limit($news['key'],23,'…') }}</a></td>
-                          <td class="text-muted"><small><span class="text-danger">{{ $news['icon'] }}</span></small></td>
+                          <td> <a style="font-size:13px;color: black;" target="_blank"  href="http://wwww.baidu.com/s?word={{ $news['key'] }}">{{ Str::limit($news['key'],20,'…') }}</a></td>
+                          <td class="text-dark"><small><span class="text-danger">{{ $news['icon'] }}</span></small></td>
                       
                         </tr>
                         @endforeach
@@ -130,7 +138,7 @@
                         @foreach($main_article as $ma)
                          <tr>
                           <td width="1"><i class="fe fe-thumbs-up text-muted"></i></td>
-                          <td> <a style="font-size:12px" target="_blank" href="{{ url('article/info') }}/{{$ma->id}}">{{ Str::limit($ma->title,22,'…') }}</a></td>
+                          <td> <a style="font-size:13px;color: black;" target="_blank" href="{{ url('article/info') }}/{{$ma->id}}">{{ Str::limit($ma->title,20,'…') }}</a></td>
                           <!-- <td class="text-right"><span class="text-muted">[阅读:{{ $ma->views }}]</span></td> -->
                         </tr>
                         @endforeach
@@ -146,7 +154,7 @@
                               @foreach($hot_article as $ha)
                               <tr>
                                 <td width="1"><i class="fa fa-h-square text-muted"></i></td>
-                                <td><a  style="font-size:12px"  href="{{ url('article/info') }}/{{$ha->id}}">{{ Str::limit($ha->title,22,'…')}}</a></td>
+                                <td><a  style="font-size:13px;color: black;"  href="{{ url('article/info') }}/{{$ha->id}}">{{ Str::limit($ha->title,20,'…')}}</a></td>
                               <!-- <td class="text-right"><span class="text-muted">[阅读:{{ $ha->views }}]</span></td> -->
                               </tr>@endforeach
                             </tbody>
@@ -164,7 +172,7 @@
                           <td><span class="text-success"><a style="color:green" href="{{ url('/urls') }}/{{ $navigation->id }}">[{{$navigation->name}}]</a></span></td>
                             
                           @foreach(\App\Model\NavigationCategory::find($navigation->id)->navigation->where('status',1)->take(6) as $url)
-                          <td><a rel="nofollow"  target="_blank" href="{{$url->url}}" class="text-primary">{{$url->title}}</a></td>
+                          <td><a rel="nofollow" style="color: black;"  target="_blank" href="{{$url->url}}" class="text-dark">{{$url->title}}</a></td>
                           @endforeach
                           <td><a target="_blank" href="{{ url('/urls') }}/{{ $navigation->id }}" class="text-success">更多...</a></td>
                         </tr>

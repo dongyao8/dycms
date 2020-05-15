@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 class IndexController extends BaseController
 {
     public function index(){
-        
+        if (Auth::guard('admin')->check()) {
+            return redirect()->action('Admin\HomeController@index');
+        }
         return view('admin.index');
     }
 

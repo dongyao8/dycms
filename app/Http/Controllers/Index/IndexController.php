@@ -7,17 +7,21 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Cookie;
 use App\Http\Controllers\Common\WaterController;
+use App\Http\Controllers\Common\HotnewsController;
 use Illuminate\Http\Request;
 use App\User;
 
 class IndexController extends BaseController
 {
     public function index(){
-
+        $news = new HotnewsController();
+        $news_list = $news->get_hotNews();
+        // 只显示前10条热搜
+        $news_data = array_slice($news_list['hot_search_list'],0,10);
         $navigations = \App\Model\NavigationCategory::orderBy('sort','desc')->get();
         $majors = \App\Model\MajorLink::orderBy('sort','desc')->get();
         // 首页内容
-        return view('welcome',compact('navigations','majors'));
+        return view('welcome',compact('navigations','majors','news_data'));
     }
     // 导航详情
     public function urls($id){

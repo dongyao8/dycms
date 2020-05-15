@@ -66,7 +66,7 @@
                     <tbody>
                     @foreach($main_article as $ma)
                     <tr>
-                      <td><a href="{{ url('article/info') }}/{{$ma->id}}">{{ $ma->title}}</a></td>
+                      <td><a href="{{ url('article/info') }}/{{$ma->id}}">{{ Str::limit($ma->title,22,'…') }}</a></td>
                       <td class="text-right">
                         <span class="badge badge-default">阅读:{{ $ma->views }}</span>
                       </td>
@@ -84,7 +84,7 @@
                   <table class="table card-table">
                     <tbody>@foreach($hot_article as $ha)
                     <tr>
-                      <td><a href="{{ url('article/info') }}/{{$ha->id}}">{{ $ha->title}}</a></td>
+                      <td><a href="{{ url('article/info') }}/{{$ha->id}}">{{ Str::limit($ha->title,'…') }}</a></td>
                       <td class="text-right">
                         <span class="badge badge-default">阅读:{{ $ha->views }}</span>
                       </td>

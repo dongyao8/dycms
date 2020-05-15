@@ -105,6 +105,22 @@
                 <div class="card">
                       <img src="http://cdn.dongyao.ren/ad.png">
                 </div>
+                <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">热门关注</h4><span class="text-muted">test</span>
+                      </div>
+                      <table class="table card-table">
+                        <tbody>
+                        @foreach($news_data as $key=>$news)
+                         <tr>
+                          <td width="1"><small>{{ $key+1 }}</small></td>
+                          <td> <a style="font-size:12px" target="_blank"  href="http://wwww.baidu.com/s?word={{ $news['key'] }}">{{ Str::limit($news['key'],23,'…') }}</a></td>
+                          <td class="text-muted"><small><span class="text-danger">{{ $news['icon'] }}</span></small></td>
+                      
+                        </tr>
+                        @endforeach
+                      </tbody></table>
+                    </div>
                     <div class="card">
                       <div class="card-header">
                         <h4 class="card-title">精选推荐</h4>
@@ -114,7 +130,7 @@
                         @foreach($main_article as $ma)
                          <tr>
                           <td width="1"><i class="fe fe-thumbs-up text-muted"></i></td>
-                          <td> <a target="_blank" href="{{ url('article/info') }}/{{$ma->id}}">{{ $ma->title}}</a></td>
+                          <td> <a style="font-size:12px" target="_blank" href="{{ url('article/info') }}/{{$ma->id}}">{{ Str::limit($ma->titlee,22,'…') }}</a></td>
                           <!-- <td class="text-right"><span class="text-muted">[阅读:{{ $ma->views }}]</span></td> -->
                         </tr>
                         @endforeach
@@ -130,7 +146,7 @@
                               @foreach($hot_article as $ha)
                               <tr>
                                 <td width="1"><i class="fa fa-h-square text-muted"></i></td>
-                                <td><a href="{{ url('article/info') }}/{{$ha->id}}">{{ $ha->title}}</a></td>
+                                <td><a  style="font-size:12px"  href="{{ url('article/info') }}/{{$ha->id}}">{{ Str::limit($ha->title,22,'…')}}</a></td>
                               <!-- <td class="text-right"><span class="text-muted">[阅读:{{ $ha->views }}]</span></td> -->
                               </tr>@endforeach
                             </tbody>

@@ -101,7 +101,7 @@
                             <span class="avatar" style="background-image: url({{asset('uploads')}}/{{ Auth::user()->avatar }})"></span>
                             <span class="ml-2 d-none d-lg-block">
                             <span class="text-default">{{ Auth::user()->name }}</span>
-                            <small class="text-muted d-block mt-1">欢迎使用</small>
+                            <small class="text-black d-block mt-1">欢迎使用</small>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
@@ -134,7 +134,7 @@
                             <span class="avatar" style="background-image: url(https://images.669pic.com/element_pic/97/98/35/77/572e74e04527651bb9397561f9b6e8f1.jpg_w700wb)"></span>
                             <span class="ml-2 d-none d-lg-block">
                             <span class="text-default">游客用户</span>
-                            <small class="text-muted d-block mt-1">欢迎使用</small>
+                            <small class="text-black d-block mt-1">欢迎使用</small>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">

@@ -21,12 +21,14 @@ body {
                     <div class="card-body">
                         <div class="input-group col-lg-8 col-md-10 m-auto">
                         <div class="input-group-prepend">
-                            <button type="button" id="anniu" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-paw text-muted"></i> 百度</button>
+                            <button type="button" id="anniu" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-paw text-black"></i> 百度</button>
                             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-                              <a class="dropdown-item" onclick="sousuo(1)"><i class="fa fa-paw text-muted"></i> 百度</a>
-                              <a class="dropdown-item" onclick="sousuo(2)"><i class="fa fa fa-scribd text-muted"></i> 搜狗</a>
-                              <a class="dropdown-item" onclick="sousuo(3)"><i class="fa fa-eercast text-muted"></i> 360</a>
-                              <a class="dropdown-item" onclick="sousuo(4)"><i class="fa fa-send-o text-muted"></i> 必应</a>
+                              <a class="dropdown-item" onclick="sousuo(1)"><i class="fa fa-paw text-black"></i> 百度</a>
+                              <a class="dropdown-item" onclick="sousuo(2)"><i class="fa fa fa-scribd text-black"></i> 搜狗</a>
+                              <a class="dropdown-item" onclick="sousuo(3)"><i class="fa fa-eercast text-black"></i> 360</a>
+                              <a class="dropdown-item" onclick="sousuo(4)"><i class="fa fa-send text-black"></i> 必应</a>
+                              <a class="dropdown-item" onclick="sousuo(5)"><i class="fa fa-superpowers text-black"></i> 秘迹</a>
+                              <a class="dropdown-item" onclick="sousuo(6)"><i class="fa fa-user-secret text-black"></i> Dogedoge</a>
                             </div>
                           </div>
                             <input type="text" name="word" baiduSug="2" class="form-control" id="tt" placeholder="安全搜索，一键直达">
@@ -219,6 +221,16 @@ body {
         $('#ss').attr('action','https://cn.bing.com/search');
         $('#tt').attr('name','q');
         $('#anniu').text('必应');
+    }
+    else if(ss==5){ //秘迹
+        $('#ss').attr('action','https://mijisou.com/');
+        $('#tt').attr('name','q');
+        $('#anniu').text('秘迹');
+    }
+    else if(ss==6){ //dogedoge
+        $('#ss').attr('action','https://www.dogedoge.com/results');
+        $('#tt').attr('name','q');
+        $('#anniu').text('Dogedoge');
     }
     };
 </script>

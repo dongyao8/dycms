@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Cache;
 use App\Http\Controllers\Common\WaterController;
 use App\Http\Controllers\Common\HotnewsController;
 use Illuminate\Http\Request;
@@ -18,8 +19,21 @@ class IndexController extends BaseController
         $news_list = $news->get_hotNews();
         // 只显示前10条热搜
         $news_data = array_slice($news_list['hot_search_list'],0,10);
-        $navigations = \App\Model\NavigationCategory::orderBy('sort','desc')->get();
-        $majors = \App\Model\MajorLink::orderBy('sort','desc')->get();
+        
+        // 热门推荐缓存
+        if (Cache::has('majors')) {
+            $majors = json_decode(Cache::get('majors'));
+        }else{
+            $majors = \App\Model\MajorLink::orderBy('sort','desc')->get();
+            $cache_majors = Cache::put('majors', json_encode($majors),config('system.cache_time')*60);
+        }
+        // 导航缓存
+        if (Cache::has('navigations')) {
+            $navigations = json_decode(Cache::get('navigations'));
+        }else{
+            $navigations = \App\Model\NavigationCategory::orderBy('sort','desc')->get();
+            $cache_navigations = Cache::put('navigations', json_encode($navigations),config('system.cache_time')*60);
+        }
         // 首页内容
         return view('welcome',compact('navigations','majors','news_data'));
     }

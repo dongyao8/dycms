@@ -12,13 +12,13 @@
               <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                   <li class="nav-item">
-                    <a href="{{ url('/') }}" class="nav-link"><i class="fe fe-home"></i> 首页</a>
+                    <a href="{{ url('/') }}" style="color:black" class="nav-link"><i class="fe fe-home"></i> 首页</a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ url('/article') }}" class="nav-link"><i class="fe fe-book"></i> 资讯中心</a>
+                    <a href="{{ url('/article') }}" style="color:black" class="nav-link"><i class="fe fe-book"></i> 资讯中心</a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ url('/daily') }}" class="nav-link"><i class="fe fe-file"></i> 每日一文</a>
+                    <a href="{{ url('/daily') }}" style="color:black" class="nav-link"><i class="fe fe-file"></i> 每日一文</a>
                   </li>
                   <!-- <li class="nav-item dropdown">
                     <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i> Components</a>

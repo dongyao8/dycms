@@ -15,7 +15,7 @@ body {
                 <div class="card">
                     <div class="card-header">
                       <!-- 天气预报插件 -->
-                      <iframe allowtransparency="true" frameborder="0" width="317" height="28" scrolling="no" src="//tianqi.eastday.com/plugin/widget_v1.html?sc=3&z=1&t=1&v=0&d=1&bd=0&k=000000&f=808080&q=1&a=1&c=54511&w=317&h=28&align=left"></iframe>
+                      <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=10" width="330" height="35" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
                     </div>
                     <form action="http://www.baidu.com/s" method="get" target="_blank" id="ss">
                     <div class="card-body">

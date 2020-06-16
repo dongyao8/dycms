@@ -26,9 +26,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Schema::defaultStringLength(191);
+        // Schema::defaultStringLength(191);
         if(Schema::hasTable('system_infos')){
-            
             // 系统配置
             if (Cache::has('sys_info')) {
                 $sys_info = json_decode(Cache::get('sys_info'));

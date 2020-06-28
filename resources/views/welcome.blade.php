@@ -1,14 +1,7 @@
 @extends('index.common.top')
 @section('title',$sys_info->web_title)
 @section('content')
-<style>
-.card-header {
-    min-height: 0;
-}
-body {
-    font-weight: 500;
-}
-</style>
+
           <div class="container">
                 <!-- 搜索框 -->
             <div>

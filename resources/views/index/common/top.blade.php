@@ -47,6 +47,15 @@
     <!-- Datatables Plugin -->
     <!-- <script src="{{asset('static/index')}}/assets/plugins/datatables/plugin.js"></script> -->
   </head>
+  <style>
+.card-header {
+    min-height: 0;
+}
+body {
+    /* background:url(https://cn.bing.com/th?id=OHR.SurfSeason_ZH-CN9212464908_1920x1080.jpg); */
+    font-weight: 500;
+}
+</style>
   <body class="">
     <div class="page">
       <div class="flex-fill">

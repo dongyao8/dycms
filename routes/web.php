@@ -27,6 +27,9 @@ Route::get('/daily', 'Index\IndexController@daily')->name('daily');
 Route::get('/article/{id?}', 'Index\ArticleController@index')->name('article');
 Route::get('/article/info/{id}', 'Index\ArticleController@show')->where('id', '[0-9]+');
 
+// 热门关注
+Route::get('/hot', 'Index\HotController@news'); //热搜榜
+
 // 申请收录
 Route::get('/shoulu', 'Index\ShouluController@index');
 Route::post('/shoulu', 'Index\ShouluController@store')->middleware('auth'); //收录处理

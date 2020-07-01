@@ -18,7 +18,13 @@
                     <a href="{{ url('/article') }}" style="color:black" class="nav-link"><i class="fe fe-book"></i> 资讯中心</a>
                   </li>
                   <li class="nav-item">
+                    <a href="{{ url('/hot') }}" style="color:black" class="nav-link"><i class="fe fe-crosshair"></i> 热门关注</a>
+                  </li>
+                  <li class="nav-item">
                     <a href="{{ url('/daily') }}" style="color:black" class="nav-link"><i class="fe fe-file"></i> 每日一文</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/home') }}" style="color:black" class="nav-link"><i class="fe fe-edit"></i> 随心笔记</a>
                   </li>
                   <!-- <li class="nav-item dropdown">
                     <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i> Components</a>

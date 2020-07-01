@@ -7,8 +7,7 @@
             <div>
                 <div class="card">
                     <div class="card-header">
-                      <!-- 天气预报插件 -->
-                      <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=10" width="330" height="35" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                      <iframe allowtransparency="true" frameborder="0" width="317" height="28" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=1&t=1&v=0&d=1&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=0&a=1&c=54511&w=317&h=28&align=left"></iframe>
                     </div>
                     <form action="http://www.baidu.com/s" method="get" target="_blank" id="ss">
                     <div class="card-body">
@@ -107,23 +106,8 @@
                 <!-- 广告位功能后续将扩展到管理后台控制 -->
                 <div class="card">
                       <img src="http://cdn.dongyao.ren/ad.png">
-                </div>
-                <div class="card">
-                      <div class="card-header">
-                        <h4 class="card-title">热门关注</h4>
-                      </div>
-                      <table class="table card-table">
-                        <tbody>
-                        @foreach($news_data as $key=>$news)
-                         <tr>
-                          <td width="1"><small>{{ $key+1 }}</small></td>
-                          <td> <a style="font-size:13px;color: black;" target="_blank"  href="http://wwww.baidu.com/s?word={{ $news['key'] }}">{{ Str::limit($news['key'],20,'…') }}</a></td>
-                          <td class="text-dark"><small><span class="text-danger">{{ $news['icon'] }}</span></small></td>
                       
-                        </tr>
-                        @endforeach
-                      </tbody></table>
-                    </div>
+                </div>
                     <div class="card">
                       <div class="card-header">
                         <h4 class="card-title">精选推荐</h4>

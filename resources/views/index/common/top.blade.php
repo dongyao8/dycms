@@ -13,7 +13,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="description" content="{{ $sys_info->web_desc }}">
-    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css"></script>
     <link rel="icon" href="{{asset('static/index')}}/favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('static/index')}}/favicon.ico" />
     <!-- Generated: 2019-04-04 16:55:45 +0200 -->

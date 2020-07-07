@@ -18,7 +18,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('static/index')}}/favicon.ico" />
     <!-- Generated: 2019-04-04 16:55:45 +0200 -->
     <title>@yield('title',$sys_info->web_title)---{{ $sys_info->web_desc }}</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script src="{{asset('static/index')}}/assets/js/require.min.js"></script>
     <script>
       requirejs.config({

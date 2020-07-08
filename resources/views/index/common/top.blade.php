@@ -48,13 +48,21 @@
     <!-- <script src="{{asset('static/index')}}/assets/plugins/datatables/plugin.js"></script> -->
   </head>
   <style>
-.card-header {
-    min-height: 0;
-}
-body {
-    /* background:url(https://cn.bing.com/th?id=OHR.SurfSeason_ZH-CN9212464908_1920x1080.jpg); */
-    font-weight: 500;
-}
+    .card-header {
+        min-height: 0;
+    }
+    body {
+      @if(env('BG_SWITCH'))
+        background:url({{env('BG_URL')}});
+        background-repeat:repeat;
+        opacity: 0.8;
+        font-weight: 500;
+        background-size:cover;
+        background-position: center center;
+      @else
+        ont-weight: 500;
+      @endif
+    }
 </style>
   <body class="">
     <div class="page">

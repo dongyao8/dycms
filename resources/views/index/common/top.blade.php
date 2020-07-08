@@ -60,7 +60,7 @@
         background-size:cover;
         background-position: center center;
       @else
-        ont-weight: 500;
+        font-weight: 500;
       @endif
     }
 </style>

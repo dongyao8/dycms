@@ -16,7 +16,7 @@ return [
     |
     */
     // 是否开启壁纸功能（图片最好是竖版的，画面干净整洁）
-    'bg_switch' => env('BG_SWITCH', 'true'),   //是否开启背景图
+    'bg_switch' => env('BG_SWITCH', 'false'),   //是否开启背景图
     'bg_url' => env('BG_URL', 'http://p15.qhimg.com/t0152bec756e80346e8.jpg'),   //背景图url地址（后台暂不提供修改功能，待后续大版本更新时候提供）
     'bg_clear' => env('BG_CLEAR', '0.8'),   //透明度，范围0-1之间，默认0.8
 ];

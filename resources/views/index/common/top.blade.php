@@ -55,7 +55,7 @@
       @if(env('BG_SWITCH'))
         background:url({{env('BG_URL')}});
         background-repeat:repeat;
-        opacity: 0.8;
+        opacity: {{env('BG_CLEAR')}};
         font-weight: 500;
         background-size:cover;
         background-position: center center;

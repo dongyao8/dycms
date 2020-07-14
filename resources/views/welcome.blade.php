@@ -19,7 +19,6 @@
                               <a class="dropdown-item" onclick="sousuo(2)"><i class="fa fa fa-scribd text-black"></i> 搜狗</a>
                               <a class="dropdown-item" onclick="sousuo(3)"><i class="fa fa-eercast text-black"></i> 360</a>
                               <a class="dropdown-item" onclick="sousuo(4)"><i class="fa fa-send text-black"></i> 必应</a>
-                              <a class="dropdown-item" onclick="sousuo(5)"><i class="fa fa-superpowers text-black"></i> 秘迹</a>
                               <a class="dropdown-item" onclick="sousuo(6)"><i class="fa fa-user-secret text-black"></i> Dogedoge</a>
                             </div>
                           </div>
@@ -175,7 +174,7 @@
   </script>
 <!-- 百度联想搜索 -->
 <script charset="gbk" src="http://www.baidu.com/js/opensug.js"></script>
-<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/jquery/2.2.3/jquery.min.js"></script>
 <!-- 搜索方式 -->
 <script type="text/javascript">
     function sousuo(ss){
@@ -198,11 +197,6 @@
         $('#ss').attr('action','https://cn.bing.com/search');
         $('#tt').attr('name','q');
         $('#anniu').text('必应');
-    }
-    else if(ss==5){ //秘迹
-        $('#ss').attr('action','https://mijisou.com/');
-        $('#tt').attr('name','q');
-        $('#anniu').text('秘迹');
     }
     else if(ss==6){ //dogedoge
         $('#ss').attr('action','https://www.dogedoge.com/results');

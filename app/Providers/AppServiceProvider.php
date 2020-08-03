@@ -26,16 +26,19 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Schema::defaultStringLength(191);
-        if(Schema::hasTable('system_infos')){
-            // 系统配置
-            if (Cache::has('sys_info')) {
-                $sys_info = json_decode(Cache::get('sys_info'));
-            }else{
-                $sys_info = \App\Model\SystemInfo::find(1);
-                $cache_sys_info = Cache::put('sys_info', json_encode($sys_info),config('system.cache_time')*60);
+        if(env('DB_HOST')){
+            Schema::defaultStringLength(191);
+            if(Schema::hasTable('system_infos')){
+                // 系统配置
+                if (Cache::has('sys_info')) {
+                    $sys_info = json_decode(Cache::get('sys_info'));
+                }else{
+                    $sys_info = \App\Model\SystemInfo::find(1);
+                    $cache_sys_info = Cache::put('sys_info', json_encode($sys_info),config('system.cache_time')*60);
+                }
+                View::share(compact('sys_info'));
             }
-            View::share(compact('sys_info'));
         }
+        
     }
 }

@@ -13,7 +13,6 @@
         "laravel/framework": "^6.7",
         "laravel/tinker": "^1.0",
         "orangehill/iseed": "^2.6",
-        "phpoffice/phpspreadsheet": "^1.10",
         "symfony/http-foundation": "4.4.*"
     },
     "require-dev": {

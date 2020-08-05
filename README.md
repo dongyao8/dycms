@@ -22,9 +22,11 @@
 
 如果不确定您的服务器是否满足该条件，可添加QQ群：648120877 进行沟通交流！
 
-## 安装说明
+----
+## 安装说明：
 
-点击此处查看：<a href="https://www.kancloud.cn/dongyao123/dycms/content" target="_blank">使用文档：https://www.kancloud.cn/dongyao123/dycms/content</a>
+## - 操作手册：
+**<a href="https://www.kancloud.cn/dongyao123/dycms/content" target="_blank">使用文档：https://www.kancloud.cn/dongyao123/dycms/content</a>**
 
 > 本次版本是基于laravel框架基础开发，安装过程中，会大量使用到[composer](https://baike.baidu.com/item/composer/3351208?fr=aladdin) 和 [Git命令](https://baike.baidu.com/item/GIT/12647237) ，以及一些基本的命令行命令，为了方便各位使用，我们会录制了一个基于宝塔面板的演示视频，请使用高清模式观看！
 
@@ -32,7 +34,8 @@
 
 - 如果您不擅长使用命令行操作，可使用手动安装包进行体验，详情请访问： [点击查看手动安装](https://www.kancloud.cn/dongyao123/dycms/1459086)
 
-> 如果您不需要新版增加的这些功能模块，只需要简单的导航页面的话，推荐您使用第一版<a href="https://gitee.com/dongyao/web_site_navigation" target="_blank">[Thinkphp版网址导航]</a>(不再维护);
+## - 手动版本：
+**[https://github.com/dongyao8/dycms/releases](https://github.com/dongyao8/dycms/releases)**
 
 ## 主要特性
 

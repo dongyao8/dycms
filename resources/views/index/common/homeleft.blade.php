@@ -2,7 +2,7 @@
                 <div class="card card-profile">
                   <div class="card-header" style="background-image: url({{asset('static/index')}}/demo/photos/eberhard-grossgasteiger-311213-500.jpg);"></div>
                   <div class="card-body text-center">
-                    <img class="card-profile-img" src="{{asset('uploads')}}/{{ Auth::user()->avatar }}">
+                    <img class="card-profile-img" src="{{ config('avatar.url')}}/{{ md5(Auth::user()->name) }}?size={{ config('avatar.size')}}&d={{ config('avatar.d')}}">
                     <h3 class="mb-3">{{ Auth::user()->name }}</h3>
                     <p class="mb-4">
                     一个人即使已登上顶峰，也仍要自强不息

@@ -68,7 +68,7 @@
                   @foreach ($note as $notes)
                   <li class="list-group-item py-5">
                       <div class="media">
-                        <div class="media-object avatar avatar-md mr-4" style="background-image: url({{asset('uploads')}}/{{ Auth::user()->avatar }})"></div>
+                        <div class="media-object avatar avatar-md mr-4" style="background-image: url({{ config('avatar.url')}}/{{ md5(Auth::user()->name) }}?size={{ config('avatar.size')}}&d={{ config('avatar.d')}})"></div>
                         <div class="media-body">
                           <div class="media-heading">
                             <small class="float-right text-muted">{{ $notes->created_at }}</small>

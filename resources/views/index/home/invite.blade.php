@@ -31,7 +31,7 @@
 
                   @foreach($friends as $friend)
                       <span class="tag">
-                        <span class="tag-avatar avatar" style="background-image: url({{asset('uploads')}}/{{ $friend->avatar }})"></span>
+                        <span class="tag-avatar avatar" style="background-image: url({{ config('avatar.url')}}/{{ md5($friend->name) }}?size={{ config('avatar.size')}}&d={{ config('avatar.d')}})"></span>
                         {{ $friend->name }}
                       </span>
                       @endforeach

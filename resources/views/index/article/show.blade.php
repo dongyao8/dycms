@@ -39,7 +39,7 @@
                     @foreach($comments as $comment)
                     <li class="list-group-item py-5">
                       <div class="media">
-                        <div class="media-object avatar avatar-md mr-4" style="background-image: url({{ asset('uploads') }}/{{ $comment->user->avatar }})"></div>
+                        <div class="media-object avatar avatar-md mr-4" style="background-image: url({{ config('avatar.url')}}/{{ md5($comment->user->name) }}?size={{ config('avatar.size')}}&d={{ config('avatar.d')}})"></div>
                         <div class="media-body">
                           <div class="media-heading">
                             <small class="float-right text-muted">{{ $comment->created_at }}</small>

@@ -115,10 +115,11 @@
                     <div class="dropdown">
                         <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
                             <!-- 随机头像 -->
-                            <span class="avatar" style="background-image: url({{asset('uploads')}}/{{ Auth::user()->avatar }})"></span>
+                            <span class="avatar" style="background-image: url({{ config('avatar.url')}}/{{ md5(Auth::user()->name) }}?size={{ config('avatar.size')}}&d={{ config('avatar.d')}})"></span>
                             <span class="ml-2 d-none d-lg-block">
                             <span class="text-default">{{ Auth::user()->name }}</span>
-                            <small class="text-black d-block mt-1">欢迎使用</small>
+                            <small class="text-black d-block mt-1">欢迎使用 
+                            </small>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
@@ -148,7 +149,7 @@
                         <div class="dropdown">
                         <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
                             <!-- 随机头像 -->
-                            <span class="avatar" style="background-image: url({{asset('uploads')}}/head_img/user.png)"></span>
+                            <span class="avatar" style="background-image: url({{ config('avatar.url')}}/0?size=120&d=mp)"></span>
                             <span class="ml-2 d-none d-lg-block">
                             <span class="text-default">游客用户</span>
                             <small class="text-default d-block mt-1">欢迎使用</small>

@@ -27,7 +27,7 @@
                       @foreach($users as $user)
                         <tr>
                           <td class="py-1">{{ $user->id }}</td>
-                          <td> <img src="{{asset('uploads')}}/{{ $user->avatar }}" alt="image"> | {{ $user->name }} </td>
+                          <td> <img src="{{ config('avatar.url')}}/{{ md5($user->name) }}?size={{ config('avatar.size')}}&d={{ config('avatar.d')}}" alt="image"> | {{ $user->name }} </td>
                           <td>{{ $user->email }}</td>
                           <td>{{ $user->integral }}</td>
                           <td>{{ $user->amount }}</td>

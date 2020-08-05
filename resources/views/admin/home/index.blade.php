@@ -94,7 +94,7 @@
 				<ul class="timeline">
 				@foreach($new_user as $user)
 				  <li class="timeline-item">
-					<p class="timeline-content"> <img class="img-xs rounded-circle" src="{{ asset('uploads') }}/{{ $user->avatar }}" alt="profile image"> | {{ $user->name }}</p>
+					<p class="timeline-content"> <img class="img-xs rounded-circle" src="{{ config('avatar.url')}}/{{ md5($user->name) }}?size={{ config('avatar.size')}}&d={{ config('avatar.d')}}" alt="profile image"> | {{ $user->name }}</p>
 					<!-- <p class="event-time">{{ $user->name }}</p> -->
 				  </li>
 				  @endforeach

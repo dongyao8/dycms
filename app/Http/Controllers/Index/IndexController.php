@@ -14,7 +14,6 @@ use App\User;
 class IndexController extends BaseController
 {
     public function index(){
-        
         // 热门推荐缓存
         if (Cache::has('majors')) {
             $majors = json_decode(Cache::get('majors'));
@@ -82,7 +81,7 @@ class IndexController extends BaseController
         $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->avatar = 'head_img/default/'.rand(1,39).".jpg";
+        $user->avatar = 'head_img/user.png'; //默认头像
         $user->password = Hash::make($request->password);
         $user->active = 1; //默认用户状态为1
         $user->amount = 0; //默认余额为0

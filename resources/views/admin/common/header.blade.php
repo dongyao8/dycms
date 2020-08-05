@@ -7,9 +7,9 @@
 <title>@yield('title',$sys_info->web_title)---后台管理</title>
 <!-- plugins:css -->
 <link rel="stylesheet" href="{{asset('static/admin')}}/assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="{{asset('static/admin')}}/assets/vendors/iconfonts/ionicons/css/ionicons.css">
+<!-- <link rel="stylesheet" href="{{asset('static/admin')}}/assets/vendors/iconfonts/ionicons/css/ionicons.css">
 <link rel="stylesheet" href="{{asset('static/admin')}}/assets/vendors/iconfonts/typicons/src/font/typicons.css">
-<link rel="stylesheet" href="{{asset('static/admin')}}/assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
+<link rel="stylesheet" href="{{asset('static/admin')}}/assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css"> -->
 <link rel="stylesheet" href="{{asset('static/admin')}}/assets/vendors/css/vendor.bundle.base.css">
 <!-- 手机适应 -->
 <meta name="viewport" content="width=device-width, initial-scale=1">

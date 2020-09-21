@@ -34,9 +34,6 @@
 
 - 如果您不擅长使用命令行操作，可使用手动安装包进行体验，详情请访问： [点击查看手动安装](https://www.kancloud.cn/dongyao123/dycms/1459086)
 
-## - 手动版本：
-**[https://github.com/dongyao8/dycms/releases](https://github.com/dongyao8/dycms/releases)**
-
 ## 主要特性
 
 DYCMS的主要特性包括：

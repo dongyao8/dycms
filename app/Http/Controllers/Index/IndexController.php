@@ -85,7 +85,7 @@ class IndexController extends BaseController
         $user->password = Hash::make($request->password);
         $user->active = 1; //默认用户状态为1
         $user->amount = 0; //默认余额为0
-        $user->integral = 0; //默认用户积分为0
+        $user->integral = config('score.reguser'); //默认用户积分为0
         // 邀请用户判断
         $father_id = Cookie::get('source');
         if($father_id=="" || $father_id==null || $father_id==0){

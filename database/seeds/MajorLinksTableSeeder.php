@@ -55,7 +55,7 @@ class MajorLinksTableSeeder extends Seeder
                 'id' => 5,
                 'title' => '京东商城',
                 'imgurl' => 'logo_img/20191213/bgaJcaQhcIoqffnH31fVnuc4mTK9jjcpCaPlP4po.png',
-                'url' => 'https://union-click.jd.com/jdc?e=&p=AyIGZRprFDJWWA1FBCVbV0IUWVALHFRBEwQAQB1AWQkrLw9aTXhTewxweBUGJmULSnRETghOHRkOIgVWHlIVMhEOURhcHAIaB2UrWxYyWWlUK1sRAhAOVBxeEwoiB1EcXBIGFAVUGFkcACIAVRJrHAMbAlUbRxYHEwdcHV8dMiI3VitrJQISN1UrBFFfTzdXGloRCw%3D%3D',
+                'url' => 'http://www.dongyao.ren/jd.php',
                 'sort' => 0,
                 'views' => 0,
                 'created_at' => '2019-12-13 19:00:05',

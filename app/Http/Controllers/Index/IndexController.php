@@ -60,7 +60,7 @@ class IndexController extends BaseController
     // 每日一文
     public function daily(){
         // 接口调用
-        $api_url = "https://interface.meiriyiwen.com/article/random";
+        $api_url = "http://service-pnlsjmqv-1251171417.bj.apigw.tencentcs.com/article";
         $api_con = file_get_contents($api_url);
         $api_con = json_decode($api_con,1);
         return view('index.index.daily',['article'=>$api_con]);

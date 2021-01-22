@@ -16,7 +16,7 @@ class HotnewsController extends Controller
             $hot_news = Cache::get('hot_news');
             $hot_list = \json_decode($hot_news,1);
         }else{
-            $hot_data = file_get_contents('https://yiban.io/api/hot_search/record/list?platform=baidu_realtime');
+            $hot_data = file_get_contents('https://yiban.io/api/hot_search/record/list?platform=weibo_hot');
             $hot_list = json_decode($hot_data,1);
             if(!is_array($hot_list)){
                 return ['code'=>0,'msg'=>'服务出错'];
@@ -29,7 +29,7 @@ class HotnewsController extends Controller
         }
         // 每半小时更新一次热搜
         if(time() - $hot_list['update_at'] >= 2000){
-            $hot_data = file_get_contents('https://yiban.io/api/hot_search/record/list?platform=baidu_realtime');
+            $hot_data = file_get_contents('https://yiban.io/api/hot_search/record/list?platform=weibo_hot');
             $hot_list = json_decode($hot_data,1);
             if(!is_array($hot_list)){
                 return ['code'=>0,'msg'=>'服务出错'];

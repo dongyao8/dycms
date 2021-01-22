@@ -12,7 +12,7 @@
     
         <tr>
             <td>
-            <a target="_blank" href="{{$val['news']}}">{{$val['rank']}}、{{$val['key']}}</a>
+            <a target="_blank" href="{{$val['url']}}">{{$val['rank']}}、{{$val['key']}}</a>
             </td>
             
             <!-- <td class="text-right text-muted d-none d-md-table-cell text-nowrap">38 offers</td> -->

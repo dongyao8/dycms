@@ -121,7 +121,7 @@
 			</div>
 		  </div>
 		</div>
-		<div class="alert alert-primary">当前版本：V 1.1.5 ；点此查看： <a target="_blank" href="https://gitee.com/dongyao/dycms/blob/master/UPDATE.md" class="alert-link">最新版本</a> </div>
+		<div class="alert alert-primary">当前版本：V 1.1.6 ；点此查看： <a target="_blank" href="https://gitee.com/dongyao/dycms/blob/master/UPDATE.md" class="alert-link">最新版本</a> </div>
 	  </div>
       <!-- content-wrapper ends -->
       @endsection 

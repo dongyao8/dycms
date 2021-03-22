@@ -18,7 +18,7 @@ return [
     |
     |
     */
-    'url' => 'https://secure.gravatar.com/avatar',   //gravatar服务地址，可替换不同镜像
+    'url' => 'http://sdn.geekzu.org/avatar',   //gravatar服务地址，可替换不同镜像
     'size' => 120,   //头像尺寸
     'd' => 'robohash',  //头像类型
 

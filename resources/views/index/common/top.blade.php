@@ -54,11 +54,11 @@
     body {
       @if(env('BG_SWITCH'))
         background:url({{env('BG_URL')}});
-        background-repeat:repeat;
+        background-repeat:no-repeat;
         opacity: {{env('BG_CLEAR')}};
         font-weight: 500;
         background-size:cover;
-        background-position: center center;
+        /* background-position: center center; */
       @else
         font-weight: 500;
       @endif

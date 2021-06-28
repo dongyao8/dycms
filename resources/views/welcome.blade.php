@@ -19,7 +19,7 @@
                               <a class="dropdown-item" onclick="sousuo(2)"><i class="fa fa fa-scribd text-black"></i> 搜狗</a>
                               <a class="dropdown-item" onclick="sousuo(3)"><i class="fa fa-eercast text-black"></i> 360</a>
                               <a class="dropdown-item" onclick="sousuo(4)"><i class="fa fa-send text-black"></i> 必应</a>
-                              <a class="dropdown-item" onclick="sousuo(6)"><i class="fa fa-user-secret text-black"></i> Dogedoge</a>
+                              <!-- <a class="dropdown-item" onclick="sousuo(6)"><i class="fa fa-user-secret text-black"></i> Dogedoge</a> -->
                             </div>
                           </div>
                             <input type="text" name="word" baiduSug="2" class="form-control" id="tt" placeholder="安全搜索，一键直达">

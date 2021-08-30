@@ -33,7 +33,7 @@
                     <li class="list-inline-item"><a href="{{ url('/shoulu') }}">申请收录</a></li>
                     <li class="list-inline-item"><a target="_blank" href="https://gitee.com/dongyao/dycms/blob/master/LICENSE">使用协议</a></li>
                     <!-- 统计代码 -->
-                    <li class="list-inline-item"><a target="_blank" href="http://www.baidu.com">备案号：{{env('APP_BEIAN')}}</a></li>
+                    <li class="list-inline-item"><a target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index">备案号：{{env('APP_BEIAN')}}</a></li>
                     <!-- 统计代码 -->
                     <!-- 统计代码 -->
                     <li class="list-inline-item">{!! $sys_info->tongji !!}</li>

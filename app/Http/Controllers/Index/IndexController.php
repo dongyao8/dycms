@@ -22,12 +22,7 @@ class IndexController extends BaseController
             $cache_majors = Cache::put('majors', json_encode($majors),config('system.cache_time')*60);
         }
         // 导航缓存
-        if (Cache::has('navigations')) {
-            $navigations = json_decode(Cache::get('navigations'));
-        }else{
-            $navigations = \App\Model\NavigationCategory::orderBy('sort','desc')->get();
-            $cache_navigations = Cache::put('navigations', json_encode($navigations),config('system.cache_time')*60);
-        }
+        $navigations = \App\Model\NavigationCategory::orderBy('sort','desc')->get();
         // 首页内容
         return view('welcome',compact('navigations','majors'));
     }

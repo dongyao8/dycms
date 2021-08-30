@@ -149,7 +149,7 @@
                         <tr>
                           <td><span class="text-success"><a style="color:green" href="{{ url('/urls') }}/{{ $navigation->id }}">[{{$navigation->name}}]</a></span></td>
                             
-                          @foreach(\App\Model\NavigationCategory::find($navigation->id)->navigation->where('status',1)->take(6) as $url)
+                          @foreach($navigation->navigation->where('status',1)->take(6) as $url)
                           <td><a rel="nofollow" style="color: black;"  target="_blank" href="{{$url->url}}" class="text-dark">{{$url->title}}</a></td>
                           @endforeach
                           <td><a target="_blank" href="{{ url('/urls') }}/{{ $navigation->id }}" class="text-success">更多...</a></td>

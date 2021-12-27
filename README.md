@@ -1,5 +1,12 @@
 <p align="center"><img src="public/uploads/sys_img/logo.png" width="400"></p>
 
+## 升级计划
+随着Laravel社区的升级更新，下一个2.0版本将计划采用`laravel9`的LTS版本进行全面更新，采用模块化设计开发，解决当前版本太多冗余文件的问题，同时在此寻找前端合作伙伴一起来实现更多定制化的界面效果。
+> 前端朋友如有兴趣，可联系QQ：243512842
+
+本着简洁实用的原则，大家如果有更好的建议和意见，欢迎提交issue给我们：
+- Github提交需求: <a href="https://github.com/dongyao8/dycms/issues" target="_blank">Github issues</a>
+- Gitee提交需求: <a href="https://gitee.com/dongyao/dycms/issues" target="_blank">Gitee issues</a>
 
 ## 关于本网站
 
@@ -55,14 +62,6 @@ DYCMS的主要特性包括：
 *   邀请好友
 *  ……
 
-
-后续开发计划
-*   绑定微信公众号
-*   收费阅读
-*   支付接口
-*   积分商城
-*   适配小程序
-* ……
 ## 版权说明
 
 长期以来，通过开源社区的朋友帮助，从开源平台学习了不少东西，特此开放本套代码，作为对开源平台的一份小贡献,如果你是开发新手，也可以借此来当做练手案例，里面都是基础功能运用！[本套程序遵循[Apache2.0开放协议](http://www.apache.org/licenses/LICENSE-2.0.html)]

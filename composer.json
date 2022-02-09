@@ -2,7 +2,7 @@
     "name": "dongyao8/dycms",
     "type": "project",
     "description": "内容导航平台，人人都是生活的导航者！",
-    "keywords": ["dycms", "dongyao"],
+    "keywords": ["dycms", "clark"],
     "license": "Apache-2.0",
     "require": {
         "php": "^8.0",

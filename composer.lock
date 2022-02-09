@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65e85f9f959c0b087110331754d451cf",
+    "content-hash": "1b285e7dc3da89979448a55ade309bf3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -363,6 +363,47 @@
                 }
             ],
             "time": "2022-01-12T08:27:12+00:00"
+        },
+        {
+            "name": "dongyao8/commuse",
+            "version": "v0.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dongyao8/commuse.git",
+                "reference": "382d07c0ef83487c509919e93ae651c4c18462c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dongyao8/commuse/zipball/382d07c0ef83487c509919e93ae651c4c18462c5",
+                "reference": "382d07c0ef83487c509919e93ae651c4c18462c5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dongyao8\\Commuse\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MACBOOK",
+                    "email": "243512842@qq.com"
+                }
+            ],
+            "description": "开发常用组件类库",
+            "homepage": "http://www.dongyao.ren",
+            "support": {
+                "issues": "https://github.com/dongyao8/commuse/issues",
+                "source": "https://github.com/dongyao8/commuse/tree/v0.0.6"
+            },
+            "time": "2021-11-04T05:16:19+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",

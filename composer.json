@@ -1,11 +1,12 @@
 {
-    "name": "laravel/laravel",
+    "name": "dongyao8/dycms",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
+    "description": "内容导航平台，人人都是生活的导航者！",
+    "keywords": ["dycms", "dongyao"],
+    "license": "Apache-2.0",
     "require": {
         "php": "^8.0",
+        "dongyao8/commuse": "^0.0.6",
         "fruitcake/laravel-cors": "^2.0.5",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.0",

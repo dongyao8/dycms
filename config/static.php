@@ -9,6 +9,6 @@ return [
     |
     */
 
-    'path' => url('static').'/'.env('TEMPLATE_NAME', 'dycms').'/',
+    'path' => resource_path('static').'/'.env('TEMPLATE_NAME', 'dycms').'/',
 
 ];

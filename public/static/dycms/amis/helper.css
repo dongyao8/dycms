@@ -33847,6 +33847,214 @@ title: Box Shadow
 /*!markdown
 
 ---
+title: Opacity
+---
+
+| Class       | Properties               |
+| ----------- | ------------------------ |
+| opacity-0 | opacity: 0 |
+| opacity-5 | opacity: 0.05 |
+| opacity-10 | opacity: 0.1 |
+| opacity-20 | opacity: 0.2 |
+| opacity-25 | opacity: 0.25 |
+| opacity-30 | opacity: 0.3 |
+| opacity-40 | opacity: 0.4 |
+| opacity-50 | opacity: 0.5 |
+| opacity-60 | opacity: 0.6 |
+| opacity-70 | opacity: 0.7 |
+| opacity-75 | opacity: 0.75 |
+| opacity-80 | opacity: 0.8 |
+| opacity-90 | opacity: 0.9 |
+| opacity-95 | opacity: 0.95 |
+| opacity-100 | opacity: 1 |
+
+
+*/
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-5 {
+  opacity: 0.05;
+}
+
+.opacity-10 {
+  opacity: 0.1;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.opacity-95 {
+  opacity: 0.95;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .m\:opacity-0 {
+    opacity: 0;
+  }
+
+  .m\:opacity-5 {
+    opacity: 0.05;
+  }
+
+  .m\:opacity-10 {
+    opacity: 0.1;
+  }
+
+  .m\:opacity-20 {
+    opacity: 0.2;
+  }
+
+  .m\:opacity-25 {
+    opacity: 0.25;
+  }
+
+  .m\:opacity-30 {
+    opacity: 0.3;
+  }
+
+  .m\:opacity-40 {
+    opacity: 0.4;
+  }
+
+  .m\:opacity-50 {
+    opacity: 0.5;
+  }
+
+  .m\:opacity-60 {
+    opacity: 0.6;
+  }
+
+  .m\:opacity-70 {
+    opacity: 0.7;
+  }
+
+  .m\:opacity-75 {
+    opacity: 0.75;
+  }
+
+  .m\:opacity-80 {
+    opacity: 0.8;
+  }
+
+  .m\:opacity-90 {
+    opacity: 0.9;
+  }
+
+  .m\:opacity-95 {
+    opacity: 0.95;
+  }
+
+  .m\:opacity-100 {
+    opacity: 1;
+  }
+}
+@media (min-width: 769px) {
+  .pc\:opacity-0 {
+    opacity: 0;
+  }
+
+  .pc\:opacity-5 {
+    opacity: 0.05;
+  }
+
+  .pc\:opacity-10 {
+    opacity: 0.1;
+  }
+
+  .pc\:opacity-20 {
+    opacity: 0.2;
+  }
+
+  .pc\:opacity-25 {
+    opacity: 0.25;
+  }
+
+  .pc\:opacity-30 {
+    opacity: 0.3;
+  }
+
+  .pc\:opacity-40 {
+    opacity: 0.4;
+  }
+
+  .pc\:opacity-50 {
+    opacity: 0.5;
+  }
+
+  .pc\:opacity-60 {
+    opacity: 0.6;
+  }
+
+  .pc\:opacity-70 {
+    opacity: 0.7;
+  }
+
+  .pc\:opacity-75 {
+    opacity: 0.75;
+  }
+
+  .pc\:opacity-80 {
+    opacity: 0.8;
+  }
+
+  .pc\:opacity-90 {
+    opacity: 0.9;
+  }
+
+  .pc\:opacity-95 {
+    opacity: 0.95;
+  }
+
+  .pc\:opacity-100 {
+    opacity: 1;
+  }
+}
+/*!markdown
+
+---
 title: Margin
 ---
 

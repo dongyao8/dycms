@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Events\Login;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,7 +21,6 @@ class LoginController extends Controller
 
     public function checklogin(Request $request){
         error_reporting(0);
-
         // 初始化
         // 接收数据
         $input = $request->only(['username', 'password']);
@@ -33,13 +31,12 @@ class LoginController extends Controller
         if(!ctype_alnum($input['password'])){
             return ['status' => 100, 'msg' => '密码格式错误', 'data' => ''];
         }
+        //TODO 登录日志记录
         // 验证密码准确性
         if (Auth::guard('admin')->attempt($input)) {
-            Login::dispatch($input,true,Auth::guard('admin')->id());
             session(['aid' => Auth::guard('admin')->id()]);
             return ['status' => 0, 'msg' => 'success', 'data' => ''];
         }else{
-            Login::dispatch($input,false,0);
             return ['status' => 100, 'msg' => '验证失败', 'data' => ''];
         }
     }

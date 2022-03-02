@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //定义全局视图资源路径
+        View()->share('dycms_static',  asset('static').'/'.env('TEMPLATE_NAME', 'dycms').'/');
     }
 }

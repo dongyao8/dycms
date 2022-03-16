@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::fallback(function (){
+    return view('default.404');
+});
 
 /**
  * 后台暴露路由

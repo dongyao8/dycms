@@ -49,7 +49,7 @@ class RouteServiceProvider extends ServiceProvider
 
             // 后台路由
             Route::prefix(env('ADMIN_PREFIX', 'admin'))
-                ->middleware('web', 'auth:admin')
+                ->middleware('web', 'checkadmin')
                 ->name('admin.')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/admin.php'));

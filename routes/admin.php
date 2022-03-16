@@ -6,7 +6,7 @@ use App\Http\Controllers\Common\MenuController;
 use Illuminate\Http\Request;
 
 /**
- * 主页面通用路由
+ * 入口页面路由
  */
 Route::get('main/{page}', function (Request $request) {
 //主页面自动路由
@@ -14,7 +14,7 @@ Route::get('main/{page}', function (Request $request) {
     $main = new $main;
     return $main->index($request);
 })->name('home');
-
+//页面body体万能路由
 Route::get('body/{controller}/{action}', function ($controller, $action) {
 //页面结构自动路由
     $class = "\\App\\Http\\Controllers\\Admin\\" . ucfirst(strtolower($controller)) . 'Controller';

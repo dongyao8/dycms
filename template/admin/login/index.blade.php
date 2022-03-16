@@ -60,12 +60,12 @@
                 "body": [{
                     "label": "用户名",
                     "type": "input-text",
-                    "name": "username",
+                    "name": "name",
                     "required": true,
                     "placeholder": "请输入您的用户名",
-                    "validations": {
-                        "isPhoneNumber": true
-                    }
+                    // "validations": {
+                    //     "isPhoneNumber": true
+                    // }
                 },
                     {
                         "type": "input-password",

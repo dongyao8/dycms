@@ -23,8 +23,8 @@ class LoginController extends Controller
         error_reporting(0);
         // 初始化
         // 接收数据
-        $input = $request->only(['username', 'password']);
-        if($input['username'] == "" || $input['password']==""){
+        $input = $request->only(['name', 'password']);
+        if($input['name'] == "" || $input['password']==""){
             return ['status' => 100, 'msg' => '有选项未填写完整，请检查', 'data' => ''];
         }
         // 验证密码

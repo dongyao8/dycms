@@ -25,19 +25,19 @@ class LoginController extends Controller
         // 接收数据
         $input = $request->only(['name', 'password']);
         if($input['name'] == "" || $input['password']==""){
-            return ['status' => 100, 'msg' => '有选项未填写完整，请检查', 'data' => ''];
+            return $this->apiReturn(100,'有选项未填写完整，请检查','');
         }
         // 验证密码
         if(!ctype_alnum($input['password'])){
-            return ['status' => 100, 'msg' => '密码格式错误', 'data' => ''];
+            return $this->apiReturn(100,'密码格式错误','');
         }
         //TODO 登录日志记录
         // 验证密码准确性
         if (Auth::guard('admin')->attempt($input)) {
             session(['aid' => Auth::guard('admin')->id()]);
-            return ['status' => 0, 'msg' => 'success', 'data' => ''];
+            return $this->apiReturn(0);
         }else{
-            return ['status' => 100, 'msg' => '验证失败', 'data' => ''];
+            return $this->apiReturn(100,'验证失败，请检查');
         }
     }
 }

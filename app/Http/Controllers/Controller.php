@@ -11,10 +11,18 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    //API接口返回格式化
-    public function apiReturn($code=0,$msg='success',$data=[]){
+    /**
+     * API接口返回格式化
+     *
+     * @param $status int 状态码
+     * @param $msg string 描述说明
+     * @param $data array 接口返回数据
+     * @param $state string 状态字段说明，部分接口需求状态码字段为status,有的又是code
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function apiReturn($status=0,$msg='success',$data=[],$state='status'){
         return response()->json([
-            'code' => $code,
+            $state => $status,
             'msg' => $msg,
             'data' => $data
         ]);

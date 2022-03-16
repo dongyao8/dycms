@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test',[\App\Http\Controllers\TestController::class,'test']); //测试调试
+
 Route::fallback(function (){
     return view('default.404');
 });

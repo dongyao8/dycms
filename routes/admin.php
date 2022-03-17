@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Common\MenuController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * 入口页面路由
@@ -25,6 +26,11 @@ Route::get('body/{controller}/{action}', function ($controller, $action) {
 
 Route::get('system', [Admin\SystemController::class, 'index'])->name('system'); //管理
 Route::get('menu', [MenuController::class, 'index'])->name('menu'); //后台主菜单JSON数据
+//退出登录
+Route::get('gout',function (){
+    Auth::guard('admin')->logout();
+    return redirect(route('admin.gout'));
+})->name('gout'); //后台主菜单JSON数据
 
 /**
  * 自定义路由路径

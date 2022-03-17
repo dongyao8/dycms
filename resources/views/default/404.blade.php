@@ -12,7 +12,7 @@
 <body>
 <div class="h-screen w-screen bg-gray-100 flex items-center">
     <div class="container flex flex-col md:flex-row items-center justify-center px-5 text-gray-700">
-        <div class="max-w-md">
+        <div class="max-w-md -mt-72">
             <h1 class="text-9xl font-dark font-bold">404</h1>
             <p class="text-2xl md:text-3xl font-light leading-normal">当前访问的页面不存在！</p>
             <p class="mb-8">请返回首页，或者关闭窗口！</p>

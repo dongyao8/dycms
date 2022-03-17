@@ -10,6 +10,10 @@ class LoginController extends Controller
 {
     //后台登录页面
     public function index(){
+        //如果已经登录，直接跳转后台首页
+        if(Auth::guard('admin')->check()){
+            return redirect(route('admin.home',['home']));
+        }
         //获取返回json，并解析成数组
         $data = json_decode(file_get_contents("https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1"),true);
         //构建返回的图片信息

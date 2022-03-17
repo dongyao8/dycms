@@ -49,6 +49,13 @@ class MenuController extends Controller
                 unset($val['updated_at']);
                 unset($val['created_at']);
                 $val['url'] = $rootpath.'main/'.$val['url'];
+                //外部跳转链接
+                if($val['islink']){
+                    unset($val['schemaApi']);
+                    unset($val['url']);
+                    $val['blank'] = false;
+                    $val['link'] = route('admin.login');
+                }
                 $data[] = $val;
             }
         }

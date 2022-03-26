@@ -16,7 +16,7 @@
             $body[] = [
                 'type' => "form",
                 'title' => '修改密码',
-                'api' => route('admin.handdle.safe.upmm'),
+                'api' => url('/admin/handdle/mima/upmm'),
                 'body' => array(
                     [
                         'type' => 'input-password',

@@ -41,7 +41,7 @@ class MenuController extends Controller
                 $val['level']=$level;
                 unset($menus_main[$key]);
                 $val[$sub]=$this->getMenu($menus_main,$val['id'],$sub,$level+1,$rootpath);
-                $val['schemaApi'] = $rootpath.'body/'.$val['bodyroute'];
+                $val['schemaApi'] = $rootpath.'handdle/'.$val['url'].'/body';
                 if($val['ismenu'] == 1){
                     unset($val['schemaApi']);
                     unset($val['parent_id']);

@@ -6,7 +6,7 @@
     <title>{{env('APP_NAME')}} - 后台管理</title>
     <meta name="author" content="David Grzyb">
     <meta name="description" content="">
-    <link rel="stylesheet" href="{{$dycms_static}}amis/{{env('ADMIN_THEME', 'sdk')}}.css" />
+    <link rel="stylesheet" href="{{$dycms_static}}amis/{{env('ADMIN_THEME', 'sdk')}}.css"/>
     <!-- Tailwind -->
     <link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.0.3/tailwind.min.css" rel="stylesheet">
     <style>
@@ -32,7 +32,10 @@
             <div id="loginform" class="app-wrapper"></div>
 
             <div class="text-center pt-12 pb-12">
-                <p class="text-gray-500">Copyright © 2019-{{date('Y')}}<a target="_blank" href="https://www.dongyao.ren/" class="underline font-semibold"> Clark</a>. All rights reserved.</p>
+                <p class="text-gray-500">Copyright © 2019-{{date('Y')}}<a target="_blank"
+                                                                          href="https://www.dongyao.ren/"
+                                                                          class="underline font-semibold"> Clark</a>.
+                    All rights reserved.</p>
             </div>
         </div>
 
@@ -45,10 +48,9 @@
 </div>
 
 
-
 <script src="{{$dycms_static}}/amis/sdk.js"></script>
 <script type="text/javascript">
-    (function() {
+    (function () {
         let amis = amisRequire('amis/embed');
         // 通过替换下面这个配置来生成不同页面
         let amisJSON = {

@@ -1,5 +1,5 @@
 /*!
- * Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2022 Fonticons, Inc.
  */
@@ -715,6 +715,22 @@ readers do not read off random characters that represent icons */
   content: "\f13d";
 }
 
+.fa-anchor-circle-check::before {
+  content: "\e4aa";
+}
+
+.fa-anchor-circle-exclamation::before {
+  content: "\e4ab";
+}
+
+.fa-anchor-circle-xmark::before {
+  content: "\e4ac";
+}
+
+.fa-anchor-lock::before {
+  content: "\e4ad";
+}
+
 .fa-angle-down::before {
   content: "\f107";
 }
@@ -839,6 +855,14 @@ readers do not read off random characters that represent icons */
   content: "\f884";
 }
 
+.fa-arrow-down-up-across-line::before {
+  content: "\e4af";
+}
+
+.fa-arrow-down-up-lock::before {
+  content: "\e4b0";
+}
+
 .fa-arrow-down-wide-short::before {
   content: "\f160";
 }
@@ -917,6 +941,10 @@ readers do not read off random characters that represent icons */
 
 .fa-sign-in::before {
   content: "\f090";
+}
+
+.fa-arrow-right-to-city::before {
+  content: "\e4b3";
 }
 
 .fa-arrow-rotate-left::before {
@@ -1011,12 +1039,24 @@ readers do not read off random characters that represent icons */
   content: "\e09a";
 }
 
+.fa-arrow-up-from-ground-water::before {
+  content: "\e4b5";
+}
+
+.fa-arrow-up-from-water-pump::before {
+  content: "\e4b6";
+}
+
 .fa-arrow-up-long::before {
   content: "\f176";
 }
 
 .fa-long-arrow-up::before {
   content: "\f176";
+}
+
+.fa-arrow-up-right-dots::before {
+  content: "\e4b7";
 }
 
 .fa-arrow-up-right-from-square::before {
@@ -1051,12 +1091,24 @@ readers do not read off random characters that represent icons */
   content: "\f882";
 }
 
+.fa-arrows-down-to-line::before {
+  content: "\e4b8";
+}
+
+.fa-arrows-down-to-people::before {
+  content: "\e4b9";
+}
+
 .fa-arrows-left-right::before {
   content: "\f07e";
 }
 
 .fa-arrows-h::before {
   content: "\f07e";
+}
+
+.fa-arrows-left-right-to-line::before {
+  content: "\e4ba";
 }
 
 .fa-arrows-rotate::before {
@@ -1069,6 +1121,34 @@ readers do not read off random characters that represent icons */
 
 .fa-sync::before {
   content: "\f021";
+}
+
+.fa-arrows-spin::before {
+  content: "\e4bb";
+}
+
+.fa-arrows-split-up-and-left::before {
+  content: "\e4bc";
+}
+
+.fa-arrows-to-circle::before {
+  content: "\e4bd";
+}
+
+.fa-arrows-to-dot::before {
+  content: "\e4be";
+}
+
+.fa-arrows-to-eye::before {
+  content: "\e4bf";
+}
+
+.fa-arrows-turn-right::before {
+  content: "\e4c0";
+}
+
+.fa-arrows-turn-to-dots::before {
+  content: "\e4c1";
 }
 
 .fa-arrows-up-down::before {
@@ -1085,6 +1165,10 @@ readers do not read off random characters that represent icons */
 
 .fa-arrows::before {
   content: "\f047";
+}
+
+.fa-arrows-up-to-line::before {
+  content: "\e4c2";
 }
 
 .fa-asterisk::before {
@@ -1427,6 +1511,10 @@ readers do not read off random characters that represent icons */
   content: "\f647";
 }
 
+.fa-book-bookmark::before {
+  content: "\e0bb";
+}
+
 .fa-book-journal-whills::before {
   content: "\f66a";
 }
@@ -1487,6 +1575,26 @@ readers do not read off random characters that represent icons */
   content: "\f853";
 }
 
+.fa-bore-hole::before {
+  content: "\e4c3";
+}
+
+.fa-bottle-droplet::before {
+  content: "\e4c4";
+}
+
+.fa-bottle-water::before {
+  content: "\e4c5";
+}
+
+.fa-bowl-food::before {
+  content: "\e4c6";
+}
+
+.fa-bowl-rice::before {
+  content: "\e2eb";
+}
+
 .fa-bowling-ball::before {
   content: "\f436";
 }
@@ -1509,6 +1617,10 @@ readers do not read off random characters that represent icons */
 
 .fa-box-tissue::before {
   content: "\e05b";
+}
+
+.fa-boxes-packing::before {
+  content: "\e4c7";
 }
 
 .fa-boxes-stacked::before {
@@ -1539,6 +1651,30 @@ readers do not read off random characters that represent icons */
   content: "\f7ec";
 }
 
+.fa-bridge::before {
+  content: "\e4c8";
+}
+
+.fa-bridge-circle-check::before {
+  content: "\e4c9";
+}
+
+.fa-bridge-circle-exclamation::before {
+  content: "\e4ca";
+}
+
+.fa-bridge-circle-xmark::before {
+  content: "\e4cb";
+}
+
+.fa-bridge-lock::before {
+  content: "\e4cc";
+}
+
+.fa-bridge-water::before {
+  content: "\e4ce";
+}
+
 .fa-briefcase::before {
   content: "\f0b1";
 }
@@ -1567,6 +1703,10 @@ readers do not read off random characters that represent icons */
   content: "\f55d";
 }
 
+.fa-bucket::before {
+  content: "\e4cf";
+}
+
 .fa-bug::before {
   content: "\f188";
 }
@@ -1575,8 +1715,28 @@ readers do not read off random characters that represent icons */
   content: "\e490";
 }
 
+.fa-bugs::before {
+  content: "\e4d0";
+}
+
 .fa-building::before {
   content: "\f1ad";
+}
+
+.fa-building-circle-arrow-right::before {
+  content: "\e4d1";
+}
+
+.fa-building-circle-check::before {
+  content: "\e4d2";
+}
+
+.fa-building-circle-exclamation::before {
+  content: "\e4d3";
+}
+
+.fa-building-circle-xmark::before {
+  content: "\e4d4";
 }
 
 .fa-building-columns::before {
@@ -1599,6 +1759,34 @@ readers do not read off random characters that represent icons */
   content: "\f19c";
 }
 
+.fa-building-flag::before {
+  content: "\e4d5";
+}
+
+.fa-building-lock::before {
+  content: "\e4d6";
+}
+
+.fa-building-ngo::before {
+  content: "\e4d7";
+}
+
+.fa-building-shield::before {
+  content: "\e4d8";
+}
+
+.fa-building-un::before {
+  content: "\e4d9";
+}
+
+.fa-building-user::before {
+  content: "\e4da";
+}
+
+.fa-building-wheat::before {
+  content: "\e4db";
+}
+
 .fa-bullhorn::before {
   content: "\f0a1";
 }
@@ -1613,6 +1801,10 @@ readers do not read off random characters that represent icons */
 
 .fa-hamburger::before {
   content: "\f805";
+}
+
+.fa-burst::before {
+  content: "\e4dc";
 }
 
 .fa-bus::before {
@@ -1743,8 +1935,16 @@ readers do not read off random characters that represent icons */
   content: "\f5df";
 }
 
+.fa-car-burst::before {
+  content: "\f5e1";
+}
+
 .fa-car-crash::before {
   content: "\f5e1";
+}
+
+.fa-car-on::before {
+  content: "\e4dd";
 }
 
 .fa-car-rear::before {
@@ -1757,6 +1957,10 @@ readers do not read off random characters that represent icons */
 
 .fa-car-side::before {
   content: "\f5e4";
+}
+
+.fa-car-tunnel::before {
+  content: "\e4de";
 }
 
 .fa-caravan::before {
@@ -1907,6 +2111,10 @@ readers do not read off random characters that represent icons */
   content: "\f200";
 }
 
+.fa-chart-simple::before {
+  content: "\e473";
+}
+
 .fa-check::before {
   content: "\f00c";
 }
@@ -1977,6 +2185,22 @@ readers do not read off random characters that represent icons */
 
 .fa-child::before {
   content: "\f1ae";
+}
+
+.fa-child-dress::before {
+  content: "\e59c";
+}
+
+.fa-child-reaching::before {
+  content: "\e59d";
+}
+
+.fa-child-rifle::before {
+  content: "\e4e0";
+}
+
+.fa-children::before {
+  content: "\e4e1";
 }
 
 .fa-church::before {
@@ -2131,6 +2355,10 @@ readers do not read off random characters that represent icons */
   content: "\f056";
 }
 
+.fa-circle-nodes::before {
+  content: "\e4e2";
+}
+
 .fa-circle-notch::before {
   content: "\f1ce";
 }
@@ -2239,6 +2467,14 @@ readers do not read off random characters that represent icons */
   content: "\f46d";
 }
 
+.fa-clipboard-question::before {
+  content: "\e4e3";
+}
+
+.fa-clipboard-user::before {
+  content: "\f7f3";
+}
+
 .fa-clock::before {
   content: "\f017";
 }
@@ -2291,6 +2527,14 @@ readers do not read off random characters that represent icons */
   content: "\f0ee";
 }
 
+.fa-cloud-bolt::before {
+  content: "\f76c";
+}
+
+.fa-thunderstorm::before {
+  content: "\f76c";
+}
+
 .fa-cloud-meatball::before {
   content: "\f73b";
 }
@@ -2309,6 +2553,10 @@ readers do not read off random characters that represent icons */
 
 .fa-cloud-showers-heavy::before {
   content: "\f740";
+}
+
+.fa-cloud-showers-water::before {
+  content: "\e4e4";
 }
 
 .fa-cloud-sun::before {
@@ -2419,6 +2667,10 @@ readers do not read off random characters that represent icons */
   content: "\f066";
 }
 
+.fa-computer::before {
+  content: "\e4e5";
+}
+
 .fa-computer-mouse::before {
   content: "\f8cc";
 }
@@ -2445,6 +2697,10 @@ readers do not read off random characters that represent icons */
 
 .fa-couch::before {
   content: "\f4b8";
+}
+
+.fa-cow::before {
+  content: "\f6c8";
 }
 
 .fa-credit-card::before {
@@ -2497,6 +2753,10 @@ readers do not read off random characters that represent icons */
 
 .fa-cubes::before {
   content: "\f1b3";
+}
+
+.fa-cubes-stacked::before {
+  content: "\e4e6";
 }
 
 .fa-d::before {
@@ -2601,6 +2861,10 @@ readers do not read off random characters that represent icons */
 
 .fa-disease::before {
   content: "\f7fa";
+}
+
+.fa-display::before {
+  content: "\e163";
 }
 
 .fa-divide::before {
@@ -2831,6 +3095,10 @@ readers do not read off random characters that represent icons */
   content: "\f0e0";
 }
 
+.fa-envelope-circle-check::before {
+  content: "\e4e8";
+}
+
 .fa-envelope-open::before {
   content: "\f2b6";
 }
@@ -2877,6 +3145,10 @@ readers do not read off random characters that represent icons */
 
 .fa-expand::before {
   content: "\f065";
+}
+
+.fa-explosion::before {
+  content: "\e4e9";
 }
 
 .fa-eye::before {
@@ -3207,6 +3479,10 @@ readers do not read off random characters that represent icons */
   content: "\e005";
 }
 
+.fa-faucet-drip::before {
+  content: "\e006";
+}
+
 .fa-fax::before {
   content: "\f1ac";
 }
@@ -3221,6 +3497,10 @@ readers do not read off random characters that represent icons */
 
 .fa-feather-alt::before {
   content: "\f56b";
+}
+
+.fa-ferry::before {
+  content: "\e4ea";
 }
 
 .fa-file::before {
@@ -3245,6 +3525,30 @@ readers do not read off random characters that represent icons */
 
 .fa-file-audio::before {
   content: "\f1c7";
+}
+
+.fa-file-circle-check::before {
+  content: "\e493";
+}
+
+.fa-file-circle-exclamation::before {
+  content: "\e4eb";
+}
+
+.fa-file-circle-minus::before {
+  content: "\e4ed";
+}
+
+.fa-file-circle-plus::before {
+  content: "\e4ee";
+}
+
+.fa-file-circle-question::before {
+  content: "\e4ef";
+}
+
+.fa-file-circle-xmark::before {
+  content: "\e494";
 }
 
 .fa-file-code::before {
@@ -3311,12 +3615,24 @@ readers do not read off random characters that represent icons */
   content: "\f1c1";
 }
 
+.fa-file-pen::before {
+  content: "\f31c";
+}
+
+.fa-file-edit::before {
+  content: "\f31c";
+}
+
 .fa-file-powerpoint::before {
   content: "\f1c4";
 }
 
 .fa-file-prescription::before {
   content: "\f572";
+}
+
+.fa-file-shield::before {
+  content: "\e4f0";
 }
 
 .fa-file-signature::before {
@@ -3383,6 +3699,10 @@ readers do not read off random characters that represent icons */
   content: "\f06d";
 }
 
+.fa-fire-burner::before {
+  content: "\e4f1";
+}
+
 .fa-fire-extinguisher::before {
   content: "\f134";
 }
@@ -3407,6 +3727,10 @@ readers do not read off random characters that represent icons */
   content: "\f578";
 }
 
+.fa-fish-fins::before {
+  content: "\e4f2";
+}
+
 .fa-flag::before {
   content: "\f024";
 }
@@ -3423,6 +3747,10 @@ readers do not read off random characters that represent icons */
   content: "\f0c3";
 }
 
+.fa-flask-vial::before {
+  content: "\e4f3";
+}
+
 .fa-floppy-disk::before {
   content: "\f0c7";
 }
@@ -3437,6 +3765,14 @@ readers do not read off random characters that represent icons */
 
 .fa-folder::before {
   content: "\f07b";
+}
+
+.fa-folder-blank::before {
+  content: "\f07b";
+}
+
+.fa-folder-closed::before {
+  content: "\e185";
 }
 
 .fa-folder-minus::before {
@@ -3615,6 +3951,14 @@ readers do not read off random characters that represent icons */
   content: "\f79c";
 }
 
+.fa-glass-water::before {
+  content: "\e4f4";
+}
+
+.fa-glass-water-droplet::before {
+  content: "\e4f5";
+}
+
 .fa-glasses::before {
   content: "\f530";
 }
@@ -3669,6 +4013,10 @@ readers do not read off random characters that represent icons */
 
 .fa-grip-vertical::before {
   content: "\f58e";
+}
+
+.fa-group-arrows-rotate::before {
+  content: "\e4f6";
 }
 
 .fa-guarani-sign::before {
@@ -3747,6 +4095,10 @@ readers do not read off random characters that represent icons */
   content: "\f4c1";
 }
 
+.fa-hand-holding-hand::before {
+  content: "\e4f7";
+}
+
 .fa-hand-holding-heart::before {
   content: "\f4be";
 }
@@ -3799,6 +4151,10 @@ readers do not read off random characters that represent icons */
   content: "\f259";
 }
 
+.fa-handcuffs::before {
+  content: "\e4f8";
+}
+
 .fa-hands::before {
   content: "\f2a7";
 }
@@ -3827,6 +4183,10 @@ readers do not read off random characters that represent icons */
   content: "\f2a3";
 }
 
+.fa-hands-bound::before {
+  content: "\e4f9";
+}
+
 .fa-hands-bubbles::before {
   content: "\e05e";
 }
@@ -3841,6 +4201,14 @@ readers do not read off random characters that represent icons */
 
 .fa-hands-holding::before {
   content: "\f4c2";
+}
+
+.fa-hands-holding-child::before {
+  content: "\e4fa";
+}
+
+.fa-hands-holding-circle::before {
+  content: "\e4fb";
 }
 
 .fa-hands-praying::before {
@@ -3861,6 +4229,14 @@ readers do not read off random characters that represent icons */
 
 .fa-hands-helping::before {
   content: "\f4c4";
+}
+
+.fa-handshake-simple::before {
+  content: "\f4c6";
+}
+
+.fa-handshake-alt::before {
+  content: "\f4c6";
 }
 
 .fa-handshake-simple-slash::before {
@@ -3947,6 +4323,30 @@ readers do not read off random characters that represent icons */
   content: "\f004";
 }
 
+.fa-heart-circle-bolt::before {
+  content: "\e4fc";
+}
+
+.fa-heart-circle-check::before {
+  content: "\e4fd";
+}
+
+.fa-heart-circle-exclamation::before {
+  content: "\e4fe";
+}
+
+.fa-heart-circle-minus::before {
+  content: "\e4ff";
+}
+
+.fa-heart-circle-plus::before {
+  content: "\e500";
+}
+
+.fa-heart-circle-xmark::before {
+  content: "\e501";
+}
+
 .fa-heart-crack::before {
   content: "\f7a9";
 }
@@ -3967,6 +4367,10 @@ readers do not read off random characters that represent icons */
   content: "\f533";
 }
 
+.fa-helicopter-symbol::before {
+  content: "\e502";
+}
+
 .fa-helmet-safety::before {
   content: "\f807";
 }
@@ -3979,8 +4383,20 @@ readers do not read off random characters that represent icons */
   content: "\f807";
 }
 
+.fa-helmet-un::before {
+  content: "\e503";
+}
+
 .fa-highlighter::before {
   content: "\f591";
+}
+
+.fa-hill-avalanche::before {
+  content: "\e507";
+}
+
+.fa-hill-rockslide::before {
+  content: "\e508";
 }
 
 .fa-hippo::before {
@@ -4115,8 +4531,36 @@ readers do not read off random characters that represent icons */
   content: "\e00d";
 }
 
+.fa-house-circle-check::before {
+  content: "\e509";
+}
+
+.fa-house-circle-exclamation::before {
+  content: "\e50a";
+}
+
+.fa-house-circle-xmark::before {
+  content: "\e50b";
+}
+
 .fa-house-crack::before {
   content: "\e3b1";
+}
+
+.fa-house-fire::before {
+  content: "\e50c";
+}
+
+.fa-house-flag::before {
+  content: "\e50d";
+}
+
+.fa-house-flood-water::before {
+  content: "\e50e";
+}
+
+.fa-house-flood-water-circle-arrow-right::before {
+  content: "\e50f";
 }
 
 .fa-house-laptop::before {
@@ -4127,8 +4571,36 @@ readers do not read off random characters that represent icons */
   content: "\e066";
 }
 
+.fa-house-lock::before {
+  content: "\e510";
+}
+
 .fa-house-medical::before {
   content: "\e3b2";
+}
+
+.fa-house-medical-circle-check::before {
+  content: "\e511";
+}
+
+.fa-house-medical-circle-exclamation::before {
+  content: "\e512";
+}
+
+.fa-house-medical-circle-xmark::before {
+  content: "\e513";
+}
+
+.fa-house-medical-flag::before {
+  content: "\e514";
+}
+
+.fa-house-signal::before {
+  content: "\e012";
+}
+
+.fa-house-tsunami::before {
+  content: "\e515";
 }
 
 .fa-house-user::before {
@@ -4145,6 +4617,10 @@ readers do not read off random characters that represent icons */
 
 .fa-hryvnia::before {
   content: "\f6f2";
+}
+
+.fa-hurricane::before {
+  content: "\f751";
 }
 
 .fa-i::before {
@@ -4251,6 +4727,14 @@ readers do not read off random characters that represent icons */
   content: "\4a";
 }
 
+.fa-jar::before {
+  content: "\e516";
+}
+
+.fa-jar-wheat::before {
+  content: "\e517";
+}
+
 .fa-jedi::before {
   content: "\f669";
 }
@@ -4263,8 +4747,16 @@ readers do not read off random characters that represent icons */
   content: "\f0fb";
 }
 
+.fa-jet-fighter-up::before {
+  content: "\e518";
+}
+
 .fa-joint::before {
   content: "\f595";
+}
+
+.fa-jug-detergent::before {
+  content: "\e519";
 }
 
 .fa-k::before {
@@ -4299,6 +4791,10 @@ readers do not read off random characters that represent icons */
   content: "\f479";
 }
 
+.fa-kitchen-set::before {
+  content: "\e51a";
+}
+
 .fa-kiwi-bird::before {
   content: "\f535";
 }
@@ -4307,8 +4803,24 @@ readers do not read off random characters that represent icons */
   content: "\4c";
 }
 
+.fa-land-mine-on::before {
+  content: "\e51b";
+}
+
 .fa-landmark::before {
   content: "\f66f";
+}
+
+.fa-landmark-dome::before {
+  content: "\f752";
+}
+
+.fa-landmark-alt::before {
+  content: "\f752";
+}
+
+.fa-landmark-flag::before {
+  content: "\e51c";
 }
 
 .fa-language::before {
@@ -4321,6 +4833,10 @@ readers do not read off random characters that represent icons */
 
 .fa-laptop-code::before {
   content: "\f5fc";
+}
+
+.fa-laptop-file::before {
+  content: "\e51d";
 }
 
 .fa-laptop-medical::before {
@@ -4373,6 +4889,10 @@ readers do not read off random characters that represent icons */
 
 .fa-lightbulb::before {
   content: "\f0eb";
+}
+
+.fa-lines-leaning::before {
+  content: "\e51e";
 }
 
 .fa-link::before {
@@ -4471,12 +4991,20 @@ readers do not read off random characters that represent icons */
   content: "\f041";
 }
 
+.fa-location-pin-lock::before {
+  content: "\e51f";
+}
+
 .fa-lock::before {
   content: "\f023";
 }
 
 .fa-lock-open::before {
   content: "\f3c1";
+}
+
+.fa-locust::before {
+  content: "\e520";
 }
 
 .fa-lungs::before {
@@ -4501,6 +5029,14 @@ readers do not read off random characters that represent icons */
 
 .fa-search::before {
   content: "\f002";
+}
+
+.fa-magnifying-glass-arrow-right::before {
+  content: "\e521";
+}
+
+.fa-magnifying-glass-chart::before {
+  content: "\e522";
 }
 
 .fa-magnifying-glass-dollar::before {
@@ -4575,6 +5111,10 @@ readers do not read off random characters that represent icons */
   content: "\f224";
 }
 
+.fa-mars-and-venus-burst::before {
+  content: "\e523";
+}
+
 .fa-mars-double::before {
   content: "\f227";
 }
@@ -4631,12 +5171,20 @@ readers do not read off random characters that represent icons */
   content: "\e1d7";
 }
 
+.fa-mask-ventilator::before {
+  content: "\e524";
+}
+
 .fa-masks-theater::before {
   content: "\f630";
 }
 
 .fa-theater-masks::before {
   content: "\f630";
+}
+
+.fa-mattress-pillow::before {
+  content: "\e525";
 }
 
 .fa-maximize::before {
@@ -4747,6 +5295,18 @@ readers do not read off random characters that represent icons */
   content: "\f10b";
 }
 
+.fa-mobile-retro::before {
+  content: "\e527";
+}
+
+.fa-mobile-screen::before {
+  content: "\f3cf";
+}
+
+.fa-mobile-android-alt::before {
+  content: "\f3cf";
+}
+
 .fa-mobile-screen-button::before {
   content: "\f3cd";
 }
@@ -4775,8 +5335,24 @@ readers do not read off random characters that represent icons */
   content: "\f53b";
 }
 
+.fa-money-bill-transfer::before {
+  content: "\e528";
+}
+
+.fa-money-bill-trend-up::before {
+  content: "\e529";
+}
+
 .fa-money-bill-wave::before {
   content: "\f53a";
+}
+
+.fa-money-bill-wheat::before {
+  content: "\e52a";
+}
+
+.fa-money-bills::before {
+  content: "\e1f3";
 }
 
 .fa-money-check::before {
@@ -4807,12 +5383,32 @@ readers do not read off random characters that represent icons */
   content: "\f678";
 }
 
+.fa-mosquito::before {
+  content: "\e52b";
+}
+
+.fa-mosquito-net::before {
+  content: "\e52c";
+}
+
 .fa-motorcycle::before {
   content: "\f21c";
 }
 
+.fa-mound::before {
+  content: "\e52d";
+}
+
 .fa-mountain::before {
   content: "\f6fc";
+}
+
+.fa-mountain-city::before {
+  content: "\e52e";
+}
+
+.fa-mountain-sun::before {
+  content: "\e52f";
 }
 
 .fa-mug-hot::before {
@@ -4881,6 +5477,10 @@ readers do not read off random characters that represent icons */
 
 .fa-oil-can::before {
   content: "\f613";
+}
+
+.fa-oil-well::before {
+  content: "\e532";
 }
 
 .fa-om::before {
@@ -5031,6 +5631,26 @@ readers do not read off random characters that represent icons */
   content: "\f4ce";
 }
 
+.fa-people-group::before {
+  content: "\e533";
+}
+
+.fa-people-line::before {
+  content: "\e534";
+}
+
+.fa-people-pulling::before {
+  content: "\e535";
+}
+
+.fa-people-robbery::before {
+  content: "\e536";
+}
+
+.fa-people-roof::before {
+  content: "\e537";
+}
+
 .fa-pepper-hot::before {
   content: "\f816";
 }
@@ -5051,6 +5671,14 @@ readers do not read off random characters that represent icons */
   content: "\f183";
 }
 
+.fa-person-arrow-down-to-line::before {
+  content: "\e538";
+}
+
+.fa-person-arrow-up-from-line::before {
+  content: "\e539";
+}
+
 .fa-person-biking::before {
   content: "\f84a";
 }
@@ -5061,6 +5689,54 @@ readers do not read off random characters that represent icons */
 
 .fa-person-booth::before {
   content: "\f756";
+}
+
+.fa-person-breastfeeding::before {
+  content: "\e53a";
+}
+
+.fa-person-burst::before {
+  content: "\e53b";
+}
+
+.fa-person-cane::before {
+  content: "\e53c";
+}
+
+.fa-person-chalkboard::before {
+  content: "\e53d";
+}
+
+.fa-person-circle-check::before {
+  content: "\e53e";
+}
+
+.fa-person-circle-exclamation::before {
+  content: "\e53f";
+}
+
+.fa-person-circle-minus::before {
+  content: "\e540";
+}
+
+.fa-person-circle-plus::before {
+  content: "\e541";
+}
+
+.fa-person-circle-question::before {
+  content: "\e542";
+}
+
+.fa-person-circle-xmark::before {
+  content: "\e543";
+}
+
+.fa-person-digging::before {
+  content: "\f85e";
+}
+
+.fa-digging::before {
+  content: "\f85e";
 }
 
 .fa-person-dots-from-line::before {
@@ -5079,12 +5755,48 @@ readers do not read off random characters that represent icons */
   content: "\f182";
 }
 
+.fa-person-dress-burst::before {
+  content: "\e544";
+}
+
+.fa-person-drowning::before {
+  content: "\e545";
+}
+
+.fa-person-falling::before {
+  content: "\e546";
+}
+
+.fa-person-falling-burst::before {
+  content: "\e547";
+}
+
+.fa-person-half-dress::before {
+  content: "\e548";
+}
+
+.fa-person-harassing::before {
+  content: "\e549";
+}
+
 .fa-person-hiking::before {
   content: "\f6ec";
 }
 
 .fa-hiking::before {
   content: "\f6ec";
+}
+
+.fa-person-military-pointing::before {
+  content: "\e54a";
+}
+
+.fa-person-military-rifle::before {
+  content: "\e54b";
+}
+
+.fa-person-military-to-person::before {
+  content: "\e54c";
 }
 
 .fa-person-praying::before {
@@ -5095,12 +5807,28 @@ readers do not read off random characters that represent icons */
   content: "\f683";
 }
 
+.fa-person-pregnant::before {
+  content: "\e31e";
+}
+
+.fa-person-rays::before {
+  content: "\e54d";
+}
+
+.fa-person-rifle::before {
+  content: "\e54e";
+}
+
 .fa-person-running::before {
   content: "\f70c";
 }
 
 .fa-running::before {
   content: "\f70c";
+}
+
+.fa-person-shelter::before {
+  content: "\e54f";
 }
 
 .fa-person-skating::before {
@@ -5143,12 +5871,32 @@ readers do not read off random characters that represent icons */
   content: "\f5c4";
 }
 
+.fa-person-through-window::before {
+  content: "\e433";
+}
+
 .fa-person-walking::before {
   content: "\f554";
 }
 
 .fa-walking::before {
   content: "\f554";
+}
+
+.fa-person-walking-arrow-loop-left::before {
+  content: "\e551";
+}
+
+.fa-person-walking-arrow-right::before {
+  content: "\e552";
+}
+
+.fa-person-walking-dashed-line-arrow-right::before {
+  content: "\e553";
+}
+
+.fa-person-walking-luggage::before {
+  content: "\e554";
 }
 
 .fa-person-walking-with-cane::before {
@@ -5223,12 +5971,40 @@ readers do not read off random characters that represent icons */
   content: "\f5af";
 }
 
+.fa-plane-circle-check::before {
+  content: "\e555";
+}
+
+.fa-plane-circle-exclamation::before {
+  content: "\e556";
+}
+
+.fa-plane-circle-xmark::before {
+  content: "\e557";
+}
+
 .fa-plane-departure::before {
   content: "\f5b0";
 }
 
+.fa-plane-lock::before {
+  content: "\e558";
+}
+
 .fa-plane-slash::before {
   content: "\e069";
+}
+
+.fa-plane-up::before {
+  content: "\e22d";
+}
+
+.fa-plant-wilt::before {
+  content: "\e43b";
+}
+
+.fa-plate-wheat::before {
+  content: "\e55a";
 }
 
 .fa-play::before {
@@ -5237,6 +6013,30 @@ readers do not read off random characters that represent icons */
 
 .fa-plug::before {
   content: "\f1e6";
+}
+
+.fa-plug-circle-bolt::before {
+  content: "\e55b";
+}
+
+.fa-plug-circle-check::before {
+  content: "\e55c";
+}
+
+.fa-plug-circle-exclamation::before {
+  content: "\e55d";
+}
+
+.fa-plug-circle-minus::before {
+  content: "\e55e";
+}
+
+.fa-plug-circle-plus::before {
+  content: "\e55f";
+}
+
+.fa-plug-circle-xmark::before {
+  content: "\e560";
 }
 
 .fa-plus::before {
@@ -5343,8 +6143,16 @@ readers do not read off random characters that represent icons */
   content: "\f7b9";
 }
 
+.fa-radio::before {
+  content: "\f8d7";
+}
+
 .fa-rainbow::before {
   content: "\f75b";
+}
+
+.fa-ranking-star::before {
+  content: "\e561";
 }
 
 .fa-receipt::before {
@@ -5471,6 +6279,34 @@ readers do not read off random characters that represent icons */
   content: "\f018";
 }
 
+.fa-road-barrier::before {
+  content: "\e562";
+}
+
+.fa-road-bridge::before {
+  content: "\e563";
+}
+
+.fa-road-circle-check::before {
+  content: "\e564";
+}
+
+.fa-road-circle-exclamation::before {
+  content: "\e565";
+}
+
+.fa-road-circle-xmark::before {
+  content: "\e566";
+}
+
+.fa-road-lock::before {
+  content: "\e567";
+}
+
+.fa-road-spikes::before {
+  content: "\e568";
+}
+
 .fa-robot::before {
   content: "\f544";
 }
@@ -5543,6 +6379,10 @@ readers do not read off random characters that represent icons */
   content: "\f158";
 }
 
+.fa-rug::before {
+  content: "\e569";
+}
+
 .fa-ruler::before {
   content: "\f545";
 }
@@ -5573,6 +6413,14 @@ readers do not read off random characters that represent icons */
 
 .fa-s::before {
   content: "\53";
+}
+
+.fa-sack-dollar::before {
+  content: "\f81d";
+}
+
+.fa-sack-xmark::before {
+  content: "\e56a";
 }
 
 .fa-sailboat::before {
@@ -5613,6 +6461,26 @@ readers do not read off random characters that represent icons */
 
 .fa-school::before {
   content: "\f549";
+}
+
+.fa-school-circle-check::before {
+  content: "\e56b";
+}
+
+.fa-school-circle-exclamation::before {
+  content: "\e56c";
+}
+
+.fa-school-circle-xmark::before {
+  content: "\e56d";
+}
+
+.fa-school-flag::before {
+  content: "\e56e";
+}
+
+.fa-school-lock::before {
+  content: "\e56f";
 }
 
 .fa-scissors::before {
@@ -5703,6 +6571,10 @@ readers do not read off random characters that represent icons */
   content: "\f1e0";
 }
 
+.fa-sheet-plastic::before {
+  content: "\e571";
+}
+
 .fa-shekel-sign::before {
   content: "\f20b";
 }
@@ -5728,11 +6600,27 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-shield-blank::before {
+  content: "\f132";
+}
+
+.fa-shield-cat::before {
+  content: "\e572";
+}
+
+.fa-shield-dog::before {
+  content: "\e573";
+}
+
+.fa-shield-halved::before {
   content: "\f3ed";
 }
 
 .fa-shield-alt::before {
   content: "\f3ed";
+}
+
+.fa-shield-heart::before {
+  content: "\e574";
 }
 
 .fa-shield-virus::before {
@@ -5765,6 +6653,10 @@ readers do not read off random characters that represent icons */
 
 .fa-store-alt::before {
   content: "\f54f";
+}
+
+.fa-shop-lock::before {
+  content: "\e4a5";
 }
 
 .fa-shop-slash::before {
@@ -6051,6 +6943,10 @@ readers do not read off random characters that represent icons */
   content: "\f146";
 }
 
+.fa-square-nfi::before {
+  content: "\e576";
+}
+
 .fa-square-parking::before {
   content: "\f540";
 }
@@ -6069,6 +6965,10 @@ readers do not read off random characters that represent icons */
 
 .fa-pencil-square::before {
   content: "\f14b";
+}
+
+.fa-square-person-confined::before {
+  content: "\e577";
 }
 
 .fa-square-phone::before {
@@ -6143,6 +7043,10 @@ readers do not read off random characters that represent icons */
   content: "\f360";
 }
 
+.fa-square-virus::before {
+  content: "\e578";
+}
+
 .fa-square-xmark::before {
   content: "\f2d3";
 }
@@ -6153,6 +7057,22 @@ readers do not read off random characters that represent icons */
 
 .fa-xmark-square::before {
   content: "\f2d3";
+}
+
+.fa-staff-aesculapius::before {
+  content: "\e579";
+}
+
+.fa-rod-asclepius::before {
+  content: "\e579";
+}
+
+.fa-rod-snake::before {
+  content: "\e579";
+}
+
+.fa-staff-snake::before {
+  content: "\e579";
 }
 
 .fa-stairs::before {
@@ -6261,6 +7181,10 @@ readers do not read off random characters that represent icons */
 
 .fa-sun::before {
   content: "\f185";
+}
+
+.fa-sun-plant-wilt::before {
+  content: "\e57a";
 }
 
 .fa-superscript::before {
@@ -6375,6 +7299,14 @@ readers do not read off random characters that represent icons */
   content: "\f4db";
 }
 
+.fa-tarp::before {
+  content: "\e57b";
+}
+
+.fa-tarp-droplet::before {
+  content: "\e57c";
+}
+
 .fa-taxi::before {
   content: "\f1ba";
 }
@@ -6389,6 +7321,22 @@ readers do not read off random characters that represent icons */
 
 .fa-teeth-open::before {
   content: "\f62f";
+}
+
+.fa-temperature-arrow-down::before {
+  content: "\e03f";
+}
+
+.fa-temperature-down::before {
+  content: "\e03f";
+}
+
+.fa-temperature-arrow-up::before {
+  content: "\e040";
+}
+
+.fa-temperature-up::before {
+  content: "\e040";
 }
 
 .fa-temperature-empty::before {
@@ -6487,6 +7435,30 @@ readers do not read off random characters that represent icons */
   content: "\f7d7";
 }
 
+.fa-tent::before {
+  content: "\e57d";
+}
+
+.fa-tent-arrow-down-to-line::before {
+  content: "\e57e";
+}
+
+.fa-tent-arrow-left-right::before {
+  content: "\e57f";
+}
+
+.fa-tent-arrow-turn-left::before {
+  content: "\e580";
+}
+
+.fa-tent-arrows-down::before {
+  content: "\e581";
+}
+
+.fa-tents::before {
+  content: "\e582";
+}
+
 .fa-terminal::before {
   content: "\f120";
 }
@@ -6563,6 +7535,14 @@ readers do not read off random characters that represent icons */
   content: "\e072";
 }
 
+.fa-toilet-portable::before {
+  content: "\e583";
+}
+
+.fa-toilets-portable::before {
+  content: "\e584";
+}
+
 .fa-toolbox::before {
   content: "\f552";
 }
@@ -6575,12 +7555,24 @@ readers do not read off random characters that represent icons */
   content: "\f6a1";
 }
 
+.fa-tornado::before {
+  content: "\f76f";
+}
+
 .fa-tower-broadcast::before {
   content: "\f519";
 }
 
 .fa-broadcast-tower::before {
   content: "\f519";
+}
+
+.fa-tower-cell::before {
+  content: "\e585";
+}
+
+.fa-tower-observation::before {
+  content: "\e586";
 }
 
 .fa-tractor::before {
@@ -6659,6 +7651,10 @@ readers do not read off random characters that represent icons */
   content: "\f1bb";
 }
 
+.fa-tree-city::before {
+  content: "\e587";
+}
+
 .fa-triangle-exclamation::before {
   content: "\f071";
 }
@@ -6675,8 +7671,24 @@ readers do not read off random characters that represent icons */
   content: "\f091";
 }
 
+.fa-trowel::before {
+  content: "\e589";
+}
+
+.fa-trowel-bricks::before {
+  content: "\e58a";
+}
+
 .fa-truck::before {
   content: "\f0d1";
+}
+
+.fa-truck-arrow-right::before {
+  content: "\e58b";
+}
+
+.fa-truck-droplet::before {
+  content: "\e58c";
 }
 
 .fa-truck-fast::before {
@@ -6685,6 +7697,18 @@ readers do not read off random characters that represent icons */
 
 .fa-shipping-fast::before {
   content: "\f48b";
+}
+
+.fa-truck-field::before {
+  content: "\e58d";
+}
+
+.fa-truck-field-un::before {
+  content: "\e58e";
+}
+
+.fa-truck-front::before {
+  content: "\e2b7";
 }
 
 .fa-truck-medical::before {
@@ -6705,6 +7729,10 @@ readers do not read off random characters that represent icons */
 
 .fa-truck-pickup::before {
   content: "\f63c";
+}
+
+.fa-truck-plane::before {
+  content: "\e58f";
 }
 
 .fa-truck-ramp-box::before {
@@ -6963,6 +7991,10 @@ readers do not read off random characters that represent icons */
   content: "\f0c0";
 }
 
+.fa-users-between-lines::before {
+  content: "\e591";
+}
+
 .fa-users-gear::before {
   content: "\f509";
 }
@@ -6971,8 +8003,24 @@ readers do not read off random characters that represent icons */
   content: "\f509";
 }
 
+.fa-users-line::before {
+  content: "\e592";
+}
+
+.fa-users-rays::before {
+  content: "\e593";
+}
+
+.fa-users-rectangle::before {
+  content: "\e594";
+}
+
 .fa-users-slash::before {
   content: "\e073";
+}
+
+.fa-users-viewfinder::before {
+  content: "\e595";
 }
 
 .fa-utensils::before {
@@ -7027,6 +8075,14 @@ readers do not read off random characters that represent icons */
   content: "\f492";
 }
 
+.fa-vial-circle-check::before {
+  content: "\e596";
+}
+
+.fa-vial-virus::before {
+  content: "\e597";
+}
+
 .fa-vials::before {
   content: "\f493";
 }
@@ -7069,6 +8125,10 @@ readers do not read off random characters that represent icons */
 
 .fa-voicemail::before {
   content: "\f897";
+}
+
+.fa-volcano::before {
+  content: "\f770";
 }
 
 .fa-volleyball::before {
@@ -7117,6 +8177,10 @@ readers do not read off random characters that represent icons */
 
 .fa-w::before {
   content: "\57";
+}
+
+.fa-walkie-talkie::before {
+  content: "\f8ef";
 }
 
 .fa-wallet::before {
@@ -7179,8 +8243,28 @@ readers do not read off random characters that represent icons */
   content: "\f496";
 }
 
+.fa-wheat-awn::before {
+  content: "\e2cd";
+}
+
+.fa-wheat-alt::before {
+  content: "\e2cd";
+}
+
+.fa-wheat-awn-circle-exclamation::before {
+  content: "\e598";
+}
+
 .fa-wheelchair::before {
   content: "\f193";
+}
+
+.fa-wheelchair-move::before {
+  content: "\e2ce";
+}
+
+.fa-wheelchair-alt::before {
+  content: "\e2ce";
 }
 
 .fa-whiskey-glass::before {
@@ -7247,6 +8331,10 @@ readers do not read off random characters that represent icons */
   content: "\f159";
 }
 
+.fa-worm::before {
+  content: "\e599";
+}
+
 .fa-wrench::before {
   content: "\f0ad";
 }
@@ -7277,6 +8365,10 @@ readers do not read off random characters that represent icons */
 
 .fa-times::before {
   content: "\f00d";
+}
+
+.fa-xmarks-lines::before {
+  content: "\e59a";
 }
 
 .fa-y::before {
@@ -8448,6 +9540,14 @@ readers do not read off random characters that represent icons */
   content: "\f612";
 }
 
+.fa-nfc-directional:before {
+  content: "\e530";
+}
+
+.fa-nfc-symbol:before {
+  content: "\e531";
+}
+
 .fa-nimblr:before {
   content: "\f5a8";
 }
@@ -8718,6 +9818,10 @@ readers do not read off random characters that represent icons */
 
 .fa-schlix:before {
   content: "\f3ea";
+}
+
+.fa-screenpal:before {
+  content: "\e570";
 }
 
 .fa-scribd:before {
@@ -9314,7 +10418,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2022 Fonticons, Inc.
  */
@@ -12120,6 +13224,8 @@ readers do not read off random characters that represent icons */
   --borderRadiusLg: 0.428rem;
   --boxShadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   --boxShadowSm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --boxTooltipShadow: 0 4px 6px 1px rgb(8 14 26 / 6%),
+    0 1px 10px 0 rgb(8 14 26 / 5%), 0 2px 4px -1px rgb(8 14 26 / 4%);
   --lineHeightBase: 1.5;
   --body-lineHeight: var(--lineHeightBase);
   --borderWidth: 0.0625rem;
@@ -12392,19 +13498,18 @@ readers do not read off random characters that represent icons */
   --ButtonGroup--primary-isActive-color: var(--white);
   --ButtonGroup--primary-isActive-bg: var(--primary);
   --Breadcrumb-item-fontSize: var(--fontSizeMd);
-  --Breadcrumb-item-default-color: #83868C;
-  --Breadcrumb-item-hover-color: #2468F2;
-  --Breadcrumb-item-active-color: #1C53C1;
-  --Breadcrumb-item-last-color: #151A26;
-  --BreadcrumbDropdown-item-default-color: #151A26;
-  --BreadcrumbDropdown-item-default-bg: #FFFFFF;
-  --BreadcrumbDropdown-item-hover-bg: #E9F0FD;
+  --Breadcrumb-item-default-color: #83868c;
+  --Breadcrumb-item-hover-color: #2468f2;
+  --Breadcrumb-item-active-color: #1c53c1;
+  --Breadcrumb-item-last-color: #151a26;
+  --BreadcrumbDropdown-item-default-color: #151a26;
+  --BreadcrumbDropdown-item-default-bg: #ffffff;
+  --BreadcrumbDropdown-item-hover-bg: #e9f0fd;
   --BreadcrumbDropdown-item-fontSize: var(--fontSizeSm);
   --BreadcrumbDropdown-item-height: 2rem;
   --BreadcrumbDropdown-item-paddingX: var(--gap-sm);
   --BreadcrumbDropdown-item-paddingY: calc(
-    (var(--BreadcrumbDropdown-item-height) - var(--fontSizeSm)) /
-      2
+    (var(--BreadcrumbDropdown-item-height) - var(--fontSizeSm)) / 2
   );
   --Calendar-btn-bg: var(--info);
   --Calendar-btn-border: var(--Calendar-btn-bg);
@@ -12447,7 +13552,7 @@ readers do not read off random characters that represent icons */
   --Calendar-input-borderRadius: var(--borderRadius);
   --Calendar-input-color: var(--info);
   --Calendar-input-fontSize: var(--fontSizeBase);
-  --Calendar-input-height: 1.875rem;
+  --Calendar-input-height: 2.5rem;
   --Calendar-input-lineHeight: var(--lineHeightBase);
   --Calendar-input-onFocused-borderColor: var(--info);
   --Calendar-input-paddingX: 0.625rem;
@@ -12516,19 +13621,26 @@ readers do not read off random characters that represent icons */
   --Carousel-svg-height: var(--gap-lg);
   --Carousel-svg-width: var(--gap-lg);
   --Carousel-transitionDuration: var(--animation-duration);
-  --Checkbox--full-inner-size: 0.75rem;
-  --Checkbox--sm--full-inner-size: 0.625rem;
+  --Checkbox--full-inner-size: 0.5rem;
+  --Checkbox--sm--full-inner-size: 0.5rem;
   --Checkbox--sm-inner-size: calc(var(--Checkbox--sm-size) / 2);
   --Checkbox--sm-size: 1rem;
-  --Checkbox-borderRadius: var(--borderRadius);
+  --Checkbox-borderRadius: 0.125rem;
   --Checkbox-color: var(--Form-input-borderColor);
   --Checkbox-gap: var(--gap-xs);
   --Checkbox-gb: #fff;
-  --Checkbox-size: var(--Form-fontSize);
+  --Checkbox-size: 1rem;
   --Checkbox-inner-size: calc(var(--Checkbox-size) / 2);
   --Checkbox-onHover-color: var(--info);
   --Checkbox-onDisabled-bg: #e5e7eb;
   --Checkbox-onDisabled-color: var(--text--muted-color);
+  --Checkbox-inner-onDisabled-bg: #d4d6d9;
+  --Checkbox-disabled-unchecked-bg: #f2f3f3;
+  --Checkbox-border-width: var(--Form-input-borderWidth);
+  --Checkbox-paddingX: 0.75rem;
+  --Checkbox-button-height: 2rem;
+  --Checkbox-button-line-height: 1.75rem;
+  --Checkbox-button-min-width: 5rem;
   --ColorPicker-bg: var(--white);
   --ColorPicker-borderColor: var(--Form-input-borderColor);
   --ColorPicker-borderRadius: var(--Form-input-borderRadius);
@@ -12632,6 +13744,16 @@ readers do not read off random characters that represent icons */
       ) / 2 - var(--DatePicker-borderWidth)
   );
   --DatePicker-placeholderColor: var(--Form-input-placeholderColor);
+  --DatePicker-minWidth: calc(
+    var(--fontSizeLg) * 5 +var(--DatePicker-paddingX) * 2 + var(
+        --Form-input-clearBtn-size
+      ) * 2
+  );
+  --DateRangePicker-minWidth: calc(
+    var(--fontSizeLg) * 8 +var(--DatePicker-paddingX) * 2 + var(
+        --Form-input-clearBtn-size
+      ) * 2
+  );
   --LocationPicker-borderRadius: var(--Form-input-borderWidth);
   --Divider-borderStyle: solid;
   --Drawer-bg: var(--background);
@@ -12685,6 +13807,8 @@ readers do not read off random characters that represent icons */
   --Form--horizontal-label-widthMd: 10rem;
   --Form--horizontal-label-widthSm: 5.625rem;
   --Form--horizontal-label-widthXs: 3.75rem;
+  --Form--horizontal-justify-label-align: left;
+  --Form--horizontal-justify-value-align: right;
   --Form-control-widthBase: 12.5rem;
   --Form-control-widthLg: 20rem;
   --Form-control-widthMd: 15rem;
@@ -12858,7 +13982,7 @@ readers do not read off random characters that represent icons */
   --InputRange-padding: 1.25rem;
   --InputRange-onDisabled-color: var(--light);
   --InputRange-primaryColor: var(--primary);
-  --InputRange-track-height: 0.25rem;
+  --InputRange-track-height: 0.375rem;
   --InputRange-track-bg: #f3f4f6;
   --InputRange-track-onDisabled-bg: var(--InputRange-onDisabled-color);
   --InputRange-track-onActive-bg: var(--InputRange-primaryColor);
@@ -13053,6 +14177,8 @@ readers do not read off random characters that represent icons */
   --Nav-item-onHover-color: var(--text--loud-color);
   --Nav-subItem-fontSize: var(--fontSizeBase);
   --Nav-subItem-onActiveBeforeBg: #e5eaeb;
+  --Nav-Item-maxWidth--tabs: 10rem;
+  --Nav-Item-height: 2.5rem;
   --Number-bg: var(--Form-input-bg);
   --Number-borderColor: var(--Form-input-borderColor);
   --Number-borderRadius: var(--Form-input-borderRadius);
@@ -13184,14 +14310,15 @@ readers do not read off random characters that represent icons */
   --Satus-icon-height: var(--Satus-icon-width);
   --Sparkline-line-color: var(--info);
   --Sparkline-area-color: rgba(35, 183, 229, 0.1);
-  --Spinner--lg-height: 3.125rem;
-  --Spinner--lg-width: 3.125rem;
+  --Spinner--lg-height: 3rem;
+  --Spinner--lg-width: 3rem;
   --Spinner--sm-height: 1rem;
   --Spinner--sm-width: 1rem;
   --Spinner-bg: url("data:image/svg+xml,%0A%3Csvg width='38' height='38' viewBox='0 0 38 38' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient x1='8.042%25' y1='0%25' x2='65.682%25' y2='23.865%25' id='a'%3E%3Cstop stop-color='%23eee' stop-opacity='0' offset='0%25'/%3E%3Cstop stop-color='%23999' stop-opacity='.631' offset='63.146%25'/%3E%3Cstop stop-color='%23666' offset='100%25'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(1 1)'%3E%3Cpath d='M36 18c0-9.94-8.06-18-18-18' id='Oval-2' stroke='url(%23a)' stroke-width='2'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 18 18' to='360 18 18' dur='0.9s' repeatCount='indefinite' /%3E%3C/path%3E%3Ccircle fill='%23eee' cx='36' cy='18' r='1'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 18 18' to='360 18 18' dur='0.9s' repeatCount='indefinite' /%3E%3C/circle%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
-  --Spinner-height: 1.625rem;
+  --Spinner-height: 2rem;
   --Spinner-overlay-bg: rgba(255, 255, 255, 0.4);
-  --Spinner-width: 1.625rem;
+  --Spinner-width: 2rem;
+  --Spinner-color: #2468f2;
   --Switch-bgColor: #4b5563;
   --Switch-borderColor: #353c46;
   --Switch-gap: var(--gap-sm);
@@ -13277,6 +14404,7 @@ readers do not read off random characters that represent icons */
   --Tabs--line-content-padding: var(--gap-base) 0;
   --Tabs--line-linkMargin: 0 32px 0 0;
   --Tabs--line-linkPadding: 0 0 8px;
+  --Tabs--line-addPadding: 0 0 10px;
   --Tabs--line-padding: var(--gap-md);
   --Tabs--line-onHover-borderColor: var(--primary);
   --Tabs--line-onHover-color: var(--primary);
@@ -13287,6 +14415,7 @@ readers do not read off random characters that represent icons */
   --Tabs--strong-add-size: 2rem;
   --Tabs--strong-arrow-size: 1.5rem;
   --Tabs-borderColor: var(--borderColor);
+  --Tabs--simple-split-color: var(--Tabs-borderColor);
   --Tabs-borderRadius: var(--borderRadius);
   --Tabs-borderWidth: var(--borderWidth);
   --Tabs-color: var(--text-color);
@@ -13299,13 +14428,20 @@ readers do not read off random characters that represent icons */
   --Tabs-onActive-color: #374151;
   --Tabs-onDisabled-color: #4b5563;
   --Tabs-onHover-borderColor: #e5e7eb;
-  --Tabs-add-icon-size: 1rem;
+  --Tabs-add-icon-size: 0.9375rem;
   --Tabs-add-icon-padding: 0.0625rem;
   --Tabs-add-icon-margin: var(--gap-xs);
   --Tabs-add-margin: var(--gap-lg);
+  --Tabs-gray-color: #83868c;
   --Tabs-close-margin: var(--gap-xs);
+  --Tabs-close-marginTop: 0.0625rem;
   --Tabs-close-size: 0.75rem;
   --Tabs-link-maxWidth: 10rem;
+  --Tabs--sidebar-sideWidth: 3.875rem;
+  --Tabs--sidebar-sidePadding: 1.6875rem;
+  --Tabs--sidebar-sideMargin: 0 0 1.375rem 0;
+  --Tabs--sidebar-iconSize: 1.5rem;
+  --Tabs--sidebar-iconMargin: 0.3125rem;
   --Tabs--vertical-bg: var(--Table-thead-bg);
   --Tabs--vertical-width: 8.75rem;
   --Tabs--vertical-onActive-color: var(--primary);
@@ -13380,29 +14516,38 @@ readers do not read off random characters that represent icons */
   --Tooltip--attr-paddingY: 0.125rem;
   --Tooltip--attr-transition: all var(--animation-duration) ease-in-out;
   --Tooltip-arrow-color: var(--Tooltip-bg);
-  --Tooltip-arrow-color: var(--Tooltip-bg);
+  --Tooltip-arrow-color--dark: rgba(7, 12, 20, 0.85);
   --Tooltip-arrow-height: 0.5rem;
   --Tooltip-arrow-height: 0.5rem;
   --Tooltip-arrow-outerColor: #d1d5db;
   --Tooltip-arrow-width: 1rem;
   --Tooltip-arrow-width: 1rem;
   --Tooltip-bg: var(--background);
+  --Tooltip-bg--dark: rgba(7, 12, 20, 0.85);
   --Tooltip-body-color: var(--text-color);
-  --Tooltip-body-paddingX: var(--gap-sm);
+  --Tooltip-body-color--dark: var(--white);
+  --Tooltip-body-paddingX: var(--gap-base);
   --Tooltip-body-paddingY: var(--gap-sm);
   --Tooltip-borderColor: var(--borderColor);
   --Tooltip-borderRadius: var(--borderRadiusLg);
   --Tooltip-borderWidth: var(--borderWidth);
-  --Tooltip-boxShadow: var(--boxShadow);
+  --Tooltip-boxShadow: var(--boxTooltipShadow);
+  --Tooltip-boxShadow--dark: 0 2px 8px 0 rgba(7, 12, 20, 0.12);
   --Tooltip-fontSize: var(--fontSizeSm);
+  --Tooltip-fontWeight: var(--fontWeightMd);
   --Tooltip-maxWidth: 15rem;
   --Tooltip-minWidth: auto;
+  --Tooltip-title-fontWeight: bold;
   --Tooltip-title-bg: #f7f7f7;
   --Tooltip-title-borderBottom-color: #ebebeb;
   --Tooltip-title-color: var(--text--loud-color);
-  --Tooltip-title-paddingX: var(--gap-sm);
-  --Tooltip-title-paddingY: var(--gap-xs);
+  --Tooltip-title-color--dark: var(--white);
+  --Tooltip-title-paddingX: var(--gap-base);
+  --Tooltip-title-paddingY: var(--gap-sm);
   --Transfer-title-bg: #f6f8f8;
+  --Transfer-selection-maxHeight: 21.875rem;
+  --TabsTransfer-title-bg: #f7f7f9;
+  --TabsTransfer-border-color: #e8e9eb;
   --Tree-indent: var(--gap-md);
   --Tree-inputHeight: calc(var(--Form-input-height) * 0.85);
   --Tree-item-onHover-bg: rgba(0, 126, 255, 0.08);
@@ -13454,6 +14599,10 @@ readers do not read off random characters that represent icons */
   --ColumnToggler-fontColor: #151a26;
   --ColumnToggler-item-backgroundColor: #f6f7f8;
   --ColumnToggler-item-backgroundColor-onHover: rgba(36, 104, 242, 0.1);
+  --ColumnToggler-item-paddingX: 0.5rem;
+  --ColumnToggler-item-paddingY: 0.25rem;
+  --ColumnToggler-item-margin: 0.25rem;
+  --ColumnToggler-item-dragBar-color: #d8d8d8;
   --InputFormula-header-bgColor: #fafafa;
   --InputFormula-icon-size: 1.5rem;
   --InputFormula-icon-color-onActive: var(--primary);
@@ -13787,7 +14936,6 @@ readers do not read off random characters that represent icons */
   outline: none;
   /* Prevent dragging from highlighting the element */
   position: relative;
-  z-index: 0;
 }
 
 .amis-scope .CodeMirror-sizer {
@@ -27686,7 +28834,6 @@ readers do not read off random characters that represent icons */
   z-index: 1600;
   word-wrap: break-word;
   background: var(--Tooltip-bg);
-  border: var(--Tooltip-borderWidth) solid var(--Tooltip-borderColor);
   box-shadow: var(--Tooltip-boxShadow);
 }
 
@@ -27723,7 +28870,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Tooltip--top .a-Tooltip-arrow::before {
   bottom: 0;
-  border-top-color: var(--Tooltip-arrow-outerColor);
 }
 
 .amis-scope .a-Tooltip--top .a-Tooltip-arrow::after {
@@ -27750,7 +28896,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Tooltip--right .a-Tooltip-arrow::before {
   left: 0;
-  border-right-color: var(--Tooltip-arrow-outerColor);
 }
 
 .amis-scope .a-Tooltip--right .a-Tooltip-arrow::after {
@@ -27773,7 +28918,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Tooltip--bottom .a-Tooltip-arrow::before {
   top: 0;
-  border-bottom-color: var(--Tooltip-arrow-outerColor);
 }
 
 .amis-scope .a-Tooltip--bottom .a-Tooltip-arrow::after {
@@ -27812,7 +28956,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Tooltip--left .a-Tooltip-arrow::before {
   right: 0;
-  border-left-color: var(--Tooltip-arrow-outerColor);
 }
 
 .amis-scope .a-Tooltip--left .a-Tooltip-arrow::after {
@@ -27821,14 +28964,14 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Tooltip-title {
-  padding: var(--Tooltip-title-paddingY) var(--Tooltip-title-paddingX);
+  padding: var(--Tooltip-title-paddingY) var(--Tooltip-title-paddingX) 0;
   margin-bottom: 0;
   font-size: var(--fontSizeBase);
   color: var(--Tooltip-title-color);
-  background: var(--Tooltip-title-bg);
-  border-bottom: var(--Tooltip-borderWidth) solid var(--Tooltip-title-borderBottom-color);
+  font-weight: var(--Tooltip-fontWeight);
   border-top-left-radius: calc( var(--Tooltip-borderRadius) - var(--Tooltip-borderWidth) );
   border-top-right-radius: calc( var(--Tooltip-borderRadius) - var(--Tooltip-borderWidth) );
+  font-weight: var(--Tooltip-title-fontWeight);
 }
 
 .amis-scope .a-Tooltip-title:empty {
@@ -27838,6 +28981,64 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Tooltip-body {
   color: var(--Tooltip-body-color);
   padding: var(--Tooltip-body-paddingY) var(--Tooltip-body-paddingX);
+  word-break: break-all;
+  text-align: left;
+}
+
+.amis-scope .a-Tooltip--dark {
+  background: var(--Tooltip-bg--dark);
+  border: none;
+  box-shadow: var(--Tooltip-boxShadow--dark);
+}
+
+.amis-scope .a-Tooltip--dark .a-Tooltip-title {
+  color: var(--Tooltip-title-color--dark);
+  background: transparent;
+  border-bottom: none;
+}
+
+.amis-scope .a-Tooltip--dark .a-Tooltip-title::before {
+  border-bottom-color: transparent;
+}
+
+.amis-scope .a-Tooltip--dark .a-Tooltip-body {
+  color: var(--Tooltip-body-color--dark);
+}
+
+.amis-scope .a-Tooltip--dark.a-Tooltip--top .a-Tooltip-arrow::before {
+  border-width: 0;
+}
+
+.amis-scope .a-Tooltip--dark.a-Tooltip--top .a-Tooltip-arrow::after {
+  border-top-color: var(--Tooltip-arrow-color--dark);
+}
+
+.amis-scope .a-Tooltip--dark.a-Tooltip--bottom .a-Tooltip-arrow::before {
+  border-width: 0;
+}
+
+.amis-scope .a-Tooltip--dark.a-Tooltip--bottom .a-Tooltip-arrow::after {
+  border-bottom-color: var(--Tooltip-arrow-color--dark);
+}
+
+.amis-scope .a-Tooltip--dark.a-Tooltip--left .a-Tooltip-arrow::before {
+  border-width: 0;
+}
+
+.amis-scope .a-Tooltip--dark.a-Tooltip--left .a-Tooltip-arrow::after {
+  border-left-color: var(--Tooltip-arrow-color--dark);
+}
+
+.amis-scope .a-Tooltip--dark.a-Tooltip--right .a-Tooltip-arrow::before {
+  border-width: 0;
+}
+
+.amis-scope .a-Tooltip--dark.a-Tooltip--right .a-Tooltip-arrow::after {
+  border-right-color: var(--Tooltip-arrow-color--dark);
+}
+
+.amis-scope .a-TooltipWrapper--inline {
+  display: inline-block;
 }
 
 @keyframes tooltipIn {
@@ -28567,7 +29768,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Alert-icon {
-  margin-right: 0.5rem;
+  margin-right: var(--gap-sm);
   font-size: var(--fontSizeLg);
 }
 
@@ -28826,7 +30027,7 @@ readers do not read off random characters that represent icons */
   margin-left: var(--Tabs-add-margin);
   align-items: center;
   justify-content: flex-start;
-  padding: var(--Tabs--line-linkPadding);
+  padding: var(--Tabs--line-addPadding);
   white-space: nowrap;
   cursor: pointer;
 }
@@ -28843,7 +30044,13 @@ readers do not read off random characters that represent icons */
   line-height: 1;
 }
 
+.amis-scope .a-Tabs-linksContainer-wrapper .a-Tabs-addable:hover {
+  color: var(--primary);
+  fill: var(--primary);
+}
+
 .amis-scope .a-Tabs-linksContainer-wrapper .a-Tabs-linksContainer {
+  flex-grow: 1;
   position: relative;
   display: flex;
   align-items: center;
@@ -28851,7 +30058,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Tabs-linksContainer-wrapper .a-Tabs-linksContainer-arrow {
-  margin-bottom: 7px;
+  margin: var(--Tabs--line-addPadding);
   width: 16px;
   height: 100%;
   display: flex;
@@ -28886,6 +30093,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Tabs-linksContainer-wrapper .a-Tabs-linksContainer-main {
+  position: relative;
   overflow-y: auto;
   scrollbar-width: none;
   width: 100%;
@@ -28896,8 +30104,10 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Tabs-linksContainer-wrapper .a-Tabs-linksContainer-main .a-Tabs-links {
-  position: relative;
   min-width: 100%;
+  max-width: 0;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .amis-scope .a-Tabs-linksContainer-wrapper .a-Tabs-linksContainer-main .a-Tabs-links .a-Tabs-links-drag {
@@ -28940,7 +30150,9 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Tabs-links > .a-Tabs-link .a-Tabs-link-close {
-  margin-left: var(--Tabs-close-margin);
+  margin: var(--Tabs-close-marginTop) 0 0 var(--Tabs-close-margin);
+  fill: var(--Tabs-gray-color);
+  cursor: pointer;
 }
 
 .amis-scope .a-Tabs-links > .a-Tabs-link .a-Tabs-link-close .a-Tabs-link-close-icon {
@@ -29028,6 +30240,18 @@ readers do not read off random characters that represent icons */
   border-bottom: var(--Tabs-borderWidth) solid var(--Tabs--simple-split-color);
 }
 
+.amis-scope .a-Tabs--line > .a-Tabs-linksContainer-wrapper--toolbar .a-Tabs-link {
+  padding-top: 10px;
+}
+
+.amis-scope .a-Tabs--line > .a-Tabs-linksContainer-wrapper--toolbar .a-Tabs-addable {
+  padding: 0;
+}
+
+.amis-scope .a-Tabs--line > .a-Tabs-linksContainer-wrapper--toolbar .a-Tabs-linksContainer-arrow {
+  margin: 0;
+}
+
 .amis-scope .a-Tabs--line > .a-Tabs-linksContainer > .a-Tabs-linksContainer-arrow {
   top: -4px;
 }
@@ -29059,13 +30283,15 @@ readers do not read off random characters that represent icons */
   padding: var(--Tabs--line-linkPadding);
 }
 
-.amis-scope .a-Tabs--line > .a-Tabs-linksWrapper > .a-Tabs-links > li > a:first-child:hover,
-.amis-scope .a-Tabs--line > .a-Tabs-linksWrapper > .a-Tabs-links > li > a:first-child:focus,
-.amis-scope .a-Tabs--line > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li > a:first-child:hover,
-.amis-scope .a-Tabs--line > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li > a:first-child:focus {
+.amis-scope .a-Tabs--line > .a-Tabs-linksWrapper > .a-Tabs-links > li:not(.is-disabled):hover a:first-child,
+.amis-scope .a-Tabs--line > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li:not(.is-disabled):hover a:first-child {
   color: var(--primary);
   background: transparent;
-  border-color: transparent;
+}
+
+.amis-scope .a-Tabs--line > .a-Tabs-linksWrapper > .a-Tabs-links > li:not(.is-disabled):hover .a-Tabs-link-close,
+.amis-scope .a-Tabs--line > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li:not(.is-disabled):hover .a-Tabs-link-close {
+  fill: var(--primary);
 }
 
 .amis-scope .a-Tabs--line > .a-Tabs-linksWrapper > .a-Tabs-links > li:last-child > a,
@@ -29105,6 +30331,10 @@ readers do not read off random characters that represent icons */
   margin-right: var(--Tabs--card-add-gap);
 }
 
+.amis-scope .a-Tabs--card > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer .a-Tabs-addable {
+  padding: 0;
+}
+
 .amis-scope .a-Tabs--card > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-arrow {
   padding: var(--Tabs--card-arrow-gap) var(--Tabs--card-add-gap) 0;
   margin-bottom: 0;
@@ -29130,6 +30360,10 @@ readers do not read off random characters that represent icons */
   background: var(--Tabs--card-onActive-bg);
 }
 
+.amis-scope .a-Tabs--card > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li.is-disabled {
+  cursor: not-allowed;
+}
+
 .amis-scope .a-Tabs--card > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li:hover,
 .amis-scope .a-Tabs--card > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li:focus {
   background: var(--Tabs--card-onActive-bg);
@@ -29141,6 +30375,11 @@ readers do not read off random characters that represent icons */
   border: none;
 }
 
+.amis-scope .a-Tabs--card > .a-Tabs-linksContainer-wrapper > .a-Tabs-toolbar {
+  padding: var(--Tabs--card-padding);
+  margin: 0;
+}
+
 .amis-scope .a-Tabs--card > .a-Tabs-content {
   border-width: 0;
 }
@@ -29149,7 +30388,7 @@ readers do not read off random characters that represent icons */
   margin-bottom: 0.625rem;
 }
 
-.amis-scope .a-Tabs--radio > .a-Tabs-linksContainer-wrapper > .a-Tabs-addable {
+.amis-scope .a-Tabs--radio > .a-Tabs-linksContainer-wrapper .a-Tabs-addable {
   padding: 0;
 }
 
@@ -29241,7 +30480,7 @@ readers do not read off random characters that represent icons */
   border-right-width: 0;
 }
 
-.amis-scope .a-Tabs--tiled > .a-Tabs-linksContainer-wrapper > .a-Tabs-addable {
+.amis-scope .a-Tabs--tiled > .a-Tabs-linksContainer-wrapper .a-Tabs-addable {
   padding: 0 var(--Tabs--tiled-add-gap);
   margin-left: 0;
   white-space: nowrap;
@@ -29295,6 +30534,10 @@ readers do not read off random characters that represent icons */
   border-bottom-color: transparent;
 }
 
+.amis-scope .a-Tabs--tiled > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li.is-disabled {
+  cursor: not-allowed;
+}
+
 .amis-scope .a-Tabs--vertical {
   display: flex;
   min-height: 12.5rem;
@@ -29346,6 +30589,87 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Tabs--vertical > .a-Tabs-content > .a-Tabs-pane {
+  height: 100%;
+}
+
+.amis-scope .a-Tabs--sidebar {
+  display: flex;
+  height: 100%;
+}
+
+.amis-scope .a-Tabs--sidebar.sidebar--left {
+  flex-direction: row;
+}
+
+.amis-scope .a-Tabs--sidebar.sidebar--left > .a-Tabs-content {
+  border-right: none;
+}
+
+.amis-scope .a-Tabs--sidebar.sidebar--right {
+  flex-direction: row-reverse;
+}
+
+.amis-scope .a-Tabs--sidebar.sidebar--right > .a-Tabs-content {
+  border-left: none;
+}
+
+.amis-scope .a-Tabs--sidebar > .a-Tabs-linksWrapper {
+  flex: 0 0 var(--Tabs--sidebar-sideWidth);
+  align-items: flex-start;
+  border: none;
+}
+
+.amis-scope .a-Tabs--sidebar > .a-Tabs-linksWrapper > .a-Tabs-links {
+  position: relative;
+  margin: 0;
+  padding-top: var(--Tabs--sidebar-sidePadding);
+  flex-grow: 1;
+  border: none;
+  flex-direction: column;
+  border: 0;
+}
+
+.amis-scope .a-Tabs--sidebar > .a-Tabs-linksWrapper > .a-Tabs-links > li {
+  display: flex;
+  margin: var(--Tabs--sidebar-sideMargin);
+  padding: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 0;
+}
+
+.amis-scope .a-Tabs--sidebar > .a-Tabs-linksWrapper > .a-Tabs-links > li:not(.is-disabled) > a:first-child {
+  color: var(--Tabs-gray-color);
+}
+
+.amis-scope .a-Tabs--sidebar > .a-Tabs-linksWrapper > .a-Tabs-links > li > a:first-child {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.amis-scope .a-Tabs--sidebar > .a-Tabs-linksWrapper > .a-Tabs-links > li > a:first-child .a-Icon {
+  font-size: var(--Tabs--sidebar-iconSize);
+  height: var(--Tabs--sidebar-iconSize);
+  margin-bottom: var(--Tabs--sidebar-iconMargin);
+}
+
+.amis-scope .a-Tabs--sidebar > .a-Tabs-linksWrapper > .a-Tabs-links > li.is-active > a:first-child,
+.amis-scope .a-Tabs--sidebar > .a-Tabs-linksWrapper > .a-Tabs-links > li > a:first-child:hover,
+.amis-scope .a-Tabs--sidebar > .a-Tabs-linksWrapper > .a-Tabs-links > li > a:first-child:focus {
+  color: var(--Tabs--sidebar-iconColor);
+}
+
+.amis-scope .a-Tabs--sidebar > .a-Tabs-content {
+  flex-grow: 1;
+  border-bottom: none;
+}
+
+.amis-scope .a-Tabs--sidebar > .a-Tabs-content > .a-Tabs-pane {
   height: 100%;
 }
 
@@ -29433,6 +30757,10 @@ readers do not read off random characters that represent icons */
   fill: var(--Tabs-onActive-bg);
 }
 
+.amis-scope .a-Tabs--chrome > .a-Tabs-linksWrapper > .a-Tabs-links > li.is-disabled {
+  cursor: not-allowed;
+}
+
 .amis-scope .a-Tabs--chrome .chrome-tab-background {
   display: none;
   position: absolute;
@@ -29464,7 +30792,7 @@ readers do not read off random characters that represent icons */
   border-bottom: none;
 }
 
-.amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper > .a-Tabs-addable {
+.amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper .a-Tabs-addable {
   padding: 0;
 }
 
@@ -29505,11 +30833,15 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li.is-active > a:first-child,
 .amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li.is-active > a:first-child:hover,
 .amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li.is-active > a:first-child:focus,
-.amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li:hover > a:first-child,
-.amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li:hover > a:first-child:hover,
-.amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li:hover > a:first-child:focus {
+.amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li:not(.is-disabled):hover > a:first-child,
+.amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li:not(.is-disabled):hover > a:first-child:hover,
+.amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li:not(.is-disabled):hover > a:first-child:focus {
   color: var(--Tabs--line-onHover-color);
   border: none;
+}
+
+.amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li:not(.is-disabled):hover .a-Tabs-link-close {
+  fill: var(--primary);
 }
 
 .amis-scope .a-Tabs--simple > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > li > a:first-child {
@@ -29531,7 +30863,7 @@ readers do not read off random characters that represent icons */
   border-bottom: var(--Tabs-borderWidth) solid var(--Tabs--simple-split-color);
 }
 
-.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-addable {
+.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper .a-Tabs-addable {
   width: var(--Tabs--strong-add-size);
   margin-left: var(--Tabs--card-arrow-gap);
   padding: 0;
@@ -29545,11 +30877,11 @@ readers do not read off random characters that represent icons */
   flex: none;
 }
 
-.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-addable > .a-Tabs-addable-icon {
+.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper .a-Tabs-addable > .a-Tabs-addable-icon {
   margin-right: 0;
 }
 
-.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-addable:hover {
+.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper .a-Tabs-addable:hover {
   color: var(--Tabs--line-onHover-color);
 }
 
@@ -29603,13 +30935,21 @@ readers do not read off random characters that represent icons */
   border-bottom-color: var(--Tabs-onActive-bg);
 }
 
+.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > .a-Tabs-link.is-disabled {
+  cursor: not-allowed;
+}
+
 .amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > .a-Tabs-link.is-active > a:first-child,
 .amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > .a-Tabs-link.is-active > a:first-child:hover,
 .amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > .a-Tabs-link.is-active > a:first-child:focus,
-.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > .a-Tabs-link:hover > a:first-child,
-.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > .a-Tabs-link:hover > a:first-child:hover,
-.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > .a-Tabs-link:hover > a:first-child:focus {
+.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > .a-Tabs-link:not(.is-disabled):hover > a:first-child,
+.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > .a-Tabs-link:not(.is-disabled):hover > a:first-child:hover,
+.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > .a-Tabs-link:not(.is-disabled):hover > a:first-child:focus {
   color: var(--Tabs--line-onHover-color);
+}
+
+.amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > .a-Tabs-link:not(.is-disabled):hover .a-Tabs-link-close {
+  fill: var(--primary);
 }
 
 .amis-scope .a-Tabs--strong > .a-Tabs-linksContainer-wrapper > .a-Tabs-linksContainer > .a-Tabs-linksContainer-main > .a-Tabs-links > .a-Tabs-link:last-of-type {
@@ -29623,9 +30963,12 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Tabs-toolbar {
-  display: inline-block;
-  float: right;
-  padding-top: var(--gap-xs);
+  flex: 1 1 auto;
+  margin-left: var(--gap-base);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .amis-scope .a-Nav {
@@ -29649,6 +30992,34 @@ readers do not read off random characters that represent icons */
   vertical-align: middle;
 }
 
+.amis-scope .a-Nav .a-Nav-list-overflow {
+  min-height: var(--Nav-Item-height) !important;
+  max-height: calc(var(--Nav-Item-height) * 5);
+  max-width: var(--Nav-Item-maxWidth--tabs);
+  font-size: var(--Nav-subItem-fontSize);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.amis-scope .a-Nav .a-Nav-list-overflow .a-Nav-subItems {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.amis-scope .a-Nav .a-Nav-list-overflow .a-Nav-item {
+  max-width: var(--Nav-Item-maxWidth--tabs);
+  height: var(--Nav-Item-height);
+}
+
+.amis-scope .a-Nav .a-Nav-list-overflow .a-Nav-item > a {
+  border: none !important;
+  display: block !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+}
+
 .amis-scope .a-Nav .a-Nav-list--tabs {
   border-bottom: var(--Tabs-borderWidth) solid var(--Tabs-borderColor);
 }
@@ -29657,6 +31028,7 @@ readers do not read off random characters that represent icons */
   margin-bottom: calc(var(--Tabs-borderWidth) * -1);
   display: inline-block;
   position: relative;
+  max-width: var(--Nav-Item-maxWidth--tabs);
 }
 
 .amis-scope .a-Nav .a-Nav-list--tabs .a-Nav-item > a {
@@ -29671,11 +31043,15 @@ readers do not read off random characters that represent icons */
   margin-right: 0.125rem;
   padding: var(--gap-sm) var(--gap-xl);
   cursor: pointer;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .amis-scope .a-Nav .a-Nav-list--tabs .a-Nav-item:hover > a,
 .amis-scope .a-Nav .a-Nav-list--tabs .a-Nav-item > a:focus {
   border-color: var(--Tabs-onHover-borderColor);
+  border-bottom: none;
   text-decoration: none;
 }
 
@@ -29693,6 +31069,13 @@ readers do not read off random characters that represent icons */
   background: var(--Tabs-onActive-bg);
   border-color: var(--Tabs-onActive-borderColor);
   border-bottom-color: var(--Tabs-content-bg);
+}
+
+.amis-scope .a-Nav .a-Nav-list--tabs .a-Nav-item-overflow:hover > a,
+.amis-scope .a-Nav .a-Nav-list--tabs .a-Nav-item-overflow > a:focus,
+.amis-scope .a-Nav .a-Nav-list--tabs .a-Nav-item-overflow.is-overflow-opened > a {
+  color: var(--primary);
+  border-color: transparent;
 }
 
 .amis-scope .a-Nav .a-Nav-list--stacked {
@@ -30615,8 +31998,130 @@ readers do not read off random characters that represent icons */
   }
 }
 
-.amis-scope .is-spin {
+.amis-scope .a-Spinner {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: ease-out opacity var(--animation-duration);
+}
+
+.amis-scope .a-Spinner.in {
+  opacity: 1;
+}
+
+.amis-scope .a-Spinner .a-Spinner-icon {
+  width: var(--Spinner-width);
+  height: var(--Spinner-height);
+  position: relative;
+  transform: translateZ(0);
   animation: spin 2s linear infinite;
+  transition: ease-out all var(--animation-duration);
+}
+
+.amis-scope .a-Spinner .a-Spinner-icon--default {
+  background: var(--Spinner-bg);
+  background-size: 100%;
+  animation: none;
+}
+
+.amis-scope .a-Spinner .a-Spinner-icon--simple {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amis-scope .a-Spinner .a-Spinner-icon--simple .icon {
+  width: 100%;
+  height: 100%;
+  color: var(--Spinner-color);
+}
+
+.amis-scope .a-Spinner .a-Spinner-icon--simple svg.icon {
+  top: 0;
+}
+
+.amis-scope .a-Spinner .a-Spinner-icon--simple svg.icon path {
+  fill: var(--Spinner-color);
+}
+
+.amis-scope .a-Spinner .a-Spinner-icon--simple i.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--Spinner-width);
+}
+
+.amis-scope .a-Spinner .a-Spinner-icon--custom {
+  width: auto;
+  height: auto;
+}
+
+.amis-scope .a-Spinner .a-Spinner-icon--lg {
+  width: var(--Spinner--lg-width);
+  height: var(--Spinner--lg-height);
+}
+
+.amis-scope .a-Spinner .a-Spinner-icon--lg i.icon {
+  font-size: var(--Spinner--lg-height);
+}
+
+.amis-scope .a-Spinner .a-Spinner-icon--sm {
+  width: var(--Spinner--sm-width);
+  height: var(--Spinner--sm-height);
+}
+
+.amis-scope .a-Spinner .a-Spinner-icon--sm i.icon {
+  font-size: var(--Spinner--sm-height);
+}
+
+.amis-scope .a-Spinner .a-Spinner-tip {
+  margin: 0.75rem 0 0 0;
+  word-break: keep-all;
+  white-space: nowrap;
+  color: var(--Spinner-color);
+}
+
+.amis-scope .a-Spinner.a-Spinner-tip--top {
+  flex-direction: column-reverse;
+}
+
+.amis-scope .a-Spinner.a-Spinner-tip--top .a-Spinner-tip {
+  margin: 0 0 0.75rem 0;
+}
+
+.amis-scope .a-Spinner.a-Spinner-tip--right {
+  flex-direction: row;
+}
+
+.amis-scope .a-Spinner.a-Spinner-tip--right .a-Spinner-tip {
+  margin: 0 0 0 0.75rem;
+}
+
+.amis-scope .a-Spinner.a-Spinner-tip--bottom {
+  flex-direction: column;
+}
+
+.amis-scope .a-Spinner.a-Spinner-tip--bottom .a-Spinner-tip {
+  margin: 0.75rem 0 0 0;
+}
+
+.amis-scope .a-Spinner.a-Spinner-tip--left {
+  flex-direction: row-reverse;
+}
+
+.amis-scope .a-Spinner.a-Spinner-tip--left .a-Spinner-tip {
+  margin: 0 0.75rem 0 0;
+}
+
+.amis-scope .a-Spinner--overlay {
+  position: absolute;
+  z-index: 11;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .amis-scope .a-Spinner-overlay {
@@ -30635,61 +32140,18 @@ readers do not read off random characters that represent icons */
   opacity: 1;
 }
 
-.amis-scope .a-Spinner {
-  width: var(--Spinner-width);
-  height: var(--Spinner-height);
-  transform: translateZ(0);
-  display: inline-flex;
-  background: var(--Spinner-bg);
-  background-size: 100%;
-  transition: ease-out all var(--animation-duration);
+.amis-scope .a-Spinner-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.amis-scope .a-Spinner--lg {
-  width: var(--Spinner--lg-width);
-  height: var(--Spinner--lg-height);
-}
-
-.amis-scope .a-Spinner--sm {
-  width: var(--Spinner--sm-width);
-  height: var(--Spinner--sm-height);
-}
-
-.amis-scope .a-Spinner--icon {
-  background: transparent;
-  animation: spin 2s linear infinite;
-  width: 16px;
-  height: 16px;
-}
-
-.amis-scope .a-Spinner--icon svg.icon {
-  width: 16px;
-  height: 16px;
-  top: 0;
-}
-
-.amis-scope .a-Spinner--overlay {
+.amis-scope .a-Spinner-wrap .a-Spinner {
   position: absolute;
   z-index: 11;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
-}
-
-.amis-scope .a-Spinner--overlay.a-Spinner--lg {
-  width: var(--Spinner--lg-width);
-  height: var(--Spinner--lg-height);
-  line-height: var(--Spinner--lg-height);
-}
-
-@media (min-width: 768px) {
-  .amis-scope .a-Layout .a-Page-body > .a-Spinner-overlay {
-    left: var(--Layout-aside-width);
-  }
-
-  .amis-scope .a-Layout--folded .a-Page-body > .a-Spinner-overlay {
-    left: var(--Layout-aside--folded-width);
-  }
 }
 
 .amis-scope .a-ButtonGroup {
@@ -30759,10 +32221,15 @@ readers do not read off random characters that represent icons */
   border-bottom-left-radius: 0;
 }
 
+.amis-scope .a-ButtonGroup > .a-ButtonGroup:last-child > .a-Button:not(:last-child) {
+  border-top-right-radius: 0;
+}
+
 .amis-scope .a-ButtonGroup--vertical {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  /* 修正头尾的圆角 */
 }
 
 .amis-scope .a-ButtonGroup--vertical .a-Button,
@@ -30788,6 +32255,16 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-ButtonGroup--vertical > .a-ButtonGroup:not(:first-child) > .btn {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.amis-scope .a-ButtonGroup--vertical > .a-Button:first-child,
+.amis-scope .a-ButtonGroup--vertical > .a-ButtonGroup:first-child > .a-Button:first-child {
+  border-top-right-radius: var(--Button-borderRadius);
+}
+
+.amis-scope .a-ButtonGroup--vertical > .a-Button:last-child,
+.amis-scope .a-ButtonGroup--vertical > .a-ButtonGroup:last-child > .a-Button:last-child {
+  border-bottom-left-radius: var(--Button-borderRadius);
 }
 
 .amis-scope .a-ButtonGroup--tiled {
@@ -31873,13 +33350,13 @@ readers do not read off random characters that represent icons */
   display: block;
   position: absolute;
   margin: 0;
-  padding: 4px 0 5px;
-  background: rgba(239, 239, 239, 0.95);
-  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.34);
-  color: rgba(0, 0, 0, 0.75);
-  font-family: -apple-system, Lucida Grande;
-  font-size: var(--fontSizeMd);
-  line-height: 1.1;
+  padding: 0;
+  background: var(--menu-background);
+  box-shadow: var(--menu-box-shadow);
+  color: var(--menu-font-color);
+  font-family: var(--menu-font-family);
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .amis-scope .a-ContextMenu-menu.in,
@@ -31905,16 +33382,16 @@ readers do not read off random characters that represent icons */
   left: -1px;
   bottom: -1px;
   right: -1px;
-  border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: var(--menu-border-radius);
+  border: 1px solid var(--menu-border-color);
   z-index: -1;
 }
 
 .amis-scope .a-ContextMenu-divider {
   border: none;
   height: 1px;
-  background: rgba(0, 0, 0, 0.1);
-  margin: 6px 1px 5px;
+  background: var(--menu-border-color);
+  margin: 4px 1px;
   padding: 0;
 }
 
@@ -31922,7 +33399,7 @@ readers do not read off random characters that represent icons */
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 185px;
+  min-width: 100px;
 }
 
 .amis-scope .a-ContextMenu-item {
@@ -31932,24 +33409,23 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-ContextMenu-item > a {
   white-space: nowrap;
   display: block;
-  padding: 0 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0);
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  padding: var(--default-padding);
   color: inherit;
+  border-top: none;
+  border-bottom: none;
 }
 
 .amis-scope .a-ContextMenu-item:not(.is-disabled):hover > a {
   text-decoration: none;
-  color: #fff;
-  background: -webkit-linear-gradient(top, #648bf5, #2866f2);
-  background: linear-gradient(to bottom, #648bf5 0%, #2866f2 100%);
-  border-top: 1px solid #5a82eb;
-  border-bottom: 1px solid #1758e7;
+  color: var(--menu-active-color);
+  background: var(--menu-hover-bg-color);
   cursor: pointer;
+  border-top: none;
+  border-bottom: none;
 }
 
 .amis-scope .a-ContextMenu-item.is-disabled > a {
-  color: #999;
+  color: var(--menu-disabled-color);
   pointer-events: none;
 }
 
@@ -31959,8 +33435,8 @@ readers do not read off random characters that represent icons */
   height: 0;
   border-width: 4px 7px;
   border-style: solid;
-  border-color: transparent transparent transparent rgba(0, 0, 0, 0.75);
-  text-shadow: 0px 4px 9px rgba(0, 0, 0, 0.34);
+  border-color: transparent transparent transparent var(--default-icon-color);
+  text-shadow: var(--menu-box-shadow);
   position: absolute;
   top: 50%;
   right: 0;
@@ -31968,7 +33444,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-ContextMenu-item.has-child:hover > a::after {
-  border-color: transparent transparent transparent #fff;
+  border-color: transparent transparent transparent var(--menu-active-color);
 }
 
 .amis-scope .a-ContextMenu-itemIcon {
@@ -31978,6 +33454,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-ContextMenu-subList {
   display: none;
   list-style: none;
+  transition: display ease-out 0.25s;
 }
 
 .amis-scope .a-ContextMenu-item:hover > .a-ContextMenu-subList {
@@ -31985,19 +33462,23 @@ readers do not read off random characters that represent icons */
   animation-duration: var(--animation-duration);
   animation-fill-mode: both;
   animation-name: contextMenuIn;
-  display: block;
   position: absolute;
   left: 100%;
   top: -3px;
+  min-width: 100px;
   margin: 0;
-  padding: 4px 0 5px;
-  background: rgba(239, 239, 239, 0.95);
-  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.34);
-  border-radius: 7px;
-  color: rgba(0, 0, 0, 0.75);
-  font-family: -apple-system, Lucida Grande;
-  font-size: var(--fontSizeMd);
-  line-height: 1.1;
+  padding: 0;
+  background: var(--menu-background);
+  box-shadow: var(--menu-box-shadow);
+  border-radius: var(--menu-border-radius);
+  color: var(--menu-font-color);
+  font-family: var(--menu-font-family);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.amis-scope .a-ContextMenu-item:hover > .a-ContextMenu-subList:hover {
+  display: block;
 }
 
 .amis-scope .a-ContextMenu-item:hover > .a-ContextMenu-subList::before {
@@ -32008,8 +33489,8 @@ readers do not read off random characters that represent icons */
   left: -1px;
   bottom: -1px;
   right: -1px;
-  border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: var(--menu-border-radius);
+  border: 1px solid var(--menu-border-color);
   z-index: -1;
 }
 
@@ -34264,14 +35745,11 @@ readers do not read off random characters that represent icons */
   background: var(--ColumnToggler-item-backgroundColor);
   border-radius: 0.125rem;
   font-size: var(--fontSizeSm);
-  padding: 0.25rem 0.5rem;
+  padding: var(--ColumnToggler-item-paddingY) var(--ColumnToggler-item-paddingX);
   height: var(--ColumnToggler-lineHeight);
-  width: calc((100% - 24px) / 3);
+  width: calc((100% - var(--ColumnToggler-item-margin) * 6) / 3);
+  margin: var(--ColumnToggler-item-margin);
   float: left;
-  margin: 0.25rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .amis-scope .a-ColumnToggler-modal-content .a-ColumnToggler-menuItem:hover {
@@ -34282,6 +35760,20 @@ readers do not read off random characters that represent icons */
   border: 1px solid var(--link-color);
 }
 
+.amis-scope .a-ColumnToggler-modal-content .a-ColumnToggler-menuItem-label {
+  display: inline-block;
+  width: calc(100% - var(--Checkbox--sm-size));
+}
+
+.amis-scope .a-ColumnToggler-modal-content .a-ColumnToggler-menuItem-label > span {
+  display: inline-block;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  user-select: none;
+}
+
 .amis-scope .a-ColumnToggler-modal-content .a-ColumnToggler-menuItem label > i {
   height: var(--fontSizeLg);
   width: var(--fontSizeLg);
@@ -34289,10 +35781,12 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-ColumnToggler-modal-content .a-ColumnToggler-menuItem-dragBar {
+  display: inline-block;
   margin-left: 0;
   margin-right: var(--gap-xs);
+  vertical-align: super;
+  color: var(--ColumnToggler-item-dragBar-color);
   cursor: move;
-  color: #d8d8d8;
 }
 
 .amis-scope .a-ColumnToggler-modal-footer {
@@ -34329,10 +35823,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-ColumnToggler-modal-footer > div:last-child {
   justify-content: flex-end;
-}
-
-.amis-scope .a-ColumnToggler-modal-footer > div:last-child button {
-  width: 72px;
 }
 
 .amis-scope .a-ColumnToggler-tooltip {
@@ -35178,6 +36668,35 @@ readers do not read off random characters that represent icons */
   padding-top: unset !important;
 }
 
+.amis-scope .a-Card2 {
+  width: 100%;
+  background: var(--Card-bg);
+  border: var(--Card-borderWidth) solid var(--Card-borderColor);
+  border-radius: var(--Card-borderRadius);
+  position: relative;
+}
+
+.amis-scope .a-Card2.checkOnItem {
+  cursor: pointer !important;
+}
+
+.amis-scope .a-Card2-checkbox {
+  margin: 0;
+  position: absolute;
+  right: var(--gap-md);
+  top: var(--gap-md);
+}
+
+.amis-scope .a-Card2-body {
+  padding: var(--gap-md);
+}
+
+.amis-scope .a-Card2.is-checked {
+  background: var(--Card-onChecked-bg);
+  border-color: var(--Card-onChecked-borderColor);
+  color: var(--Card-onChecked-color);
+}
+
 .amis-scope .a-Field-quickEditBtn {
   color: var(--QuickEdit-iconColor);
   margin-left: var(--gap-xs);
@@ -35290,31 +36809,29 @@ readers do not read off random characters that represent icons */
   right: 0;
 }
 
+.amis-scope .a-Progress {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  font-size: var(--fontSizeXs);
+}
+
 .amis-scope .a-Progress-line {
   display: inline-block;
   width: 100%;
-  margin-right: calc(-2em + -8px);
-  padding-right: calc(2em + 8px);
 }
 
 .amis-scope .a-Progress-line-inter {
-  height: 10px;
+  height: 100%;
   background-color: var(--Progress-bar-backgroundColor);
   overflow: hidden;
   border-radius: var(--Progress-borderRadius);
 }
 
-.amis-scope .a-Progress-line-no-label {
-  padding-right: 0;
-  margin-right: 0;
-}
-
 .amis-scope .a-Progress-line-text {
   display: inline-block;
-  width: 2em;
+  flex-grow: 1;
   margin-left: 8px;
-  color: var(--text-color);
-  font-size: var(--fontSizeXs);
   white-space: nowrap;
   text-align: left;
   word-break: normal;
@@ -35327,10 +36844,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Progress-line-bar {
   float: left;
   width: 0;
-  height: 100%;
-  font-size: 12px;
-  line-height: 10px;
-  text-align: center;
+  height: 10px;
   background: var(--primary);
   transition: width var(--animation-duration) ease;
 }
@@ -35363,8 +36877,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Progress-circle {
-  width: 120px;
-  height: 120px;
+  width: 100%;
   position: relative;
 }
 
@@ -35375,9 +36888,6 @@ readers do not read off random characters that represent icons */
   width: 100%;
   margin: 0;
   padding: 0;
-  color: var(--text-color);
-  font-size: 1em;
-  line-height: 1;
   white-space: normal;
   text-align: center;
   transform: translate(-50%, -50%);
@@ -35584,13 +37094,17 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Pagination-inputGroup input {
-  width: 3.125rem;
+  width: 3.5rem;
   height: var(--Pagination-height);
   border: var(--borderWidth) solid var(--borderColor);
   border-radius: var(--borderRadius);
   padding: var(--gap-xs) 0.625rem;
   margin: 0 0.625rem;
   text-align: center;
+}
+
+.amis-scope .a-Pagination-inputGroup input:focus {
+  width: auto;
 }
 
 .amis-scope .a-Pagination-inputGroup input:focus,
@@ -35852,6 +37366,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Carousel-dotsControl .a-Carousel-dot {
+  cursor: pointer;
   display: inline-block;
   height: var(--Carousel-dot-width);
   width: var(--Carousel-dot-height);
@@ -37014,6 +38529,10 @@ readers do not read off random characters that represent icons */
   line-height: 2rem;
 }
 
+.amis-scope .a-Steps .a-StepsItem-container {
+  position: relative;
+}
+
 .amis-scope .a-Steps .a-StepsItem-containerIcon {
   vertical-align: top;
   display: inline-block;
@@ -37063,6 +38582,13 @@ readers do not read off random characters that represent icons */
   background-color: var(--Steps-line-success-bg);
 }
 
+.amis-scope .a-Steps .a-StepsItem-containerWrapper .a-StepsItem-body .a-StepsItem-ellText {
+  max-width: 9.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .amis-scope .a-Steps .a-StepsItem-containerWrapper .a-StepsItem-body .a-StepsItem-subTitle {
   padding-left: 0.625rem;
   font-size: var(--Steps-sub-title-fontsize);
@@ -37072,6 +38598,8 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Steps .a-StepsItem-containerWrapper .a-StepsItem-body .a-StepsItem-description {
   max-width: 8.75rem;
   white-space: nowrap;
+  position: relative;
+  bottom: 0.625rem;
 }
 
 .amis-scope .a-Steps .a-StepsItem:last-child {
@@ -37089,19 +38617,16 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Steps--vertical .a-StepsItem {
   padding: 0.3125rem 0;
   min-height: 75px;
+  overflow: hidden !important;
 }
 
-.amis-scope .a-Steps--vertical .a-StepsItem-containerIcon > .a-StepsItem-icon {
-  position: relative;
-}
-
-.amis-scope .a-Steps--vertical .a-StepsItem-containerIcon > .a-StepsItem-icon:after {
+.amis-scope .a-Steps--vertical .a-StepsItem-containerIcon:after {
   content: "";
   position: absolute;
   right: 0;
-  top: 2.1875rem;
+  top: 2rem;
   height: 9999px;
-  left: 0.875rem;
+  left: 0.6875rem;
   width: 1px;
   background-color: var(--Steps-line-bg);
 }
@@ -37110,12 +38635,183 @@ readers do not read off random characters that represent icons */
   display: none;
 }
 
+.amis-scope .a-Steps--vertical .a-StepsItem-containerTail:after {
+  display: none !important;
+}
+
 .amis-scope .a-Steps--vertical .a-StepsItem:last-child {
   flex: none;
 }
 
-.amis-scope .a-Steps--vertical .a-StepsItem:last-child .a-StepsItem-icon:after {
+.amis-scope .a-Steps--vertical .a-StepsItem:last-child .a-StepsItem-containerIcon:after {
   display: none;
+}
+
+.amis-scope .a-Steps--vertical .a-StepsItem-ProgressDot {
+  margin-left: 10px;
+}
+
+.amis-scope .a-Steps--vertical .a-StepsItem-ProgressDot .a-StepsItem-container {
+  flex-direction: row;
+}
+
+.amis-scope .a-Steps--vertical .a-StepsItem-ProgressDot .a-StepsItem-containerTail {
+  display: none;
+}
+
+.amis-scope .a-Steps--vertical .a-StepsItem-ProgressDot .a-StepsItem-containerWrapper {
+  width: 25rem;
+}
+
+.amis-scope .a-Steps--vertical .a-StepsItem-ProgressDot .a-StepsItem-containerProgressDot {
+  margin-left: 0px;
+  margin-top: 0.625rem;
+}
+
+.amis-scope .a-Steps--vertical .a-StepsItem-ProgressDot .a-StepsItem-containerProgressDot:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 1.75rem;
+  width: 1px;
+  left: 3px;
+  height: 9999px;
+  background-color: var(--Steps-line-bg);
+}
+
+.amis-scope .a-Steps--vertical .a-StepsItem-ProgressDot .a-StepsItem-title > span {
+  display: inline-block !important;
+}
+
+.amis-scope .a-Steps--vertical .a-StepsItem-ProgressDot .a-StepsItem-vertical-ProgressDot {
+  right: 0.625rem;
+}
+
+.amis-scope .a-Steps--vertical .a-StepsItem-ProgressDot .a-StepsItem-body {
+  text-align: left !important;
+}
+
+.amis-scope .a-Steps--vertical .a-StepsItem-ProgressDot:last-child .a-StepsItem-containerProgressDot:after {
+  display: none;
+}
+
+.amis-scope .a-Steps--vertical .is-finish .a-StepsItem-containerProgressDot:after {
+  background: var(--Steps-status-success);
+}
+
+.amis-scope .a-Steps--Placement-vertical {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem {
+  flex: 1;
+  padding: 0;
+  overflow: visible;
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem-containerTail:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 1rem;
+  height: 1px;
+  left: 8.125rem;
+  width: calc(100% - 55px);
+  background-color: var(--Steps-line-bg);
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem-containerIcon {
+  margin-left: 5.625rem;
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem-containerWrapper {
+  width: 12.5rem;
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem-containerWrapper .a-StepsItem-body {
+  text-align: center;
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem-containerWrapper .a-StepsItem-body .a-StepsItem-title {
+  padding: 0 0.625rem;
+  width: 100%;
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem-containerWrapper .a-StepsItem-body .a-StepsItem-title > span {
+  display: block;
+  position: relative;
+  left: 0.625rem;
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem-containerWrapper .a-StepsItem-body .a-StepsItem-title .a-StepsItem-subTitle {
+  word-break: break-all;
+  padding: 0 0.625rem;
+  position: relative;
+  left: 0.625rem;
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem-containerWrapper .a-StepsItem-body .a-StepsItem-title:after {
+  display: none;
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem-containerWrapper .a-StepsItem-body .a-StepsItem-description {
+  min-width: 12.5rem;
+  word-break: break-all;
+  padding: 0 0.625rem;
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem-containerWrapper .a-StepsItem-body .a-StepsItem-title.is-success:after {
+  background-color: var(--Steps-line-success-bg);
+}
+
+.amis-scope .a-Steps--Placement-vertical .a-StepsItem:last-child .a-StepsItem-containerTail:after {
+  display: none;
+}
+
+.amis-scope .a-Steps--Placement-vertical .is-finish .a-StepsItem-containerTail:after {
+  background: var(--Steps-status-success);
+}
+
+.amis-scope .a-Steps--ProgressDot .a-StepsItem-containerTail:after {
+  left: 6.875rem;
+  width: calc(100% - 20px);
+}
+
+.amis-scope .a-Steps--ProgressDot .a-StepsItem-containerProgressDot {
+  margin-top: 0.8125rem;
+  margin-bottom: 0.3125rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 6rem;
+  border: 1px solid var(--Steps-line-success-bg);
+  border-radius: 100%;
+}
+
+.amis-scope .a-Steps--ProgressDot .is-finish .a-StepsItem-containerTail:after {
+  background: var(--Steps-status-success);
+}
+
+.amis-scope .a-Steps--ProgressDot .is-wait .a-StepsItem-containerProgressDot {
+  background: var(--Steps-line-bg);
+  border: 1px solid var(--Steps-line-bg);
+}
+
+.amis-scope .a-Steps--ProgressDot .is-error .a-StepsItem-containerProgressDot {
+  background: var(--Steps-status-error);
+  border: 1px solid var(--Steps-status-error);
+}
+
+.amis-scope .a-Steps--ProgressDot .is-process .a-StepsItem-containerProgressDot {
+  border: 1px solid var(--Steps-status-success);
+  background: var(--Steps-status-success);
 }
 
 .amis-scope .a-Steps .a-StepsItem.is-wait .a-StepsItem-icon {
@@ -38166,8 +39862,120 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-TextareaControl {
+  position: relative;
+  max-width: 100%;
   --Form-input-clearBtn-padding: 0.125rem;
   position: relative;
+}
+
+.amis-scope .a-TextareaControl.is-inline {
+  display: inline-block;
+  width: var(--Form-control-widthBase);
+}
+
+.amis-scope .a-TextareaControl-input {
+  display: flex;
+  background: var(--Form-input-bg);
+  border: var(--Form-input-borderWidth) solid var(--Form-input-borderColor);
+  border-radius: var(--Form-input-borderRadius);
+  line-height: var(--Form-input-lineHeight);
+  padding: var(--Form-input-paddingY) var(--Form-input-paddingX);
+  font-size: var(--Form-input-fontSize);
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.amis-scope .a-TextareaControl-input input {
+  flex-basis: 5rem;
+  flex-grow: 1;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: var(--Form-input-color);
+  width: 100%;
+  height: calc(var(--Form-input-lineHeight) * var(--Form-input-fontSize));
+}
+
+.amis-scope .a-TextareaControl-input input::placeholder {
+  color: var(--Form-input-placeholderColor);
+  user-select: none;
+}
+
+.amis-scope .a-TextareaControl-input:hover {
+  border-color: var(--Form-input-onFocused-borderColor);
+}
+
+.amis-scope .a-TextareaControl-input--borderHalf {
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-top-color: transparent !important;
+}
+
+.amis-scope .a-TextareaControl-input--borderNone {
+  border-color: transparent !important;
+}
+
+.amis-scope .a-TextareaControl.is-error > .a-TextareaControl-input {
+  border-color: var(--Form-input-onError-borderColor);
+  background: var(--Form-input-onError-bg);
+  transition: all var(--animation-duration);
+}
+
+.amis-scope .a-TextareaControl.is-focused > .a-TextareaControl-input {
+  border-color: var(--Form-input-onFocused-borderColor);
+  box-shadow: var(--Form-input-boxShadow);
+  background: var(--Form-input-onFocused-bg);
+  transition: all var(--animation-duration);
+}
+
+.amis-scope .a-TextareaControl.is-error.is-focused > .a-TextareaControl-input {
+  border-color: var(--Form-input-onError-borderColor);
+}
+
+.amis-scope .a-TextareaControl.is-disabled > .a-TextareaControl-input {
+  color: var(--text--muted-color);
+  background: var(--Form-input-onDisabled-bg);
+  border-color: var(--Form-input-onDisabled-borderColor);
+  transition: all var(--animation-duration);
+}
+
+.amis-scope .a-TextareaControl-spinner {
+  line-height: calc( var(--Form-input-lineHeight) * var(--Form-input-fontSize) );
+}
+
+.amis-scope .a-TextareaControl-clear {
+  padding: var(--Form-input-clearBtn-padding);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  text-decoration: none;
+}
+
+.amis-scope .a-TextareaControl-clear svg {
+  fill: var(--Form-input-clearBtn-color);
+  top: 0;
+  width: var(--Form-input-clearBtn-size);
+  height: var(--Form-input-clearBtn-size);
+}
+
+.amis-scope .a-TextareaControl-clear:hover svg {
+  fill: var(--Form-input-clearBtn-color-onHover);
+}
+
+.amis-scope .a-TextareaControl-clear:active svg {
+  fill: var(--Form-input-clearBtn-color-onActive);
+}
+
+@media (min-width: 576px) {
+  .amis-scope .a-TextareaControl.a-Form-control--sizeXs > .a-TextareaControl-input,
+  .amis-scope .a-TextareaControl.a-Form-control--sizeSm > .a-TextareaControl-input,
+  .amis-scope .a-TextareaControl.a-Form-control--sizeMd > .a-TextareaControl-input,
+  .amis-scope .a-TextareaControl.a-Form-control--sizeLg > .a-TextareaControl-input {
+    min-width: 100%;
+    display: inline-flex;
+  }
 }
 
 .amis-scope .a-TextareaControl > textarea {
@@ -38199,27 +40007,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-TextareaControl > textarea:hover {
   border-color: var(--Form-input-onHover-borderColor);
-}
-
-.amis-scope .a-TextareaControl > textarea:focus,
-.amis-scope .a-TextareaControl.is-focused > textarea {
-  border-color: var(--Form-input-onFocused-borderColor);
-  box-shadow: var(--Form-input-boxShadow);
-}
-
-.amis-scope .a-TextareaControl > textarea:focus:hover,
-.amis-scope .a-TextareaControl.is-focused > textarea:hover {
-  border-color: var(--Form-input-onFocused-borderColor);
-}
-
-.amis-scope .a-TextareaControl.is-disabled > textarea,
-.amis-scope .a-TextareaControl > textarea[disabled] {
-  background: #e5e7eb;
-  color: var(--text--muted-color);
-}
-
-.amis-scope .a-TextareaControl.is-error > textarea {
-  border-color: var(--Form-input-onError-borderColor);
 }
 
 .amis-scope .a-TextareaControl-counter {
@@ -38421,9 +40208,122 @@ readers do not read off random characters that represent icons */
   height: 0;
   border-color: transparent;
   transition: width var(--animation-duration), height var(--animation-duration), transform var(--animation-duration);
-  border-width: 0 0 0.125rem 0.125rem;
-  transform: translate(-50%, -60%) rotate(-40deg);
+  border-width: 0 0 0.0625rem 0.0625rem;
+  transform: translate(-50%, -90%) rotate(-40deg);
   border-style: solid;
+}
+
+.amis-scope .a-Checkbox--partial.a-Checkbox--checkbox input {
+  margin-left: calc(var(--Checkbox-size) * -1);
+}
+
+.amis-scope .a-Checkbox--partial.a-Checkbox--checkbox input + i {
+  border-color: var(--Checkbox-onHover-color);
+}
+
+.amis-scope .a-Checkbox--partial.a-Checkbox--checkbox input + i:before {
+  width: var(--Checkbox-inner-size);
+  height: var(--Checkbox-inner-size);
+  background: var(--Checkbox-onHover-color);
+}
+
+.amis-scope .a-Checkbox--partial.a-Checkbox--checkbox input[disabled] + i {
+  border-color: var(--Checkbox-onDisabled-color);
+}
+
+.amis-scope .a-Checkbox--partial.a-Checkbox--checkbox input[disabled] + i:before {
+  width: var(--Checkbox-inner-size);
+  height: var(--Checkbox-inner-size);
+  background: var(--Checkbox-inner-onDisabled-bg);
+}
+
+.amis-scope .a-Checkbox--partial.a-Checkbox--checkbox input:checked[disabled] + i {
+  width: var(--Checkbox-inner-size);
+  height: var(--Checkbox-inner-size);
+  background: var(--Checkbox-onDisabled-bg);
+}
+
+.amis-scope .a-Checkbox--button.a-Checkbox--checkbox {
+  text-align: center;
+  height: var(--Checkbox-button-height);
+  line-height: var(--Checkbox-button-line-height);
+  padding-left: var(--Checkbox-paddingX);
+  padding-right: var(--Checkbox-paddingX);
+  font-size: var(--fontSizeSm);
+  border: var(--Checkbox-border-width) solid;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background-color: var(--Checkbox-gb);
+  border-color: var(--Checkbox-color);
+  margin-right: 0;
+  border-radius: calc(var(--Checkbox-borderRadius) * 2);
+  min-width: var(--Checkbox-button-min-width);
+}
+
+.amis-scope .a-Checkbox--button.a-Checkbox--checkbox:hover:not(:disabled) {
+  color: var(--Checkbox-onHover-color);
+}
+
+.amis-scope .a-Checkbox--button.a-Checkbox--checkbox input:checked + i {
+  background: transparent;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-width: 0.5rem;
+  border-color: var(--Checkbox-onHover-color) transparent transparent var(--Checkbox-onHover-color);
+  border-radius: 0;
+}
+
+.amis-scope .a-Checkbox--button.a-Checkbox--checkbox input:checked + i:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--Checkbox--full-inner-size);
+  height: calc(var(--Checkbox--full-inner-size) / 2);
+  transform: translate(-80%, -160%) rotate(-50deg);
+  background: transparent;
+}
+
+.amis-scope .a-Checkbox--button.a-Checkbox--checkbox input[disabled] + i {
+  border-color: var(--Checkbox-onDisabled-color);
+  background: transparent;
+}
+
+.amis-scope .a-Checkbox--button.a-Checkbox--checkbox input[disabled] + i:before {
+  background: transparent;
+}
+
+.amis-scope .a-Checkbox--button.a-Checkbox--checkbox input:checked[disabled] + i {
+  background: transparent;
+  border-width: 0.5rem;
+  border-color: var(--Checkbox-onHover-color) transparent transparent var(--Checkbox-onHover-color);
+}
+
+.amis-scope .a-Checkbox--button.a-Checkbox--checkbox > i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  border: 0;
+  border-style: solid;
+}
+
+.amis-scope .a-Checkbox--button.a-Checkbox--checkbox > i + span {
+  max-width: 6.25rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.amis-scope .a-Checkbox--button--checked.a-Checkbox--checkbox {
+  border-color: var(--Checkbox-onHover-color);
+  color: var(--Checkbox-onHover-color);
+}
+
+.amis-scope .a-Checkbox--button--disabled--unchecked.a-Checkbox--checkbox {
+  background: var(--Checkbox-disabled-unchecked-bg);
 }
 
 .amis-scope .a-Checkbox--radio {
@@ -38522,10 +40422,22 @@ readers do not read off random characters that represent icons */
   margin-bottom: var(--Form-label-paddingTop);
 }
 
+.amis-scope .a-RadiosControl .a-Checkbox--button,
+.amis-scope .a-CheckboxesControl .a-Checkbox--button {
+  margin-bottom: 0;
+}
+
 .amis-scope .a-RadiosControl.is-inline .a-Checkbox,
 .amis-scope .a-CheckboxesControl.is-inline .a-Checkbox {
   display: inline-block;
   margin-right: var(--gap-md);
+}
+
+.amis-scope .a-RadiosControl.is-inline .a-Checkbox--button,
+.amis-scope .a-CheckboxesControl.is-inline .a-Checkbox--button {
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .amis-scope .a-RadiosControl-group:not(:first-child),
@@ -39011,6 +40923,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Switch.is-checked .text {
   color: var(--white);
+  margin: 0 1.5625rem 0 0.4375rem;
 }
 
 .amis-scope .a-Switch.is-checked.is-disabled .slider:before {
@@ -39059,6 +40972,7 @@ readers do not read off random characters that represent icons */
   background: var(--Number-bg);
   border: var(--Number-borderWidth) solid var(--Number-borderColor);
   border-radius: var(--Number-borderRadius);
+  overflow: hidden;
 }
 
 .amis-scope .a-Number--borderHalf {
@@ -39133,6 +41047,7 @@ readers do not read off random characters that represent icons */
   transition: all var(--animation-duration) ease;
   border: 0;
   border-radius: var(--Form-input-borderRadius);
+  color: var(--Form-input-color);
   padding: 0 var(--Form-input-paddingX);
 }
 
@@ -39189,9 +41104,10 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Number-disabled .a-Number-input {
-  opacity: 0.72;
   cursor: not-allowed;
-  background: var(--Number-onDisabled-bg);
+  color: var(--text--muted-color);
+  background: var(--Form-input-onDisabled-bg);
+  border-color: var(--Form-input-onDisabled-borderColor);
 }
 
 .amis-scope .a-Number-disabled .a-Number-handler {
@@ -39286,7 +41202,6 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Select-placeholder {
-  color: var(--Form-select-placeholderColor);
   line-height: var(--Form-input-lineHeight);
   user-select: none;
   white-space: nowrap;
@@ -39307,10 +41222,6 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Select--multi {
   height: auto;
   min-height: var(--Form-selectOption-height);
-}
-
-.amis-scope .a-Select--multi .a-Select-valueWrap {
-  margin-bottom: calc(var(--gap-xs) * -1);
 }
 
 .amis-scope .a-Select--multi .a-Select-valueWrap > input {
@@ -40112,6 +42023,21 @@ readers do not read off random characters that represent icons */
   color: var(--DatePicker-color);
   background: var(--DatePicker-bg);
   border-radius: var(--DatePicker-borderRadius);
+  min-width: var(--DatePicker-minWidth);
+}
+
+.amis-scope .a-DatePicker-input {
+  display: inline-block;
+  width: 100%;
+  background: none;
+  padding: 0;
+  border: 0;
+}
+
+.amis-scope .a-DatePicker-input:focus {
+  border: none;
+  outline: none;
+  box-sizing: none;
 }
 
 .amis-scope .a-DatePicker--borderHalf {
@@ -40232,12 +42158,22 @@ readers do not read off random characters that represent icons */
   display: flex;
 }
 
+.amis-scope .a-DateControl {
+  width: auto !important;
+}
+
+.amis-scope .a-DateControl.is-date > .a-DatePicker {
+  min-width: calc(var(--DatePicker-minWidth) + var(--fontSizeLg) * 2);
+}
+
+.amis-scope .a-DateControl.is-datetime > .a-DatePicker {
+  min-width: calc(var(--DatePicker-minWidth) + var(--fontSizeLg) * 6);
+}
+
 .amis-scope .a-DatePicker-shortcuts {
   margin: 0;
-  background: var(--Calendar-shortcuts-bg);
   padding: calc( ( var(--Calendar-shortcuts-height) - var(--Calendar-fontSize) * var(--lineHeightBase) ) / 2 ) var(--gap-sm);
   list-style: none;
-  width: 15.625rem;
 }
 
 .amis-scope .a-DatePicker-shortcuts + .rdt .rdtPicker {
@@ -40323,15 +42259,54 @@ readers do not read off random characters that represent icons */
   color: var(--Calendar-color);
 }
 
+.amis-scope .rdt .rdtDays {
+  display: flex;
+}
+
+.amis-scope .rdt .rdtDays .rdtDaysPart {
+  width: 16.5rem;
+  border-right: 1px solid var(--Calendar-input-borderColor);
+}
+
+.amis-scope .rdt .rdtDays .rdtTimePart {
+  width: 8rem;
+  text-align: center;
+}
+
+.amis-scope .rdt .rdtDays .rdtTimePartWithS {
+  width: 12rem;
+  text-align: center;
+}
+
+.amis-scope .rdt .rdtDays .rdtShowTime {
+  height: 2.6875rem;
+  padding-top: 0.6875rem;
+  margin-left: 0.125rem;
+  border-bottom: 1px solid var(--Calendar-input-borderColor);
+}
+
+.amis-scope .rdt .rdtPickerTime {
+  width: 100%;
+  height: 100%;
+}
+
+.amis-scope .rdt .rdtPickerDate {
+  width: 17rem;
+  height: 100%;
+}
+
+.amis-scope .rdt .rdtPickerTimeWithoutD {
+  width: 100%;
+}
+
 .amis-scope .rdt .rdtPicker {
   margin-top: 0;
-  padding: var(--gap-sm);
+  padding: 0;
   background: transparent;
   border: none;
 }
 
 .amis-scope .rdt .rdtPicker .dow {
-  color: var(--Calendar-wLabel-color);
   font-weight: normal;
 }
 
@@ -40383,6 +42358,10 @@ readers do not read off random characters that represent icons */
   background: transparent;
 }
 
+.amis-scope .rdt tbody {
+  height: 12.125rem;
+}
+
 .amis-scope .rdt tfoot {
   border-top: 0;
 }
@@ -40399,31 +42378,42 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .rdt tfoot td .rdtActions {
-  margin-top: var(--gap-sm);
   text-align: right;
+  padding: var(--gap-sm);
+  border-top: 1px solid var(--Calendar-input-borderColor);
 }
 
 .amis-scope .a-CalendarInputWrapper {
   display: inline-block;
   position: relative;
+  width: 4rem;
+  height: 14rem;
+  overflow: auto;
 }
 
 .amis-scope .a-CalendarInputWrapper .a-CalendarInput-sugs {
   list-style: none;
-  position: absolute;
   background: var(--Form-select-menu-bg);
   color: var(--Form-select-menu-color);
-  border: var(--Form-input-borderWidth) solid var(--Form-input-onFocused-borderColor);
   left: -0.0625rem;
   right: -0.0625rem;
   top: 100%;
   z-index: 10;
-  max-height: 12.5rem;
-  overflow: auto;
+}
+
+.amis-scope .a-CalendarInputWrapper .a-CalendarInput-sugsHours {
+  height: 54.25rem;
+}
+
+.amis-scope .a-CalendarInputWrapper .a-CalendarInput-sugsTimes {
+  height: 117.25rem;
+  border-left: 1px solid var(--Calendar-input-borderColor);
 }
 
 .amis-scope .a-CalendarInputWrapper .a-CalendarInput-sugsItem {
-  padding-left: 4px;
+  text-align: center;
+  height: 28px;
+  line-height: 28px;
 }
 
 .amis-scope .a-CalendarInputWrapper .a-CalendarInput-sugsItem.is-highlight,
@@ -40432,9 +42422,16 @@ readers do not read off random characters that represent icons */
   background: var(--Form-select-menu-onHover-bg);
 }
 
+.amis-scope .a-TimeRangeHeaderWrapper {
+  height: 40px;
+  padding-top: 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--Calendar-input-borderColor);
+}
+
 .amis-scope .a-CalendarInput {
   outline: none;
-  width: 40px;
+  width: 3.5rem;
   font-size: var(--Calendar-input-fontSize);
   color: var(--Calendar-input-color);
   border: 1px solid var(--Calendar-input-borderColor);
@@ -40605,7 +42602,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .rdtSwitch {
   text-align: center;
-  color: #000;
   cursor: pointer;
   font-weight: normal;
 }
@@ -40619,6 +42615,8 @@ readers do not read off random characters that represent icons */
   display: table;
   table-layout: fixed;
   border-collapse: separate;
+  border-bottom: 1px solid var(--Calendar-input-borderColor);
+  height: 40px;
   width: 100%;
 }
 
@@ -40709,6 +42707,7 @@ readers do not read off random characters that represent icons */
   border-radius: var(--DatePicker-borderRadius);
   color: var(--DatePicker-color);
   background: var(--DatePicker-bg);
+  min-width: var(--DateRangePicker-minWidth);
 }
 
 .amis-scope .a-DateRangePicker--borderHalf {
@@ -40737,6 +42736,22 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-DateRangePicker.is-focused {
   border-color: var(--DatePicker-onFocused-borderColor);
   box-shadow: var(--Form-input-boxShadow);
+}
+
+.amis-scope .a-DateRangePicker .a-DateRangePicker-input {
+  border: none;
+  border-bottom: 1px solid transparent;
+  outline: none;
+  padding: 0;
+  background: 0;
+}
+
+.amis-scope .a-DateRangePicker .a-DateRangePicker-input.isActive {
+  border-bottom: 1px solid var(--DatePicker-onFocused-borderColor);
+}
+
+.amis-scope .a-DateRangePicker .a-DateRangePicker-input-separator {
+  margin: 0 var(--gap-sm);
 }
 
 .amis-scope .a-DateRangePicker.is-disabled {
@@ -40826,7 +42841,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-DateRangePicker-wrap {
   width: auto;
-  padding: var(--gap-sm);
+  padding: 0;
 }
 
 .amis-scope .a-DateRangePicker-start,
@@ -40847,8 +42862,8 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-DateRangePicker-rangers {
-  margin: 0 0 var(--gap-sm);
-  padding: 0;
+  margin: 0;
+  padding: 10px 0 0 10px;
   list-style: none;
 }
 
@@ -40863,11 +42878,20 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-DateRangePicker-actions {
   text-align: right;
-  margin-top: var(--gap-sm);
+  padding: var(--gap-sm);
+  border-top: 1px solid var(--Calendar-input-borderColor);
 }
 
 .amis-scope .a-DateRangeControl:not(.is-inline) > .a-DateRangePicker {
   display: flex;
+}
+
+.amis-scope .a-DateRangeControl.is-date > .a-DateRangePicker {
+  min-width: calc(var(--DateRangePicker-minWidth) + var(--fontSizeLg) * 5.5);
+}
+
+.amis-scope .a-DateRangeControl.is-datetime > .a-DateRangePicker {
+  min-width: calc(var(--DateRangePicker-minWidth) + var(--fontSizeLg) * 11);
 }
 
 .amis-scope .a-DateRangePicker-popover {
@@ -40890,7 +42914,7 @@ readers do not read off random characters that represent icons */
 
   .amis-scope .a-DateRangePicker-end {
     margin-top: 0;
-    margin-left: var(--gap-sm);
+    border-left: 1px solid var(--Calendar-input-borderColor);
   }
 }
 
@@ -41391,6 +43415,10 @@ readers do not read off random characters that represent icons */
   top: 0;
 }
 
+.amis-scope .a-FileControl-dropzone.is-active .a-FileControl-acceptTip {
+  border-color: var(--info);
+}
+
 .amis-scope .a-FileControl-sum {
   font-size: var(--fontSizeSm);
 }
@@ -41450,7 +43478,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-EditorControl > .a-MonacoEditor,
 .amis-scope .a-EditorControl > .a-MonacoEditor > .monaco-diff-editor {
-  min-height: 12.375rem;
+  min-height: inherit;
 }
 
 .amis-scope .a-EditorControl.is-error {
@@ -41554,7 +43582,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fr-popup {
-  z-index: 1300 !important;
+  z-index: 3000 !important;
 }
 
 .amis-scope .a-RichTextControl {
@@ -42042,20 +44070,8 @@ readers do not read off random characters that represent icons */
   position: relative;
 }
 
-.amis-scope .a-Tree-itemLabel > * {
-  position: relative;
-  z-index: 2;
-}
-
-.amis-scope .a-Tree-itemLabel:hover:after {
-  position: absolute;
-  content: "";
-  z-index: 1;
+.amis-scope .a-Tree-itemLabel:hover {
   background: var(--Tree-item-onHover-bg);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: -99999px;
 }
 
 .amis-scope .a-Tree.is-draggable .a-Tree-itemLabel:hover::after {
@@ -42588,6 +44604,10 @@ readers do not read off random characters that represent icons */
   opacity: var(--Button-onDisabled-opacity);
 }
 
+.amis-scope .a-Combo--hor .a-Combo-delController {
+  margin-left: var(--gap-xs);
+}
+
 .amis-scope .a-Combo--hor.is-draggable .a-Combo-toolbar {
   padding-left: 1.5rem;
 }
@@ -42649,8 +44669,17 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Combo--ver:not(.a-Combo--noBorder):not(.is-disabled) > .a-Combo-item:hover > .a-Combo-delBtn,
-.amis-scope .a-Combo--ver:not(.a-Combo--noBorder):not(.is-disabled) > .a-Combo-items > .a-Combo-item:hover > .a-Combo-delBtn {
+.amis-scope .a-Combo--ver:not(.a-Combo--noBorder):not(.is-disabled) > .a-Combo-item:hover > .a-Combo-delController,
+.amis-scope .a-Combo--ver:not(.a-Combo--noBorder):not(.is-disabled) > .a-Combo-items > .a-Combo-item:hover > .a-Combo-delBtn,
+.amis-scope .a-Combo--ver:not(.a-Combo--noBorder):not(.is-disabled) > .a-Combo-items > .a-Combo-item:hover > .a-Combo-delController {
   opacity: 1;
+}
+
+.amis-scope .a-Combo--ver:not(.a-Combo--noBorder) .a-Combo-delController {
+  position: absolute;
+  top: var(--gap-xs);
+  right: var(--gap-xs);
+  opacity: 0;
 }
 
 .amis-scope .a-Combo--ver:not(.a-Combo--noBorder) > .a-Combo-items > .a-Combo-item > .a-Combo-itemDrager {
@@ -43403,6 +45432,25 @@ readers do not read off random characters that represent icons */
   height: 40px;
 }
 
+.amis-scope .a-TabsTransfer-tabs .a-Tabs-linksContainer {
+  padding-left: 1.25rem;
+  padding-top: 0.5rem;
+  background-color: var(--TabsTransfer-title-bg);
+}
+
+.amis-scope .a-TabsTransfer-search {
+  margin: var(--gap-sm) var(--gap-sm);
+}
+
+.amis-scope .a-TabsTransfer-search .a-InputBox {
+  border: 1px solid var(--TabsTransfer-border-color);
+}
+
+.amis-scope .a-TabsTransfer .a-Transfer-result .a-Transfer-title {
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+
 .amis-scope .a-TabsTransfer-placeholder {
   height: var(--Form-input-height);
   line-height: var(--Form-input-lineHeight);
@@ -43532,8 +45580,9 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-TransferDropDown-content > .a-Transfer-selection {
   flex-grow: 1;
-  max-height: 100%;
-  overflow: auto;
+  max-height: var(--Transfer-selection-maxHeight);
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -44091,6 +46140,23 @@ readers do not read off random characters that represent icons */
   white-space: var(--Form--horizontal-label-whiteSpace);
 }
 
+.amis-scope .a-Form-item--horizontal-justify {
+  justify-content: space-between;
+}
+
+.amis-scope .a-Form-item--horizontal-justify > .a-Form-label {
+  text-align: var(--Form--horizontal-justify-label-align);
+  white-space: var(--Form--horizontal-justify-label-whiteSpace);
+}
+
+.amis-scope .a-Form-item--horizontal-justify > .a-Form-value {
+  text-align: var(--Form--horizontal-justify-value-align);
+}
+
+.amis-scope .a-Form-item--horizontal-justify > .a-Form-value > * {
+  text-align: initial;
+}
+
 .amis-scope .a-Form-item--normal > .a-Form-label {
   display: block;
 }
@@ -44432,6 +46498,17 @@ readers do not read off random characters that represent icons */
 /* 移动端样式调整 */
 
 @media (max-width: 767px) {
+  .amis-scope .a-Form::before {
+    position: absolute;
+    box-sizing: border-box;
+    content: " ";
+    pointer-events: none;
+    right: 0;
+    top: 0;
+    left: 0;
+    border-bottom: var(--Form-input-borderWidth) solid var(--borderColor);
+  }
+
   .amis-scope .a-Form .a-Form-item {
     display: flex;
     flex-wrap: wrap;
@@ -44449,7 +46526,6 @@ readers do not read off random characters that represent icons */
     bottom: 0;
     left: 0;
     border-bottom: var(--Form-input-borderWidth) solid var(--borderColor);
-    transform: scaleY(0.5);
   }
 
   .amis-scope .a-Form .a-Form-item .a-InputGroup-addOn,
@@ -44581,17 +46657,16 @@ readers do not read off random characters that represent icons */
     margin-bottom: 0;
   }
 
+  .amis-scope .a-Form > .a-Form-item.is-placeholder::after {
+    display: none;
+  }
+
   .amis-scope .a-Form .a-Divider {
     display: none;
   }
 
   .amis-scope .a-Form .a-Tabs-pane {
     padding: 0;
-  }
-
-  .amis-scope .a-Form > .a-Form-item:last-child::after,
-  .amis-scope .a-Form > .a-Form-item:last-of-type::after {
-    display: none;
   }
 
   .amis-scope .a-Form .a-Form-item .a-Form-groupColumn > .a-Form-item {
@@ -45007,7 +47082,7 @@ readers do not read off random characters that represent icons */
   box-sizing: border-box;
   background: var(--InputFormula-header-bgColor);
   border-radius: var(--borderRadius) var(--borderRadius) 0 0;
-  border-bottom: var(--Form-input-borderWidth) solid var(--Form-input-borderColor);
+  border-bottom: none;
   font-weight: 500;
 }
 
@@ -45051,11 +47126,11 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-FormulaEditor-panel {
   display: flex;
+  flex: 1;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: stretch;
   height: 15.625rem;
-  width: 13.75rem;
   border-radius: var(--borderRadius);
   border: var(--Form-input-borderWidth) solid var(--Form-input-borderColor);
 }
@@ -45076,7 +47151,7 @@ readers do not read off random characters that represent icons */
   box-sizing: border-box;
   background: var(--InputFormula-header-bgColor);
   border-radius: var(--borderRadius) var(--borderRadius) 0 0;
-  border-bottom: var(--Form-input-borderWidth) solid var(--Form-input-borderColor);
+  border-bottom: none;
   font-weight: 500;
 }
 
@@ -45087,42 +47162,114 @@ readers do not read off random characters that represent icons */
   max-height: 13.75rem;
 }
 
+.amis-scope .a-FormulaEditor-panel-body--tabs {
+  max-height: 15.625rem;
+}
+
 .amis-scope .a-FormulaEditor-VariableList-root {
-  max-height: 13.75rem;
+  max-height: 100%;
 }
 
-.amis-scope .a-FormulaEditor-VariableList-root.is-scrollable {
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.amis-scope .a-FormulaEditor-VariableList-root.is-scrollable::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-.amis-scope .a-FormulaEditor-VariableList-root.is-scrollable::-webkit-scrollbar-thumb {
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.3);
+.amis-scope .a-FormulaEditor-VariableList-body {
+  display: flex;
+  flex-flow: column nowrap;
+  max-height: 100%;
 }
 
 .amis-scope .a-FormulaEditor-VariableList-base {
   --Form-input-fontSize: var(--fontSizeSm);
-  max-width: inherit;
-  overflow: hidden;
+  --gap-sm: 0.625rem;
+  flex: 1;
+  max-height: 100%;
+}
+
+.amis-scope .a-FormulaEditor-VariableList-base.is-scrollable {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.amis-scope .a-FormulaEditor-VariableList-base.is-scrollable::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.amis-scope .a-FormulaEditor-VariableList-base.is-scrollable::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.amis-scope .a-FormulaEditor-VariableList-searchBox {
+  display: flex;
+  width: auto;
+  flex-shrink: 0;
+  padding: 0.5rem;
+}
+
+.amis-scope .a-FormulaEditor-VariableList-searchBox > div {
+  flex: 1;
+  font-size: var(--fontSizeSm);
+  height: var(--gap-xl);
 }
 
 .amis-scope .a-FormulaEditor-VariableList-tabs {
   --Tabs-linkFontSize: var(--fontSizeSm);
   --Tabs--card-linkPadding: 0.3125rem;
-  max-height: 13.75rem;
+  max-height: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
 }
 
-.amis-scope .a-FormulaEditor-VariableList-tabs > ul {
-  border-top: none;
+.amis-scope .a-FormulaEditor-VariableList-tabs .a-Tabs-content {
+  padding: 0;
+}
+
+.amis-scope .a-FormulaEditor-VariableList-tabs .a-Tabs-content .a-FormulaEditor-VariableList-sub .a-FormulaEditor-VariableList-body {
+  max-height: 13.75rem;
+  overflow-y: hidden;
+}
+
+.amis-scope .a-FormulaEditor-VariableList-tabs .a-Tabs-content .a-FormulaEditor-VariableList-sub-FormulaEditor-VariableList-base {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.amis-scope .a-FormulaEditor-VariableList-tabs .a-Tabs-content .a-FormulaEditor-VariableList-sub-FormulaEditor-VariableList-base::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.amis-scope .a-FormulaEditor-VariableList-tabs .a-Tabs-content .a-FormulaEditor-VariableList-sub-FormulaEditor-VariableList-base::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.amis-scope .a-FormulaEditor-VariableList-tabs .a-Tabs-linksContainer-wrapper {
+  width: 100%;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  padding: 0 0.625rem;
+  box-sizing: border-box;
+  background: var(--InputFormula-header-bgColor);
+  border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+  border-bottom: none;
+  font-weight: 500;
+  max-height: 1.875rem;
+  min-height: 1.875rem;
+}
+
+.amis-scope .a-FormulaEditor-VariableList-tabs .a-Tabs-linksContainer-wrapper ul.a-Tabs-links > li {
+  height: 30px;
+  line-height: 30px;
+}
+
+.amis-scope .a-FormulaEditor-VariableList-tabs .a-Tabs-linksContainer-wrapper ul.a-Tabs-links > li > a {
+  margin: 0;
+  padding: 0;
+}
+
+.amis-scope .a-FormulaEditor-VariableList-tabs .a-Tabs-linksContainer--overflow > div {
+  margin: 0;
 }
 
 .amis-scope .a-FormulaEditor-VariableList-tabs > div {
@@ -45173,6 +47320,10 @@ readers do not read off random characters that represent icons */
   justify-content: space-between;
   align-items: stretch;
   flex: 1;
+}
+
+.amis-scope .a-FormulaEditor-FuncList .a-FormulaEditor-panel {
+  width: 11.75rem;
 }
 
 .amis-scope .a-FormulaEditor-FuncList:not(:last-child) {
@@ -45236,7 +47387,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-FormulaEditor-FuncList-item {
   cursor: pointer;
-  padding: 0 var(--gap-lg);
+  padding: 0 1.875rem;
   height: var(--gap-xl);
   line-height: var(--gap-xl);
 }
@@ -45334,6 +47485,26 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-FormulaPicker-icon.is-filled {
   fill: var(--InputFormula-icon-color-onActive);
   color: var(--InputFormula-icon-color-onActive);
+}
+
+.amis-scope .a-FormulaPicker-ResultBox {
+  padding-right: 10px;
+}
+
+.amis-scope .a-FormulaPicker-ResultBox span.c-field {
+  background: #007bff;
+  padding: 3px 5px;
+  margin: 0 1px;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.amis-scope .a-FormulaPicker-ResultBox span.c-func {
+  color: #ae4597;
+  font-weight: bold;
+  line-height: 14px;
+  padding: 0 2px;
 }
 
 .amis-scope .a-Timeline-vertical {
@@ -45525,9 +47696,32 @@ readers do not read off random characters that represent icons */
   border-radius: var(--TimelineItem--icon-radius);
 }
 
-.amis-scope .a-BarCode > svg {
+.amis-scope .a-BarCode > img {
   display: block;
   margin: 0 auto;
+}
+
+.amis-scope .a-PullRefresh-wrap {
+  position: relative;
+  height: 100%;
+}
+
+.amis-scope .a-PullRefresh-header {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-100%);
+  overflow: hidden;
+  padding: var(--gap-xs) 0;
+  min-height: var(--gap-lg);
+  line-height: var(--gap-lg);
+  color: #999;
+}
+
+.amis-scope .a-PullRefresh .loading-icon {
+  animation: var(--Button-animation-spin);
+  margin-right: var(--gap-xs);
 }
 
 /**
@@ -45601,9 +47795,8 @@ readers do not read off random characters that represent icons */
   right: 0;
   width: 24px;
   height: 48px;
-  box-shadow: rgba(0, 0, 0, 0.24) -2px 0px 4px 0px;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
+  box-shadow: 0 4px 6px 0 rgba(8, 14, 26, 0.04), 0 1px 10px 0 rgba(8, 14, 26, 0.05), 0 2px 4px -1px rgba(8, 14, 26, 0.06);
+  border-radius: var(--borderRadius) 0 0 var(--borderRadius);
   padding-top: 14px;
   padding-left: 6px;
   cursor: pointer;

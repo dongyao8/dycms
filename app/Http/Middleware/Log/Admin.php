@@ -22,7 +22,7 @@ class Admin
             $log = [
                 'ip'=>$request->ip(),
                 'method' => $request->method(),
-                'parms'=>$request->all(),
+                'parms'=>$request->except(['password']),
             ];
             //登录用户标记id身份
             if ($request->session()->has('aid')) {

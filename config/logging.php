@@ -67,6 +67,19 @@ return [
             'days' => 14,
         ],
 
+        'admin' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/admin.log'),
+            'days' => 30,
+            'ignore_exceptions' => false,
+        ],
+        'home' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/home.log'),
+            'days' => 30,
+            'ignore_exceptions' => false,
+        ],
+
         'slack' => [
             'driver' => 'slack',
             'url' => env('LOG_SLACK_WEBHOOK_URL'),

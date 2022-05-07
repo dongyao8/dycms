@@ -13387,6 +13387,7 @@ readers do not read off random characters that represent icons */
   --Button--light-onHover-color: var(--Button--light-color);
   --Button--link-color: var(--primary);
   --Button--link-onDisabled-color: #4b5563;
+  --Button--link-onDisabled-backgroundColor: transparent;
   --Button--link-onHover-color: var(--primary-onHover);
   --Button--link-onActive-color: var(--primary-onActive);
   --Button--md-fontSize: var(--Button-fontSize);
@@ -13745,14 +13746,12 @@ readers do not read off random characters that represent icons */
   );
   --DatePicker-placeholderColor: var(--Form-input-placeholderColor);
   --DatePicker-minWidth: calc(
-    var(--fontSizeLg) * 5 +var(--DatePicker-paddingX) * 2 + var(
-        --Form-input-clearBtn-size
-      ) * 2
+    var(--fontSizeLg) * 5 + var(--DatePicker-paddingX) * 2 +
+      var(--Form-input-clearBtn-size) * 2
   );
   --DateRangePicker-minWidth: calc(
-    var(--fontSizeLg) * 8 +var(--DatePicker-paddingX) * 2 + var(
-        --Form-input-clearBtn-size
-      ) * 2
+    var(--fontSizeLg) * 8 + var(--DatePicker-paddingX) * 2 +
+      var(--Form-input-clearBtn-size) * 2
   );
   --LocationPicker-borderRadius: var(--Form-input-borderWidth);
   --Divider-borderStyle: solid;
@@ -13850,6 +13849,10 @@ readers do not read off random characters that represent icons */
   --Form-input-onHover-bg: rgba(255, 255, 255, 0.6);
   --Form-input-onHover-borderColor: var(--Form-input-onFocused-borderColor);
   --Form-input-paddingX: 0.5rem;
+  --Form-inputNumber-paddingX: 0.75rem;
+  --Form-inputNumber-base-width: 1.5rem;
+  --Form-inputNumber-base-height: 2rem;
+  --Form-inputNumber-strong-disabled-color: #b4b6ba;
   --Form-input-paddingY: calc(
     (
         var(--Form-input-height) - var(--Form-input-lineHeight) *
@@ -13914,6 +13917,7 @@ readers do not read off random characters that represent icons */
   --Form-selectValue-onDisable-bg: #fcfdff;
   --Form-selectValue-onHover-bg: #cbe7fd;
   --Form-selectValue-onDisabled-color: var(--Form-select-caret-iconColor);
+  --Form-selectValue-onInvalid-color: var(--danger);
   --Form-valueLabel-maxWidth: 7.5rem;
   --Form-select-onFocus-boxShadow: none;
   --IconPicker-content-maxHeight: 21.875rem;
@@ -14142,6 +14146,7 @@ readers do not read off random characters that represent icons */
   --Modal-content-minHeight: unset;
   --Modal-content-startMarginTop: 3.75rem;
   --Modal-content-stepMarginTop: 1.875rem;
+  --Modal-footer-button-width: 4.5rem;
   --Modal-footer-marginX: 0;
   --Modal-footer-marginY: 0;
   --Modal-footer-padding: var(--gap-sm);
@@ -14157,7 +14162,8 @@ readers do not read off random characters that represent icons */
   --Modal-overlay-bg: rgba(0, 0, 0, 0.6);
   --Modal-title-color: var(--text--loud-color);
   --Modal-title-fontSize: var(--fontSizeBase);
-  --Modal-title-fontWeight: normal;
+  --Modal-title-fontSize: var(--fontSizeBase);
+  --Modal-title-fontWeight: 500;
   --Modal-title-lineHeight: var(--lineHeightBase);
   --Modal-widthBase: 31.25rem;
   --Modal-widthLg: 68.75rem;
@@ -14218,7 +14224,10 @@ readers do not read off random characters that represent icons */
   --Pagination-onActive-backgroundColor: var(--primary);
   --Pagination-onActive-border: 0;
   --Pagination-onActive-color: var(--white);
+  --Pagination-onDisabled-color: var(--text--muted-color);
+  --Pagination-onDisabled-backgroundColor: #e5e7eb;
   --Pagination-padding: 0 0.5rem;
+  --Pagination-light-color: #84868c;
   --Panel--default-badgeBg: #333;
   --Panel--default-badgeColor: #f5f5f5;
   --Panel--default-bg: #f6f8f8;
@@ -14372,14 +14381,34 @@ readers do not read off random characters that represent icons */
   --Table-searchableForm-backgroundColor: #f6f7f8;
   --Table-searchableForm-borderRadius: 0.25rem;
   --TableCell--edge-paddingX: var(--gap-md);
+  --TableCell--edge-paddingX-default: var(--gap-base);
   --TableCell-filterBtn--onActive-color: var(--primary);
   --TableCell-filterBtn-width: 1rem;
   --TableCell-filterPopOver-dropDownItem-height: 2.125rem;
   --TableCell-filterPopOver-dropDownItem-padding: 0 0.75rem;
+  --TableCell-line-height-large: 2.5rem;
+  --TableCell-line-height-middle: 1.875rem;
   --TableCell-height: 2.5rem;
+  --TableCell-height-default: 2.5625rem;
+  --TableCell-height-large: 3.8125rem;
+  --TableCell-height-small: 2.0625rem;
   --TableCell-paddingX: var(--gap-sm);
+  --TableCell-paddingX-large: var(--gap-base);
+  --TableCell-paddingX-small: var(--gap-xs);
   --TableCell-paddingY: calc(
     (var(--TableCell-height) - var(--Table-fontSize) * var(--Table-lineHeight)) /
+      2
+  );
+  --TableCell-paddingY-default: calc(
+    (var(--TableCell-height-default) - var(--Table-fontSize) * var(--Table-lineHeight)) /
+      2
+  );
+  --TableCell-paddingY-large: calc(
+    (var(--TableCell-height-large) - var(--Table-fontSize) * var(--Table-lineHeight)) /
+      2
+  );
+  --TableCell-paddingY-small: calc(
+    (var(--TableCell-height-small) - var(--Table-fontSize) * var(--Table-lineHeight)) /
       2
   );
   --TableCell-searchBtn--onActive-color: var(--primary);
@@ -14388,6 +14417,10 @@ readers do not read off random characters that represent icons */
   --TableCell-sortBtn--default-opacity: 0;
   --TableCell-sortBtn--onActive-color: var(--primary);
   --TableCell-sortBtn-width: 0.5rem;
+  --TableCell-icon-gap: var(--gap-sm);
+  --Table-fixedLeftLast-boxShadow: inset 10px 0 8px -8px #00000026;
+  --Table-fixedRightFirst-boxShadow: inset -10px 0 8px -8px #00000026;
+  --Table-loading-padding: 30px 0px;
   --Tabs--card-bg: #f6f8f8;
   --Tabs--card-borderTopColor: var(--borderColor);
   --Tabs--card-linkMargin: 0 10px 0 0;
@@ -14517,11 +14550,11 @@ readers do not read off random characters that represent icons */
   --Tooltip--attr-transition: all var(--animation-duration) ease-in-out;
   --Tooltip-arrow-color: var(--Tooltip-bg);
   --Tooltip-arrow-color--dark: rgba(7, 12, 20, 0.85);
-  --Tooltip-arrow-height: 0.5rem;
-  --Tooltip-arrow-height: 0.5rem;
+  --Tooltip-arrow-height: 0.25rem;
+  --Tooltip-arrow-height: 0.25rem;
   --Tooltip-arrow-outerColor: #d1d5db;
-  --Tooltip-arrow-width: 1rem;
-  --Tooltip-arrow-width: 1rem;
+  --Tooltip-arrow-width: 0.5rem;
+  --Tooltip-arrow-width: 0.5rem;
   --Tooltip-bg: var(--background);
   --Tooltip-bg--dark: rgba(7, 12, 20, 0.85);
   --Tooltip-body-color: var(--text-color);
@@ -14549,8 +14582,11 @@ readers do not read off random characters that represent icons */
   --TabsTransfer-title-bg: #f7f7f9;
   --TabsTransfer-border-color: #e8e9eb;
   --Tree-indent: var(--gap-md);
+  --Tree-icon-gap: var(--gap-xs);
+  --Tree-icon-margin-right: 0.625rem;
   --Tree-inputHeight: calc(var(--Form-input-height) * 0.85);
   --Tree-item-onHover-bg: rgba(0, 126, 255, 0.08);
+  --Tree-item-onHover-bg-pure: rgba(0, 126, 255, 0.08);
   --Tree-itemArrowWidth: 0.75rem;
   --Tree-itemHeight: 1.875rem;
   --Tree-itemLabel--onChecked-color: var(--Form-selectValue-color);
@@ -14619,7 +14655,7 @@ readers do not read off random characters that represent icons */
   --TimelineItem--icon-height: 1rem;
   --TimelineItem--icon-left: 0.375rem;
   --TimelineItem--content-padding-bottom: var(--gap-md);
-  --TimelineItem--content-margin-left: var(--gap-base);
+  --TimelineItem--content-margin-left: 0.125rem;
   --TimelineItem--content-time-margin-bottom: var(--gap-xs);
   --TimelineItem--content-title-margin-bottom: var(--gap-xs);
   --TimelineItem--detail-button-margin-bottom: var(--gap-base);
@@ -14643,6 +14679,38 @@ readers do not read off random characters that represent icons */
   --Timeline--info-bg: var(--info);
   --Timeline--warning-bg: var(--warning);
   --Timeline--danger-bg: var(--danger);
+  --Tag-content-fontSize: var(--fontSizeSm);
+  --Tag-height: 1.5rem;
+  --Tag-borderRadius: 0.125rem;
+  --Tag-fontColor: #151a26;
+  --Tag-default-color: #f2f2f4;
+  --Tag-inactive-color: #b4b6ba;
+  --Tag-active-color: #2468f2;
+  --Tag-processing-color: #1ac5ff;
+  --Tag-success-color: #0bc286;
+  --Tag-error-color: #e8684a;
+  --Tag-warning-color: #ffb200;
+  --Tag-checkable-bgColor: #f2f2f4;
+  --Tag-checkable-bgColor-onDisable: #e6e6e8;
+  --Tag-checkable-bgColor-onHover: #e6e6e8;
+  --Tag-checkable-bgColor-onActive: #e6e6e8;
+  --Tag-checkable-bgColor-onHover-onChecked: #4f86f4;
+  --Tag-checkable-bgColor-onActive-onChecked: #1c53c1;
+  --Tag-checkable-bgColor-onChecked: #2468f2;
+  --Tag-checkable-fontColor-onDisable: #b4b6ba;
+  --menu-background: #fff;
+  --menu-box-shadow: 0 2px 8px 0 rgba(7, 12, 20, 0.12);
+  --menu-border-radius: 4px;
+  --menu-font-color: #151b26;
+  --menu-font-family: PingFangSC-Regular;
+  --menu-border-color: #e8e9eb;
+  --menu-active-color: #2468f2;
+  --menu-hover-bg-color: #e6f0ff;
+  --menu-disabled-color: #b8babf;
+  --default-icon-color: #84868c;
+  --default-padding: 4px 12px;
+  --menu-min-width: 150px;
+  --menu-sub-min-width: 100px;
 }
 
 :root {
@@ -14731,17 +14799,6 @@ readers do not read off random characters that represent icons */
   --Radio-onDisabled-color: #4e4e4e;
   --Radio-onDisabled-bg: var(--Panel-bg);
   --TimelineItem--text-primary-color: #f3f1f1;
-  --menu-background: #fff;
-  --menu-box-shadow: 0 2px 8px 0 rgba(7, 12, 20, 0.12);
-  --menu-border-radius: 4px;
-  --menu-font-color: #151b26;
-  --menu-font-family: PingFangSC-Regular;
-  --menu-border-color: #e8e9eb;
-  --menu-active-color: #2468f2;
-  --menu-hover-bg-color: #e6f0ff;
-  --menu-disabled-color: #b8babf;
-  --default-icon-color: #84868c;
-  --default-padding: 4px 12px;
 }
 
 /* BASICS */
@@ -15035,6 +15092,7 @@ readers do not read off random characters that represent icons */
   outline: none;
   /* Prevent dragging from highlighting the element */
   position: relative;
+  z-index: 0;
 }
 
 .amis-scope .CodeMirror-sizer {
@@ -27431,98 +27489,6 @@ readers do not read off random characters that represent icons */
   height: var(--Button-height);
 }
 
-.amis-scope .dark-Button:active,
-.amis-scope .dark-Button.is-active {
-  color: var(--Button-onActive-color);
-  box-shadow: var(--Button-onActive-boxShadow);
-  border-color: var(--Button-onActive-border);
-}
-
-.amis-scope .dark-Button:active:focus,
-.amis-scope .dark-Button.is-active:focus {
-  box-shadow: var(--Button-onActive-boxShadow);
-}
-
-.amis-scope .dark-Button .dark-Button-icon:first-child:not(:last-child):not(.pull-right),
-.amis-scope .dark-Button > svg.icon:not(:last-child):not(.pull-right),
-.amis-scope .dark-Button > .pull-left {
-  margin-right: var(--Button-paddingX);
-}
-
-.amis-scope .dark-Button .dark-Button-icon:last-child:not(:first-child):not(.pull-left),
-.amis-scope .dark-Button > .pull-right {
-  margin-left: var(--Button-paddingX);
-}
-
-.amis-scope .dark-Button .dark-Button--loading:first-child:not(:last-child):not(.pull-right),
-.amis-scope .dark-Button > svg.icon:not(:last-child):not(.pull-right),
-.amis-scope .dark-Button > .pull-left {
-  margin-right: var(--Button-paddingX);
-}
-
-.amis-scope .dark-Button .dark-Button--loading:last-child:not(:first-child):not(.pull-left),
-.amis-scope .dark-Button > .pull-right {
-  margin-left: var(--Button-paddingX);
-}
-
-.amis-scope .dark-Button img.dark-Button-icon {
-  height: var(--Button-fontSize);
-  vertical-align: middle;
-}
-
-.amis-scope .dark-Button:hover:focus {
-  text-decoration: none;
-}
-
-.amis-scope .dark-Button:focus,
-.amis-scope .dark-Button.focus {
-  outline: 0;
-  box-shadow: var(--Button-onFocus-boxShadow);
-}
-
-.amis-scope .dark-Button.is-disabled,
-.amis-scope .dark-Button:disabled {
-  filter: grayscale(100%);
-  box-shadow: none;
-  cursor: not-allowed;
-  color: var(--text--muted-color);
-  pointer-events: auto;
-  border: var(--Button-borderWidth) solid var(--Button-onDisabled-borderColor);
-  background: var(--Button-onDisabled-bg);
-}
-
-.amis-scope .dark-Button.is-disabled > svg,
-.amis-scope .dark-Button.is-disabled > svg path,
-.amis-scope .dark-Button:disabled > svg,
-.amis-scope .dark-Button:disabled > svg path {
-  fill: currentColor;
-}
-
-.amis-scope .dark-Button:not(:disabled):not(.is-disabled) {
-  cursor: pointer;
-}
-
-.amis-scope .dark-Button.cxd-Button--link.is-disabled {
-  background: transparent;
-  border: none;
-}
-
-.amis-scope .dark-Button > .pull-left,
-.amis-scope .dark-Button > .pull-right {
-  line-height: inherit;
-}
-
-.amis-scope .dark-Button > .fa,
-.amis-scope .dark-Button > .iconfont,
-.amis-scope .dark-Button > .glyphicon {
-  font-size: inherit;
-}
-
-.amis-scope a.dark-Button.is-disabled,
-.amis-scope fieldset:disabled a.dark-Button {
-  pointer-events: none;
-}
-
 .amis-scope .dark-Button--primary {
   color: var(--Button--primary-color);
   background: var(--Button--primary-bg);
@@ -27920,7 +27886,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .dark-Button--iconOnly {
-  min-width: calc(var(--Button-height) * var(--Button--iconOnly-minWidthRate));
+  min-width: calc( var(--Button-height) * var(--Button--iconOnly-minWidthRate) );
 }
 
 .amis-scope .dark-Button--iconOnly:not(.dark-Button--link) > svg.icon {
@@ -27938,12 +27904,74 @@ readers do not read off random characters that represent icons */
   line-height: 1;
 }
 
-.amis-scope .dark-Button--loading {
-  transition: --Button-transition;
+.amis-scope .dark-Button:active,
+.amis-scope .dark-Button.is-active {
+  color: var(--Button-onActive-color);
+  box-shadow: var(--Button-onActive-boxShadow);
+  border-color: var(--Button-onActive-border);
 }
 
-.amis-scope .dark-Button--loading svg {
-  animation: var(--Button-animation-spin);
+.amis-scope .dark-Button:active:focus,
+.amis-scope .dark-Button.is-active:focus {
+  box-shadow: var(--Button-onActive-boxShadow);
+}
+
+.amis-scope .dark-Button .dark-Button-icon:first-child:not(:last-child):not(.pull-right),
+.amis-scope .dark-Button > svg.icon:not(:last-child):not(.pull-right),
+.amis-scope .dark-Button > .pull-left {
+  margin-right: var(--Button-paddingX);
+}
+
+.amis-scope .dark-Button .dark-Button-icon:last-child:not(:first-child):not(.pull-left),
+.amis-scope .dark-Button > .pull-right {
+  margin-left: var(--Button-paddingX);
+}
+
+.amis-scope .dark-Button .dark-Button--loading:first-child:not(:last-child):not(.pull-right),
+.amis-scope .dark-Button > svg.icon:not(:last-child):not(.pull-right),
+.amis-scope .dark-Button > .pull-left {
+  margin-right: var(--Button-paddingX);
+}
+
+.amis-scope .dark-Button .dark-Button--loading:last-child:not(:first-child):not(.pull-left),
+.amis-scope .dark-Button > .pull-right {
+  margin-left: var(--Button-paddingX);
+}
+
+.amis-scope .dark-Button img.dark-Button-icon {
+  height: var(--Button-fontSize);
+  vertical-align: middle;
+}
+
+.amis-scope .dark-Button:hover:focus {
+  text-decoration: none;
+}
+
+.amis-scope .dark-Button:focus,
+.amis-scope .dark-Button.focus {
+  outline: 0;
+  box-shadow: var(--Button-onFocus-boxShadow);
+}
+
+.amis-scope .dark-Button.is-disabled,
+.amis-scope .dark-Button:disabled {
+  filter: grayscale(100%);
+  box-shadow: none;
+  cursor: not-allowed;
+  color: var(--text--muted-color);
+  border: var(--Button-borderWidth) solid var(--Button-onDisabled-borderColor);
+  background: var(--Button-onDisabled-bg);
+}
+
+.amis-scope .dark-Button.is-disabled > svg,
+.amis-scope .dark-Button.is-disabled > svg path,
+.amis-scope .dark-Button:disabled > svg,
+.amis-scope .dark-Button:disabled > svg path {
+  fill: currentColor;
+}
+
+.amis-scope .dark-Button:not(:disabled):not(.is-disabled) {
+  cursor: pointer;
 }
 
 .amis-scope .dark-Button--link {
@@ -27969,8 +27997,13 @@ readers do not read off random characters that represent icons */
 .amis-scope .dark-Button--link:disabled,
 .amis-scope .dark-Button--link.is-disabled {
   color: var(--text--muted-color);
-  pointer-events: none;
-  background: var(--Button-onDisabled-bg);
+  border: none;
+  background: var(--Button--link-onDisabled-backgroundColor);
+}
+
+.amis-scope .dark-Button--link:disabled:hover:active,
+.amis-scope .dark-Button--link.is-disabled:hover:active {
+  color: var(--text--muted-color);
 }
 
 .amis-scope .dark-Button--block {
@@ -27980,6 +28013,30 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .dark-Button--block + .dark-Button--block {
   margin-top: var(--gap-base);
+}
+
+.amis-scope .dark-Button > .pull-left,
+.amis-scope .dark-Button > .pull-right {
+  line-height: inherit;
+}
+
+.amis-scope .dark-Button > .fa,
+.amis-scope .dark-Button > .iconfont,
+.amis-scope .dark-Button > .glyphicon {
+  font-size: inherit;
+}
+
+.amis-scope a.dark-Button.is-disabled,
+.amis-scope fieldset:disabled a.dark-Button {
+  pointer-events: none;
+}
+
+.amis-scope .dark-Button--loading {
+  transition: --Button-transition;
+}
+
+.amis-scope .dark-Button--loading svg {
+  animation: var(--Button-animation-spin);
 }
 
 .amis-scope input[type=submit].dark-Button--block,
@@ -28471,6 +28528,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .dark-Modal-footer .dark-Button {
+  width: var(--Modal-footer-button-width);
   margin-left: var(--gap-sm);
 }
 
@@ -28781,6 +28839,7 @@ readers do not read off random characters that represent icons */
   right: var(--gap-base);
   left: auto;
   margin-top: 0;
+  z-index: 10;
 }
 
 .amis-scope .dark-Drawer--top .dark-Drawer-content {
@@ -28812,6 +28871,7 @@ readers do not read off random characters that represent icons */
   top: var(--gap-base);
   right: var(--gap-base);
   margin-right: 0;
+  z-index: 10;
 }
 
 .amis-scope .dark-Drawer--right .dark-Drawer-content {
@@ -28866,6 +28926,7 @@ readers do not read off random characters that represent icons */
   right: var(--gap-base);
   left: auto;
   margin-bottom: 0;
+  z-index: 10;
 }
 
 .amis-scope .dark-Drawer--bottom .dark-Drawer-content {
@@ -28897,6 +28958,7 @@ readers do not read off random characters that represent icons */
   left: auto;
   right: var(--gap-base);
   top: var(--gap-base);
+  z-index: 10;
 }
 
 .amis-scope .dark-Drawer--left .dark-Drawer-content {
@@ -30411,7 +30473,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .dark-Tabs--line > .dark-Tabs-content {
   border-width: 0;
-  padding: var(--Tabs--line-content-padding);
   background: var(--Tabs--line-content-bg);
 }
 
@@ -30775,6 +30836,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .dark-Tabs--chrome > .dark-Tabs-linksWrapper {
   background: var(--Tabs--chrome-bg);
   border-bottom: none;
+  overflow-x: hidden;
 }
 
 .amis-scope .dark-Tabs--chrome > .dark-Tabs-linksWrapper > .dark-Tabs-addable {
@@ -30788,6 +30850,7 @@ readers do not read off random characters that represent icons */
   padding: 0 0.625rem;
   padding-top: 0.5rem;
   display: flex;
+  width: 100%;
 }
 
 .amis-scope .dark-Tabs--chrome > .dark-Tabs-linksWrapper > .dark-Tabs-links > li {
@@ -30802,6 +30865,11 @@ readers do not read off random characters that represent icons */
   overflow: inherit;
 }
 
+.amis-scope .dark-Tabs--chrome > .dark-Tabs-linksWrapper > .dark-Tabs-links > li > a {
+  /* 最少展示一个字 */
+  min-width: var(--fontSizeBase);
+}
+
 .amis-scope .dark-Tabs--chrome > .dark-Tabs-linksWrapper > .dark-Tabs-links > li > a:first-child {
   background: none;
   border: none;
@@ -30809,7 +30877,7 @@ readers do not read off random characters that represent icons */
   z-index: 5;
   overflow: hidden;
   padding: 0;
-  text-overflow: unset;
+  text-overflow: ellipsis;
 }
 
 .amis-scope .dark-Tabs--chrome > .dark-Tabs-linksWrapper > .dark-Tabs-links > li.is-active > a:first-child,
@@ -31570,6 +31638,10 @@ readers do not read off random characters that represent icons */
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.amis-scope .dark-Remark-icon--circle {
+  border-radius: 50%;
 }
 
 .amis-scope .dark-Remark > span + .dark-Remark-icon {
@@ -33085,12 +33157,41 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .dark-CBGroup {
   font-size: var(--fontSizeSm);
+  position: relative;
+  border: 1px solid #e8e9eb;
+  border-radius: 4px;
+  border-left: 0.1875rem solid #e6f0ff;
+  padding: 1.875rem 1.6875rem 1.0625rem;
+  margin-top: 1.875rem;
+}
+
+.amis-scope .dark-CBGroup-toolbarCondition {
+  text-align: center;
+  margin-top: -2.75rem;
+  margin-bottom: 1rem;
+}
+
+.amis-scope .dark-CBGroup-toolbarCondition .dark-Select {
+  font-size: 12px;
+  height: 1.75rem;
+  width: 3.875rem;
+  background: #d4e5ff;
+  border: none;
+  color: #0832a6;
+  font-weight: 500;
+  padding: 0;
+  padding-left: 0.5rem;
+  min-height: 1.75rem;
+}
+
+.amis-scope .dark-CBGroup-toolbarCondition .dark-Select:hover {
+  background: #d4e5ff;
 }
 
 .amis-scope .dark-CBGroup-toolbar {
   display: flex;
   flex-direction: row;
-  padding-bottom: 10px;
+  margin-top: 0.5rem;
 }
 
 .amis-scope .dark-CBGroup-toolbar .dark-Button {
@@ -33105,27 +33206,21 @@ readers do not read off random characters that represent icons */
   margin-right: 5px;
 }
 
-.amis-scope .dark-CBGroup-toolbar:not(:hover) .dark-CBGroup-toolbarCondition .dark-Button:not(.is-active) {
-  width: 0;
-  padding: 0;
-  overflow: hidden;
-  opacity: 0;
-  margin: 0;
-  border: 0;
-}
-
 .amis-scope .dark-CBGroup-toolbar .dark-CBGroup-toolbarConditionAdd {
-  transition: opacity var(--animation-duration);
   display: flex;
   align-items: center;
+}
+
+.amis-scope .dark-CBGroup-toolbar .dark-CBGroup-toolbarConditionAdd .dark-ButtonGroup > .cxd-Button:first-child {
+  margin-right: 1.5rem;
 }
 
 .amis-scope .dark-CBGroup-toolbar .dark-CBGroup-toolbarConditionAdd .dark-CBDelete {
   margin-left: var(--gap-xs);
 }
 
-.amis-scope .dark-CBGroup-toolbar:not(:hover) .dark-CBGroup-toolbarConditionAdd {
-  opacity: 0;
+.amis-scope .dark-CBGroup .dark-ResultBox {
+  padding-right: 0.1875rem;
 }
 
 .amis-scope .dark-CBGroup-field,
@@ -33164,94 +33259,88 @@ readers do not read off random characters that represent icons */
 .amis-scope .dark-CBGroup-placeholder {
   color: var(--text--muted-color);
   position: relative;
-  margin-left: 30px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.03);
   border-radius: 5px;
-}
-
-.amis-scope .dark-CBGroup-placeholder:before {
-  position: absolute;
-  content: "";
-  top: -10px;
-  left: -30px;
-  width: var(--gap-md);
-  border-left: solid 1px var(--borderColor);
-  bottom: 0;
-}
-
-.amis-scope .dark-CBGroup-placeholder:after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  width: var(--gap-md);
-  left: -30px;
-  border-top: solid 1px var(--borderColor);
-}
-
-.amis-scope .dark-CBGroup-placeholder:last-child:before {
-  border-bottom-left-radius: 5px;
-  border-bottom: solid 1px var(--borderColor);
-  bottom: 50%;
-}
-
-.amis-scope .dark-CBGroup-placeholder:last-child:after {
-  display: none;
 }
 
 .amis-scope .dark-CBGroup-placeholder.simple {
   margin-left: 0;
 }
 
-.amis-scope .dark-CBGroup-placeholder.simple:before {
-  display: none;
-}
-
-.amis-scope .dark-CBGroup-placeholder.simple:after {
-  display: none;
-}
-
-.amis-scope .dark-CBGroup-toolbarCondition {
-  margin-right: var(--gap-base);
-}
-
 .amis-scope .dark-CBDelete {
-  color: var(--icon-color);
   cursor: pointer;
   margin-left: auto;
-  transition: opacity var(--animation-duration);
 }
 
-.amis-scope .dark-CBDelete:hover {
-  color: var(--icon-onHover-color);
+.amis-scope .dark-CBGroupOrItem-body-group--hover > .dark-CBGroupOrItem-dragbar {
+  opacity: 1 !important;
+}
+
+.amis-scope .dark-CBGroupOrItem-body-group--hover > .dark-CBGroup {
+  border-left-color: #2468f1;
 }
 
 .amis-scope .dark-CBGroupOrItem {
   position: relative;
-  margin-left: 1.875rem;
 }
 
 .amis-scope .dark-CBGroupOrItem + .dark-CBGroupOrItem {
   margin-top: 0.625rem;
 }
 
+.amis-scope .dark-CBGroupOrItem-dragbar {
+  cursor: move;
+  width: 20px;
+  margin-left: -5px;
+  opacity: 0.6;
+  text-align: center;
+  transition: opacity var(--animation-duration) ease-out;
+  color: var(--icon-color);
+}
+
+.amis-scope .dark-CBGroupOrItem-dragbar:hover {
+  color: var(--icon-onHover-color);
+}
+
 .amis-scope .dark-CBGroupOrItem-body {
   display: flex;
-  padding: 2px 7px;
-  border-radius: 5px;
   flex-direction: row;
   align-items: center;
   position: relative;
-  background: rgba(0, 0, 0, 0.03);
   transition: all var(--animation-duration) ease-out;
 }
 
-.amis-scope .dark-CBGroupOrItem-body > .dark-CBGroup {
-  margin: 3px;
+.amis-scope .dark-CBGroupOrItem-body-group {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.amis-scope .dark-CBGroupOrItem-body:not(:hover) .dark-CBDelete {
-  opacity: 0;
+.amis-scope .dark-CBGroupOrItem-body-group > .dark-CBGroupOrItem-dragbar {
+  left: -1rem;
+  position: absolute;
+}
+
+.amis-scope .dark-CBGroupOrItem-body-group > .dark-CBGroup {
+  margin: 0px;
+}
+
+.amis-scope .dark-CBGroupOrItem-body-item {
+  background-color: #f7f7f9;
+  width: 100%;
+  padding: 0.75rem;
+  padding-left: 1.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.amis-scope .dark-CBGroupOrItem-body-item > .dark-CBGroupOrItem-dragbar {
+  left: 0.625rem;
+  position: absolute;
 }
 
 .amis-scope .dark-CBGroupOrItem.is-dragging {
@@ -33269,59 +33358,17 @@ readers do not read off random characters that represent icons */
   background: rgba(34, 150, 243, 0.2);
 }
 
-.amis-scope .dark-CBGroupOrItem-dragbar {
-  cursor: move;
-  width: 20px;
-  margin-left: -5px;
-  opacity: 0.6;
-  text-align: center;
-  transition: opacity var(--animation-duration) ease-out;
-  color: var(--icon-color);
-}
-
-.amis-scope .dark-CBGroupOrItem-dragbar:hover {
-  color: var(--icon-onHover-color);
-}
-
 .amis-scope .dark-CBGroupOrItem .dark-CBGroup {
   flex-grow: 1;
 }
 
-.amis-scope .dark-CBGroupOrItem:hover > .dark-CBGroupOrItem-body {
-  background: rgba(0, 0, 0, 0.05);
+.amis-scope .dark-CBGroupOrItem > .dark-CBGroupOrItem-body > .dark-CBGroupOrItem-body-group > .dark-CBGroupOrItem-dragbar,
+.amis-scope .dark-CBGroupOrItem > .dark-CBGroupOrItem-body > .dark-CBGroupOrItem-body-item > .dark-CBGroupOrItem-dragbar {
+  opacity: 0;
 }
 
-.amis-scope .dark-CBGroupOrItem:hover > .dark-CBGroupOrItem-body > .dark-CBGroupOrItem-dragbar {
+.amis-scope .dark-CBGroupOrItem:hover > .dark-CBGroupOrItem-body > .dark-CBGroupOrItem-body-item > .dark-CBGroupOrItem-dragbar {
   opacity: 1;
-}
-
-.amis-scope .dark-CBGroupOrItem:before {
-  position: absolute;
-  content: "";
-  top: -10px;
-  left: -30px;
-  width: 20px;
-  border-left: solid 1px var(--borderColor);
-  bottom: 0;
-}
-
-.amis-scope .dark-CBGroupOrItem:after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  width: 20px;
-  left: -30px;
-  border-top: solid 1px var(--borderColor);
-}
-
-.amis-scope .dark-CBGroupOrItem:last-child:before {
-  border-bottom-left-radius: 5px;
-  border-bottom: solid 1px var(--borderColor);
-  bottom: 50%;
-}
-
-.amis-scope .dark-CBGroupOrItem:last-child:after {
-  display: none;
 }
 
 .amis-scope .dark-CBGroupOrItem-simple {
@@ -33449,7 +33496,7 @@ readers do not read off random characters that represent icons */
   display: block;
   position: absolute;
   margin: 0;
-  padding: 0;
+  padding: 4px 0;
   background: var(--menu-background);
   box-shadow: var(--menu-box-shadow);
   color: var(--menu-font-color);
@@ -33473,19 +33520,6 @@ readers do not read off random characters that represent icons */
   animation-name: contextMenuOut;
 }
 
-.amis-scope .dark-ContextMenu-menu::before {
-  display: block;
-  position: absolute;
-  content: "";
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  right: -1px;
-  border-radius: var(--menu-border-radius);
-  border: 1px solid var(--menu-border-color);
-  z-index: -1;
-}
-
 .amis-scope .dark-ContextMenu-divider {
   border: none;
   height: 1px;
@@ -33498,7 +33532,7 @@ readers do not read off random characters that represent icons */
   list-style: none;
   margin: 0;
   padding: 0;
-  min-width: 100px;
+  min-width: var(--menu-min-width);
 }
 
 .amis-scope .dark-ContextMenu-item {
@@ -33564,7 +33598,7 @@ readers do not read off random characters that represent icons */
   position: absolute;
   left: 100%;
   top: -3px;
-  min-width: 100px;
+  min-width: var(--menu-sub-min-width);
   margin: 0;
   padding: 0;
   background: var(--menu-background);
@@ -33968,6 +34002,12 @@ readers do not read off random characters that represent icons */
 .amis-scope .dark-Crud-statistics {
   line-height: var(--Crud-toolbar-height);
   vertical-align: middle;
+}
+
+.amis-scope .dark-Crud-pageSwitch {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
 .amis-scope .dark-Crud-pageSwitch .dark-Select {
@@ -34394,12 +34434,6 @@ readers do not read off random characters that represent icons */
 .amis-scope .dark-Table-table > tbody > tr.is-moved + tr,
 .amis-scope .dark-Table-table > tbody > tr.is-modified + tr {
   border-color: var(--Table-onModified-borderColor);
-}
-
-.amis-scope .dark-Table-table > tbody > tr.is-summary {
-  background: var(--Table-thead-bg);
-  color: var(--Table-thead-color);
-  font-weight: var(--fontWeightNormal);
 }
 
 .amis-scope .dark-Table-table > tbody > tr.bg-light {
@@ -35651,6 +35685,1610 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .dark-Table--autoFillHeight > .dark-Table-footToolbar {
   margin-bottom: 0;
+}
+
+.amis-scope .dark-InputTable-toolbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.amis-scope .dark-InputTable-pager {
+  margin-left: auto;
+}
+
+.amis-scope .dark-OperationField {
+  margin: -0.1875rem;
+}
+
+.amis-scope .dark-OperationField > .dark-Button,
+.amis-scope .dark-OperationField > .dark-Button--disabled-wrap > .dark-Button {
+  margin: 0.1875rem;
+}
+
+.amis-scope .dark-OperationField > .dark-Button--disabled-wrap > .dark-Button--link {
+  padding: 0;
+}
+
+.amis-scope .dark-OperationField > .dark-Button--link {
+  padding: 0;
+  margin-right: 0.625rem;
+}
+
+.amis-scope .dark-Table-v2 {
+  position: relative;
+  border-radius: var(--Table-borderRadius);
+  margin-bottom: var(--gap-md);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-bordered {
+  border-width: var(--Table-borderWidth) var(--Table-borderWidth) 0 var(--Table-borderWidth);
+  border-style: solid;
+  border-color: var(--Table-borderColor);
+  border-collapse: inherit;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-bordered .dark-Table-table > thead > tr > th,
+.amis-scope .dark-Table-v2.dark-Table-bordered .dark-Table-table > tbody > tr > td,
+.amis-scope .dark-Table-v2.dark-Table-bordered .dark-Table-table > tfoot > tr > td {
+  border-right: var(--Table-borderWidth) solid var(--Table-borderColor);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-bordered .dark-Table-table > thead > tr > th:last-child,
+.amis-scope .dark-Table-v2.dark-Table-bordered .dark-Table-table > tbody > tr > td:last-child,
+.amis-scope .dark-Table-v2.dark-Table-bordered .dark-Table-table > tfoot > tr > td:last-child {
+  border-right: none;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-bordered .dark-Table-footer {
+  border-bottom: var(--Table-borderWidth) solid var(--Table-borderColor);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-bordered .dark-Table-title {
+  border-bottom: var(--Table-borderWidth) solid var(--Table-borderColor);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-large .dark-Table-table > thead > tr > th {
+  padding: var(--TableCell-paddingY-large) var(--TableCell-paddingX-large);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-large .dark-Table-table > tbody > tr > td,
+.amis-scope .dark-Table-v2.dark-Table-large .dark-Table-table > tbody > tr > th {
+  padding: var(--TableCell-paddingY-large) var(--TableCell-paddingX-large);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-large .dark-Table-table > tfoot > tr > td {
+  padding: var(--TableCell-paddingY-large) var(--TableCell-paddingX-large);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-large .dark-TableCell-filterBtn {
+  right: calc( var(--TableCell-paddingX-large) - var(--TableCell-filterBtn-width) / 2 );
+}
+
+.amis-scope .dark-Table-v2.dark-Table-small .dark-Table-table > thead > tr > th {
+  padding: var(--TableCell-paddingY-small) var(--TableCell-paddingX-small);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-small .dark-Table-table > tbody > tr > td,
+.amis-scope .dark-Table-v2.dark-Table-small .dark-Table-table > tbody > tr > th {
+  padding: var(--TableCell-paddingY-small) var(--TableCell-paddingX-small);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-small .dark-Table-table > tfoot > tr > td {
+  padding: var(--TableCell-paddingY-small) var(--TableCell-paddingX-small);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-small .dark-TableCell-filterBtn {
+  right: calc( var(--TableCell-paddingX-small) - var(--TableCell-filterBtn-width) / 2 );
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-title,
+.amis-scope .dark-Table-v2 .dark-Table-footer {
+  background: var(--Table-heading-bg);
+  padding: calc( ( var(--Table-heading-height) - var(--Table-fontSize) * var(--lineHeightBase) ) / 2 ) var(--gap-sm);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-header {
+  padding: var(--Table-toolbar-marginY) var(--Table-toolbar-marginX);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-header.dark-Table-sticky-holder {
+  position: sticky;
+  z-index: 3;
+  background: var(--Table-bg);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-toolbar {
+  display: flex;
+  margin: 0 var(--Table-toolbar-marginX) var(--Table-toolbar-marginY);
+  flex-wrap: wrap;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-toolbar::before,
+.amis-scope .dark-Table-v2 .dark-Table-toolbar::after {
+  display: table;
+  content: "";
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-toolbar::after {
+  clear: both;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-toolbar .dark-DropDown-menuItem {
+  height: auto;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-toolbar .dark-DropDown-menuItem .dark-Checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-header + .dark-Table-toolbar {
+  padding-top: 0;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-content {
+  min-height: 0.01%;
+  overflow-x: auto;
+  transform: translateZ(0);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-content th {
+  position: relative;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table {
+  width: 100%;
+  min-width: 100%;
+  margin-bottom: 0;
+  font-size: var(--Table-fontSize);
+  color: var(--Table-color);
+  background: var(--Table-bg);
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: none;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table th,
+.amis-scope .dark-Table-v2 .dark-Table-table td {
+  text-align: left;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table th.text-center,
+.amis-scope .dark-Table-v2 .dark-Table-table td.text-center,
+.amis-scope .dark-Table-v2 .dark-Table-table th[colspan],
+.amis-scope .dark-Table-v2 .dark-Table-table td[colspan] {
+  text-align: center;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table th.text-right,
+.amis-scope .dark-Table-v2 .dark-Table-table td.text-right {
+  text-align: right;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th {
+  background: var(--Table-thead-bg);
+  padding: var(--TableCell-paddingY-default) var(--TableCell-paddingX);
+  font-size: var(--Table-thead-fontSize);
+  color: var(--Table-thead-color);
+  font-weight: var(--fontWeightNormal);
+  white-space: nowrap;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th:first-child {
+  padding-left: var(--TableCell--edge-paddingX-default);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th.dark-Table-cell-last {
+  padding-right: var(--TableCell--edge-paddingX-default);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th:not(.dark-Table-cell-last) {
+  border-right: var(--Table-thead-borderWidth) solid var(--Table-thead-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th.dark-Table-row-expand-icon-cell {
+  border-right: 0;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th .dark-Remark {
+  margin-left: var(--gap-xs);
+  position: relative;
+  top: 2px;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th .dark-Table-head-cell-wrapper {
+  display: flex;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr:not(:last-child) {
+  border-bottom: var(--Table-borderWidth) solid var(--Table-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr {
+  position: relative;
+  border-bottom: var(--Table-borderWidth) solid var(--Table-borderColor);
+  background: transparent;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.dark-Table-summary-row > td {
+  background: var(--Table-thead-bg);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > th {
+  background: var(--Table-thead-bg);
+  color: var(--Table-thead-color);
+  font-weight: var(--fontWeightNormal);
+  white-space: nowrap;
+  border-right: var(--Table-thead-borderWidth) solid var(--Table-thead-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > th {
+  padding: var(--TableCell-paddingY-default) var(--TableCell-paddingX);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td:first-child,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > th:first-child {
+  padding-left: var(--TableCell--edge-paddingX-default);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td:last-child,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > th:last-child {
+  padding-right: var(--TableCell--edge-paddingX-default);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr .dark-Table-cell-wrapper-prefix {
+  display: flex;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr .dark-Table-cell-wrapper-prefix .dark-Table-expandBtn {
+  margin-right: 5px;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr .dark-Table-cell-height-large {
+  height: var(--TableCell-line-height-large);
+  line-height: var(--TableCell-line-height-large);
+  overflow: hidden;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr .dark-Table-cell-height-middle {
+  height: var(--TableCell-line-height-middle);
+  line-height: var(--TableCell-line-height-middle);
+  overflow: hidden;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.dark-Table-tr--odd {
+  background: var(--Table-strip-bg);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.dark-Table-tr--hasItemAction:hover {
+  cursor: pointer;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-hovered {
+  background: var(--Table-onHover-bg);
+  border-color: var(--Table-onHover-borderColor);
+  color: var(--Table-onHover-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr:hover + tr,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-hovered + tr {
+  border-color: var(--Table-onHover-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-checked {
+  background: var(--Table-onChecked-bg);
+  border-color: var(--Table-onChecked-borderColor);
+  color: var(--Table-onChecked-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-checked + tr {
+  border-color: var(--Table-onChecked-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-moved,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-modified {
+  background: var(--Table-onModified-bg);
+  border-color: var(--Table-onModified-borderColor);
+  color: var(--Table-onModified-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-moved + tr,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-modified + tr {
+  border-color: var(--Table-onModified-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-summary {
+  background: var(--Table-thead-bg);
+  color: var(--Table-thead-color);
+  font-weight: var(--fontWeightNormal);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-light {
+  background-color: #3a3a3a;
+  color: #f3f1f1;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-light.lt,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-light .lt {
+  background: #3f3f3f;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-light.lter,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-light .lter {
+  background: #424242;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-light.dk,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-light .dk {
+  background: #343131;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-light.dker,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-light .dker {
+  background: #302b2b;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-light.bg,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-light .bg {
+  background-color: #3a3a3a;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark {
+  background-color: #1e1f22;
+  color: #868686;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark.lt,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark .lt {
+  background: #2b2c2e;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark.lter,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark .lter {
+  background: #39393a;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark.dk,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark .dk {
+  background: #121215;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark.dker,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark .dker {
+  background: #060607;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark.bg,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark .bg {
+  background-color: #1e1f22;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark .dark-Button--link {
+  color: #a0a0a0;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark .dark-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark .open > a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark .open > a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark .text-muted {
+  color: #dbd6d6 !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-dark .text-lt {
+  color: white !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black {
+  background-color: #141316;
+  color: #7b7b7b;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black.lt,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black .lt {
+  background: #212023;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black.lter,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black .lter {
+  background: #2e2d2f;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black.dk,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black .dk {
+  background: #070709;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black.dker,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black .dker {
+  background: black;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black.bg,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black .bg {
+  background-color: #141316;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black .dark-Button--link {
+  color: #949494;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black .dark-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black .open > a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black .open > a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black .text-muted {
+  color: #dbd6d6 !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-black .text-lt {
+  color: white !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary {
+  background-color: #0983ff;
+  color: #d7eafd;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary.lt,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary .lt {
+  background: #2590fc;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary.lter,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary .lter {
+  background: #419dfa;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary.dk,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary .dk {
+  background: #0076ef;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary.dker,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary .dker {
+  background: #006ad5;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary.bg,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary .bg {
+  background-color: #0983ff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary .dark-Button--link {
+  color: white;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary .dark-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary .open > a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary .open > a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary .text-muted {
+  color: #dbd6d6 !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-primary .text-lt {
+  color: white !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success {
+  background-color: #32d74b;
+  color: #dff6e2;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success.lt,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success .lt {
+  background: #4ad860;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success.lter,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success .lter {
+  background: #62da74;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success.dk,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success .dk {
+  background: #24cb3d;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success.dker,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success .dker {
+  background: #1eb835;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success.bg,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success .bg {
+  background-color: #32d74b;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success .dark-Button--link {
+  color: white;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success .dark-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success .open > a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success .open > a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success .text-muted {
+  color: #dbd6d6 !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-success .text-lt {
+  color: white !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info {
+  background-color: #2296f3;
+  color: #e5f2fc;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info.lt,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info .lt {
+  background: #3da1f2;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info.lter,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info .lter {
+  background: #57acf1;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info.dk,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info .dk {
+  background: #0a8bf2;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info.dker,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info .dker {
+  background: #067ddc;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info.bg,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info .bg {
+  background-color: #2296f3;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info .dark-Button--link {
+  color: white;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info .dark-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info .open > a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info .open > a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info .text-muted {
+  color: #dbd6d6 !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-info .text-lt {
+  color: white !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning {
+  background-color: #ff9f0b;
+  color: #fdefd9;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning.lt,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning .lt {
+  background: #fca827;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning.lter,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning .lter {
+  background: #fab243;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning.dk,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning .dk {
+  background: #f19200;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning.dker,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning .dker {
+  background: #d78200;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning.bg,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning .bg {
+  background-color: #ff9f0b;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning .dark-Button--link {
+  color: white;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning .dark-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning .open > a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning .open > a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning .text-muted {
+  color: #dbd6d6 !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-warning .text-lt {
+  color: white !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger {
+  background-color: #dc3545;
+  color: #f8e5e6;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger.lt,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger .lt {
+  background: #dd4d5b;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger.lter,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger .lter {
+  background: #df6571;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger.dk,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger .dk {
+  background: #d62133;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger.dker,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger .dker {
+  background: #c31b2b;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger.bg,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger .bg {
+  background-color: #dc3545;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger .dark-Button--link {
+  color: white;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger .dark-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger .open > a,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger .open > a:hover,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger .text-muted {
+  color: #dbd6d6 !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.bg-danger .text-lt {
+  color: white !important;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-dragging {
+  opacity: var(--Table-onDragging-opacity);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--2th.is-expanded .dark-Table-expandCell:before {
+  right: -0.6875rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--2th .dark-Table-expandBtn {
+  position: relative;
+  right: -1.125rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--2th .dark-Table-expandCell + td {
+  position: relative;
+  padding-left: 1.125rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--2th .dark-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: -0.5rem;
+  height: auto;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--2th .dark-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: -0.5rem;
+  width: 0.625rem;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--2th.is-expandable .dark-Table-expandCell + td {
+  padding-left: 1.125rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--2th.is-last:not(.is-expanded) .dark-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--3th.is-expanded .dark-Table-expandCell:before {
+  right: -1.8125rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--3th .dark-Table-expandBtn {
+  position: relative;
+  right: -2.25rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--3th .dark-Table-expandCell + td {
+  position: relative;
+  padding-left: 2.25rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--3th .dark-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 0.625rem;
+  height: auto;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--3th .dark-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 0.625rem;
+  width: 0.625rem;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--3th.is-expandable .dark-Table-expandCell + td {
+  padding-left: 2.25rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--3th.is-last:not(.is-expanded) .dark-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--4th.is-expanded .dark-Table-expandCell:before {
+  right: -2.9375rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--4th .dark-Table-expandBtn {
+  position: relative;
+  right: -3.375rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--4th .dark-Table-expandCell + td {
+  position: relative;
+  padding-left: 3.375rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--4th .dark-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 1.75rem;
+  height: auto;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--4th .dark-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 1.75rem;
+  width: 0.625rem;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--4th.is-expandable .dark-Table-expandCell + td {
+  padding-left: 3.375rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--4th.is-last:not(.is-expanded) .dark-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--5th.is-expanded .dark-Table-expandCell:before {
+  right: -4.0625rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--5th .dark-Table-expandBtn {
+  position: relative;
+  right: -4.5rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--5th .dark-Table-expandCell + td {
+  position: relative;
+  padding-left: 4.5rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--5th .dark-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 2.875rem;
+  height: auto;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--5th .dark-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 2.875rem;
+  width: 0.625rem;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--5th.is-expandable .dark-Table-expandCell + td {
+  padding-left: 4.5rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--5th.is-last:not(.is-expanded) .dark-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--6th.is-expanded .dark-Table-expandCell:before {
+  right: -5.1875rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--6th .dark-Table-expandBtn {
+  position: relative;
+  right: -5.625rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--6th .dark-Table-expandCell + td {
+  position: relative;
+  padding-left: 5.625rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--6th .dark-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 4rem;
+  height: auto;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--6th .dark-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 4rem;
+  width: 0.625rem;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--6th.is-expandable .dark-Table-expandCell + td {
+  padding-left: 5.625rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--6th.is-last:not(.is-expanded) .dark-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--7th.is-expanded .dark-Table-expandCell:before {
+  right: -6.3125rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--7th .dark-Table-expandBtn {
+  position: relative;
+  right: -6.75rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--7th .dark-Table-expandCell + td {
+  position: relative;
+  padding-left: 6.75rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--7th .dark-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 5.125rem;
+  height: auto;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--7th .dark-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 5.125rem;
+  width: 0.625rem;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--7th.is-expandable .dark-Table-expandCell + td {
+  padding-left: 6.75rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--7th.is-last:not(.is-expanded) .dark-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--8th.is-expanded .dark-Table-expandCell:before {
+  right: -7.4375rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--8th .dark-Table-expandBtn {
+  position: relative;
+  right: -7.875rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--8th .dark-Table-expandCell + td {
+  position: relative;
+  padding-left: 7.875rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--8th .dark-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 6.25rem;
+  height: auto;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--8th .dark-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 6.25rem;
+  width: 0.625rem;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--8th.is-expandable .dark-Table-expandCell + td {
+  padding-left: 7.875rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--8th.is-last:not(.is-expanded) .dark-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--9th.is-expanded .dark-Table-expandCell:before {
+  right: -8.5625rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--9th .dark-Table-expandBtn {
+  position: relative;
+  right: -9rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--9th .dark-Table-expandCell + td {
+  position: relative;
+  padding-left: 9rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--9th .dark-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 7.375rem;
+  height: auto;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--9th .dark-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 7.375rem;
+  width: 0.625rem;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--9th.is-expandable .dark-Table-expandCell + td {
+  padding-left: 9rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--9th.is-last:not(.is-expanded) .dark-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--10th.is-expanded .dark-Table-expandCell:before {
+  right: -9.6875rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--10th .dark-Table-expandBtn {
+  position: relative;
+  right: -10.125rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--10th .dark-Table-expandCell + td {
+  position: relative;
+  padding-left: 10.125rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--10th .dark-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 8.5rem;
+  height: auto;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--10th .dark-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 8.5rem;
+  width: 0.625rem;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--10th.is-expandable .dark-Table-expandCell + td {
+  padding-left: 10.125rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table tr.dark-Table-tr--10th.is-last:not(.is-expanded) .dark-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th.dark-Table-checkCell,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-checkCell {
+  border-right: 0;
+  white-space: nowrap;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th.dark-Table-checkCell .dark-Checkbox,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-checkCell .dark-Checkbox {
+  margin: 0;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th.dark-Table-expandCell,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-expandCell {
+  border-right: 0;
+  width: 0.0625rem;
+  padding-right: 0;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th.dark-Table-dragCell,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-dragCell {
+  border-right: 0;
+  width: 0.0625rem;
+  padding-right: 0;
+  cursor: move;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th.dark-Table-dragCell > svg,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-dragCell > svg {
+  vertical-align: middle;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-expandCell {
+  position: relative;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-expandCell .dark-Table-divider-1 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: var(--Table-tree-borderColor);
+  right: 0.4375rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-expandCell .dark-Table-divider-2 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: var(--Table-tree-borderColor);
+  right: -0.6875rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-expandCell .dark-Table-divider-3 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: var(--Table-tree-borderColor);
+  right: -1.8125rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-expandCell .dark-Table-divider-4 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: var(--Table-tree-borderColor);
+  right: -2.9375rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-expandCell .dark-Table-divider-5 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: var(--Table-tree-borderColor);
+  right: -4.0625rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-expandCell .dark-Table-divider-6 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: var(--Table-tree-borderColor);
+  right: -5.1875rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-expandCell .dark-Table-divider-7 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: var(--Table-tree-borderColor);
+  right: -6.3125rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-expanded > td.dark-Table-expandCell::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 50%;
+  bottom: 0;
+  right: 0.4375rem;
+  height: auto;
+  background: var(--Table-tree-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th.dark-TableCell--sortable {
+  padding-right: calc( var(--TableCell-paddingX) + var(--TableCell-sortBtn-width) );
+  position: relative;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th.dark-TableCell--searchable {
+  padding-right: calc( var(--TableCell-paddingX) + var(--TableCell-searchBtn-width) );
+  position: relative;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th.dark-TableCell--filterable {
+  padding-right: calc( var(--TableCell-paddingX) + var(--TableCell-filterBtn-width) );
+  position: relative;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.dark-Table-row-disabled {
+  background: var(--TableRow-onDisabled-bg);
+  color: var(--TableRow-onDisabled-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr:not(.dark-Table-row-disabled) > td.dark-Table-cell-row-hover {
+  background: var(--Table-onHover-bg);
+  border-color: var(--Table-onHover-borderColor);
+  color: var(--Table-onHover-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th.dark-Table-cell-fix-left-last:after,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-cell-fix-left-last:after,
+.amis-scope .dark-Table-v2 .dark-Table-table > tfoot > tr > td.dark-Table-cell-fix-left-last:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -1px;
+  width: 30px;
+  transform: translate(100%);
+  transition: box-shadow 0.3s;
+  content: "";
+  pointer-events: none;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > thead > tr > th.dark-Table-cell-fix-right-first:after,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-cell-fix-right-first:after,
+.amis-scope .dark-Table-v2 .dark-Table-table > tfoot > tr > td.dark-Table-cell-fix-right-last:after {
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: 0;
+  width: 30px;
+  transform: translate(-100%);
+  transition: box-shadow 0.3s;
+  content: "";
+  pointer-events: none;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-cell-expand-icon-cell {
+  text-align: center;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr > td.dark-Table-cell-expand-icon-cell .dark-Table-row-indent {
+  height: 1px;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.dark-Table-expanded-row > td {
+  background: var(--Table-onHover-bg);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tfoot > tr {
+  border-bottom: var(--Table-borderWidth) solid var(--Table-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tfoot > tr > td {
+  padding: var(--TableCell-paddingY-default) var(--TableCell-paddingX);
+  background: var(--Table-thead-bg);
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-container .dark-Table-header {
+  padding: 0;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-ping-left .dark-Table-table > thead > tr > th.dark-Table-cell-fix-left-last:after,
+.amis-scope .dark-Table-v2.dark-Table-ping-left .dark-Table-table > tbody > tr > td.dark-Table-cell-fix-left-last:after,
+.amis-scope .dark-Table-v2.dark-Table-ping-left .dark-Table-table > tfoot > tr > td.dark-Table-cell-fix-left-last:after {
+  box-shadow: var(--Table-fixedLeftLast-boxShadow);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-ping-left .dark-Table-table > tbody > tr:not(.dark-Table-row-disabled) > td.dark-Table-cell-fix-left {
+  border-right: none;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-ping-left .dark-Table-table > tbody > tr:not(.dark-Table-row-disabled) > td.dark-Table-cell-fix-left:not(.dark-Table-cell-row-hover) {
+  background: #FFF;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-ping-left .dark-Table-table > tfoot > tr > td:not(:last-child).dark-Table-cell-fix-left-last {
+  border-right: none;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-ping-left .dark-Table-table > thead > tr > th:not(:last-child):not(:first-child).dark-Table-cell-fix-left-last {
+  border-right: none;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-ping-right .dark-Table-table > thead > tr > th.dark-Table-cell-fix-right-first:after,
+.amis-scope .dark-Table-v2.dark-Table-ping-right .dark-Table-table > tbody > tr > td.dark-Table-cell-fix-right-first:after,
+.amis-scope .dark-Table-v2.dark-Table-ping-right .dark-Table-table > tfoot > tr > td.dark-Table-cell-fix-right-first:after {
+  box-shadow: var(--Table-fixedRightFirst-boxShadow);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-ping-right .dark-Table-table > tbody > tr:not(.dark-Table-row-disabled) > td.dark-Table-cell-fix-right {
+  border-right: none;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-ping-right .dark-Table-table > tbody > tr:not(.dark-Table-row-disabled) > td.dark-Table-cell-fix-right:not(.dark-Table-cell-row-hover) {
+  background: #FFF;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-ping-right:not(.dark-Table-bordered) .dark-Table-table > thead > tr > th.dark-Table-cell-fix-right-first-prev {
+  border-right: none;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-ping-right:not(.dark-Table-bordered) .dark-Table-table > thead > tr > th:not(:last-child).dark-Table-cell-fix-right-first {
+  border-right: none;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-resizable .dark-Table-table > thead > tr > th {
+  position: relative;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-resizable .dark-Table-table > thead > tr > th .dark-Table-thead-resizable {
+  position: absolute;
+  width: 1px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: col-resize;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-loading {
+  padding: var(--Table-loading-padding);
+  text-align: center;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn {
+  cursor: pointer;
+  width: var(--TableCell-sortBtn-width);
+  height: var(--gap-md);
+  position: static;
+  display: inline-block;
+  transform: none;
+  color: var(--icon-color);
+  margin-left: var(--TableCell-icon-gap);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn:hover {
+  color: var(--icon-onHover-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--up > svg,
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--down > svg,
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--default > svg {
+  color: inherit;
+  width: 13px;
+  height: 13px;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--up,
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--down,
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--default {
+  display: none;
+  z-index: 2;
+  font-style: normal;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--up.is-active,
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--down.is-active,
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--default.is-active {
+  display: inline-block;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--default.is-active {
+  color: var(--text--muted-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--default.is-active:hover {
+  color: var(--text-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--up.is-active,
+.amis-scope .dark-Table-v2 .dark-TableCell-sortBtn--down.is-active {
+  color: var(--TableCell-sortBtn--onActive-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-searchBtn {
+  cursor: pointer;
+  position: static;
+  transform: translateY(-50%);
+  color: var(--text--muted-color);
+  margin-left: var(--TableCell-icon-gap);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-searchBtn svg.icon {
+  width: 12px;
+  height: 12px;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-searchBtn:hover {
+  color: var(--text-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-searchBtn.is-active {
+  color: var(--TableCell-searchBtn--onActive-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-searchPopOver {
+  border: none;
+  min-width: 20rem;
+  max-width: 40rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-searchPopOver .dark-Panel {
+  margin: 0;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterBtn {
+  cursor: pointer;
+  width: var(--TableCell-filterBtn-width);
+  position: static;
+  display: inline-block;
+  transform: none;
+  color: var(--text--muted-color);
+  margin-left: var(--TableCell-icon-gap);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterBtn svg.icon {
+  width: 13px;
+  height: 13px;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterBtn:hover {
+  color: var(--text-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterBtn.is-active {
+  color: var(--TableCell-filterBtn--onActive-color);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterBtn .dark-Remark {
+  display: inline;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterPopOver {
+  border: none;
+  width: 10rem;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterPopOver .dark-DropDown-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterPopOver .dark-DropDown-menu .dark-DropDown-divider {
+  height: var(--TableCell-filterPopOver-dropDownItem-height);
+  line-height: var(--TableCell-filterPopOver-dropDownItem-height);
+  padding: var(--TableCell-filterPopOver-dropDownItem-padding);
+  background: var(--white);
+  margin: 0;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterPopOver .dark-DropDown-menu .dark-DropDown-divider:hover {
+  background: var(--light);
+  color: var(--primary);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterPopOver .dark-DropDown-menu .dark-DropDown-divider.is-selected {
+  background: var(--light);
+  color: var(--primary);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterPopOver .dark-DropDown-menu .dark-DropDown-divider .dark-Checkbox {
+  width: 100%;
+  margin: 0;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterPopOver .dark-DropDown-multiple-menu {
+  text-align: center;
+  border-top: 1px solid var(--Table-borderColor);
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterPopOver .dark-DropDown-multiple-menu .dark-Button {
+  margin: 0 5px;
+  padding: 0 10px;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-filterPopOver .dark-DropDown-multiple-menu:hover {
+  background: none;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-selectionBtn {
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-selectionBtn svg.icon {
+  transform: rotate(270deg);
+  font-size: 12px;
+}
+
+.amis-scope .dark-Table-v2 .dark-TableCell-selectionPopOver .dark-DropDown-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-expandBtn {
+  position: relative;
+  z-index: 1;
+  color: var(--Table-expandBtn-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.875rem;
+  line-height: 1;
+  height: 16px;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-expandBtn > svg {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  transition: transform ease-in-out var(--animation-duration), top ease-in-out var(--animation-duration);
+  position: relative;
+  transform-origin: 50% 50%;
+  width: 0.625rem;
+  height: 0.625rem;
+  top: 0;
+}
+
+.amis-scope .dark-Table-v2.dark-Table-expandBtn.is-active > svg {
+  transform: rotate(90deg);
+}
+
+.amis-scope .dark-Table-v2.dark-Table-expandBtn:hover {
+  text-decoration: none;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr:hover .dark-Table-dragBtn,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-dragging .dark-Table-dragBtn,
+.amis-scope .dark-Table-v2 .dark-Table-table > tbody > tr.is-drop-allowed .dark-Table-dragBtn {
+  visibility: visible;
+}
+
+.amis-scope .dark-Table-v2 .fake-hide {
+  visibility: hidden;
+  position: absolute;
+}
+
+.amis-scope .dark-Table-v2 .dark-Table-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .amis-scope .dark-InputTable-toolbar {
@@ -37117,7 +38755,8 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .dark-Pagination > li {
-  display: inline;
+  display: inline-flex;
+  cursor: pointer;
 }
 
 .amis-scope .dark-Pagination > li > a,
@@ -37147,6 +38786,16 @@ readers do not read off random characters that represent icons */
   color: var(--primary);
 }
 
+.amis-scope .dark-Pagination .ellipsis {
+  cursor: unset;
+}
+
+.amis-scope .dark-Pagination .ellipsis > a {
+  cursor: unset;
+  position: relative;
+  top: -0.25rem;
+}
+
 .amis-scope .dark-Pagination > li.is-disabled > span,
 .amis-scope .dark-Pagination > li.is-disabled > a {
   cursor: not-allowed;
@@ -37173,43 +38822,112 @@ readers do not read off random characters that represent icons */
   border-radius: var(--borderRadius);
 }
 
-.amis-scope .dark-Pagination-prev > span {
-  cursor: pointer;
+.amis-scope .dark-Pagination-simple > ul > li:hover,
+.amis-scope .dark-Pagination-simple > ul > li:focus {
+  outline: none;
 }
 
-.amis-scope .dark-Pagination-ellipsis > a > span {
-  position: relative;
-  top: -0.25rem;
+.amis-scope .dark-Pagination-simple > ul > li.is-active > a {
+  border: none;
+}
+
+.amis-scope .dark-Pagination-simple > ul > li.is-active > a:hover,
+.amis-scope .dark-Pagination-simple > ul > li.is-active > a:focus {
+  border: none;
+}
+
+.amis-scope .dark-Pagination-prev > span {
+  cursor: pointer;
 }
 
 .amis-scope .dark-Pagination-next > span {
   cursor: pointer;
 }
 
+.amis-scope .dark-Pagination-total {
+  display: inline-block;
+  color: var(--Pagination-light-color);
+}
+
 .amis-scope .dark-Pagination-inputGroup {
   display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
+  height: var(--Pagination-height);
+}
+
+.amis-scope .dark-Pagination-inputGroup-left {
+  color: var(--Pagination-light-color);
 }
 
 .amis-scope .dark-Pagination-inputGroup input {
-  width: 3.5rem;
+  min-width: 3.125rem;
+  width: 3.125rem;
   height: var(--Pagination-height);
+  line-height: var(--Pagination-height);
+  border: none;
   border: var(--borderWidth) solid var(--borderColor);
-  border-radius: var(--borderRadius);
-  padding: var(--gap-xs) 0.625rem;
-  margin: 0 0.625rem;
+  border-radius: var(--borderRadius) 0 0 var(--borderRadius);
+  padding: var(--Pagination-padding);
+  margin-left: 0.625rem;
   text-align: center;
-}
-
-.amis-scope .dark-Pagination-inputGroup input:focus {
-  width: auto;
 }
 
 .amis-scope .dark-Pagination-inputGroup input:focus,
 .amis-scope .dark-Pagination-inputGroup input:hover {
   outline: none;
-  border: var(--borderWidth) solid var(--primary);
+  border-color: var(--primary);
+}
+
+.amis-scope .dark-Pagination-inputGroup-right {
+  display: inline-block;
+  width: 2rem;
+  cursor: pointer;
+  text-align: center;
+  height: var(--Pagination-height);
+  line-height: var(--Pagination-height);
+  border: var(--borderWidth) solid var(--borderColor);
+  border-left: none;
+  border-radius: 0 var(--borderRadius) var(--borderRadius) 0;
+  font-size: var(--fontSizeSm);
+}
+
+.amis-scope .dark-Pagination-inputGroup-right:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  border-left: var(--borderWidth) solid var(--primary);
+}
+
+.amis-scope .dark-Pagination-wrap {
+  line-height: 1.875rem;
+}
+
+.amis-scope .dark-Pagination-wrap .dark-Pagination-item {
+  margin-left: 0.625rem;
+}
+
+.amis-scope .dark-Pagination-wrap .dark-Pagination-item:nth-child(1) {
+  margin-left: 0;
+}
+
+.amis-scope .dark-Pagination-wrap.disabled {
+  background-color: #fff;
+}
+
+.amis-scope .dark-Pagination-wrap.disabled .dark-Pagination > li > a,
+.amis-scope .dark-Pagination-wrap.disabled .dark-Pagination > li > span {
+  color: var(--Pagination-onDisabled-color);
+  cursor: not-allowed;
+}
+
+.amis-scope .dark-Pagination-wrap.disabled .dark-Pagination > li.is-active > a,
+.amis-scope .dark-Pagination-wrap.disabled .dark-Pagination > li.is-active > span,
+.amis-scope .dark-Pagination-wrap.disabled .dark-Pagination > li.is-active > a:hover,
+.amis-scope .dark-Pagination-wrap.disabled .dark-Pagination > li.is-active > span:hover,
+.amis-scope .dark-Pagination-wrap.disabled .dark-Pagination > li.is-active > a:focus,
+.amis-scope .dark-Pagination-wrap.disabled .dark-Pagination > li.is-active > span:focus {
+  background-color: var(--Pagination-onDisabled-backgroundColor);
+  border-color: var(--Pagination-onDisabled-color);
 }
 
 .amis-scope .dark-PaginationWrapper-pager {
@@ -38068,6 +39786,132 @@ readers do not read off random characters that represent icons */
   cursor: pointer;
 }
 
+.amis-scope .dark-SchemaEditorProps {
+  width: 100%;
+}
+
+.amis-scope .dark-SchemaEditorProps > button {
+  margin-top: 7px;
+}
+
+.amis-scope .dark-SchemaEditorProps-placeholder {
+  color: var(--text--muted-color);
+}
+
+.amis-scope .dark-SchemaEditorProps--depth {
+  position: relative;
+  margin-left: 2.5rem;
+}
+
+.amis-scope .dark-SchemaEditorProps--depth:before {
+  width: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  bottom: 10px;
+  left: -35px;
+  border-left: dashed 1px var(--icon-color);
+}
+
+.amis-scope .dark-SchemaEditorProps--depth .dark-SchemaEditorItem:before {
+  height: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 17px;
+  width: 25px;
+  left: -35px;
+  border-top: dashed 1px var(--icon-color);
+}
+
+.amis-scope .dark-SchemaEditorProps--depth > button {
+  position: relative;
+}
+
+.amis-scope .dark-SchemaEditorProps--depth > button:before {
+  height: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  width: 25px;
+  left: -35px;
+  border-top: dashed 1px var(--icon-color);
+}
+
+.amis-scope .dark-SchemaEditorArrayProps:before {
+  bottom: 15px;
+}
+
+.amis-scope .dark-SchemaEditorItem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+  align-items: flex-start;
+  position: relative;
+}
+
+.amis-scope .dark-SchemaEditorItem + .dark-SchemaEditorItem {
+  margin-top: var(--gap-sm);
+}
+
+.amis-scope .dark-SchemaEditorObject,
+.amis-scope .dark-SchemaEditorArray {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+  align-items: flex-start;
+  width: 100%;
+}
+
+.amis-scope .dark-SchemaEditor-itemsLabel {
+  margin-top: calc((var(--Form-input-height) - var(--Switch-height)) / 2);
+}
+
+.amis-scope .dark-SchemaEditor-caret {
+  display: inline-block;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform var(--animation-duration);
+  color: var(--icon-color);
+  margin-top: calc((var(--Form-input-height) - var(--Switch-height)) / 2);
+}
+
+.amis-scope .dark-SchemaEditor-caret > svg {
+  width: 10px;
+  height: 10px;
+  top: 0;
+}
+
+.amis-scope .dark-SchemaEditor-caret.is-collapsed {
+  transform: rotate(-90deg);
+}
+
+.amis-scope .dark-SchemaEditor-required {
+  padding-top: 4px;
+}
+
+.amis-scope .dark-SchemaEditor-key,
+.amis-scope .dark-SchemaEditor-title,
+.amis-scope .dark-SchemaEditor-description {
+  flex: 1;
+  max-width: 200px;
+  min-width: 80px;
+}
+
+.amis-scope .dark-SchemaEditor-key > input,
+.amis-scope .dark-SchemaEditor-title > input,
+.amis-scope .dark-SchemaEditor-description > input {
+  flex-basis: 0;
+}
+
 .amis-scope .dark-ResultBox {
   display: flex;
   background: var(--Form-input-bg);
@@ -38079,7 +39923,7 @@ readers do not read off random characters that represent icons */
   flex-wrap: wrap;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding: 0 1.625rem 0 0.1875rem;
+  padding: 0 0.3125rem;
   min-height: var(--Form-input-height);
   align-items: center;
   border-radius: 3px;
@@ -39714,6 +41558,11 @@ readers do not read off random characters that represent icons */
   fill: var(--Form-input-clearBtn-color-onActive);
 }
 
+.amis-scope .dark-TextControl-passwordReveal {
+  cursor: pointer;
+  color: var(--text--muted-color);
+}
+
 @media (min-width: 576px) {
   .amis-scope .dark-TextControl.dark-Form-control--sizeXs > .dark-TextControl-input,
   .amis-scope .dark-TextControl.dark-Form-control--sizeSm > .dark-TextControl-input,
@@ -39863,7 +41712,7 @@ readers do not read off random characters that represent icons */
   border: var(--Form-input-borderWidth) solid var(--Form-input-onFocused-borderColor);
   left: -0.0625rem;
   right: -0.0625rem;
-  top: 100%;
+  top: calc(100% + 0.25rem);
   z-index: 10;
   max-height: 18.75rem;
   overflow: auto;
@@ -40065,6 +41914,11 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .dark-TextareaControl-clear:active svg {
   fill: var(--Form-input-clearBtn-color-onActive);
+}
+
+.amis-scope .dark-TextareaControl-passwordReveal {
+  cursor: pointer;
+  color: var(--text--muted-color);
 }
 
 @media (min-width: 576px) {
@@ -40718,6 +42572,10 @@ readers do not read off random characters that represent icons */
   bottom: 0;
 }
 
+.amis-scope .dark-TreeSelection-item.is-disabled {
+  color: var(--text--muted-color);
+}
+
 .amis-scope .dark-TreeSelection-sublist .dark-TreeSelection-item:before {
   height: 1px;
   content: "";
@@ -40738,7 +42596,6 @@ readers do not read off random characters that represent icons */
   flex-direction: row;
   cursor: pointer;
   user-select: none;
-  position: relative;
 }
 
 .amis-scope .dark-TreeSelection-itemInner > .dark-Checkbox {
@@ -40746,19 +42603,7 @@ readers do not read off random characters that represent icons */
   margin-left: var(--gap-sm);
 }
 
-.amis-scope .dark-TreeSelection-itemInner > * {
-  position: relative;
-  z-index: 2;
-}
-
-.amis-scope .dark-TreeSelection-itemInner:hover:after {
-  position: absolute;
-  content: "";
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: -99999px;
+.amis-scope .dark-TreeSelection-itemInner:hover {
   background: var(--Tree-item-onHover-bg);
 }
 
@@ -41115,18 +42960,8 @@ readers do not read off random characters that represent icons */
   border-color: var(--Form-input-onFocused-borderColor);
 }
 
-.amis-scope .dark-Number:hover .dark-Number-handler-up,
-.amis-scope .dark-Number:hover .dark-Number-handler-wrap {
-  border-color: var(--Form-input-onFocused-borderColor);
-}
-
 .amis-scope .dark-Number-disabled:hover {
-  border-color: var(--Form-input-borderColor);
-}
-
-.amis-scope .dark-Number-disabled:hover .dark-Number-handler-up,
-.amis-scope .dark-Number-disabled:hover .dark-Number-handler-wrap {
-  border-color: var(--Form-input-borderColor);
+  border-color: var(--Form-input-onDisabled-borderColor);
 }
 
 .amis-scope .dark-Number-input-wrap {
@@ -41147,7 +42982,7 @@ readers do not read off random characters that represent icons */
   border: 0;
   border-radius: var(--Form-input-borderRadius);
   color: var(--Form-input-color);
-  padding: 0 var(--Form-input-paddingX);
+  padding: 0 var(--Form-inputNumber-paddingX);
 }
 
 .amis-scope .dark-Number-handler {
@@ -41160,6 +42995,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .dark-Number-handler:hover {
   background: var(--Number-handler-onHover-bg);
   color: var(--Number-handler-onHover-color);
+  cursor: pointer;
 }
 
 .amis-scope .dark-Number-handler:hover:active {
@@ -41202,20 +43038,39 @@ readers do not read off random characters that represent icons */
   color: var(--Number-handler-onDisabled-color);
 }
 
+.amis-scope .dark-Number-disabled {
+  border-color: var(--Form-input-onDisabled-borderColor);
+}
+
 .amis-scope .dark-Number-disabled .dark-Number-input {
+  opacity: 0.72;
   cursor: not-allowed;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   color: var(--text--muted-color);
   background: var(--Form-input-onDisabled-bg);
   border-color: var(--Form-input-onDisabled-borderColor);
 }
 
+.amis-scope .dark-Number-disabled .dark-Number-handler-wrap {
+  border-color: var(--Form-input-onDisabled-borderColor);
+}
+
 .amis-scope .dark-Number-disabled .dark-Number-handler {
+  cursor: not-allowed;
+  color: var(--text--muted-color);
+  background: var(--Form-input-onDisabled-bg);
+  border-color: var(--Form-input-onDisabled-borderColor);
   opacity: 0.72;
 }
 
 .amis-scope .dark-Number-disabled .dark-Number-handler:hover {
   color: var(--text--muted-color);
   border-color: var(--Form-input-borderColor);
+}
+
+.amis-scope .dark-Number-disabled .dark-Number-handler:hover:active {
+  background: var(--Form-input-onDisabled-bg);
 }
 
 .amis-scope .dark-NumberControl:not(.is-inline) > .dark-Number {
@@ -41237,6 +43092,131 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .dark-NumberControl--withUnit .dark-Select {
   border-left: 0;
+}
+
+.amis-scope .dark-Number--enhance {
+  display: inline-flex;
+  align-items: center;
+  border: var(--Number-borderWidth) solid var(--Number-borderColor);
+  border-radius: var(--Number-borderRadius);
+  overflow: hidden;
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-left-icon,
+.amis-scope .dark-Number--enhance .dark-Number--enhance-right-icon {
+  display: inline-block;
+  width: var(--Form-inputNumber-base-width);
+  height: var(--Form-inputNumber-base-height);
+  line-height: var(--Form-inputNumber-base-height);
+  text-align: center;
+  color: var(--Form-input-color);
+  background: var(--Form-input-bg);
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-left-icon:hover,
+.amis-scope .dark-Number--enhance .dark-Number--enhance-right-icon:hover {
+  cursor: pointer;
+  background: var(--Form-input-bg);
+  color: var(--Form-input-onHover-borderColor);
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-left-icon-focused,
+.amis-scope .dark-Number--enhance .dark-Number--enhance-right-icon-focused {
+  background: var(--Form-input-bg);
+  color: var(--Form-input-onFocused-borderColor);
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-left-icon > svg,
+.amis-scope .dark-Number--enhance .dark-Number--enhance-right-icon > svg {
+  width: var(--fontSizeSm);
+  height: var(--fontSizeSm);
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-left-icon {
+  border-top-left-radius: var(--Number-borderRadius);
+  border-bottom-left-radius: var(--Number-borderRadius);
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-right-icon {
+  border-top-right-radius: var(--Number-borderRadius);
+  border-bottom-right-radius: var(--Number-borderRadius);
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-input {
+  flex: 1;
+  border: 0;
+  border-left: var(--Number-borderWidth) solid var(--Number-borderColor);
+  border-right: var(--Number-borderWidth) solid var(--Number-borderColor);
+  border-radius: 0;
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-input .dark-Number-handler-wrap {
+  display: none;
+}
+
+.amis-scope .dark-Number--enhance:hover {
+  border-color: var(--Form-input-onFocused-borderColor);
+}
+
+.amis-scope .dark-Number--enhance:focus-within {
+  border-color: var(--Form-input-onFocused-borderColor);
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-border-min,
+.amis-scope .dark-Number--enhance .dark-Number--enhance-border-max {
+  background: var(--Number-handler-onDisabled-bg);
+  pointer-events: none;
+  color: var(--Number-handler-onDisabled-color);
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-border-min:hover,
+.amis-scope .dark-Number--enhance .dark-Number--enhance-border-max:hover {
+  background: var(--Number-handler-onDisabled-bg);
+  color: var(--Number-handler-onDisabled-color);
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-border-disabled {
+  background: var(--Form-input-onDisabled-bg);
+  color: var(--Form-inputNumber-strong-disabled-color);
+  cursor: not-allowed;
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-border-disabled:hover {
+  cursor: not-allowed;
+  background: var(--Form-input-onDisabled-bg);
+  color: var(--Form-inputNumber-strong-disabled-color);
+}
+
+.amis-scope .dark-Number--enhance .dark-Number--enhance-border-readOnly:hover,
+.amis-scope .dark-Number--enhance .dark-Number--enhance-border-readOnly:hover {
+  color: var(--Number-handler-onHover-color);
+}
+
+.amis-scope .dark-Number--enhance-no-steps .dark-Number--enhance-left-icon,
+.amis-scope .dark-Number--enhance-no-steps .dark-Number--enhance-right-icon {
+  display: none;
+}
+
+.amis-scope .dark-Number--enhance-no-steps .dark-Number--enhance-input {
+  border: none;
+  border-radius: var(--Number-borderRadius);
+}
+
+.amis-scope .dark-Number--enhance-disabled {
+  border-color: var(--Form-input-onDisabled-borderColor);
+}
+
+.amis-scope .dark-Number--enhance-disabled .dark-Number--enhance-input {
+  border-color: var(--Form-input-onDisabled-borderColor);
+}
+
+.amis-scope .dark-Number--enhance-disabled:hover {
+  border-color: var(--Number-borderColor);
+}
+
+.amis-scope .dark-Number--enhance-borderNone,
+.amis-scope .dark-Number--enhance-borderHalf {
+  border: none;
 }
 
 .amis-scope .dark-Select {
@@ -41301,9 +43281,11 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .dark-Select-placeholder {
+  color: var(--Form-select-placeholderColor);
   line-height: var(--Form-input-lineHeight);
   user-select: none;
   white-space: nowrap;
+  color: var(--Form-select-placeholderColor);
 }
 
 .amis-scope .dark-Select-value {
@@ -41312,6 +43294,10 @@ readers do not read off random characters that represent icons */
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.amis-scope .dark-Select-value.is-invalid {
+  color: var(--Form-selectValue-onInvalid-color);
 }
 
 .amis-scope .dark-Select-value.is-disabled {
@@ -41493,10 +43479,6 @@ readers do not read off random characters that represent icons */
 .amis-scope .dark-Select-option.is-disabled {
   color: var(--Form-select-menu-onDisabled-color);
   background: var(--Form-select-menu-onDisabled-bg);
-}
-
-.amis-scope .dark-Select-option--placeholder {
-  color: var(--Form-input-placeholderColor);
 }
 
 .amis-scope .dark-Select-option > label {
@@ -42390,7 +44372,6 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .rdt .rdtPickerDate {
-  width: 17rem;
   height: 100%;
 }
 
@@ -43462,7 +45443,6 @@ readers do not read off random characters that represent icons */
   background: var(--info);
   border-radius: var(--FileControl-progress-borderRadius);
   height: 100%;
-  min-width: 10%;
   transition: ease-out width var(--animation-duration);
 }
 
@@ -44134,7 +46114,7 @@ readers do not read off random characters that represent icons */
   top: 2px;
   width: 1rem;
   height: 1rem;
-  margin-left: var(--gap-xs);
+  margin-left: var(--Tree-icon-gap);
 }
 
 .amis-scope .dark-Tree.is-disabled {
@@ -44167,10 +46147,37 @@ readers do not read off random characters that represent icons */
   display: flex;
   align-items: center;
   position: relative;
+  user-select: none;
+  margin-bottom: 0.25rem;
+  padding-left: var(--Tree-icon-gap);
+}
+
+.amis-scope .dark-Tree-itemLabel > * {
+  position: relative;
+  z-index: 2;
+}
+
+.amis-scope .dark-Tree-itemLabel > .dark-Checkbox {
+  display: inline-flex;
+  align-self: center;
 }
 
 .amis-scope .dark-Tree-itemLabel:hover {
-  background: var(--Tree-item-onHover-bg);
+  background: var(--Tree-item-onHover-bg-pure);
+}
+
+.amis-scope .dark-Tree-item .is-checked {
+  background: var(--Tree-item-onChekced-bg);
+  border-radius: var(--Tree-item-onChekced-bg-borderRadius);
+}
+
+.amis-scope .dark-Tree-item .is-disabled {
+  color: var(--text--muted-color);
+  background: none;
+}
+
+.amis-scope .dark-Tree-item .is-disabled:hover {
+  background: none;
 }
 
 .amis-scope .dark-Tree.is-draggable .dark-Tree-itemLabel:hover::after {
@@ -44184,13 +46191,13 @@ readers do not read off random characters that represent icons */
   vertical-align: top;
   height: var(--Tree-itemHeight);
   line-height: var(--Tree-itemHeight);
-  padding-right: var(--gap-xs);
+  padding-right: var(--Tree-icon-gap);
 }
 
 .amis-scope .dark-Tree-item-icons > a {
   display: inline-block;
   vertical-align: middle;
-  margin-left: var(--gap-xs);
+  margin-left: var(--Tree-icon-gap);
   cursor: pointer;
 }
 
@@ -44210,7 +46217,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .dark-Tree-itemInput > a {
   display: inline-block;
   cursor: pointer;
-  margin-left: var(--gap-sm);
+  margin-left: var(--Tree-icon-gap);
   color: var(--icon-color);
 }
 
@@ -44262,14 +46269,14 @@ readers do not read off random characters that represent icons */
   width: 0.875rem;
   height: 0.875rem;
   top: 0.109375rem;
-  margin-right: var(--gap-xs);
+  margin-right: var(--Tree-icon-gap);
 }
 
 .amis-scope .dark-Tree-itemArrow {
   cursor: pointer;
   width: var(--Tree-itemArrowWidth);
   display: inline-flex;
-  margin-right: var(--gap-xs);
+  margin-right: var(--Tree-icon-margin-right);
 }
 
 .amis-scope .dark-Tree-itemArrow > svg {
@@ -44287,7 +46294,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .dark-Tree-itemArrowPlaceholder {
   display: inline-block;
-  width: calc(var(--Tree-itemArrowWidth) + var(--gap-xs));
+  width: calc(var(--Tree-itemArrowWidth) + var(--Tree-icon-gap));
 }
 
 .amis-scope .dark-Tree-itemDrager {
@@ -44296,12 +46303,12 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .dark-Tree-spinner {
-  margin-right: var(--gap-xs);
+  margin-right: var(--Tree-icon-gap);
 }
 
 .amis-scope .dark-Tree-itemIcon {
   display: inline-flex;
-  margin-right: var(--gap-xs);
+  margin-right: var(--Tree-icon-gap);
 }
 
 .amis-scope .dark-Tree-rootIcon > svg,
@@ -44312,29 +46319,15 @@ readers do not read off random characters that represent icons */
   height: 0.875rem;
 }
 
-.amis-scope .dark-Tree-itemLabel {
-  user-select: none;
-}
-
-.amis-scope .dark-Tree-itemLabel.is-checked,
-.amis-scope .dark-Tree-itemLabel.is-children-checked {
-  color: var(--Tree-itemLabel--onChecked-color);
-}
-
-.amis-scope .dark-Tree-itemLabel.is-disabled {
-  color: var(--text--muted-color);
-}
-
-.amis-scope .dark-Tree-itemLabel > .dark-Checkbox {
-  display: inline-flex;
-  align-self: center;
-}
-
 .amis-scope .dark-Tree-itemText {
   cursor: pointer;
   flex: 1 auto;
+  color: var(--Form-input-color);
   line-height: var(--lineHeightBase);
-  padding: 0.25rem 0;
+}
+
+.amis-scope .is-disabled .dark-Tree-itemText {
+  color: var(--text--muted-color);
 }
 
 .amis-scope .dark-Tree-placeholder {
@@ -44363,7 +46356,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .dark-Tree-dropIndicator--hover {
   border-radius: 0;
-  background-color: var(--Tree-item-onHover-bg);
+  background-color: var(--Tree-item-onHover-bg-pure);
 }
 
 .amis-scope .dark-Tree-dropIndicator--hover::after {
@@ -44482,6 +46475,11 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .dark-TreeSelect-clear:active svg {
   fill: var(--Form-input-clearBtn-color-onActive);
+}
+
+.amis-scope .dark-TreeSelect-passwordReveal {
+  cursor: pointer;
+  color: var(--text--muted-color);
 }
 
 @media (min-width: 576px) {
@@ -45095,6 +47093,11 @@ readers do not read off random characters that represent icons */
   fill: var(--Form-input-clearBtn-color-onActive);
 }
 
+.amis-scope .dark-Picker-passwordReveal {
+  cursor: pointer;
+  color: var(--text--muted-color);
+}
+
 @media (min-width: 576px) {
   .amis-scope .dark-Picker.dark-Form-control--sizeXs > .dark-Picker-input,
   .amis-scope .dark-Picker.dark-Form-control--sizeSm > .dark-Picker-input,
@@ -45475,6 +47478,10 @@ readers do not read off random characters that represent icons */
   overflow: initial;
 }
 
+.amis-scope .dark-Transfer-select {
+  overflow: hidden;
+}
+
 .amis-scope .dark-Transfer-search + .dark-Transfer-selection {
   border-top: 1px solid var(--borderColor);
 }
@@ -45783,6 +47790,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .dark-NestedSelect-menu .dark-NestedSelect-option.no-result {
   justify-content: center;
   cursor: default;
+  color: var(--Form-select-placeholderColor);
 }
 
 .amis-scope .dark-NestedSelect-menu .dark-NestedSelect-option.no-result:hover {
@@ -46012,6 +48020,11 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .dark-IconPickerControl-clear:active svg {
   fill: var(--Form-input-clearBtn-color-onActive);
+}
+
+.amis-scope .dark-IconPickerControl-passwordReveal {
+  cursor: pointer;
+  color: var(--text--muted-color);
 }
 
 @media (min-width: 576px) {
@@ -47564,6 +49577,8 @@ readers do not read off random characters that represent icons */
 .amis-scope .dark-FormulaPicker-input {
   flex: 1;
   margin-right: 0.625rem;
+  padding-right: 0;
+  max-width: calc(100% - 2.625rem);
 }
 
 .amis-scope .dark-FormulaPicker-action {
@@ -47588,6 +49603,9 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .dark-FormulaPicker-ResultBox {
   padding-right: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .amis-scope .dark-FormulaPicker-ResultBox span.c-field {
@@ -47800,6 +49818,209 @@ readers do not read off random characters that represent icons */
   margin: 0 auto;
 }
 
+.amis-scope .dark-Tag {
+  display: inline-flex;
+  height: var(--Tag-height);
+  padding: 0 var(--gap-sm);
+  justify-content: center;
+  align-items: center;
+  font-size: var(--Tag-content-fontSize);
+  max-width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.3;
+  border-radius: var(--Tag-borderRadius);
+  background-color: var(--Tag-default-color);
+  color: var(--Tag-fontColor);
+}
+
+.amis-scope .dark-Tag:not(:last-child) {
+  margin-right: var(--gap-sm);
+}
+
+.amis-scope .dark-Tag--normal {
+  border-radius: var(--Tag-borderRadius);
+}
+
+.amis-scope .dark-Tag--normal--hasColor {
+  color: var(--white);
+}
+
+.amis-scope .dark-Tag--normal--inactive {
+  background: var(--Tag-inactive-color);
+}
+
+.amis-scope .dark-Tag--normal--active {
+  background: var(--Tag-active-color);
+}
+
+.amis-scope .dark-Tag--normal--processing {
+  background: var(--Tag-processing-color);
+}
+
+.amis-scope .dark-Tag--normal--success {
+  background: var(--Tag-success-color);
+}
+
+.amis-scope .dark-Tag--normal--error {
+  background: var(--Tag-error-color);
+}
+
+.amis-scope .dark-Tag--normal--warning {
+  background: var(--Tag-warning-color);
+}
+
+.amis-scope .dark-Tag--rounded {
+  background-color: var(--white);
+  border-radius: calc((var(--Tag-height) + 2px) / 2);
+  border: 1px solid var(--Tag-default-color);
+  color: var(--Tag-default-color);
+}
+
+.amis-scope .dark-Tag--rounded--inactive {
+  border-color: var(--Tag-inactive-color);
+  color: var(--Tag-inactive-color);
+}
+
+.amis-scope .dark-Tag--rounded--active {
+  border-color: var(--Tag-active-color);
+  color: var(--Tag-active-color);
+}
+
+.amis-scope .dark-Tag--rounded--processing {
+  border-color: var(--Tag-processing-color);
+  color: var(--Tag-processing-color);
+}
+
+.amis-scope .dark-Tag--rounded--success {
+  border-color: var(--Tag-success-color);
+  color: var(--Tag-success-color);
+}
+
+.amis-scope .dark-Tag--rounded--error {
+  border-color: var(--Tag-error-color);
+  color: var(--Tag-error-color);
+}
+
+.amis-scope .dark-Tag--rounded--warning {
+  border-color: var(--Tag-warning-color);
+  color: var(--Tag-warning-color);
+}
+
+.amis-scope .dark-Tag--status {
+  background-color: var(--white);
+}
+
+.amis-scope .dark-Tag--status--inactive .dark-Tag--prev {
+  color: var(--Tag-inactive-color);
+}
+
+.amis-scope .dark-Tag--status--active .dark-Tag--prev {
+  color: var(--Tag-active-color);
+}
+
+.amis-scope .dark-Tag--status--processing .dark-Tag--prev {
+  color: var(--Tag-processing-color);
+}
+
+.amis-scope .dark-Tag--status--success .dark-Tag--prev {
+  color: var(--Tag-success-color);
+}
+
+.amis-scope .dark-Tag--status--error .dark-Tag--prev {
+  color: var(--Tag-error-color);
+}
+
+.amis-scope .dark-Tag--status--warning .dark-Tag--prev {
+  color: var(--Tag-warning-color);
+}
+
+.amis-scope .dark-Tag--status:not(.dark-Tag--status--processing):not(.dark-Tag--status--active) .icon-dot #dotWave {
+  display: none;
+}
+
+.amis-scope .dark-Tag--prev {
+  color: var(--Tag-default-color);
+  margin-right: var(--gap-sm);
+}
+
+.amis-scope .dark-Tag--prev i {
+  font-size: 0.5rem;
+}
+
+.amis-scope .dark-Tag--prev .icon {
+  width: 0.5rem;
+  height: 0.5rem;
+  top: 0;
+}
+
+.amis-scope .dark-Tag--close {
+  margin-left: var(--gap-sm);
+  margin-right: var(--gap-xs);
+  cursor: pointer;
+}
+
+.amis-scope .dark-Tag--close i {
+  font-size: 0.5rem;
+}
+
+.amis-scope .dark-Tag--close .icon {
+  width: 0.5rem;
+  height: 0.5rem;
+  position: inherit;
+}
+
+.amis-scope .dark-Tag--close:hover {
+  opacity: 0.7;
+}
+
+.amis-scope .dark-Tag--close:active {
+  opacity: 0.3;
+}
+
+.amis-scope .dark-Tag--disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.amis-scope .dark-Tag--disabled .dark-Tag--close {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.amis-scope .dark-Tag--checkable {
+  background-color: var(--Tag-checkable-bgColor);
+  cursor: pointer;
+}
+
+.amis-scope .dark-Tag--checkable:hover {
+  background-color: var(--Tag-checkable-bgColor-onHover);
+}
+
+.amis-scope .dark-Tag--checkable:active {
+  background-color: var(--Tag-checkable-bgColor-onActive);
+}
+
+.amis-scope .dark-Tag--checkable--disabled {
+  cursor: not-allowed;
+  background-color: var(--Tag-checkable-bgColor-onDisable);
+  color: var(--Tag-checkable-fontColor-onDisable);
+}
+
+.amis-scope .dark-Tag--checkable--checked:not(.dark-Tag--checkable--disabled) {
+  color: var(--white);
+  background-color: var(--Tag-checkable-bgColor-onChecked);
+}
+
+.amis-scope .dark-Tag--checkable--checked:not(.dark-Tag--checkable--disabled):hover {
+  background-color: var(--Tag-checkable-bgColor-onHover-onChecked);
+}
+
+.amis-scope .dark-Tag--checkable--checked:not(.dark-Tag--checkable--disabled):active {
+  background-color: var(--Tag-checkable-bgColor-onActive-onChecked);
+}
+
 .amis-scope .dark-PullRefresh-wrap {
   position: relative;
   height: 100%;
@@ -47834,6 +50055,7 @@ readers do not read off random characters that represent icons */
   right: 0;
   height: 100vh;
   width: 24px;
+  pointer-events: none;
 }
 
 .AMISDebug h3 {
@@ -47888,6 +50110,7 @@ readers do not read off random characters that represent icons */
 }
 
 .AMISDebug-toggle {
+  pointer-events: all;
   background: var(--body-bg);
   position: fixed;
   top: 50%;
@@ -47910,6 +50133,7 @@ readers do not read off random characters that represent icons */
 }
 
 .AMISDebug-content {
+  pointer-events: all;
   display: none;
 }
 

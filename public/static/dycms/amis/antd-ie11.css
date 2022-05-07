@@ -13455,6 +13455,7 @@ readers do not read off random characters that represent icons */
   outline: none;
   /* Prevent dragging from highlighting the element */
   position: relative;
+  z-index: 0;
 }
 
 .amis-scope .CodeMirror-sizer {
@@ -25860,98 +25861,6 @@ readers do not read off random characters that represent icons */
   height: 1.875rem;
 }
 
-.amis-scope .antd-Button:active,
-.amis-scope .antd-Button.is-active {
-  color: #1890ff;
-  box-shadow: none;
-  border-color: #1890ff;
-}
-
-.amis-scope .antd-Button:active:focus,
-.amis-scope .antd-Button.is-active:focus {
-  box-shadow: none;
-}
-
-.amis-scope .antd-Button .antd-Button-icon:first-child:not(:last-child):not(.pull-right),
-.amis-scope .antd-Button > svg.icon:not(:last-child):not(.pull-right),
-.amis-scope .antd-Button > .pull-left {
-  margin-right: 0.75rem;
-}
-
-.amis-scope .antd-Button .antd-Button-icon:last-child:not(:first-child):not(.pull-left),
-.amis-scope .antd-Button > .pull-right {
-  margin-left: 0.75rem;
-}
-
-.amis-scope .antd-Button .antd-Button--loading:first-child:not(:last-child):not(.pull-right),
-.amis-scope .antd-Button > svg.icon:not(:last-child):not(.pull-right),
-.amis-scope .antd-Button > .pull-left {
-  margin-right: 0.75rem;
-}
-
-.amis-scope .antd-Button .antd-Button--loading:last-child:not(:first-child):not(.pull-left),
-.amis-scope .antd-Button > .pull-right {
-  margin-left: 0.75rem;
-}
-
-.amis-scope .antd-Button img.antd-Button-icon {
-  height: 0.875rem;
-  vertical-align: middle;
-}
-
-.amis-scope .antd-Button:hover:focus {
-  text-decoration: none;
-}
-
-.amis-scope .antd-Button:focus,
-.amis-scope .antd-Button.focus {
-  outline: 0;
-  box-shadow: none;
-}
-
-.amis-scope .antd-Button.is-disabled,
-.amis-scope .antd-Button:disabled {
-  filter: grayscale(100%);
-  box-shadow: none;
-  cursor: not-allowed;
-  color: #999;
-  pointer-events: auto;
-  border: 0.0625rem solid #d9d9d9;
-  background: #f2f3f3;
-}
-
-.amis-scope .antd-Button.is-disabled > svg,
-.amis-scope .antd-Button.is-disabled > svg path,
-.amis-scope .antd-Button:disabled > svg,
-.amis-scope .antd-Button:disabled > svg path {
-  fill: currentColor;
-}
-
-.amis-scope .antd-Button:not(:disabled):not(.is-disabled) {
-  cursor: pointer;
-}
-
-.amis-scope .antd-Button.cxd-Button--link.is-disabled {
-  background: transparent;
-  border: none;
-}
-
-.amis-scope .antd-Button > .pull-left,
-.amis-scope .antd-Button > .pull-right {
-  line-height: inherit;
-}
-
-.amis-scope .antd-Button > .fa,
-.amis-scope .antd-Button > .iconfont,
-.amis-scope .antd-Button > .glyphicon {
-  font-size: inherit;
-}
-
-.amis-scope a.antd-Button.is-disabled,
-.amis-scope fieldset:disabled a.antd-Button {
-  pointer-events: none;
-}
-
 .amis-scope .antd-Button--primary {
   color: #fff;
   background: #1890ff;
@@ -26369,7 +26278,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Button--iconOnly {
-  min-width: calc(1.875rem * 4 / 3);
+  min-width: calc( 1.875rem * 4 / 3 );
 }
 
 .amis-scope .antd-Button--iconOnly:not(.antd-Button--link) > svg.icon {
@@ -26387,12 +26296,74 @@ readers do not read off random characters that represent icons */
   line-height: 1;
 }
 
-.amis-scope .antd-Button--loading {
-  transition: --Button-transition;
+.amis-scope .antd-Button:active,
+.amis-scope .antd-Button.is-active {
+  color: #1890ff;
+  box-shadow: none;
+  border-color: #1890ff;
 }
 
-.amis-scope .antd-Button--loading svg {
-  animation: spin 1s infinite linear;
+.amis-scope .antd-Button:active:focus,
+.amis-scope .antd-Button.is-active:focus {
+  box-shadow: none;
+}
+
+.amis-scope .antd-Button .antd-Button-icon:first-child:not(:last-child):not(.pull-right),
+.amis-scope .antd-Button > svg.icon:not(:last-child):not(.pull-right),
+.amis-scope .antd-Button > .pull-left {
+  margin-right: 0.75rem;
+}
+
+.amis-scope .antd-Button .antd-Button-icon:last-child:not(:first-child):not(.pull-left),
+.amis-scope .antd-Button > .pull-right {
+  margin-left: 0.75rem;
+}
+
+.amis-scope .antd-Button .antd-Button--loading:first-child:not(:last-child):not(.pull-right),
+.amis-scope .antd-Button > svg.icon:not(:last-child):not(.pull-right),
+.amis-scope .antd-Button > .pull-left {
+  margin-right: 0.75rem;
+}
+
+.amis-scope .antd-Button .antd-Button--loading:last-child:not(:first-child):not(.pull-left),
+.amis-scope .antd-Button > .pull-right {
+  margin-left: 0.75rem;
+}
+
+.amis-scope .antd-Button img.antd-Button-icon {
+  height: 0.875rem;
+  vertical-align: middle;
+}
+
+.amis-scope .antd-Button:hover:focus {
+  text-decoration: none;
+}
+
+.amis-scope .antd-Button:focus,
+.amis-scope .antd-Button.focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.amis-scope .antd-Button.is-disabled,
+.amis-scope .antd-Button:disabled {
+  filter: grayscale(100%);
+  box-shadow: none;
+  cursor: not-allowed;
+  color: #999;
+  border: 0.0625rem solid #d9d9d9;
+  background: #f2f3f3;
+}
+
+.amis-scope .antd-Button.is-disabled > svg,
+.amis-scope .antd-Button.is-disabled > svg path,
+.amis-scope .antd-Button:disabled > svg,
+.amis-scope .antd-Button:disabled > svg path {
+  fill: currentColor;
+}
+
+.amis-scope .antd-Button:not(:disabled):not(.is-disabled) {
+  cursor: pointer;
 }
 
 .amis-scope .antd-Button--link {
@@ -26418,8 +26389,13 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-Button--link:disabled,
 .amis-scope .antd-Button--link.is-disabled {
   color: #999;
-  pointer-events: none;
-  background: #f2f3f3;
+  border: none;
+  background: transparent;
+}
+
+.amis-scope .antd-Button--link:disabled:hover:active,
+.amis-scope .antd-Button--link.is-disabled:hover:active {
+  color: #999;
 }
 
 .amis-scope .antd-Button--block {
@@ -26429,6 +26405,30 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-Button--block + .antd-Button--block {
   margin-top: 0.75rem;
+}
+
+.amis-scope .antd-Button > .pull-left,
+.amis-scope .antd-Button > .pull-right {
+  line-height: inherit;
+}
+
+.amis-scope .antd-Button > .fa,
+.amis-scope .antd-Button > .iconfont,
+.amis-scope .antd-Button > .glyphicon {
+  font-size: inherit;
+}
+
+.amis-scope a.antd-Button.is-disabled,
+.amis-scope fieldset:disabled a.antd-Button {
+  pointer-events: none;
+}
+
+.amis-scope .antd-Button--loading {
+  transition: --Button-transition;
+}
+
+.amis-scope .antd-Button--loading svg {
+  animation: spin 1s infinite linear;
 }
 
 .amis-scope input[type=submit].antd-Button--block,
@@ -26927,6 +26927,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Modal-footer .antd-Button {
+  width: 4.5rem;
   margin-left: 0.5rem;
 }
 
@@ -27237,6 +27238,7 @@ readers do not read off random characters that represent icons */
   right: 0.75rem;
   left: auto;
   margin-top: 0;
+  z-index: 10;
 }
 
 .amis-scope .antd-Drawer--top .antd-Drawer-content {
@@ -27268,6 +27270,7 @@ readers do not read off random characters that represent icons */
   top: 0.75rem;
   right: 0.75rem;
   margin-right: 0;
+  z-index: 10;
 }
 
 .amis-scope .antd-Drawer--right .antd-Drawer-content {
@@ -27322,6 +27325,7 @@ readers do not read off random characters that represent icons */
   right: 0.75rem;
   left: auto;
   margin-bottom: 0;
+  z-index: 10;
 }
 
 .amis-scope .antd-Drawer--bottom .antd-Drawer-content {
@@ -27353,6 +27357,7 @@ readers do not read off random characters that represent icons */
   left: auto;
   right: 0.75rem;
   top: 0.75rem;
+  z-index: 10;
 }
 
 .amis-scope .antd-Drawer--left .antd-Drawer-content {
@@ -27396,9 +27401,9 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-Tooltip-arrow {
   position: absolute;
   display: block;
-  width: 1rem;
-  height: 0.5rem;
-  margin-left: calc(1rem * -1 / 2);
+  width: 0.5rem;
+  height: 0.25rem;
+  margin-left: calc(0.5rem * -1 / 2);
   left: 50%;
 }
 
@@ -27412,16 +27417,16 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Tooltip--top {
-  margin-top: calc(0.5rem * -1 - 0.125rem);
+  margin-top: calc(0.25rem * -1 - 0.125rem);
 }
 
 .amis-scope .antd-Tooltip--top .antd-Tooltip-arrow {
-  bottom: calc( (0.5rem + 0.0625rem) * -1 );
+  bottom: calc( (0.25rem + 0.0625rem) * -1 );
 }
 
 .amis-scope .antd-Tooltip--top .antd-Tooltip-arrow::before,
 .amis-scope .antd-Tooltip--top .antd-Tooltip-arrow::after {
-  border-width: 0.5rem calc(1rem / 2) 0;
+  border-width: 0.25rem calc(0.5rem / 2) 0;
 }
 
 .amis-scope .antd-Tooltip--top .antd-Tooltip-arrow::before {
@@ -27434,20 +27439,20 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Tooltip--right {
-  margin-left: calc(0.5rem + 0.125rem);
+  margin-left: calc(0.25rem + 0.125rem);
 }
 
 .amis-scope .antd-Tooltip--right .antd-Tooltip-arrow {
   left: calc(0.0625rem * -1);
-  width: 0.5rem;
-  height: 1rem;
-  margin-top: calc(1rem / -2);
+  width: 0.25rem;
+  height: 0.5rem;
+  margin-top: calc(0.5rem / -2);
   top: 50%;
 }
 
 .amis-scope .antd-Tooltip--right .antd-Tooltip-arrow::before,
 .amis-scope .antd-Tooltip--right .antd-Tooltip-arrow::after {
-  border-width: calc(1rem / 2) 0.5rem calc(1rem / 2) 0;
+  border-width: calc(0.5rem / 2) 0.25rem calc(0.5rem / 2) 0;
 }
 
 .amis-scope .antd-Tooltip--right .antd-Tooltip-arrow::before {
@@ -27460,16 +27465,16 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Tooltip--bottom {
-  margin-top: calc(0.5rem + 0.125rem);
+  margin-top: calc(0.25rem + 0.125rem);
 }
 
 .amis-scope .antd-Tooltip--bottom .antd-Tooltip-arrow {
-  top: calc( (0.5rem + 0.0625rem) * -1 );
+  top: calc( (0.25rem + 0.0625rem) * -1 );
 }
 
 .amis-scope .antd-Tooltip--bottom .antd-Tooltip-arrow::before,
 .amis-scope .antd-Tooltip--bottom .antd-Tooltip-arrow::after {
-  border-width: 0 calc(1rem / 2) 0.5rem calc(1rem / 2);
+  border-width: 0 calc(0.5rem / 2) 0.25rem calc(0.5rem / 2);
 }
 
 .amis-scope .antd-Tooltip--bottom .antd-Tooltip-arrow::before {
@@ -27486,28 +27491,28 @@ readers do not read off random characters that represent icons */
   top: 0;
   left: 50%;
   display: block;
-  width: 1rem;
-  margin-left: calc(1rem / -2);
+  width: 0.5rem;
+  margin-left: calc(0.5rem / -2);
   content: "";
   border-bottom: 0.0625rem solid #f7f7f7;
 }
 
 .amis-scope .antd-Tooltip--left {
-  margin-left: calc(0.5rem * -1 - 0.125rem);
+  margin-left: calc(0.25rem * -1 - 0.125rem);
 }
 
 .amis-scope .antd-Tooltip--left .antd-Tooltip-arrow {
   left: auto;
-  right: calc( (0.5rem + 0.0625rem) * -1 );
-  width: 0.5rem;
-  height: 1rem;
-  margin-top: calc(1rem * -1 / 2);
+  right: calc( (0.25rem + 0.0625rem) * -1 );
+  width: 0.25rem;
+  height: 0.5rem;
+  margin-top: calc(0.5rem * -1 / 2);
   top: 50%;
 }
 
 .amis-scope .antd-Tooltip--left .antd-Tooltip-arrow::before,
 .amis-scope .antd-Tooltip--left .antd-Tooltip-arrow::after {
-  border-width: calc(1rem / 2) 0 calc(1rem / 2) 0.5rem;
+  border-width: calc(0.5rem / 2) 0 calc(0.5rem / 2) 0.25rem;
 }
 
 .amis-scope .antd-Tooltip--left .antd-Tooltip-arrow::before {
@@ -28883,7 +28888,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-Tabs--line > .antd-Tabs-content {
   border-width: 0;
-  padding: 0.75rem 0;
   background: transparent;
 }
 
@@ -29247,6 +29251,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-Tabs--chrome > .antd-Tabs-linksWrapper {
   background: #e7eaed;
   border-bottom: none;
+  overflow-x: hidden;
 }
 
 .amis-scope .antd-Tabs--chrome > .antd-Tabs-linksWrapper > .antd-Tabs-addable {
@@ -29260,6 +29265,7 @@ readers do not read off random characters that represent icons */
   padding: 0 0.625rem;
   padding-top: 0.5rem;
   display: flex;
+  width: 100%;
 }
 
 .amis-scope .antd-Tabs--chrome > .antd-Tabs-linksWrapper > .antd-Tabs-links > li {
@@ -29274,6 +29280,11 @@ readers do not read off random characters that represent icons */
   overflow: inherit;
 }
 
+.amis-scope .antd-Tabs--chrome > .antd-Tabs-linksWrapper > .antd-Tabs-links > li > a {
+  /* 最少展示一个字 */
+  min-width: 0.875rem;
+}
+
 .amis-scope .antd-Tabs--chrome > .antd-Tabs-linksWrapper > .antd-Tabs-links > li > a:first-child {
   background: none;
   border: none;
@@ -29281,7 +29292,7 @@ readers do not read off random characters that represent icons */
   z-index: 5;
   overflow: hidden;
   padding: 0;
-  text-overflow: unset;
+  text-overflow: ellipsis;
 }
 
 .amis-scope .antd-Tabs--chrome > .antd-Tabs-linksWrapper > .antd-Tabs-links > li.is-active > a:first-child,
@@ -30042,6 +30053,10 @@ readers do not read off random characters that represent icons */
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.amis-scope .antd-Remark-icon--circle {
+  border-radius: 50%;
 }
 
 .amis-scope .antd-Remark > span + .antd-Remark-icon {
@@ -31561,12 +31576,41 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-CBGroup {
   font-size: 0.75rem;
+  position: relative;
+  border: 1px solid #e8e9eb;
+  border-radius: 4px;
+  border-left: 0.1875rem solid #e6f0ff;
+  padding: 1.875rem 1.6875rem 1.0625rem;
+  margin-top: 1.875rem;
+}
+
+.amis-scope .antd-CBGroup-toolbarCondition {
+  text-align: center;
+  margin-top: -2.75rem;
+  margin-bottom: 1rem;
+}
+
+.amis-scope .antd-CBGroup-toolbarCondition .antd-Select {
+  font-size: 12px;
+  height: 1.75rem;
+  width: 3.875rem;
+  background: #d4e5ff;
+  border: none;
+  color: #0832a6;
+  font-weight: 500;
+  padding: 0;
+  padding-left: 0.5rem;
+  min-height: 1.75rem;
+}
+
+.amis-scope .antd-CBGroup-toolbarCondition .antd-Select:hover {
+  background: #d4e5ff;
 }
 
 .amis-scope .antd-CBGroup-toolbar {
   display: flex;
   flex-direction: row;
-  padding-bottom: 10px;
+  margin-top: 0.5rem;
 }
 
 .amis-scope .antd-CBGroup-toolbar .antd-Button {
@@ -31581,27 +31625,21 @@ readers do not read off random characters that represent icons */
   margin-right: 5px;
 }
 
-.amis-scope .antd-CBGroup-toolbar:not(:hover) .antd-CBGroup-toolbarCondition .antd-Button:not(.is-active) {
-  width: 0;
-  padding: 0;
-  overflow: hidden;
-  opacity: 0;
-  margin: 0;
-  border: 0;
-}
-
 .amis-scope .antd-CBGroup-toolbar .antd-CBGroup-toolbarConditionAdd {
-  transition: opacity 0s;
   display: flex;
   align-items: center;
+}
+
+.amis-scope .antd-CBGroup-toolbar .antd-CBGroup-toolbarConditionAdd .antd-ButtonGroup > .cxd-Button:first-child {
+  margin-right: 1.5rem;
 }
 
 .amis-scope .antd-CBGroup-toolbar .antd-CBGroup-toolbarConditionAdd .antd-CBDelete {
   margin-left: 0.25rem;
 }
 
-.amis-scope .antd-CBGroup-toolbar:not(:hover) .antd-CBGroup-toolbarConditionAdd {
-  opacity: 0;
+.amis-scope .antd-CBGroup .antd-ResultBox {
+  padding-right: 0.1875rem;
 }
 
 .amis-scope .antd-CBGroup-field,
@@ -31640,94 +31678,88 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-CBGroup-placeholder {
   color: #999;
   position: relative;
-  margin-left: 30px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.03);
   border-radius: 5px;
-}
-
-.amis-scope .antd-CBGroup-placeholder:before {
-  position: absolute;
-  content: "";
-  top: -10px;
-  left: -30px;
-  width: 1rem;
-  border-left: solid 1px #d9d9d9;
-  bottom: 0;
-}
-
-.amis-scope .antd-CBGroup-placeholder:after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  width: 1rem;
-  left: -30px;
-  border-top: solid 1px #d9d9d9;
-}
-
-.amis-scope .antd-CBGroup-placeholder:last-child:before {
-  border-bottom-left-radius: 5px;
-  border-bottom: solid 1px #d9d9d9;
-  bottom: 50%;
-}
-
-.amis-scope .antd-CBGroup-placeholder:last-child:after {
-  display: none;
 }
 
 .amis-scope .antd-CBGroup-placeholder.simple {
   margin-left: 0;
 }
 
-.amis-scope .antd-CBGroup-placeholder.simple:before {
-  display: none;
-}
-
-.amis-scope .antd-CBGroup-placeholder.simple:after {
-  display: none;
-}
-
-.amis-scope .antd-CBGroup-toolbarCondition {
-  margin-right: 0.75rem;
-}
-
 .amis-scope .antd-CBDelete {
-  color: inherit;
   cursor: pointer;
   margin-left: auto;
-  transition: opacity 0s;
 }
 
-.amis-scope .antd-CBDelete:hover {
-  color: #1890ff;
+.amis-scope .antd-CBGroupOrItem-body-group--hover > .antd-CBGroupOrItem-dragbar {
+  opacity: 1 !important;
+}
+
+.amis-scope .antd-CBGroupOrItem-body-group--hover > .antd-CBGroup {
+  border-left-color: #2468f1;
 }
 
 .amis-scope .antd-CBGroupOrItem {
   position: relative;
-  margin-left: 1.875rem;
 }
 
 .amis-scope .antd-CBGroupOrItem + .antd-CBGroupOrItem {
   margin-top: 0.625rem;
 }
 
+.amis-scope .antd-CBGroupOrItem-dragbar {
+  cursor: move;
+  width: 20px;
+  margin-left: -5px;
+  opacity: 0.6;
+  text-align: center;
+  transition: opacity 0s ease-out;
+  color: inherit;
+}
+
+.amis-scope .antd-CBGroupOrItem-dragbar:hover {
+  color: #1890ff;
+}
+
 .amis-scope .antd-CBGroupOrItem-body {
   display: flex;
-  padding: 2px 7px;
-  border-radius: 5px;
   flex-direction: row;
   align-items: center;
   position: relative;
-  background: rgba(0, 0, 0, 0.03);
   transition: all 0s ease-out;
 }
 
-.amis-scope .antd-CBGroupOrItem-body > .antd-CBGroup {
-  margin: 3px;
+.amis-scope .antd-CBGroupOrItem-body-group {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.amis-scope .antd-CBGroupOrItem-body:not(:hover) .antd-CBDelete {
-  opacity: 0;
+.amis-scope .antd-CBGroupOrItem-body-group > .antd-CBGroupOrItem-dragbar {
+  left: -1rem;
+  position: absolute;
+}
+
+.amis-scope .antd-CBGroupOrItem-body-group > .antd-CBGroup {
+  margin: 0px;
+}
+
+.amis-scope .antd-CBGroupOrItem-body-item {
+  background-color: #f7f7f9;
+  width: 100%;
+  padding: 0.75rem;
+  padding-left: 1.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.amis-scope .antd-CBGroupOrItem-body-item > .antd-CBGroupOrItem-dragbar {
+  left: 0.625rem;
+  position: absolute;
 }
 
 .amis-scope .antd-CBGroupOrItem.is-dragging {
@@ -31745,59 +31777,17 @@ readers do not read off random characters that represent icons */
   background: rgba(24, 144, 255, 0.2);
 }
 
-.amis-scope .antd-CBGroupOrItem-dragbar {
-  cursor: move;
-  width: 20px;
-  margin-left: -5px;
-  opacity: 0.6;
-  text-align: center;
-  transition: opacity 0s ease-out;
-  color: inherit;
-}
-
-.amis-scope .antd-CBGroupOrItem-dragbar:hover {
-  color: #1890ff;
-}
-
 .amis-scope .antd-CBGroupOrItem .antd-CBGroup {
   flex-grow: 1;
 }
 
-.amis-scope .antd-CBGroupOrItem:hover > .antd-CBGroupOrItem-body {
-  background: rgba(0, 0, 0, 0.05);
+.amis-scope .antd-CBGroupOrItem > .antd-CBGroupOrItem-body > .antd-CBGroupOrItem-body-group > .antd-CBGroupOrItem-dragbar,
+.amis-scope .antd-CBGroupOrItem > .antd-CBGroupOrItem-body > .antd-CBGroupOrItem-body-item > .antd-CBGroupOrItem-dragbar {
+  opacity: 0;
 }
 
-.amis-scope .antd-CBGroupOrItem:hover > .antd-CBGroupOrItem-body > .antd-CBGroupOrItem-dragbar {
+.amis-scope .antd-CBGroupOrItem:hover > .antd-CBGroupOrItem-body > .antd-CBGroupOrItem-body-item > .antd-CBGroupOrItem-dragbar {
   opacity: 1;
-}
-
-.amis-scope .antd-CBGroupOrItem:before {
-  position: absolute;
-  content: "";
-  top: -10px;
-  left: -30px;
-  width: 20px;
-  border-left: solid 1px #d9d9d9;
-  bottom: 0;
-}
-
-.amis-scope .antd-CBGroupOrItem:after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  width: 20px;
-  left: -30px;
-  border-top: solid 1px #d9d9d9;
-}
-
-.amis-scope .antd-CBGroupOrItem:last-child:before {
-  border-bottom-left-radius: 5px;
-  border-bottom: solid 1px #d9d9d9;
-  bottom: 50%;
-}
-
-.amis-scope .antd-CBGroupOrItem:last-child:after {
-  display: none;
 }
 
 .amis-scope .antd-CBGroupOrItem-simple {
@@ -31925,7 +31915,7 @@ readers do not read off random characters that represent icons */
   display: block;
   position: absolute;
   margin: 0;
-  padding: 0;
+  padding: 4px 0;
   background: #fff;
   box-shadow: 0 2px 8px 0 rgba(7, 12, 20, 0.12);
   color: #151b26;
@@ -31949,19 +31939,6 @@ readers do not read off random characters that represent icons */
   animation-name: contextMenuOut;
 }
 
-.amis-scope .antd-ContextMenu-menu::before {
-  display: block;
-  position: absolute;
-  content: "";
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  right: -1px;
-  border-radius: 4px;
-  border: 1px solid #e8e9eb;
-  z-index: -1;
-}
-
 .amis-scope .antd-ContextMenu-divider {
   border: none;
   height: 1px;
@@ -31974,7 +31951,7 @@ readers do not read off random characters that represent icons */
   list-style: none;
   margin: 0;
   padding: 0;
-  min-width: 100px;
+  min-width: 150px;
 }
 
 .amis-scope .antd-ContextMenu-item {
@@ -32446,6 +32423,12 @@ readers do not read off random characters that represent icons */
   vertical-align: middle;
 }
 
+.amis-scope .antd-Crud-pageSwitch {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
 .amis-scope .antd-Crud-pageSwitch .antd-Select {
   margin-left: 0.25rem;
 }
@@ -32876,12 +32859,6 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-Table-table > tbody > tr.is-moved + tr,
 .amis-scope .antd-Table-table > tbody > tr.is-modified + tr {
   border-color: #d0e0fd;
-}
-
-.amis-scope .antd-Table-table > tbody > tr.is-summary {
-  background: #fafafa;
-  color: #333;
-  font-weight: 400;
 }
 
 .amis-scope .antd-Table-table > tbody > tr.bg-light {
@@ -34139,6 +34116,1637 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-Table--autoFillHeight > .antd-Table-footToolbar {
   margin-bottom: 0;
+}
+
+.amis-scope .antd-InputTable-toolbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.amis-scope .antd-InputTable-pager {
+  margin-left: auto;
+}
+
+.amis-scope .antd-OperationField {
+  margin: -0.1875rem;
+}
+
+.amis-scope .antd-OperationField > .antd-Button,
+.amis-scope .antd-OperationField > .antd-Button--disabled-wrap > .antd-Button {
+  margin: 0.1875rem;
+}
+
+.amis-scope .antd-OperationField > .antd-Button--disabled-wrap > .antd-Button--link {
+  padding: 0;
+}
+
+.amis-scope .antd-OperationField > .antd-Button--link {
+  padding: 0;
+  margin-right: 0.625rem;
+}
+
+.amis-scope .antd-Table-v2 {
+  position: relative;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-bordered {
+  border-width: 0.0625rem 0.0625rem 0 0.0625rem;
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-collapse: inherit;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-bordered .antd-Table-table > thead > tr > th,
+.amis-scope .antd-Table-v2.antd-Table-bordered .antd-Table-table > tbody > tr > td,
+.amis-scope .antd-Table-v2.antd-Table-bordered .antd-Table-table > tfoot > tr > td {
+  border-right: 0.0625rem solid #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-bordered .antd-Table-table > thead > tr > th:last-child,
+.amis-scope .antd-Table-v2.antd-Table-bordered .antd-Table-table > tbody > tr > td:last-child,
+.amis-scope .antd-Table-v2.antd-Table-bordered .antd-Table-table > tfoot > tr > td:last-child {
+  border-right: none;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-bordered .antd-Table-footer {
+  border-bottom: 0.0625rem solid #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-bordered .antd-Table-title {
+  border-bottom: 0.0625rem solid #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-large .antd-Table-table > thead > tr > th {
+  padding: calc(
+    (3.8125rem - 0.875rem * 1.57) /
+      2
+  ) 0.75rem;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-large .antd-Table-table > tbody > tr > td,
+.amis-scope .antd-Table-v2.antd-Table-large .antd-Table-table > tbody > tr > th {
+  padding: calc(
+    (3.8125rem - 0.875rem * 1.57) /
+      2
+  ) 0.75rem;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-large .antd-Table-table > tfoot > tr > td {
+  padding: calc(
+    (3.8125rem - 0.875rem * 1.57) /
+      2
+  ) 0.75rem;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-large .antd-TableCell-filterBtn {
+  right: calc( 0.75rem - 1rem / 2 );
+}
+
+.amis-scope .antd-Table-v2.antd-Table-small .antd-Table-table > thead > tr > th {
+  padding: calc(
+    (2.0625rem - 0.875rem * 1.57) /
+      2
+  ) 0.25rem;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-small .antd-Table-table > tbody > tr > td,
+.amis-scope .antd-Table-v2.antd-Table-small .antd-Table-table > tbody > tr > th {
+  padding: calc(
+    (2.0625rem - 0.875rem * 1.57) /
+      2
+  ) 0.25rem;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-small .antd-Table-table > tfoot > tr > td {
+  padding: calc(
+    (2.0625rem - 0.875rem * 1.57) /
+      2
+  ) 0.25rem;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-small .antd-TableCell-filterBtn {
+  right: calc( 0.25rem - 1rem / 2 );
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-title,
+.amis-scope .antd-Table-v2 .antd-Table-footer {
+  background: #fff;
+  padding: calc( ( 2.5rem - 0.875rem * 1.57 ) / 2 ) 0.5rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-header {
+  padding: 0.75rem 0;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-header.antd-Table-sticky-holder {
+  position: sticky;
+  z-index: 3;
+  background: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-toolbar {
+  display: flex;
+  margin: 0 0 0.75rem;
+  flex-wrap: wrap;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-toolbar::before,
+.amis-scope .antd-Table-v2 .antd-Table-toolbar::after {
+  display: table;
+  content: "";
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-toolbar::after {
+  clear: both;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-toolbar .antd-DropDown-menuItem {
+  height: auto;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-toolbar .antd-DropDown-menuItem .antd-Checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-header + .antd-Table-toolbar {
+  padding-top: 0;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-content {
+  min-height: 0.01%;
+  overflow-x: auto;
+  transform: translateZ(0);
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-content th {
+  position: relative;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table {
+  width: 100%;
+  min-width: 100%;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.85);
+  background: #fff;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: none;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table th,
+.amis-scope .antd-Table-v2 .antd-Table-table td {
+  text-align: left;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table th.text-center,
+.amis-scope .antd-Table-v2 .antd-Table-table td.text-center,
+.amis-scope .antd-Table-v2 .antd-Table-table th[colspan],
+.amis-scope .antd-Table-v2 .antd-Table-table td[colspan] {
+  text-align: center;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table th.text-right,
+.amis-scope .antd-Table-v2 .antd-Table-table td.text-right {
+  text-align: right;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th {
+  background: #fafafa;
+  padding: calc(
+    (2.5625rem - 0.875rem * 1.57) /
+      2
+  ) 0.5rem;
+  font-size: 0.875rem;
+  color: #333;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th:first-child {
+  padding-left: 0.75rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th.antd-Table-cell-last {
+  padding-right: 0.75rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th:not(.antd-Table-cell-last) {
+  border-right: 0.0625rem solid #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th.antd-Table-row-expand-icon-cell {
+  border-right: 0;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th .antd-Remark {
+  margin-left: 0.25rem;
+  position: relative;
+  top: 2px;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th .antd-Table-head-cell-wrapper {
+  display: flex;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr:not(:last-child) {
+  border-bottom: 0.0625rem solid #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr {
+  position: relative;
+  border-bottom: 0.0625rem solid #d9d9d9;
+  background: transparent;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.antd-Table-summary-row > td {
+  background: #fafafa;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > th {
+  background: #fafafa;
+  color: #333;
+  font-weight: 400;
+  white-space: nowrap;
+  border-right: 0.0625rem solid #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > th {
+  padding: calc(
+    (2.5625rem - 0.875rem * 1.57) /
+      2
+  ) 0.5rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td:first-child,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > th:first-child {
+  padding-left: 0.75rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td:last-child,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > th:last-child {
+  padding-right: 0.75rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr .antd-Table-cell-wrapper-prefix {
+  display: flex;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr .antd-Table-cell-wrapper-prefix .antd-Table-expandBtn {
+  margin-right: 5px;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr .antd-Table-cell-height-large {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  overflow: hidden;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr .antd-Table-cell-height-middle {
+  height: 1.875rem;
+  line-height: 1.875rem;
+  overflow: hidden;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.antd-Table-tr--odd {
+  background: transparent;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.antd-Table-tr--hasItemAction:hover {
+  cursor: pointer;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-hovered {
+  background: rgb(250, 250, 250);
+  border-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr:hover + tr,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-hovered + tr {
+  border-color: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-checked {
+  background: #e6f7ff;
+  border-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-checked + tr {
+  border-color: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-moved,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-modified {
+  background: #e8f0fe;
+  border-color: #d0e0fd;
+  color: #4285f4;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-moved + tr,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-modified + tr {
+  border-color: #d0e0fd;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-summary {
+  background: #fafafa;
+  color: #333;
+  font-weight: 400;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-light {
+  background-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-light.lt,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-light .lt {
+  background: #dedede;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-light.lter,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-light .lter {
+  background: #e1e1e1;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-light.dk,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-light .dk {
+  background: #d2d0d0;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-light.dker,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-light .dker {
+  background: #cfcaca;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-light.bg,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-light .bg {
+  background-color: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark {
+  background-color: #343a40;
+  color: #a0a0a0;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark.lt,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark .lt {
+  background: #41474c;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark.lter,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark .lter {
+  background: #4f5458;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark.dk,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark .dk {
+  background: #272d33;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark.dker,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark .dker {
+  background: #1c2125;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark.bg,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark .bg {
+  background-color: #343a40;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark .antd-Button--link {
+  color: #b9baba;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark .antd-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark .open > a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark .open > a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark .text-muted {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-dark .text-lt {
+  color: rgba(64, 64, 64, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black {
+  background-color: #000;
+  color: #666666;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black.lt,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black .lt {
+  background: #0d0d0d;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black.lter,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black .lter {
+  background: #1a1a1a;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black.dk,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black .dk {
+  background: black;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black.dker,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black .dker {
+  background: black;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black.bg,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black .bg {
+  background-color: #000;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black .antd-Button--link {
+  color: gray;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black .antd-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black .open > a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black .open > a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black .text-muted {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-black .text-lt {
+  color: rgba(64, 64, 64, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary {
+  background-color: #1890ff;
+  color: #e5f2fe;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary.lt,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary .lt {
+  background: #349cfc;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary.lter,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary .lter {
+  background: #50a8fb;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary.dk,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary .dk {
+  background: #0084fe;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary.dker,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary .dker {
+  background: #0076e4;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary.bg,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary .bg {
+  background-color: #1890ff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary .antd-Button--link {
+  color: white;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary .antd-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary .open > a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary .open > a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary .text-muted {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-primary .text-lt {
+  color: rgba(64, 64, 64, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success {
+  background-color: #52c41a;
+  color: #cbf1b9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success.lt,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success .lt {
+  background: #5cd720;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success.lter,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success .lter {
+  background: #6cdd34;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success.dk,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success .dk {
+  background: #48b015;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success.dker,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success .dker {
+  background: #3e9b10;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success.bg,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success .bg {
+  background-color: #52c41a;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success .antd-Button--link {
+  color: #ebf9e4;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success .antd-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success .open > a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success .open > a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success .text-muted {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-success .text-lt {
+  color: rgba(64, 64, 64, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info {
+  background-color: #1890ff;
+  color: #e5f2fe;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info.lt,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info .lt {
+  background: #349cfc;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info.lter,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info .lter {
+  background: #50a8fb;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info.dk,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info .dk {
+  background: #0084fe;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info.dker,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info .dker {
+  background: #0076e4;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info.bg,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info .bg {
+  background-color: #1890ff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info .antd-Button--link {
+  color: white;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info .antd-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info .open > a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info .open > a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info .text-muted {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-info .text-lt {
+  color: rgba(64, 64, 64, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning {
+  background-color: #faad14;
+  color: #fcf2de;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning.lt,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning .lt {
+  background: #f8b530;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning.lter,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning .lter {
+  background: #f6bd4b;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning.dk,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning .dk {
+  background: #f2a202;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning.dker,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning .dker {
+  background: #db9200;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning.bg,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning .bg {
+  background-color: #faad14;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning .antd-Button--link {
+  color: white;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning .antd-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning .open > a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning .open > a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning .text-muted {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-warning .text-lt {
+  color: rgba(64, 64, 64, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger.lt,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger .lt {
+  background: #fd686a;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger.lter,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger .lter {
+  background: #fc8385;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger.dk,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger .dk {
+  background: #ff3436;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger.dker,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger .dker {
+  background: #ff1a1d;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger.bg,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger .bg {
+  background-color: #ff4d4f;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger .antd-Button--link {
+  color: white;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger .antd-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger .open > a,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger .open > a:hover,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger .text-muted {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.bg-danger .text-lt {
+  color: rgba(64, 64, 64, 0.85) !important;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-dragging {
+  opacity: 0.1;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--2th.is-expanded .antd-Table-expandCell:before {
+  right: -0.6875rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--2th .antd-Table-expandBtn {
+  position: relative;
+  right: -1.125rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--2th .antd-Table-expandCell + td {
+  position: relative;
+  padding-left: 1.125rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--2th .antd-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: -0.5rem;
+  height: auto;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--2th .antd-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: -0.5rem;
+  width: 0.625rem;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--2th.is-expandable .antd-Table-expandCell + td {
+  padding-left: 1.125rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--2th.is-last:not(.is-expanded) .antd-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--3th.is-expanded .antd-Table-expandCell:before {
+  right: -1.8125rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--3th .antd-Table-expandBtn {
+  position: relative;
+  right: -2.25rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--3th .antd-Table-expandCell + td {
+  position: relative;
+  padding-left: 2.25rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--3th .antd-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 0.625rem;
+  height: auto;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--3th .antd-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 0.625rem;
+  width: 0.625rem;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--3th.is-expandable .antd-Table-expandCell + td {
+  padding-left: 2.25rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--3th.is-last:not(.is-expanded) .antd-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--4th.is-expanded .antd-Table-expandCell:before {
+  right: -2.9375rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--4th .antd-Table-expandBtn {
+  position: relative;
+  right: -3.375rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--4th .antd-Table-expandCell + td {
+  position: relative;
+  padding-left: 3.375rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--4th .antd-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 1.75rem;
+  height: auto;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--4th .antd-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 1.75rem;
+  width: 0.625rem;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--4th.is-expandable .antd-Table-expandCell + td {
+  padding-left: 3.375rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--4th.is-last:not(.is-expanded) .antd-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--5th.is-expanded .antd-Table-expandCell:before {
+  right: -4.0625rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--5th .antd-Table-expandBtn {
+  position: relative;
+  right: -4.5rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--5th .antd-Table-expandCell + td {
+  position: relative;
+  padding-left: 4.5rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--5th .antd-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 2.875rem;
+  height: auto;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--5th .antd-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 2.875rem;
+  width: 0.625rem;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--5th.is-expandable .antd-Table-expandCell + td {
+  padding-left: 4.5rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--5th.is-last:not(.is-expanded) .antd-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--6th.is-expanded .antd-Table-expandCell:before {
+  right: -5.1875rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--6th .antd-Table-expandBtn {
+  position: relative;
+  right: -5.625rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--6th .antd-Table-expandCell + td {
+  position: relative;
+  padding-left: 5.625rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--6th .antd-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 4rem;
+  height: auto;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--6th .antd-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 4rem;
+  width: 0.625rem;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--6th.is-expandable .antd-Table-expandCell + td {
+  padding-left: 5.625rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--6th.is-last:not(.is-expanded) .antd-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--7th.is-expanded .antd-Table-expandCell:before {
+  right: -6.3125rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--7th .antd-Table-expandBtn {
+  position: relative;
+  right: -6.75rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--7th .antd-Table-expandCell + td {
+  position: relative;
+  padding-left: 6.75rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--7th .antd-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 5.125rem;
+  height: auto;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--7th .antd-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 5.125rem;
+  width: 0.625rem;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--7th.is-expandable .antd-Table-expandCell + td {
+  padding-left: 6.75rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--7th.is-last:not(.is-expanded) .antd-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--8th.is-expanded .antd-Table-expandCell:before {
+  right: -7.4375rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--8th .antd-Table-expandBtn {
+  position: relative;
+  right: -7.875rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--8th .antd-Table-expandCell + td {
+  position: relative;
+  padding-left: 7.875rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--8th .antd-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 6.25rem;
+  height: auto;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--8th .antd-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 6.25rem;
+  width: 0.625rem;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--8th.is-expandable .antd-Table-expandCell + td {
+  padding-left: 7.875rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--8th.is-last:not(.is-expanded) .antd-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--9th.is-expanded .antd-Table-expandCell:before {
+  right: -8.5625rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--9th .antd-Table-expandBtn {
+  position: relative;
+  right: -9rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--9th .antd-Table-expandCell + td {
+  position: relative;
+  padding-left: 9rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--9th .antd-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 7.375rem;
+  height: auto;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--9th .antd-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 7.375rem;
+  width: 0.625rem;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--9th.is-expandable .antd-Table-expandCell + td {
+  padding-left: 9rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--9th.is-last:not(.is-expanded) .antd-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--10th.is-expanded .antd-Table-expandCell:before {
+  right: -9.6875rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--10th .antd-Table-expandBtn {
+  position: relative;
+  right: -10.125rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--10th .antd-Table-expandCell + td {
+  position: relative;
+  padding-left: 10.125rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--10th .antd-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 8.5rem;
+  height: auto;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--10th .antd-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 8.5rem;
+  width: 0.625rem;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--10th.is-expandable .antd-Table-expandCell + td {
+  padding-left: 10.125rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table tr.antd-Table-tr--10th.is-last:not(.is-expanded) .antd-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th.antd-Table-checkCell,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-checkCell {
+  border-right: 0;
+  white-space: nowrap;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th.antd-Table-checkCell .antd-Checkbox,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-checkCell .antd-Checkbox {
+  margin: 0;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th.antd-Table-expandCell,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-expandCell {
+  border-right: 0;
+  width: 0.0625rem;
+  padding-right: 0;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th.antd-Table-dragCell,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-dragCell {
+  border-right: 0;
+  width: 0.0625rem;
+  padding-right: 0;
+  cursor: move;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th.antd-Table-dragCell > svg,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-dragCell > svg {
+  vertical-align: middle;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-expandCell {
+  position: relative;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-expandCell .antd-Table-divider-1 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d9d9d9;
+  right: 0.4375rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-expandCell .antd-Table-divider-2 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d9d9d9;
+  right: -0.6875rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-expandCell .antd-Table-divider-3 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d9d9d9;
+  right: -1.8125rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-expandCell .antd-Table-divider-4 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d9d9d9;
+  right: -2.9375rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-expandCell .antd-Table-divider-5 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d9d9d9;
+  right: -4.0625rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-expandCell .antd-Table-divider-6 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d9d9d9;
+  right: -5.1875rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-expandCell .antd-Table-divider-7 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d9d9d9;
+  right: -6.3125rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-expanded > td.antd-Table-expandCell::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 50%;
+  bottom: 0;
+  right: 0.4375rem;
+  height: auto;
+  background: #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th.antd-TableCell--sortable {
+  padding-right: calc( 0.5rem + 0.5rem );
+  position: relative;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th.antd-TableCell--searchable {
+  padding-right: calc( 0.5rem + 1rem );
+  position: relative;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th.antd-TableCell--filterable {
+  padding-right: calc( 0.5rem + 1rem );
+  position: relative;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.antd-Table-row-disabled {
+  background: var(--TableRow-onDisabled-bg);
+  color: var(--TableRow-onDisabled-color);
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr:not(.antd-Table-row-disabled) > td.antd-Table-cell-row-hover {
+  background: rgb(250, 250, 250);
+  border-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th.antd-Table-cell-fix-left-last:after,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-cell-fix-left-last:after,
+.amis-scope .antd-Table-v2 .antd-Table-table > tfoot > tr > td.antd-Table-cell-fix-left-last:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -1px;
+  width: 30px;
+  transform: translate(100%);
+  transition: box-shadow 0.3s;
+  content: "";
+  pointer-events: none;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > thead > tr > th.antd-Table-cell-fix-right-first:after,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-cell-fix-right-first:after,
+.amis-scope .antd-Table-v2 .antd-Table-table > tfoot > tr > td.antd-Table-cell-fix-right-last:after {
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: 0;
+  width: 30px;
+  transform: translate(-100%);
+  transition: box-shadow 0.3s;
+  content: "";
+  pointer-events: none;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-cell-expand-icon-cell {
+  text-align: center;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr > td.antd-Table-cell-expand-icon-cell .antd-Table-row-indent {
+  height: 1px;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.antd-Table-expanded-row > td {
+  background: rgb(250, 250, 250);
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tfoot > tr {
+  border-bottom: 0.0625rem solid #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tfoot > tr > td {
+  padding: calc(
+    (2.5625rem - 0.875rem * 1.57) /
+      2
+  ) 0.5rem;
+  background: #fafafa;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-container .antd-Table-header {
+  padding: 0;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-ping-left .antd-Table-table > thead > tr > th.antd-Table-cell-fix-left-last:after,
+.amis-scope .antd-Table-v2.antd-Table-ping-left .antd-Table-table > tbody > tr > td.antd-Table-cell-fix-left-last:after,
+.amis-scope .antd-Table-v2.antd-Table-ping-left .antd-Table-table > tfoot > tr > td.antd-Table-cell-fix-left-last:after {
+  box-shadow: inset 10px 0 8px -8px #00000026;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-ping-left .antd-Table-table > tbody > tr:not(.antd-Table-row-disabled) > td.antd-Table-cell-fix-left {
+  border-right: none;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-ping-left .antd-Table-table > tbody > tr:not(.antd-Table-row-disabled) > td.antd-Table-cell-fix-left:not(.antd-Table-cell-row-hover) {
+  background: #FFF;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-ping-left .antd-Table-table > tfoot > tr > td:not(:last-child).antd-Table-cell-fix-left-last {
+  border-right: none;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-ping-left .antd-Table-table > thead > tr > th:not(:last-child):not(:first-child).antd-Table-cell-fix-left-last {
+  border-right: none;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-ping-right .antd-Table-table > thead > tr > th.antd-Table-cell-fix-right-first:after,
+.amis-scope .antd-Table-v2.antd-Table-ping-right .antd-Table-table > tbody > tr > td.antd-Table-cell-fix-right-first:after,
+.amis-scope .antd-Table-v2.antd-Table-ping-right .antd-Table-table > tfoot > tr > td.antd-Table-cell-fix-right-first:after {
+  box-shadow: inset -10px 0 8px -8px #00000026;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-ping-right .antd-Table-table > tbody > tr:not(.antd-Table-row-disabled) > td.antd-Table-cell-fix-right {
+  border-right: none;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-ping-right .antd-Table-table > tbody > tr:not(.antd-Table-row-disabled) > td.antd-Table-cell-fix-right:not(.antd-Table-cell-row-hover) {
+  background: #FFF;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-ping-right:not(.antd-Table-bordered) .antd-Table-table > thead > tr > th.antd-Table-cell-fix-right-first-prev {
+  border-right: none;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-ping-right:not(.antd-Table-bordered) .antd-Table-table > thead > tr > th:not(:last-child).antd-Table-cell-fix-right-first {
+  border-right: none;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-resizable .antd-Table-table > thead > tr > th {
+  position: relative;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-resizable .antd-Table-table > thead > tr > th .antd-Table-thead-resizable {
+  position: absolute;
+  width: 1px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: col-resize;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-loading {
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn {
+  cursor: pointer;
+  width: 0.5rem;
+  height: 1rem;
+  position: static;
+  display: inline-block;
+  transform: none;
+  color: inherit;
+  margin-left: 0.5rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn:hover {
+  color: #1890ff;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--up > svg,
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--down > svg,
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--default > svg {
+  color: inherit;
+  width: 13px;
+  height: 13px;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--up,
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--down,
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--default {
+  display: none;
+  z-index: 2;
+  font-style: normal;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--up.is-active,
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--down.is-active,
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--default.is-active {
+  display: inline-block;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--default.is-active {
+  color: #999;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--default.is-active:hover {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--up.is-active,
+.amis-scope .antd-Table-v2 .antd-TableCell-sortBtn--down.is-active {
+  color: #1890ff;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-searchBtn {
+  cursor: pointer;
+  position: static;
+  transform: translateY(-50%);
+  color: #999;
+  margin-left: 0.5rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-searchBtn svg.icon {
+  width: 12px;
+  height: 12px;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-searchBtn:hover {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-searchBtn.is-active {
+  color: #1890ff;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-searchPopOver {
+  border: none;
+  min-width: 20rem;
+  max-width: 40rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-searchPopOver .antd-Panel {
+  margin: 0;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterBtn {
+  cursor: pointer;
+  width: 1rem;
+  position: static;
+  display: inline-block;
+  transform: none;
+  color: #999;
+  margin-left: 0.5rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterBtn svg.icon {
+  width: 13px;
+  height: 13px;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterBtn:hover {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterBtn.is-active {
+  color: #1890ff;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterBtn .antd-Remark {
+  display: inline;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterPopOver {
+  border: none;
+  width: 10rem;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterPopOver .antd-DropDown-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterPopOver .antd-DropDown-menu .antd-DropDown-divider {
+  height: 2.125rem;
+  line-height: 2.125rem;
+  padding: 0 0.75rem;
+  background: #fff;
+  margin: 0;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterPopOver .antd-DropDown-menu .antd-DropDown-divider:hover {
+  background: #d9d9d9;
+  color: #1890ff;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterPopOver .antd-DropDown-menu .antd-DropDown-divider.is-selected {
+  background: #d9d9d9;
+  color: #1890ff;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterPopOver .antd-DropDown-menu .antd-DropDown-divider .antd-Checkbox {
+  width: 100%;
+  margin: 0;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterPopOver .antd-DropDown-multiple-menu {
+  text-align: center;
+  border-top: 1px solid #d9d9d9;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterPopOver .antd-DropDown-multiple-menu .antd-Button {
+  margin: 0 5px;
+  padding: 0 10px;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-filterPopOver .antd-DropDown-multiple-menu:hover {
+  background: none;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-selectionBtn {
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-selectionBtn svg.icon {
+  transform: rotate(270deg);
+  font-size: 12px;
+}
+
+.amis-scope .antd-Table-v2 .antd-TableCell-selectionPopOver .antd-DropDown-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-expandBtn {
+  position: relative;
+  z-index: 1;
+  color: #1890ff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.875rem;
+  line-height: 1;
+  height: 16px;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-expandBtn > svg {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  transition: transform ease-in-out 0s, top ease-in-out 0s;
+  position: relative;
+  transform-origin: 50% 50%;
+  width: 0.625rem;
+  height: 0.625rem;
+  top: 0;
+}
+
+.amis-scope .antd-Table-v2.antd-Table-expandBtn.is-active > svg {
+  transform: rotate(90deg);
+}
+
+.amis-scope .antd-Table-v2.antd-Table-expandBtn:hover {
+  text-decoration: none;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr:hover .antd-Table-dragBtn,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-dragging .antd-Table-dragBtn,
+.amis-scope .antd-Table-v2 .antd-Table-table > tbody > tr.is-drop-allowed .antd-Table-dragBtn {
+  visibility: visible;
+}
+
+.amis-scope .antd-Table-v2 .fake-hide {
+  visibility: hidden;
+  position: absolute;
+}
+
+.amis-scope .antd-Table-v2 .antd-Table-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .amis-scope .antd-InputTable-toolbar {
@@ -35608,7 +37216,8 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Pagination > li {
-  display: inline;
+  display: inline-flex;
+  cursor: pointer;
 }
 
 .amis-scope .antd-Pagination > li > a,
@@ -35638,6 +37247,16 @@ readers do not read off random characters that represent icons */
   color: #1890ff;
 }
 
+.amis-scope .antd-Pagination .ellipsis {
+  cursor: unset;
+}
+
+.amis-scope .antd-Pagination .ellipsis > a {
+  cursor: unset;
+  position: relative;
+  top: -0.25rem;
+}
+
 .amis-scope .antd-Pagination > li.is-disabled > span,
 .amis-scope .antd-Pagination > li.is-disabled > a {
   cursor: not-allowed;
@@ -35664,43 +37283,112 @@ readers do not read off random characters that represent icons */
   border-radius: 2px;
 }
 
-.amis-scope .antd-Pagination-prev > span {
-  cursor: pointer;
+.amis-scope .antd-Pagination-simple > ul > li:hover,
+.amis-scope .antd-Pagination-simple > ul > li:focus {
+  outline: none;
 }
 
-.amis-scope .antd-Pagination-ellipsis > a > span {
-  position: relative;
-  top: -0.25rem;
+.amis-scope .antd-Pagination-simple > ul > li.is-active > a {
+  border: none;
+}
+
+.amis-scope .antd-Pagination-simple > ul > li.is-active > a:hover,
+.amis-scope .antd-Pagination-simple > ul > li.is-active > a:focus {
+  border: none;
+}
+
+.amis-scope .antd-Pagination-prev > span {
+  cursor: pointer;
 }
 
 .amis-scope .antd-Pagination-next > span {
   cursor: pointer;
 }
 
+.amis-scope .antd-Pagination-total {
+  display: inline-block;
+  color: #84868c;
+}
+
 .amis-scope .antd-Pagination-inputGroup {
   display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
+  height: 1.875rem;
+}
+
+.amis-scope .antd-Pagination-inputGroup-left {
+  color: #84868c;
 }
 
 .amis-scope .antd-Pagination-inputGroup input {
-  width: 3.5rem;
+  min-width: 3.125rem;
+  width: 3.125rem;
   height: 1.875rem;
+  line-height: 1.875rem;
+  border: none;
   border: 0.0625rem solid #d9d9d9;
-  border-radius: 2px;
-  padding: 0.25rem 0.625rem;
-  margin: 0 0.625rem;
+  border-radius: 2px 0 0 2px;
+  padding: 0 0.5rem;
+  margin-left: 0.625rem;
   text-align: center;
-}
-
-.amis-scope .antd-Pagination-inputGroup input:focus {
-  width: auto;
 }
 
 .amis-scope .antd-Pagination-inputGroup input:focus,
 .amis-scope .antd-Pagination-inputGroup input:hover {
   outline: none;
-  border: 0.0625rem solid #1890ff;
+  border-color: #1890ff;
+}
+
+.amis-scope .antd-Pagination-inputGroup-right {
+  display: inline-block;
+  width: 2rem;
+  cursor: pointer;
+  text-align: center;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  border: 0.0625rem solid #d9d9d9;
+  border-left: none;
+  border-radius: 0 2px 2px 0;
+  font-size: 0.75rem;
+}
+
+.amis-scope .antd-Pagination-inputGroup-right:hover {
+  color: #1890ff;
+  border-color: #1890ff;
+  border-left: 0.0625rem solid #1890ff;
+}
+
+.amis-scope .antd-Pagination-wrap {
+  line-height: 1.875rem;
+}
+
+.amis-scope .antd-Pagination-wrap .antd-Pagination-item {
+  margin-left: 0.625rem;
+}
+
+.amis-scope .antd-Pagination-wrap .antd-Pagination-item:nth-child(1) {
+  margin-left: 0;
+}
+
+.amis-scope .antd-Pagination-wrap.disabled {
+  background-color: #fff;
+}
+
+.amis-scope .antd-Pagination-wrap.disabled .antd-Pagination > li > a,
+.amis-scope .antd-Pagination-wrap.disabled .antd-Pagination > li > span {
+  color: #999;
+  cursor: not-allowed;
+}
+
+.amis-scope .antd-Pagination-wrap.disabled .antd-Pagination > li.is-active > a,
+.amis-scope .antd-Pagination-wrap.disabled .antd-Pagination > li.is-active > span,
+.amis-scope .antd-Pagination-wrap.disabled .antd-Pagination > li.is-active > a:hover,
+.amis-scope .antd-Pagination-wrap.disabled .antd-Pagination > li.is-active > span:hover,
+.amis-scope .antd-Pagination-wrap.disabled .antd-Pagination > li.is-active > a:focus,
+.amis-scope .antd-Pagination-wrap.disabled .antd-Pagination > li.is-active > span:focus {
+  background-color: #e5e7eb;
+  border-color: #999;
 }
 
 .amis-scope .antd-PaginationWrapper-pager {
@@ -36564,6 +38252,132 @@ readers do not read off random characters that represent icons */
   cursor: pointer;
 }
 
+.amis-scope .antd-SchemaEditorProps {
+  width: 100%;
+}
+
+.amis-scope .antd-SchemaEditorProps > button {
+  margin-top: 7px;
+}
+
+.amis-scope .antd-SchemaEditorProps-placeholder {
+  color: #999;
+}
+
+.amis-scope .antd-SchemaEditorProps--depth {
+  position: relative;
+  margin-left: 2.5rem;
+}
+
+.amis-scope .antd-SchemaEditorProps--depth:before {
+  width: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  bottom: 10px;
+  left: -35px;
+  border-left: dashed 1px inherit;
+}
+
+.amis-scope .antd-SchemaEditorProps--depth .antd-SchemaEditorItem:before {
+  height: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 17px;
+  width: 25px;
+  left: -35px;
+  border-top: dashed 1px inherit;
+}
+
+.amis-scope .antd-SchemaEditorProps--depth > button {
+  position: relative;
+}
+
+.amis-scope .antd-SchemaEditorProps--depth > button:before {
+  height: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  width: 25px;
+  left: -35px;
+  border-top: dashed 1px inherit;
+}
+
+.amis-scope .antd-SchemaEditorArrayProps:before {
+  bottom: 15px;
+}
+
+.amis-scope .antd-SchemaEditorItem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.amis-scope .antd-SchemaEditorItem + .antd-SchemaEditorItem {
+  margin-top: 0.5rem;
+}
+
+.amis-scope .antd-SchemaEditorObject,
+.amis-scope .antd-SchemaEditorArray {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.amis-scope .antd-SchemaEditor-itemsLabel {
+  margin-top: calc((1.875rem - 1.375rem) / 2);
+}
+
+.amis-scope .antd-SchemaEditor-caret {
+  display: inline-block;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 0s;
+  color: inherit;
+  margin-top: calc((1.875rem - 1.375rem) / 2);
+}
+
+.amis-scope .antd-SchemaEditor-caret > svg {
+  width: 10px;
+  height: 10px;
+  top: 0;
+}
+
+.amis-scope .antd-SchemaEditor-caret.is-collapsed {
+  transform: rotate(-90deg);
+}
+
+.amis-scope .antd-SchemaEditor-required {
+  padding-top: 4px;
+}
+
+.amis-scope .antd-SchemaEditor-key,
+.amis-scope .antd-SchemaEditor-title,
+.amis-scope .antd-SchemaEditor-description {
+  flex: 1;
+  max-width: 200px;
+  min-width: 80px;
+}
+
+.amis-scope .antd-SchemaEditor-key > input,
+.amis-scope .antd-SchemaEditor-title > input,
+.amis-scope .antd-SchemaEditor-description > input {
+  flex-basis: 0;
+}
+
 .amis-scope .antd-ResultBox {
   display: flex;
   background: #fff;
@@ -36580,7 +38394,7 @@ readers do not read off random characters that represent icons */
   flex-wrap: wrap;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding: 0 1.625rem 0 0.1875rem;
+  padding: 0 0.3125rem;
   min-height: 1.875rem;
   align-items: center;
   border-radius: 3px;
@@ -38231,6 +40045,11 @@ readers do not read off random characters that represent icons */
   fill: #2d323c;
 }
 
+.amis-scope .antd-TextControl-passwordReveal {
+  cursor: pointer;
+  color: #999;
+}
+
 @media (min-width: 576px) {
   .amis-scope .antd-TextControl.antd-Form-control--sizeXs > .antd-TextControl-input,
   .amis-scope .antd-TextControl.antd-Form-control--sizeSm > .antd-TextControl-input,
@@ -38385,7 +40204,7 @@ readers do not read off random characters that represent icons */
   border: 0.0625rem solid #40a9ff;
   left: -0.0625rem;
   right: -0.0625rem;
-  top: 100%;
+  top: calc(100% + 0.25rem);
   z-index: 10;
   max-height: 18.75rem;
   overflow: auto;
@@ -38597,6 +40416,11 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-TextareaControl-clear:active svg {
   fill: #2d323c;
+}
+
+.amis-scope .antd-TextareaControl-passwordReveal {
+  cursor: pointer;
+  color: #999;
 }
 
 @media (min-width: 576px) {
@@ -39270,6 +41094,10 @@ readers do not read off random characters that represent icons */
   bottom: 0;
 }
 
+.amis-scope .antd-TreeSelection-item.is-disabled {
+  color: #999;
+}
+
 .amis-scope .antd-TreeSelection-sublist .antd-TreeSelection-item:before {
   height: 1px;
   content: "";
@@ -39290,7 +41118,6 @@ readers do not read off random characters that represent icons */
   flex-direction: row;
   cursor: pointer;
   user-select: none;
-  position: relative;
 }
 
 .amis-scope .antd-TreeSelection-itemInner > .antd-Checkbox {
@@ -39298,19 +41125,7 @@ readers do not read off random characters that represent icons */
   margin-left: 0.5rem;
 }
 
-.amis-scope .antd-TreeSelection-itemInner > * {
-  position: relative;
-  z-index: 2;
-}
-
-.amis-scope .antd-TreeSelection-itemInner:hover:after {
-  position: absolute;
-  content: "";
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: -99999px;
+.amis-scope .antd-TreeSelection-itemInner:hover {
   background: rgba(0, 126, 255, 0.08);
 }
 
@@ -39677,17 +41492,7 @@ readers do not read off random characters that represent icons */
   border-color: #40a9ff;
 }
 
-.amis-scope .antd-Number:hover .antd-Number-handler-up,
-.amis-scope .antd-Number:hover .antd-Number-handler-wrap {
-  border-color: #40a9ff;
-}
-
 .amis-scope .antd-Number-disabled:hover {
-  border-color: #d9d9d9;
-}
-
-.amis-scope .antd-Number-disabled:hover .antd-Number-handler-up,
-.amis-scope .antd-Number-disabled:hover .antd-Number-handler-wrap {
   border-color: #d9d9d9;
 }
 
@@ -39709,7 +41514,7 @@ readers do not read off random characters that represent icons */
   border: 0;
   border-radius: 2px;
   color: rgba(0, 0, 0, 0.85);
-  padding: 0 0.5rem;
+  padding: 0 0.75rem;
 }
 
 .amis-scope .antd-Number-handler {
@@ -39722,6 +41527,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-Number-handler:hover {
   background: #f2f2f2;
   color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
 }
 
 .amis-scope .antd-Number-handler:hover:active {
@@ -39764,20 +41570,39 @@ readers do not read off random characters that represent icons */
   color: #999;
 }
 
+.amis-scope .antd-Number-disabled {
+  border-color: #d9d9d9;
+}
+
 .amis-scope .antd-Number-disabled .antd-Number-input {
+  opacity: 0.72;
   cursor: not-allowed;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   color: #999;
   background: #e5e7eb;
   border-color: #d9d9d9;
 }
 
+.amis-scope .antd-Number-disabled .antd-Number-handler-wrap {
+  border-color: #d9d9d9;
+}
+
 .amis-scope .antd-Number-disabled .antd-Number-handler {
+  cursor: not-allowed;
+  color: #999;
+  background: #e5e7eb;
+  border-color: #d9d9d9;
   opacity: 0.72;
 }
 
 .amis-scope .antd-Number-disabled .antd-Number-handler:hover {
   color: #999;
   border-color: #d9d9d9;
+}
+
+.amis-scope .antd-Number-disabled .antd-Number-handler:hover:active {
+  background: #e5e7eb;
 }
 
 .amis-scope .antd-NumberControl:not(.is-inline) > .antd-Number {
@@ -39799,6 +41624,131 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-NumberControl--withUnit .antd-Select {
   border-left: 0;
+}
+
+.amis-scope .antd-Number--enhance {
+  display: inline-flex;
+  align-items: center;
+  border: 0.0625rem solid #d9d9d9;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-left-icon,
+.amis-scope .antd-Number--enhance .antd-Number--enhance-right-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.85);
+  background: #fff;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-left-icon:hover,
+.amis-scope .antd-Number--enhance .antd-Number--enhance-right-icon:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #40a9ff;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-left-icon-focused,
+.amis-scope .antd-Number--enhance .antd-Number--enhance-right-icon-focused {
+  background: #fff;
+  color: #40a9ff;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-left-icon > svg,
+.amis-scope .antd-Number--enhance .antd-Number--enhance-right-icon > svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-left-icon {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-right-icon {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-input {
+  flex: 1;
+  border: 0;
+  border-left: 0.0625rem solid #d9d9d9;
+  border-right: 0.0625rem solid #d9d9d9;
+  border-radius: 0;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-input .antd-Number-handler-wrap {
+  display: none;
+}
+
+.amis-scope .antd-Number--enhance:hover {
+  border-color: #40a9ff;
+}
+
+.amis-scope .antd-Number--enhance:focus-within {
+  border-color: #40a9ff;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-border-min,
+.amis-scope .antd-Number--enhance .antd-Number--enhance-border-max {
+  background: #e5e7eb;
+  pointer-events: none;
+  color: #999;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-border-min:hover,
+.amis-scope .antd-Number--enhance .antd-Number--enhance-border-max:hover {
+  background: #e5e7eb;
+  color: #999;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-border-disabled {
+  background: #e5e7eb;
+  color: #b4b6ba;
+  cursor: not-allowed;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-border-disabled:hover {
+  cursor: not-allowed;
+  background: #e5e7eb;
+  color: #b4b6ba;
+}
+
+.amis-scope .antd-Number--enhance .antd-Number--enhance-border-readOnly:hover,
+.amis-scope .antd-Number--enhance .antd-Number--enhance-border-readOnly:hover {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.amis-scope .antd-Number--enhance-no-steps .antd-Number--enhance-left-icon,
+.amis-scope .antd-Number--enhance-no-steps .antd-Number--enhance-right-icon {
+  display: none;
+}
+
+.amis-scope .antd-Number--enhance-no-steps .antd-Number--enhance-input {
+  border: none;
+  border-radius: 2px;
+}
+
+.amis-scope .antd-Number--enhance-disabled {
+  border-color: #d9d9d9;
+}
+
+.amis-scope .antd-Number--enhance-disabled .antd-Number--enhance-input {
+  border-color: #d9d9d9;
+}
+
+.amis-scope .antd-Number--enhance-disabled:hover {
+  border-color: #d9d9d9;
+}
+
+.amis-scope .antd-Number--enhance-borderNone,
+.amis-scope .antd-Number--enhance-borderHalf {
+  border: none;
 }
 
 .amis-scope .antd-Select {
@@ -39863,9 +41813,11 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Select-placeholder {
+  color: #999;
   line-height: 1.4285714286;
   user-select: none;
   white-space: nowrap;
+  color: #999;
 }
 
 .amis-scope .antd-Select-value {
@@ -39874,6 +41826,10 @@ readers do not read off random characters that represent icons */
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.amis-scope .antd-Select-value.is-invalid {
+  color: #ff4d4f;
 }
 
 .amis-scope .antd-Select-value.is-disabled {
@@ -40055,10 +42011,6 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-Select-option.is-disabled {
   color: #999;
   background: transparent;
-}
-
-.amis-scope .antd-Select-option--placeholder {
-  color: #999;
 }
 
 .amis-scope .antd-Select-option > label {
@@ -40701,7 +42653,8 @@ readers do not read off random characters that represent icons */
   background: #fff;
   border-radius: 2px;
   min-width: calc(
-    1rem * 5 +var(--DatePicker-paddingX) * 2 + 0.875rem * 2
+    1rem * 5 + 0.75rem * 2 +
+      0.875rem * 2
   );
 }
 
@@ -40843,13 +42796,15 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-DateControl.is-date > .antd-DatePicker {
   min-width: calc(calc(
-    1rem * 5 +var(--DatePicker-paddingX) * 2 + 0.875rem * 2
+    1rem * 5 + 0.75rem * 2 +
+      0.875rem * 2
   ) + 1rem * 2);
 }
 
 .amis-scope .antd-DateControl.is-datetime > .antd-DatePicker {
   min-width: calc(calc(
-    1rem * 5 +var(--DatePicker-paddingX) * 2 + 0.875rem * 2
+    1rem * 5 + 0.75rem * 2 +
+      0.875rem * 2
   ) + 1rem * 6);
 }
 
@@ -40974,7 +42929,6 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .rdt .rdtPickerDate {
-  width: 17rem;
   height: 100%;
 }
 
@@ -41406,7 +43360,8 @@ readers do not read off random characters that represent icons */
   color: rgba(0, 0, 0, 0.85);
   background: #fff;
   min-width: calc(
-    1rem * 8 +var(--DatePicker-paddingX) * 2 + 0.875rem * 2
+    1rem * 8 + 0.75rem * 2 +
+      0.875rem * 2
   );
 }
 
@@ -41588,13 +43543,15 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-DateRangeControl.is-date > .antd-DateRangePicker {
   min-width: calc(calc(
-    1rem * 8 +var(--DatePicker-paddingX) * 2 + 0.875rem * 2
+    1rem * 8 + 0.75rem * 2 +
+      0.875rem * 2
   ) + 1rem * 5.5);
 }
 
 .amis-scope .antd-DateRangeControl.is-datetime > .antd-DateRangePicker {
   min-width: calc(calc(
-    1rem * 8 +var(--DatePicker-paddingX) * 2 + 0.875rem * 2
+    1rem * 8 + 0.75rem * 2 +
+      0.875rem * 2
   ) + 1rem * 11);
 }
 
@@ -42072,7 +44029,6 @@ readers do not read off random characters that represent icons */
   background: #1890ff;
   border-radius: 0;
   height: 100%;
-  min-width: 10%;
   transition: ease-out width 0s;
 }
 
@@ -42779,10 +44735,37 @@ readers do not read off random characters that represent icons */
   display: flex;
   align-items: center;
   position: relative;
+  user-select: none;
+  margin-bottom: 0.25rem;
+  padding-left: 0.25rem;
+}
+
+.amis-scope .antd-Tree-itemLabel > * {
+  position: relative;
+  z-index: 2;
+}
+
+.amis-scope .antd-Tree-itemLabel > .antd-Checkbox {
+  display: inline-flex;
+  align-self: center;
 }
 
 .amis-scope .antd-Tree-itemLabel:hover {
   background: rgba(0, 126, 255, 0.08);
+}
+
+.amis-scope .antd-Tree-item .is-checked {
+  background: var(--Tree-item-onChekced-bg);
+  border-radius: var(--Tree-item-onChekced-bg-borderRadius);
+}
+
+.amis-scope .antd-Tree-item .is-disabled {
+  color: #999;
+  background: none;
+}
+
+.amis-scope .antd-Tree-item .is-disabled:hover {
+  background: none;
 }
 
 .amis-scope .antd-Tree.is-draggable .antd-Tree-itemLabel:hover::after {
@@ -42822,7 +44805,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-Tree-itemInput > a {
   display: inline-block;
   cursor: pointer;
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
   color: inherit;
 }
 
@@ -42881,7 +44864,7 @@ readers do not read off random characters that represent icons */
   cursor: pointer;
   width: 0.75rem;
   display: inline-flex;
-  margin-right: 0.25rem;
+  margin-right: 0.625rem;
 }
 
 .amis-scope .antd-Tree-itemArrow > svg {
@@ -42924,29 +44907,15 @@ readers do not read off random characters that represent icons */
   height: 0.875rem;
 }
 
-.amis-scope .antd-Tree-itemLabel {
-  user-select: none;
-}
-
-.amis-scope .antd-Tree-itemLabel.is-checked,
-.amis-scope .antd-Tree-itemLabel.is-children-checked {
-  color: #1890ff;
-}
-
-.amis-scope .antd-Tree-itemLabel.is-disabled {
-  color: #999;
-}
-
-.amis-scope .antd-Tree-itemLabel > .antd-Checkbox {
-  display: inline-flex;
-  align-self: center;
-}
-
 .amis-scope .antd-Tree-itemText {
   cursor: pointer;
   flex: 1 auto;
+  color: rgba(0, 0, 0, 0.85);
   line-height: 1.57;
-  padding: 0.25rem 0;
+}
+
+.amis-scope .is-disabled .antd-Tree-itemText {
+  color: #999;
 }
 
 .amis-scope .antd-Tree-placeholder {
@@ -43099,6 +45068,11 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-TreeSelect-clear:active svg {
   fill: #2d323c;
+}
+
+.amis-scope .antd-TreeSelect-passwordReveal {
+  cursor: pointer;
+  color: #999;
 }
 
 @media (min-width: 576px) {
@@ -43742,6 +45716,11 @@ readers do not read off random characters that represent icons */
   fill: #2d323c;
 }
 
+.amis-scope .antd-Picker-passwordReveal {
+  cursor: pointer;
+  color: #999;
+}
+
 @media (min-width: 576px) {
   .amis-scope .antd-Picker.antd-Form-control--sizeXs > .antd-Picker-input,
   .amis-scope .antd-Picker.antd-Form-control--sizeSm > .antd-Picker-input,
@@ -44128,6 +46107,10 @@ readers do not read off random characters that represent icons */
   overflow: initial;
 }
 
+.amis-scope .antd-Transfer-select {
+  overflow: hidden;
+}
+
 .amis-scope .antd-Transfer-search + .antd-Transfer-selection {
   border-top: 1px solid #d9d9d9;
 }
@@ -44437,6 +46420,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-NestedSelect-menu .antd-NestedSelect-option.no-result {
   justify-content: center;
   cursor: default;
+  color: #999;
 }
 
 .amis-scope .antd-NestedSelect-menu .antd-NestedSelect-option.no-result:hover {
@@ -44671,6 +46655,11 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-IconPickerControl-clear:active svg {
   fill: #2d323c;
+}
+
+.amis-scope .antd-IconPickerControl-passwordReveal {
+  cursor: pointer;
+  color: #999;
 }
 
 @media (min-width: 576px) {
@@ -46283,6 +48272,8 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-FormulaPicker-input {
   flex: 1;
   margin-right: 0.625rem;
+  padding-right: 0;
+  max-width: calc(100% - 2.625rem);
 }
 
 .amis-scope .antd-FormulaPicker-action {
@@ -46307,6 +48298,9 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-FormulaPicker-ResultBox {
   padding-right: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .amis-scope .antd-FormulaPicker-ResultBox span.c-field {
@@ -46390,7 +48384,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-Timeline-vertical .antd-TimelineItem-content {
   padding-bottom: 1rem;
-  margin-left: 0.75rem;
+  margin-left: 0.125rem;
 }
 
 .amis-scope .antd-Timeline-vertical .antd-TimelineItem-content .antd-TimelineItem-time {
@@ -46520,6 +48514,209 @@ readers do not read off random characters that represent icons */
   margin: 0 auto;
 }
 
+.amis-scope .antd-Tag {
+  display: inline-flex;
+  height: 1.5rem;
+  padding: 0 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  max-width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.3;
+  border-radius: 0.125rem;
+  background-color: #f2f2f4;
+  color: #151a26;
+}
+
+.amis-scope .antd-Tag:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.amis-scope .antd-Tag--normal {
+  border-radius: 0.125rem;
+}
+
+.amis-scope .antd-Tag--normal--hasColor {
+  color: #fff;
+}
+
+.amis-scope .antd-Tag--normal--inactive {
+  background: #b4b6ba;
+}
+
+.amis-scope .antd-Tag--normal--active {
+  background: #2468f2;
+}
+
+.amis-scope .antd-Tag--normal--processing {
+  background: #1ac5ff;
+}
+
+.amis-scope .antd-Tag--normal--success {
+  background: #0bc286;
+}
+
+.amis-scope .antd-Tag--normal--error {
+  background: #e8684a;
+}
+
+.amis-scope .antd-Tag--normal--warning {
+  background: #ffb200;
+}
+
+.amis-scope .antd-Tag--rounded {
+  background-color: #fff;
+  border-radius: calc((1.5rem + 2px) / 2);
+  border: 1px solid #f2f2f4;
+  color: #f2f2f4;
+}
+
+.amis-scope .antd-Tag--rounded--inactive {
+  border-color: #b4b6ba;
+  color: #b4b6ba;
+}
+
+.amis-scope .antd-Tag--rounded--active {
+  border-color: #2468f2;
+  color: #2468f2;
+}
+
+.amis-scope .antd-Tag--rounded--processing {
+  border-color: #1ac5ff;
+  color: #1ac5ff;
+}
+
+.amis-scope .antd-Tag--rounded--success {
+  border-color: #0bc286;
+  color: #0bc286;
+}
+
+.amis-scope .antd-Tag--rounded--error {
+  border-color: #e8684a;
+  color: #e8684a;
+}
+
+.amis-scope .antd-Tag--rounded--warning {
+  border-color: #ffb200;
+  color: #ffb200;
+}
+
+.amis-scope .antd-Tag--status {
+  background-color: #fff;
+}
+
+.amis-scope .antd-Tag--status--inactive .antd-Tag--prev {
+  color: #b4b6ba;
+}
+
+.amis-scope .antd-Tag--status--active .antd-Tag--prev {
+  color: #2468f2;
+}
+
+.amis-scope .antd-Tag--status--processing .antd-Tag--prev {
+  color: #1ac5ff;
+}
+
+.amis-scope .antd-Tag--status--success .antd-Tag--prev {
+  color: #0bc286;
+}
+
+.amis-scope .antd-Tag--status--error .antd-Tag--prev {
+  color: #e8684a;
+}
+
+.amis-scope .antd-Tag--status--warning .antd-Tag--prev {
+  color: #ffb200;
+}
+
+.amis-scope .antd-Tag--status:not(.antd-Tag--status--processing):not(.antd-Tag--status--active) .icon-dot #dotWave {
+  display: none;
+}
+
+.amis-scope .antd-Tag--prev {
+  color: #f2f2f4;
+  margin-right: 0.5rem;
+}
+
+.amis-scope .antd-Tag--prev i {
+  font-size: 0.5rem;
+}
+
+.amis-scope .antd-Tag--prev .icon {
+  width: 0.5rem;
+  height: 0.5rem;
+  top: 0;
+}
+
+.amis-scope .antd-Tag--close {
+  margin-left: 0.5rem;
+  margin-right: 0.25rem;
+  cursor: pointer;
+}
+
+.amis-scope .antd-Tag--close i {
+  font-size: 0.5rem;
+}
+
+.amis-scope .antd-Tag--close .icon {
+  width: 0.5rem;
+  height: 0.5rem;
+  position: inherit;
+}
+
+.amis-scope .antd-Tag--close:hover {
+  opacity: 0.7;
+}
+
+.amis-scope .antd-Tag--close:active {
+  opacity: 0.3;
+}
+
+.amis-scope .antd-Tag--disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.amis-scope .antd-Tag--disabled .antd-Tag--close {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.amis-scope .antd-Tag--checkable {
+  background-color: #f2f2f4;
+  cursor: pointer;
+}
+
+.amis-scope .antd-Tag--checkable:hover {
+  background-color: #e6e6e8;
+}
+
+.amis-scope .antd-Tag--checkable:active {
+  background-color: #e6e6e8;
+}
+
+.amis-scope .antd-Tag--checkable--disabled {
+  cursor: not-allowed;
+  background-color: #e6e6e8;
+  color: #b4b6ba;
+}
+
+.amis-scope .antd-Tag--checkable--checked:not(.antd-Tag--checkable--disabled) {
+  color: #fff;
+  background-color: #2468f2;
+}
+
+.amis-scope .antd-Tag--checkable--checked:not(.antd-Tag--checkable--disabled):hover {
+  background-color: #4f86f4;
+}
+
+.amis-scope .antd-Tag--checkable--checked:not(.antd-Tag--checkable--disabled):active {
+  background-color: #1c53c1;
+}
+
 .amis-scope .antd-PullRefresh-wrap {
   position: relative;
   height: 100%;
@@ -46554,6 +48751,7 @@ readers do not read off random characters that represent icons */
   right: 0;
   height: 100vh;
   width: 24px;
+  pointer-events: none;
 }
 
 .AMISDebug h3 {
@@ -46608,6 +48806,7 @@ readers do not read off random characters that represent icons */
 }
 
 .AMISDebug-toggle {
+  pointer-events: all;
   background: #f0f2f5;
   position: fixed;
   top: 50%;
@@ -46630,6 +48829,7 @@ readers do not read off random characters that represent icons */
 }
 
 .AMISDebug-content {
+  pointer-events: all;
   display: none;
 }
 

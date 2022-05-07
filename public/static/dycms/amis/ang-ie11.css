@@ -13451,6 +13451,7 @@ readers do not read off random characters that represent icons */
   outline: none;
   /* Prevent dragging from highlighting the element */
   position: relative;
+  z-index: 0;
 }
 
 .amis-scope .CodeMirror-sizer {
@@ -25860,98 +25861,6 @@ readers do not read off random characters that represent icons */
   height: 1.875rem;
 }
 
-.amis-scope .a-Button:active,
-.amis-scope .a-Button.is-active {
-  color: #7266ba;
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  border-color: #7266ba;
-}
-
-.amis-scope .a-Button:active:focus,
-.amis-scope .a-Button.is-active:focus {
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-
-.amis-scope .a-Button .a-Button-icon:first-child:not(:last-child):not(.pull-right),
-.amis-scope .a-Button > svg.icon:not(:last-child):not(.pull-right),
-.amis-scope .a-Button > .pull-left {
-  margin-right: 0.75rem;
-}
-
-.amis-scope .a-Button .a-Button-icon:last-child:not(:first-child):not(.pull-left),
-.amis-scope .a-Button > .pull-right {
-  margin-left: 0.75rem;
-}
-
-.amis-scope .a-Button .a-Button--loading:first-child:not(:last-child):not(.pull-right),
-.amis-scope .a-Button > svg.icon:not(:last-child):not(.pull-right),
-.amis-scope .a-Button > .pull-left {
-  margin-right: 0.75rem;
-}
-
-.amis-scope .a-Button .a-Button--loading:last-child:not(:first-child):not(.pull-left),
-.amis-scope .a-Button > .pull-right {
-  margin-left: 0.75rem;
-}
-
-.amis-scope .a-Button img.a-Button-icon {
-  height: 0.875rem;
-  vertical-align: middle;
-}
-
-.amis-scope .a-Button:hover:focus {
-  text-decoration: none;
-}
-
-.amis-scope .a-Button:focus,
-.amis-scope .a-Button.focus {
-  outline: 0;
-  box-shadow: none;
-}
-
-.amis-scope .a-Button.is-disabled,
-.amis-scope .a-Button:disabled {
-  filter: grayscale(100%);
-  box-shadow: none;
-  cursor: not-allowed;
-  color: #99a6ad;
-  pointer-events: auto;
-  border: 0.0625rem solid #dee2e6;
-  background: #f2f3f3;
-}
-
-.amis-scope .a-Button.is-disabled > svg,
-.amis-scope .a-Button.is-disabled > svg path,
-.amis-scope .a-Button:disabled > svg,
-.amis-scope .a-Button:disabled > svg path {
-  fill: currentColor;
-}
-
-.amis-scope .a-Button:not(:disabled):not(.is-disabled) {
-  cursor: pointer;
-}
-
-.amis-scope .a-Button.cxd-Button--link.is-disabled {
-  background: transparent;
-  border: none;
-}
-
-.amis-scope .a-Button > .pull-left,
-.amis-scope .a-Button > .pull-right {
-  line-height: inherit;
-}
-
-.amis-scope .a-Button > .fa,
-.amis-scope .a-Button > .iconfont,
-.amis-scope .a-Button > .glyphicon {
-  font-size: inherit;
-}
-
-.amis-scope a.a-Button.is-disabled,
-.amis-scope fieldset:disabled a.a-Button {
-  pointer-events: none;
-}
-
 .amis-scope .a-Button--primary {
   color: #fff;
   background: #7266ba;
@@ -26389,7 +26298,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Button--iconOnly {
-  min-width: calc(1.875rem * 4 / 3);
+  min-width: calc( 1.875rem * 4 / 3 );
 }
 
 .amis-scope .a-Button--iconOnly:not(.a-Button--link) > svg.icon {
@@ -26407,12 +26316,74 @@ readers do not read off random characters that represent icons */
   line-height: 1;
 }
 
-.amis-scope .a-Button--loading {
-  transition: --Button-transition;
+.amis-scope .a-Button:active,
+.amis-scope .a-Button.is-active {
+  color: #7266ba;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  border-color: #7266ba;
 }
 
-.amis-scope .a-Button--loading svg {
-  animation: spin 1s infinite linear;
+.amis-scope .a-Button:active:focus,
+.amis-scope .a-Button.is-active:focus {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.amis-scope .a-Button .a-Button-icon:first-child:not(:last-child):not(.pull-right),
+.amis-scope .a-Button > svg.icon:not(:last-child):not(.pull-right),
+.amis-scope .a-Button > .pull-left {
+  margin-right: 0.75rem;
+}
+
+.amis-scope .a-Button .a-Button-icon:last-child:not(:first-child):not(.pull-left),
+.amis-scope .a-Button > .pull-right {
+  margin-left: 0.75rem;
+}
+
+.amis-scope .a-Button .a-Button--loading:first-child:not(:last-child):not(.pull-right),
+.amis-scope .a-Button > svg.icon:not(:last-child):not(.pull-right),
+.amis-scope .a-Button > .pull-left {
+  margin-right: 0.75rem;
+}
+
+.amis-scope .a-Button .a-Button--loading:last-child:not(:first-child):not(.pull-left),
+.amis-scope .a-Button > .pull-right {
+  margin-left: 0.75rem;
+}
+
+.amis-scope .a-Button img.a-Button-icon {
+  height: 0.875rem;
+  vertical-align: middle;
+}
+
+.amis-scope .a-Button:hover:focus {
+  text-decoration: none;
+}
+
+.amis-scope .a-Button:focus,
+.amis-scope .a-Button.focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.amis-scope .a-Button.is-disabled,
+.amis-scope .a-Button:disabled {
+  filter: grayscale(100%);
+  box-shadow: none;
+  cursor: not-allowed;
+  color: #99a6ad;
+  border: 0.0625rem solid #dee2e6;
+  background: #f2f3f3;
+}
+
+.amis-scope .a-Button.is-disabled > svg,
+.amis-scope .a-Button.is-disabled > svg path,
+.amis-scope .a-Button:disabled > svg,
+.amis-scope .a-Button:disabled > svg path {
+  fill: currentColor;
+}
+
+.amis-scope .a-Button:not(:disabled):not(.is-disabled) {
+  cursor: pointer;
 }
 
 .amis-scope .a-Button--link {
@@ -26438,8 +26409,13 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Button--link:disabled,
 .amis-scope .a-Button--link.is-disabled {
   color: #99a6ad;
-  pointer-events: none;
-  background: #f2f3f3;
+  border: none;
+  background: transparent;
+}
+
+.amis-scope .a-Button--link:disabled:hover:active,
+.amis-scope .a-Button--link.is-disabled:hover:active {
+  color: #99a6ad;
 }
 
 .amis-scope .a-Button--block {
@@ -26449,6 +26425,30 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Button--block + .a-Button--block {
   margin-top: 0.75rem;
+}
+
+.amis-scope .a-Button > .pull-left,
+.amis-scope .a-Button > .pull-right {
+  line-height: inherit;
+}
+
+.amis-scope .a-Button > .fa,
+.amis-scope .a-Button > .iconfont,
+.amis-scope .a-Button > .glyphicon {
+  font-size: inherit;
+}
+
+.amis-scope a.a-Button.is-disabled,
+.amis-scope fieldset:disabled a.a-Button {
+  pointer-events: none;
+}
+
+.amis-scope .a-Button--loading {
+  transition: --Button-transition;
+}
+
+.amis-scope .a-Button--loading svg {
+  animation: spin 1s infinite linear;
 }
 
 .amis-scope input[type=submit].a-Button--block,
@@ -26889,7 +26889,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Modal-title {
   font-size: 0.875rem;
   color: #414c52;
-  font-weight: normal;
+  font-weight: 500;
 }
 
 .amis-scope .a-Modal-close {
@@ -26947,6 +26947,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Modal-footer .a-Button {
+  width: 4.5rem;
   margin-left: 0.5rem;
 }
 
@@ -27257,6 +27258,7 @@ readers do not read off random characters that represent icons */
   right: 0.75rem;
   left: auto;
   margin-top: 0;
+  z-index: 10;
 }
 
 .amis-scope .a-Drawer--top .a-Drawer-content {
@@ -27288,6 +27290,7 @@ readers do not read off random characters that represent icons */
   top: 0.75rem;
   right: 0.75rem;
   margin-right: 0;
+  z-index: 10;
 }
 
 .amis-scope .a-Drawer--right .a-Drawer-content {
@@ -27342,6 +27345,7 @@ readers do not read off random characters that represent icons */
   right: 0.75rem;
   left: auto;
   margin-bottom: 0;
+  z-index: 10;
 }
 
 .amis-scope .a-Drawer--bottom .a-Drawer-content {
@@ -27373,6 +27377,7 @@ readers do not read off random characters that represent icons */
   left: auto;
   right: 0.75rem;
   top: 0.75rem;
+  z-index: 10;
 }
 
 .amis-scope .a-Drawer--left .a-Drawer-content {
@@ -27416,9 +27421,9 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Tooltip-arrow {
   position: absolute;
   display: block;
-  width: 1rem;
-  height: 0.5rem;
-  margin-left: calc(1rem * -1 / 2);
+  width: 0.5rem;
+  height: 0.25rem;
+  margin-left: calc(0.5rem * -1 / 2);
   left: 50%;
 }
 
@@ -27432,16 +27437,16 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Tooltip--top {
-  margin-top: calc(0.5rem * -1 - 0.125rem);
+  margin-top: calc(0.25rem * -1 - 0.125rem);
 }
 
 .amis-scope .a-Tooltip--top .a-Tooltip-arrow {
-  bottom: calc( (0.5rem + 0.0625rem) * -1 );
+  bottom: calc( (0.25rem + 0.0625rem) * -1 );
 }
 
 .amis-scope .a-Tooltip--top .a-Tooltip-arrow::before,
 .amis-scope .a-Tooltip--top .a-Tooltip-arrow::after {
-  border-width: 0.5rem calc(1rem / 2) 0;
+  border-width: 0.25rem calc(0.5rem / 2) 0;
 }
 
 .amis-scope .a-Tooltip--top .a-Tooltip-arrow::before {
@@ -27454,20 +27459,20 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Tooltip--right {
-  margin-left: calc(0.5rem + 0.125rem);
+  margin-left: calc(0.25rem + 0.125rem);
 }
 
 .amis-scope .a-Tooltip--right .a-Tooltip-arrow {
   left: calc(0.0625rem * -1);
-  width: 0.5rem;
-  height: 1rem;
-  margin-top: calc(1rem / -2);
+  width: 0.25rem;
+  height: 0.5rem;
+  margin-top: calc(0.5rem / -2);
   top: 50%;
 }
 
 .amis-scope .a-Tooltip--right .a-Tooltip-arrow::before,
 .amis-scope .a-Tooltip--right .a-Tooltip-arrow::after {
-  border-width: calc(1rem / 2) 0.5rem calc(1rem / 2) 0;
+  border-width: calc(0.5rem / 2) 0.25rem calc(0.5rem / 2) 0;
 }
 
 .amis-scope .a-Tooltip--right .a-Tooltip-arrow::before {
@@ -27480,16 +27485,16 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Tooltip--bottom {
-  margin-top: calc(0.5rem + 0.125rem);
+  margin-top: calc(0.25rem + 0.125rem);
 }
 
 .amis-scope .a-Tooltip--bottom .a-Tooltip-arrow {
-  top: calc( (0.5rem + 0.0625rem) * -1 );
+  top: calc( (0.25rem + 0.0625rem) * -1 );
 }
 
 .amis-scope .a-Tooltip--bottom .a-Tooltip-arrow::before,
 .amis-scope .a-Tooltip--bottom .a-Tooltip-arrow::after {
-  border-width: 0 calc(1rem / 2) 0.5rem calc(1rem / 2);
+  border-width: 0 calc(0.5rem / 2) 0.25rem calc(0.5rem / 2);
 }
 
 .amis-scope .a-Tooltip--bottom .a-Tooltip-arrow::before {
@@ -27506,28 +27511,28 @@ readers do not read off random characters that represent icons */
   top: 0;
   left: 50%;
   display: block;
-  width: 1rem;
-  margin-left: calc(1rem / -2);
+  width: 0.5rem;
+  margin-left: calc(0.5rem / -2);
   content: "";
   border-bottom: 0.0625rem solid #f7f7f7;
 }
 
 .amis-scope .a-Tooltip--left {
-  margin-left: calc(0.5rem * -1 - 0.125rem);
+  margin-left: calc(0.25rem * -1 - 0.125rem);
 }
 
 .amis-scope .a-Tooltip--left .a-Tooltip-arrow {
   left: auto;
-  right: calc( (0.5rem + 0.0625rem) * -1 );
-  width: 0.5rem;
-  height: 1rem;
-  margin-top: calc(1rem * -1 / 2);
+  right: calc( (0.25rem + 0.0625rem) * -1 );
+  width: 0.25rem;
+  height: 0.5rem;
+  margin-top: calc(0.5rem * -1 / 2);
   top: 50%;
 }
 
 .amis-scope .a-Tooltip--left .a-Tooltip-arrow::before,
 .amis-scope .a-Tooltip--left .a-Tooltip-arrow::after {
-  border-width: calc(1rem / 2) 0 calc(1rem / 2) 0.5rem;
+  border-width: calc(0.5rem / 2) 0 calc(0.5rem / 2) 0.25rem;
 }
 
 .amis-scope .a-Tooltip--left .a-Tooltip-arrow::before {
@@ -28905,7 +28910,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Tabs--line > .a-Tabs-content {
   border-width: 0;
-  padding: 0.75rem 0;
   background: transparent;
 }
 
@@ -29269,6 +29273,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Tabs--chrome > .a-Tabs-linksWrapper {
   background: #e7eaed;
   border-bottom: none;
+  overflow-x: hidden;
 }
 
 .amis-scope .a-Tabs--chrome > .a-Tabs-linksWrapper > .a-Tabs-addable {
@@ -29282,6 +29287,7 @@ readers do not read off random characters that represent icons */
   padding: 0 0.625rem;
   padding-top: 0.5rem;
   display: flex;
+  width: 100%;
 }
 
 .amis-scope .a-Tabs--chrome > .a-Tabs-linksWrapper > .a-Tabs-links > li {
@@ -29296,6 +29302,11 @@ readers do not read off random characters that represent icons */
   overflow: inherit;
 }
 
+.amis-scope .a-Tabs--chrome > .a-Tabs-linksWrapper > .a-Tabs-links > li > a {
+  /* 最少展示一个字 */
+  min-width: 0.875rem;
+}
+
 .amis-scope .a-Tabs--chrome > .a-Tabs-linksWrapper > .a-Tabs-links > li > a:first-child {
   background: none;
   border: none;
@@ -29303,7 +29314,7 @@ readers do not read off random characters that represent icons */
   z-index: 5;
   overflow: hidden;
   padding: 0;
-  text-overflow: unset;
+  text-overflow: ellipsis;
 }
 
 .amis-scope .a-Tabs--chrome > .a-Tabs-linksWrapper > .a-Tabs-links > li.is-active > a:first-child,
@@ -30064,6 +30075,10 @@ readers do not read off random characters that represent icons */
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.amis-scope .a-Remark-icon--circle {
+  border-radius: 50%;
 }
 
 .amis-scope .a-Remark > span + .a-Remark-icon {
@@ -31583,12 +31598,41 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-CBGroup {
   font-size: 0.75rem;
+  position: relative;
+  border: 1px solid #e8e9eb;
+  border-radius: 4px;
+  border-left: 0.1875rem solid #e6f0ff;
+  padding: 1.875rem 1.6875rem 1.0625rem;
+  margin-top: 1.875rem;
+}
+
+.amis-scope .a-CBGroup-toolbarCondition {
+  text-align: center;
+  margin-top: -2.75rem;
+  margin-bottom: 1rem;
+}
+
+.amis-scope .a-CBGroup-toolbarCondition .a-Select {
+  font-size: 12px;
+  height: 1.75rem;
+  width: 3.875rem;
+  background: #d4e5ff;
+  border: none;
+  color: #0832a6;
+  font-weight: 500;
+  padding: 0;
+  padding-left: 0.5rem;
+  min-height: 1.75rem;
+}
+
+.amis-scope .a-CBGroup-toolbarCondition .a-Select:hover {
+  background: #d4e5ff;
 }
 
 .amis-scope .a-CBGroup-toolbar {
   display: flex;
   flex-direction: row;
-  padding-bottom: 10px;
+  margin-top: 0.5rem;
 }
 
 .amis-scope .a-CBGroup-toolbar .a-Button {
@@ -31603,27 +31647,21 @@ readers do not read off random characters that represent icons */
   margin-right: 5px;
 }
 
-.amis-scope .a-CBGroup-toolbar:not(:hover) .a-CBGroup-toolbarCondition .a-Button:not(.is-active) {
-  width: 0;
-  padding: 0;
-  overflow: hidden;
-  opacity: 0;
-  margin: 0;
-  border: 0;
-}
-
 .amis-scope .a-CBGroup-toolbar .a-CBGroup-toolbarConditionAdd {
-  transition: opacity 0s;
   display: flex;
   align-items: center;
+}
+
+.amis-scope .a-CBGroup-toolbar .a-CBGroup-toolbarConditionAdd .a-ButtonGroup > .cxd-Button:first-child {
+  margin-right: 1.5rem;
 }
 
 .amis-scope .a-CBGroup-toolbar .a-CBGroup-toolbarConditionAdd .a-CBDelete {
   margin-left: 0.25rem;
 }
 
-.amis-scope .a-CBGroup-toolbar:not(:hover) .a-CBGroup-toolbarConditionAdd {
-  opacity: 0;
+.amis-scope .a-CBGroup .a-ResultBox {
+  padding-right: 0.1875rem;
 }
 
 .amis-scope .a-CBGroup-field,
@@ -31662,94 +31700,88 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-CBGroup-placeholder {
   color: #99a6ad;
   position: relative;
-  margin-left: 30px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.03);
   border-radius: 5px;
-}
-
-.amis-scope .a-CBGroup-placeholder:before {
-  position: absolute;
-  content: "";
-  top: -10px;
-  left: -30px;
-  width: 1rem;
-  border-left: solid 1px #d1d5db;
-  bottom: 0;
-}
-
-.amis-scope .a-CBGroup-placeholder:after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  width: 1rem;
-  left: -30px;
-  border-top: solid 1px #d1d5db;
-}
-
-.amis-scope .a-CBGroup-placeholder:last-child:before {
-  border-bottom-left-radius: 5px;
-  border-bottom: solid 1px #d1d5db;
-  bottom: 50%;
-}
-
-.amis-scope .a-CBGroup-placeholder:last-child:after {
-  display: none;
 }
 
 .amis-scope .a-CBGroup-placeholder.simple {
   margin-left: 0;
 }
 
-.amis-scope .a-CBGroup-placeholder.simple:before {
-  display: none;
-}
-
-.amis-scope .a-CBGroup-placeholder.simple:after {
-  display: none;
-}
-
-.amis-scope .a-CBGroup-toolbarCondition {
-  margin-right: 0.75rem;
-}
-
 .amis-scope .a-CBDelete {
-  color: #4b5563;
   cursor: pointer;
   margin-left: auto;
-  transition: opacity 0s;
 }
 
-.amis-scope .a-CBDelete:hover {
-  color: #111827;
+.amis-scope .a-CBGroupOrItem-body-group--hover > .a-CBGroupOrItem-dragbar {
+  opacity: 1 !important;
+}
+
+.amis-scope .a-CBGroupOrItem-body-group--hover > .a-CBGroup {
+  border-left-color: #2468f1;
 }
 
 .amis-scope .a-CBGroupOrItem {
   position: relative;
-  margin-left: 1.875rem;
 }
 
 .amis-scope .a-CBGroupOrItem + .a-CBGroupOrItem {
   margin-top: 0.625rem;
 }
 
+.amis-scope .a-CBGroupOrItem-dragbar {
+  cursor: move;
+  width: 20px;
+  margin-left: -5px;
+  opacity: 0.6;
+  text-align: center;
+  transition: opacity 0s ease-out;
+  color: #4b5563;
+}
+
+.amis-scope .a-CBGroupOrItem-dragbar:hover {
+  color: #111827;
+}
+
 .amis-scope .a-CBGroupOrItem-body {
   display: flex;
-  padding: 2px 7px;
-  border-radius: 5px;
   flex-direction: row;
   align-items: center;
   position: relative;
-  background: rgba(0, 0, 0, 0.03);
   transition: all 0s ease-out;
 }
 
-.amis-scope .a-CBGroupOrItem-body > .a-CBGroup {
-  margin: 3px;
+.amis-scope .a-CBGroupOrItem-body-group {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.amis-scope .a-CBGroupOrItem-body:not(:hover) .a-CBDelete {
-  opacity: 0;
+.amis-scope .a-CBGroupOrItem-body-group > .a-CBGroupOrItem-dragbar {
+  left: -1rem;
+  position: absolute;
+}
+
+.amis-scope .a-CBGroupOrItem-body-group > .a-CBGroup {
+  margin: 0px;
+}
+
+.amis-scope .a-CBGroupOrItem-body-item {
+  background-color: #f7f7f9;
+  width: 100%;
+  padding: 0.75rem;
+  padding-left: 1.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.amis-scope .a-CBGroupOrItem-body-item > .a-CBGroupOrItem-dragbar {
+  left: 0.625rem;
+  position: absolute;
 }
 
 .amis-scope .a-CBGroupOrItem.is-dragging {
@@ -31767,59 +31799,17 @@ readers do not read off random characters that represent icons */
   background: rgba(35, 183, 229, 0.2);
 }
 
-.amis-scope .a-CBGroupOrItem-dragbar {
-  cursor: move;
-  width: 20px;
-  margin-left: -5px;
-  opacity: 0.6;
-  text-align: center;
-  transition: opacity 0s ease-out;
-  color: #4b5563;
-}
-
-.amis-scope .a-CBGroupOrItem-dragbar:hover {
-  color: #111827;
-}
-
 .amis-scope .a-CBGroupOrItem .a-CBGroup {
   flex-grow: 1;
 }
 
-.amis-scope .a-CBGroupOrItem:hover > .a-CBGroupOrItem-body {
-  background: rgba(0, 0, 0, 0.05);
+.amis-scope .a-CBGroupOrItem > .a-CBGroupOrItem-body > .a-CBGroupOrItem-body-group > .a-CBGroupOrItem-dragbar,
+.amis-scope .a-CBGroupOrItem > .a-CBGroupOrItem-body > .a-CBGroupOrItem-body-item > .a-CBGroupOrItem-dragbar {
+  opacity: 0;
 }
 
-.amis-scope .a-CBGroupOrItem:hover > .a-CBGroupOrItem-body > .a-CBGroupOrItem-dragbar {
+.amis-scope .a-CBGroupOrItem:hover > .a-CBGroupOrItem-body > .a-CBGroupOrItem-body-item > .a-CBGroupOrItem-dragbar {
   opacity: 1;
-}
-
-.amis-scope .a-CBGroupOrItem:before {
-  position: absolute;
-  content: "";
-  top: -10px;
-  left: -30px;
-  width: 20px;
-  border-left: solid 1px #d1d5db;
-  bottom: 0;
-}
-
-.amis-scope .a-CBGroupOrItem:after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  width: 20px;
-  left: -30px;
-  border-top: solid 1px #d1d5db;
-}
-
-.amis-scope .a-CBGroupOrItem:last-child:before {
-  border-bottom-left-radius: 5px;
-  border-bottom: solid 1px #d1d5db;
-  bottom: 50%;
-}
-
-.amis-scope .a-CBGroupOrItem:last-child:after {
-  display: none;
 }
 
 .amis-scope .a-CBGroupOrItem-simple {
@@ -31947,11 +31937,11 @@ readers do not read off random characters that represent icons */
   display: block;
   position: absolute;
   margin: 0;
-  padding: 0;
-  background: var(--menu-background);
-  box-shadow: var(--menu-box-shadow);
-  color: var(--menu-font-color);
-  font-family: var(--menu-font-family);
+  padding: 4px 0;
+  background: #fff;
+  box-shadow: 0 2px 8px 0 rgba(7, 12, 20, 0.12);
+  color: #151b26;
+  font-family: PingFangSC-Regular;
   font-size: 12px;
   line-height: 20px;
 }
@@ -31971,23 +31961,10 @@ readers do not read off random characters that represent icons */
   animation-name: contextMenuOut;
 }
 
-.amis-scope .a-ContextMenu-menu::before {
-  display: block;
-  position: absolute;
-  content: "";
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  right: -1px;
-  border-radius: var(--menu-border-radius);
-  border: 1px solid var(--menu-border-color);
-  z-index: -1;
-}
-
 .amis-scope .a-ContextMenu-divider {
   border: none;
   height: 1px;
-  background: var(--menu-border-color);
+  background: #e8e9eb;
   margin: 4px 1px;
   padding: 0;
 }
@@ -31996,7 +31973,7 @@ readers do not read off random characters that represent icons */
   list-style: none;
   margin: 0;
   padding: 0;
-  min-width: 100px;
+  min-width: 150px;
 }
 
 .amis-scope .a-ContextMenu-item {
@@ -32006,7 +31983,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-ContextMenu-item > a {
   white-space: nowrap;
   display: block;
-  padding: var(--default-padding);
+  padding: 4px 12px;
   color: inherit;
   border-top: none;
   border-bottom: none;
@@ -32014,15 +31991,15 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-ContextMenu-item:not(.is-disabled):hover > a {
   text-decoration: none;
-  color: var(--menu-active-color);
-  background: var(--menu-hover-bg-color);
+  color: #2468f2;
+  background: #e6f0ff;
   cursor: pointer;
   border-top: none;
   border-bottom: none;
 }
 
 .amis-scope .a-ContextMenu-item.is-disabled > a {
-  color: var(--menu-disabled-color);
+  color: #b8babf;
   pointer-events: none;
 }
 
@@ -32032,8 +32009,8 @@ readers do not read off random characters that represent icons */
   height: 0;
   border-width: 4px 7px;
   border-style: solid;
-  border-color: transparent transparent transparent var(--default-icon-color);
-  text-shadow: var(--menu-box-shadow);
+  border-color: transparent transparent transparent #84868c;
+  text-shadow: 0 2px 8px 0 rgba(7, 12, 20, 0.12);
   position: absolute;
   top: 50%;
   right: 0;
@@ -32041,7 +32018,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-ContextMenu-item.has-child:hover > a::after {
-  border-color: transparent transparent transparent var(--menu-active-color);
+  border-color: transparent transparent transparent #2468f2;
 }
 
 .amis-scope .a-ContextMenu-itemIcon {
@@ -32065,11 +32042,11 @@ readers do not read off random characters that represent icons */
   min-width: 100px;
   margin: 0;
   padding: 0;
-  background: var(--menu-background);
-  box-shadow: var(--menu-box-shadow);
-  border-radius: var(--menu-border-radius);
-  color: var(--menu-font-color);
-  font-family: var(--menu-font-family);
+  background: #fff;
+  box-shadow: 0 2px 8px 0 rgba(7, 12, 20, 0.12);
+  border-radius: 4px;
+  color: #151b26;
+  font-family: PingFangSC-Regular;
   font-size: 12px;
   line-height: 20px;
 }
@@ -32086,8 +32063,8 @@ readers do not read off random characters that represent icons */
   left: -1px;
   bottom: -1px;
   right: -1px;
-  border-radius: var(--menu-border-radius);
-  border: 1px solid var(--menu-border-color);
+  border-radius: 4px;
+  border: 1px solid #e8e9eb;
   z-index: -1;
 }
 
@@ -32466,6 +32443,12 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Crud-statistics {
   line-height: 1.875rem;
   vertical-align: middle;
+}
+
+.amis-scope .a-Crud-pageSwitch {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
 .amis-scope .a-Crud-pageSwitch .a-Select {
@@ -32898,12 +32881,6 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Table-table > tbody > tr.is-moved + tr,
 .amis-scope .a-Table-table > tbody > tr.is-modified + tr {
   border-color: #d0e0fd;
-}
-
-.amis-scope .a-Table-table > tbody > tr.is-summary {
-  background: #f6f8f8;
-  color: #414c52;
-  font-weight: 400;
 }
 
 .amis-scope .a-Table-table > tbody > tr.bg-light {
@@ -34161,6 +34138,1637 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Table--autoFillHeight > .a-Table-footToolbar {
   margin-bottom: 0;
+}
+
+.amis-scope .a-InputTable-toolbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.amis-scope .a-InputTable-pager {
+  margin-left: auto;
+}
+
+.amis-scope .a-OperationField {
+  margin: -0.1875rem;
+}
+
+.amis-scope .a-OperationField > .a-Button,
+.amis-scope .a-OperationField > .a-Button--disabled-wrap > .a-Button {
+  margin: 0.1875rem;
+}
+
+.amis-scope .a-OperationField > .a-Button--disabled-wrap > .a-Button--link {
+  padding: 0;
+}
+
+.amis-scope .a-OperationField > .a-Button--link {
+  padding: 0;
+  margin-right: 0.625rem;
+}
+
+.amis-scope .a-Table-v2 {
+  position: relative;
+  border-radius: 0.142rem;
+  margin-bottom: 1rem;
+}
+
+.amis-scope .a-Table-v2.a-Table-bordered {
+  border-width: 0.0625rem 0.0625rem 0 0.0625rem;
+  border-style: solid;
+  border-color: #d1d5db;
+  border-collapse: inherit;
+}
+
+.amis-scope .a-Table-v2.a-Table-bordered .a-Table-table > thead > tr > th,
+.amis-scope .a-Table-v2.a-Table-bordered .a-Table-table > tbody > tr > td,
+.amis-scope .a-Table-v2.a-Table-bordered .a-Table-table > tfoot > tr > td {
+  border-right: 0.0625rem solid #d1d5db;
+}
+
+.amis-scope .a-Table-v2.a-Table-bordered .a-Table-table > thead > tr > th:last-child,
+.amis-scope .a-Table-v2.a-Table-bordered .a-Table-table > tbody > tr > td:last-child,
+.amis-scope .a-Table-v2.a-Table-bordered .a-Table-table > tfoot > tr > td:last-child {
+  border-right: none;
+}
+
+.amis-scope .a-Table-v2.a-Table-bordered .a-Table-footer {
+  border-bottom: 0.0625rem solid #d1d5db;
+}
+
+.amis-scope .a-Table-v2.a-Table-bordered .a-Table-title {
+  border-bottom: 0.0625rem solid #d1d5db;
+}
+
+.amis-scope .a-Table-v2.a-Table-large .a-Table-table > thead > tr > th {
+  padding: calc(
+    (3.8125rem - 0.875rem * 1.5) /
+      2
+  ) 0.75rem;
+}
+
+.amis-scope .a-Table-v2.a-Table-large .a-Table-table > tbody > tr > td,
+.amis-scope .a-Table-v2.a-Table-large .a-Table-table > tbody > tr > th {
+  padding: calc(
+    (3.8125rem - 0.875rem * 1.5) /
+      2
+  ) 0.75rem;
+}
+
+.amis-scope .a-Table-v2.a-Table-large .a-Table-table > tfoot > tr > td {
+  padding: calc(
+    (3.8125rem - 0.875rem * 1.5) /
+      2
+  ) 0.75rem;
+}
+
+.amis-scope .a-Table-v2.a-Table-large .a-TableCell-filterBtn {
+  right: calc( 0.75rem - 1rem / 2 );
+}
+
+.amis-scope .a-Table-v2.a-Table-small .a-Table-table > thead > tr > th {
+  padding: calc(
+    (2.0625rem - 0.875rem * 1.5) /
+      2
+  ) 0.25rem;
+}
+
+.amis-scope .a-Table-v2.a-Table-small .a-Table-table > tbody > tr > td,
+.amis-scope .a-Table-v2.a-Table-small .a-Table-table > tbody > tr > th {
+  padding: calc(
+    (2.0625rem - 0.875rem * 1.5) /
+      2
+  ) 0.25rem;
+}
+
+.amis-scope .a-Table-v2.a-Table-small .a-Table-table > tfoot > tr > td {
+  padding: calc(
+    (2.0625rem - 0.875rem * 1.5) /
+      2
+  ) 0.25rem;
+}
+
+.amis-scope .a-Table-v2.a-Table-small .a-TableCell-filterBtn {
+  right: calc( 0.25rem - 1rem / 2 );
+}
+
+.amis-scope .a-Table-v2 .a-Table-title,
+.amis-scope .a-Table-v2 .a-Table-footer {
+  background: #fff;
+  padding: calc( ( 2.5rem - 0.875rem * 1.5 ) / 2 ) 0.5rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-header {
+  padding: 0.75rem 0;
+}
+
+.amis-scope .a-Table-v2 .a-Table-header.a-Table-sticky-holder {
+  position: sticky;
+  z-index: 3;
+  background: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-toolbar {
+  display: flex;
+  margin: 0 0 0.75rem;
+  flex-wrap: wrap;
+}
+
+.amis-scope .a-Table-v2 .a-Table-toolbar::before,
+.amis-scope .a-Table-v2 .a-Table-toolbar::after {
+  display: table;
+  content: "";
+}
+
+.amis-scope .a-Table-v2 .a-Table-toolbar::after {
+  clear: both;
+}
+
+.amis-scope .a-Table-v2 .a-Table-toolbar .a-DropDown-menuItem {
+  height: auto;
+}
+
+.amis-scope .a-Table-v2 .a-Table-toolbar .a-DropDown-menuItem .a-Checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .a-Table-v2 .a-Table-header + .a-Table-toolbar {
+  padding-top: 0;
+}
+
+.amis-scope .a-Table-v2 .a-Table-content {
+  min-height: 0.01%;
+  overflow-x: auto;
+  transform: translateZ(0);
+}
+
+.amis-scope .a-Table-v2 .a-Table-content th {
+  position: relative;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table {
+  width: 100%;
+  min-width: 100%;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  color: #58666e;
+  background: #fff;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: none;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table th,
+.amis-scope .a-Table-v2 .a-Table-table td {
+  text-align: left;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table th.text-center,
+.amis-scope .a-Table-v2 .a-Table-table td.text-center,
+.amis-scope .a-Table-v2 .a-Table-table th[colspan],
+.amis-scope .a-Table-v2 .a-Table-table td[colspan] {
+  text-align: center;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table th.text-right,
+.amis-scope .a-Table-v2 .a-Table-table td.text-right {
+  text-align: right;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th {
+  background: #f6f8f8;
+  padding: calc(
+    (2.5625rem - 0.875rem * 1.5) /
+      2
+  ) 0.5rem;
+  font-size: 0.875rem;
+  color: #414c52;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th:first-child {
+  padding-left: 0.75rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th.a-Table-cell-last {
+  padding-right: 0.75rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th:not(.a-Table-cell-last) {
+  border-right: 0.0625rem solid #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th.a-Table-row-expand-icon-cell {
+  border-right: 0;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th .a-Remark {
+  margin-left: 0.25rem;
+  position: relative;
+  top: 2px;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th .a-Table-head-cell-wrapper {
+  display: flex;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr:not(:last-child) {
+  border-bottom: 0.0625rem solid #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr {
+  position: relative;
+  border-bottom: 0.0625rem solid #d1d5db;
+  background: transparent;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.a-Table-summary-row > td {
+  background: #f6f8f8;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > th {
+  background: #f6f8f8;
+  color: #414c52;
+  font-weight: 400;
+  white-space: nowrap;
+  border-right: 0.0625rem solid #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > th {
+  padding: calc(
+    (2.5625rem - 0.875rem * 1.5) /
+      2
+  ) 0.5rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td:first-child,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > th:first-child {
+  padding-left: 0.75rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td:last-child,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > th:last-child {
+  padding-right: 0.75rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr .a-Table-cell-wrapper-prefix {
+  display: flex;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr .a-Table-cell-wrapper-prefix .a-Table-expandBtn {
+  margin-right: 5px;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr .a-Table-cell-height-large {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  overflow: hidden;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr .a-Table-cell-height-middle {
+  height: 1.875rem;
+  line-height: 1.875rem;
+  overflow: hidden;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.a-Table-tr--odd {
+  background: #f9fafa;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.a-Table-tr--hasItemAction:hover {
+  cursor: pointer;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-hovered {
+  background: #f3f6f6;
+  border-color: #d6dfdf;
+  color: #58666e;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr:hover + tr,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-hovered + tr {
+  border-color: #d6dfdf;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-checked {
+  background: #d9f3fb;
+  border-color: #abe4f6;
+  color: #20b9e8;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-checked + tr {
+  border-color: #abe4f6;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-moved,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-modified {
+  background: #e8f0fe;
+  border-color: #d0e0fd;
+  color: #4285f4;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-moved + tr,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-modified + tr {
+  border-color: #d0e0fd;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-summary {
+  background: #f6f8f8;
+  color: #414c52;
+  font-weight: 400;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-light {
+  background-color: #edf1f2;
+  color: #58666e;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-light.lt,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-light .lt {
+  background: #f3f5f6;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-light.lter,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-light .lter {
+  background: #f6f8f8;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-light.dk,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-light .dk {
+  background: #e4eaec;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-light.dker,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-light .dker {
+  background: #dde6e9;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-light.bg,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-light .bg {
+  background-color: #edf1f2;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark {
+  background-color: #3a3f51;
+  color: #a6a8b1;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark.lt,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark .lt {
+  background: #474c5e;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark.lter,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark .lter {
+  background: #54596a;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark.dk,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark .dk {
+  background: #2e3344;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark.dker,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark .dker {
+  background: #232735;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark.bg,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark .bg {
+  background-color: #3a3f51;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark .a-Button--link {
+  color: #c1c3c9;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark .a-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark .open > a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark .open > a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark .text-muted {
+  color: #414c52 !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-dark .text-lt {
+  color: #99a6ad !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black {
+  background-color: #1c2b36;
+  color: #7793a7;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black.lt,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black .lt {
+  background: #263845;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black.lter,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black .lter {
+  background: #314554;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black.dk,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black .dk {
+  background: #131e26;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black.dker,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black .dker {
+  background: #0a1015;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black.bg,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black .bg {
+  background-color: #1c2b36;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black .a-Button--link {
+  color: #96abbb;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black .a-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black .open > a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black .open > a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black .text-muted {
+  color: #414c52 !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-black .text-lt {
+  color: #99a6ad !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary {
+  background-color: #7266ba;
+  color: #f4f3f9;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary.lt,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary .lt {
+  background: #847abf;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary.lter,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary .lter {
+  background: #958dc6;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary.dk,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary .dk {
+  background: #6051b5;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary.dker,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary .dker {
+  background: #5244a9;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary.bg,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary .bg {
+  background-color: #7266ba;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary .a-Button--link {
+  color: white;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary .a-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary .open > a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary .open > a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary .text-muted {
+  color: #414c52 !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-primary .text-lt {
+  color: #99a6ad !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success {
+  background-color: #27c24c;
+  color: #c6efd0;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success.lt,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success .lt {
+  background: #31d257;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success.lter,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success .lter {
+  background: #48d46a;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success.dk,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success .dk {
+  background: #20af42;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success.dker,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success .dker {
+  background: #1a9c39;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success.bg,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success .bg {
+  background-color: #27c24c;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success .a-Button--link {
+  color: #eefaf1;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success .a-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success .open > a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success .open > a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success .text-muted {
+  color: #414c52 !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-success .text-lt {
+  color: #99a6ad !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info {
+  background-color: #23b7e5;
+  color: #dcf2f8;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info.lt,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info .lt {
+  background: #3dbde5;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info.lter,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info .lter {
+  background: #55c3e6;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info.dk,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info .dk {
+  background: #16aad8;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info.dker,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info .dker {
+  background: #1199c4;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info.bg,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info .bg {
+  background-color: #23b7e5;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info .a-Button--link {
+  color: white;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info .a-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info .open > a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info .open > a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info .text-muted {
+  color: #414c52 !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-info .text-lt {
+  color: #99a6ad !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning {
+  background-color: #fad733;
+  color: #fffefa;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning.lt,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning .lt {
+  background: #f8da4e;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning.lter,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning .lter {
+  background: #f7de69;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning.dk,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning .dk {
+  background: #fcd417;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning.dker,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning .dker {
+  background: #face00;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning.bg,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning .bg {
+  background-color: #fad733;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning .a-Button--link {
+  color: white;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning .a-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning .open > a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning .open > a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning .text-muted {
+  color: #414c52 !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-warning .text-lt {
+  color: #99a6ad !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger {
+  background-color: #f05050;
+  color: white;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger.lt,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger .lt {
+  background: #f06a6a;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger.lter,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger .lter {
+  background: #f18282;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger.dk,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger .dk {
+  background: #f13636;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger.dker,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger .dker {
+  background: #f21b1b;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger.bg,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger .bg {
+  background-color: #f05050;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger .a-Button--link {
+  color: white;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger .a-Button--link:hover {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger .open > a,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger .open > a:hover,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger .open > a:focus {
+  color: #fff;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger .text-muted {
+  color: #414c52 !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.bg-danger .text-lt {
+  color: #99a6ad !important;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-dragging {
+  opacity: 0.1;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--2th.is-expanded .a-Table-expandCell:before {
+  right: -0.6875rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--2th .a-Table-expandBtn {
+  position: relative;
+  right: -1.125rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--2th .a-Table-expandCell + td {
+  position: relative;
+  padding-left: 1.125rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--2th .a-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: -0.5rem;
+  height: auto;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--2th .a-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: -0.5rem;
+  width: 0.625rem;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--2th.is-expandable .a-Table-expandCell + td {
+  padding-left: 1.125rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--2th.is-last:not(.is-expanded) .a-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--3th.is-expanded .a-Table-expandCell:before {
+  right: -1.8125rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--3th .a-Table-expandBtn {
+  position: relative;
+  right: -2.25rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--3th .a-Table-expandCell + td {
+  position: relative;
+  padding-left: 2.25rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--3th .a-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 0.625rem;
+  height: auto;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--3th .a-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 0.625rem;
+  width: 0.625rem;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--3th.is-expandable .a-Table-expandCell + td {
+  padding-left: 2.25rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--3th.is-last:not(.is-expanded) .a-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--4th.is-expanded .a-Table-expandCell:before {
+  right: -2.9375rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--4th .a-Table-expandBtn {
+  position: relative;
+  right: -3.375rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--4th .a-Table-expandCell + td {
+  position: relative;
+  padding-left: 3.375rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--4th .a-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 1.75rem;
+  height: auto;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--4th .a-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 1.75rem;
+  width: 0.625rem;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--4th.is-expandable .a-Table-expandCell + td {
+  padding-left: 3.375rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--4th.is-last:not(.is-expanded) .a-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--5th.is-expanded .a-Table-expandCell:before {
+  right: -4.0625rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--5th .a-Table-expandBtn {
+  position: relative;
+  right: -4.5rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--5th .a-Table-expandCell + td {
+  position: relative;
+  padding-left: 4.5rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--5th .a-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 2.875rem;
+  height: auto;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--5th .a-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 2.875rem;
+  width: 0.625rem;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--5th.is-expandable .a-Table-expandCell + td {
+  padding-left: 4.5rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--5th.is-last:not(.is-expanded) .a-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--6th.is-expanded .a-Table-expandCell:before {
+  right: -5.1875rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--6th .a-Table-expandBtn {
+  position: relative;
+  right: -5.625rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--6th .a-Table-expandCell + td {
+  position: relative;
+  padding-left: 5.625rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--6th .a-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 4rem;
+  height: auto;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--6th .a-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 4rem;
+  width: 0.625rem;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--6th.is-expandable .a-Table-expandCell + td {
+  padding-left: 5.625rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--6th.is-last:not(.is-expanded) .a-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--7th.is-expanded .a-Table-expandCell:before {
+  right: -6.3125rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--7th .a-Table-expandBtn {
+  position: relative;
+  right: -6.75rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--7th .a-Table-expandCell + td {
+  position: relative;
+  padding-left: 6.75rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--7th .a-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 5.125rem;
+  height: auto;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--7th .a-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 5.125rem;
+  width: 0.625rem;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--7th.is-expandable .a-Table-expandCell + td {
+  padding-left: 6.75rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--7th.is-last:not(.is-expanded) .a-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--8th.is-expanded .a-Table-expandCell:before {
+  right: -7.4375rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--8th .a-Table-expandBtn {
+  position: relative;
+  right: -7.875rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--8th .a-Table-expandCell + td {
+  position: relative;
+  padding-left: 7.875rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--8th .a-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 6.25rem;
+  height: auto;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--8th .a-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 6.25rem;
+  width: 0.625rem;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--8th.is-expandable .a-Table-expandCell + td {
+  padding-left: 7.875rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--8th.is-last:not(.is-expanded) .a-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--9th.is-expanded .a-Table-expandCell:before {
+  right: -8.5625rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--9th .a-Table-expandBtn {
+  position: relative;
+  right: -9rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--9th .a-Table-expandCell + td {
+  position: relative;
+  padding-left: 9rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--9th .a-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 7.375rem;
+  height: auto;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--9th .a-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 7.375rem;
+  width: 0.625rem;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--9th.is-expandable .a-Table-expandCell + td {
+  padding-left: 9rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--9th.is-last:not(.is-expanded) .a-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--10th.is-expanded .a-Table-expandCell:before {
+  right: -9.6875rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--10th .a-Table-expandBtn {
+  position: relative;
+  right: -10.125rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--10th .a-Table-expandCell + td {
+  position: relative;
+  padding-left: 10.125rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--10th .a-Table-expandCell + td::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  left: 8.5rem;
+  height: auto;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--10th .a-Table-expandCell + td::after {
+  content: "";
+  position: absolute;
+  height: 0.0625rem;
+  top: 50%;
+  left: 8.5rem;
+  width: 0.625rem;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--10th.is-expandable .a-Table-expandCell + td {
+  padding-left: 10.125rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table tr.a-Table-tr--10th.is-last:not(.is-expanded) .a-Table-expandCell + td::before {
+  height: 50%;
+  bottom: auto;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th.a-Table-checkCell,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-checkCell {
+  border-right: 0;
+  white-space: nowrap;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th.a-Table-checkCell .a-Checkbox,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-checkCell .a-Checkbox {
+  margin: 0;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th.a-Table-expandCell,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-expandCell {
+  border-right: 0;
+  width: 0.0625rem;
+  padding-right: 0;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th.a-Table-dragCell,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-dragCell {
+  border-right: 0;
+  width: 0.0625rem;
+  padding-right: 0;
+  cursor: move;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th.a-Table-dragCell > svg,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-dragCell > svg {
+  vertical-align: middle;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-expandCell {
+  position: relative;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-expandCell .a-Table-divider-1 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d1d5db;
+  right: 0.4375rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-expandCell .a-Table-divider-2 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d1d5db;
+  right: -0.6875rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-expandCell .a-Table-divider-3 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d1d5db;
+  right: -1.8125rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-expandCell .a-Table-divider-4 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d1d5db;
+  right: -2.9375rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-expandCell .a-Table-divider-5 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d1d5db;
+  right: -4.0625rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-expandCell .a-Table-divider-6 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d1d5db;
+  right: -5.1875rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-expandCell .a-Table-divider-7 {
+  position: absolute;
+  width: 0.0625rem;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d1d5db;
+  right: -6.3125rem;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-expanded > td.a-Table-expandCell::before {
+  content: "";
+  position: absolute;
+  width: 0.0625rem;
+  top: 50%;
+  bottom: 0;
+  right: 0.4375rem;
+  height: auto;
+  background: #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th.a-TableCell--sortable {
+  padding-right: calc( 0.5rem + 0.5rem );
+  position: relative;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th.a-TableCell--searchable {
+  padding-right: calc( 0.5rem + 1rem );
+  position: relative;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th.a-TableCell--filterable {
+  padding-right: calc( 0.5rem + 1rem );
+  position: relative;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.a-Table-row-disabled {
+  background: var(--TableRow-onDisabled-bg);
+  color: var(--TableRow-onDisabled-color);
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr:not(.a-Table-row-disabled) > td.a-Table-cell-row-hover {
+  background: #f3f6f6;
+  border-color: #d6dfdf;
+  color: #58666e;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th.a-Table-cell-fix-left-last:after,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-cell-fix-left-last:after,
+.amis-scope .a-Table-v2 .a-Table-table > tfoot > tr > td.a-Table-cell-fix-left-last:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -1px;
+  width: 30px;
+  transform: translate(100%);
+  transition: box-shadow 0.3s;
+  content: "";
+  pointer-events: none;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > thead > tr > th.a-Table-cell-fix-right-first:after,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-cell-fix-right-first:after,
+.amis-scope .a-Table-v2 .a-Table-table > tfoot > tr > td.a-Table-cell-fix-right-last:after {
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: 0;
+  width: 30px;
+  transform: translate(-100%);
+  transition: box-shadow 0.3s;
+  content: "";
+  pointer-events: none;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-cell-expand-icon-cell {
+  text-align: center;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td.a-Table-cell-expand-icon-cell .a-Table-row-indent {
+  height: 1px;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.a-Table-expanded-row > td {
+  background: #f3f6f6;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tfoot > tr {
+  border-bottom: 0.0625rem solid #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tfoot > tr > td {
+  padding: calc(
+    (2.5625rem - 0.875rem * 1.5) /
+      2
+  ) 0.5rem;
+  background: #f6f8f8;
+}
+
+.amis-scope .a-Table-v2 .a-Table-container .a-Table-header {
+  padding: 0;
+}
+
+.amis-scope .a-Table-v2.a-Table-ping-left .a-Table-table > thead > tr > th.a-Table-cell-fix-left-last:after,
+.amis-scope .a-Table-v2.a-Table-ping-left .a-Table-table > tbody > tr > td.a-Table-cell-fix-left-last:after,
+.amis-scope .a-Table-v2.a-Table-ping-left .a-Table-table > tfoot > tr > td.a-Table-cell-fix-left-last:after {
+  box-shadow: inset 10px 0 8px -8px #00000026;
+}
+
+.amis-scope .a-Table-v2.a-Table-ping-left .a-Table-table > tbody > tr:not(.a-Table-row-disabled) > td.a-Table-cell-fix-left {
+  border-right: none;
+}
+
+.amis-scope .a-Table-v2.a-Table-ping-left .a-Table-table > tbody > tr:not(.a-Table-row-disabled) > td.a-Table-cell-fix-left:not(.a-Table-cell-row-hover) {
+  background: #FFF;
+}
+
+.amis-scope .a-Table-v2.a-Table-ping-left .a-Table-table > tfoot > tr > td:not(:last-child).a-Table-cell-fix-left-last {
+  border-right: none;
+}
+
+.amis-scope .a-Table-v2.a-Table-ping-left .a-Table-table > thead > tr > th:not(:last-child):not(:first-child).a-Table-cell-fix-left-last {
+  border-right: none;
+}
+
+.amis-scope .a-Table-v2.a-Table-ping-right .a-Table-table > thead > tr > th.a-Table-cell-fix-right-first:after,
+.amis-scope .a-Table-v2.a-Table-ping-right .a-Table-table > tbody > tr > td.a-Table-cell-fix-right-first:after,
+.amis-scope .a-Table-v2.a-Table-ping-right .a-Table-table > tfoot > tr > td.a-Table-cell-fix-right-first:after {
+  box-shadow: inset -10px 0 8px -8px #00000026;
+}
+
+.amis-scope .a-Table-v2.a-Table-ping-right .a-Table-table > tbody > tr:not(.a-Table-row-disabled) > td.a-Table-cell-fix-right {
+  border-right: none;
+}
+
+.amis-scope .a-Table-v2.a-Table-ping-right .a-Table-table > tbody > tr:not(.a-Table-row-disabled) > td.a-Table-cell-fix-right:not(.a-Table-cell-row-hover) {
+  background: #FFF;
+}
+
+.amis-scope .a-Table-v2.a-Table-ping-right:not(.a-Table-bordered) .a-Table-table > thead > tr > th.a-Table-cell-fix-right-first-prev {
+  border-right: none;
+}
+
+.amis-scope .a-Table-v2.a-Table-ping-right:not(.a-Table-bordered) .a-Table-table > thead > tr > th:not(:last-child).a-Table-cell-fix-right-first {
+  border-right: none;
+}
+
+.amis-scope .a-Table-v2.a-Table-resizable .a-Table-table > thead > tr > th {
+  position: relative;
+}
+
+.amis-scope .a-Table-v2.a-Table-resizable .a-Table-table > thead > tr > th .a-Table-thead-resizable {
+  position: absolute;
+  width: 1px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: col-resize;
+}
+
+.amis-scope .a-Table-v2 .a-Table-loading {
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn {
+  cursor: pointer;
+  width: 0.5rem;
+  height: 1rem;
+  position: static;
+  display: inline-block;
+  transform: none;
+  color: #4b5563;
+  margin-left: 0.5rem;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn:hover {
+  color: #111827;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--up > svg,
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--down > svg,
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--default > svg {
+  color: inherit;
+  width: 13px;
+  height: 13px;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--up,
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--down,
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--default {
+  display: none;
+  z-index: 2;
+  font-style: normal;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--up.is-active,
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--down.is-active,
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--default.is-active {
+  display: inline-block;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--default.is-active {
+  color: #99a6ad;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--default.is-active:hover {
+  color: #58666e;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--up.is-active,
+.amis-scope .a-Table-v2 .a-TableCell-sortBtn--down.is-active {
+  color: #7266ba;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-searchBtn {
+  cursor: pointer;
+  position: static;
+  transform: translateY(-50%);
+  color: #99a6ad;
+  margin-left: 0.5rem;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-searchBtn svg.icon {
+  width: 12px;
+  height: 12px;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-searchBtn:hover {
+  color: #58666e;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-searchBtn.is-active {
+  color: #7266ba;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-searchPopOver {
+  border: none;
+  min-width: 20rem;
+  max-width: 40rem;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-searchPopOver .a-Panel {
+  margin: 0;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterBtn {
+  cursor: pointer;
+  width: 1rem;
+  position: static;
+  display: inline-block;
+  transform: none;
+  color: #99a6ad;
+  margin-left: 0.5rem;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterBtn svg.icon {
+  width: 13px;
+  height: 13px;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterBtn:hover {
+  color: #58666e;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterBtn.is-active {
+  color: #7266ba;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterBtn .a-Remark {
+  display: inline;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterPopOver {
+  border: none;
+  width: 10rem;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterPopOver .a-DropDown-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterPopOver .a-DropDown-menu .a-DropDown-divider {
+  height: 2.125rem;
+  line-height: 2.125rem;
+  padding: 0 0.75rem;
+  background: #fff;
+  margin: 0;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterPopOver .a-DropDown-menu .a-DropDown-divider:hover {
+  background: #edf1f2;
+  color: #7266ba;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterPopOver .a-DropDown-menu .a-DropDown-divider.is-selected {
+  background: #edf1f2;
+  color: #7266ba;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterPopOver .a-DropDown-menu .a-DropDown-divider .a-Checkbox {
+  width: 100%;
+  margin: 0;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterPopOver .a-DropDown-multiple-menu {
+  text-align: center;
+  border-top: 1px solid #d1d5db;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterPopOver .a-DropDown-multiple-menu .a-Button {
+  margin: 0 5px;
+  padding: 0 10px;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-filterPopOver .a-DropDown-multiple-menu:hover {
+  background: none;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-selectionBtn {
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-selectionBtn svg.icon {
+  transform: rotate(270deg);
+  font-size: 12px;
+}
+
+.amis-scope .a-Table-v2 .a-TableCell-selectionPopOver .a-DropDown-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.amis-scope .a-Table-v2.a-Table-expandBtn {
+  position: relative;
+  z-index: 1;
+  color: #23b7e5;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.875rem;
+  line-height: 1;
+  height: 16px;
+}
+
+.amis-scope .a-Table-v2.a-Table-expandBtn > svg {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  transition: transform ease-in-out 0s, top ease-in-out 0s;
+  position: relative;
+  transform-origin: 50% 50%;
+  width: 0.625rem;
+  height: 0.625rem;
+  top: 0;
+}
+
+.amis-scope .a-Table-v2.a-Table-expandBtn.is-active > svg {
+  transform: rotate(90deg);
+}
+
+.amis-scope .a-Table-v2.a-Table-expandBtn:hover {
+  text-decoration: none;
+}
+
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr:hover .a-Table-dragBtn,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-dragging .a-Table-dragBtn,
+.amis-scope .a-Table-v2 .a-Table-table > tbody > tr.is-drop-allowed .a-Table-dragBtn {
+  visibility: visible;
+}
+
+.amis-scope .a-Table-v2 .fake-hide {
+  visibility: hidden;
+  position: absolute;
+}
+
+.amis-scope .a-Table-v2 .a-Table-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .amis-scope .a-InputTable-toolbar {
@@ -35630,7 +37238,8 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Pagination > li {
-  display: inline;
+  display: inline-flex;
+  cursor: pointer;
 }
 
 .amis-scope .a-Pagination > li > a,
@@ -35660,6 +37269,16 @@ readers do not read off random characters that represent icons */
   color: #7266ba;
 }
 
+.amis-scope .a-Pagination .ellipsis {
+  cursor: unset;
+}
+
+.amis-scope .a-Pagination .ellipsis > a {
+  cursor: unset;
+  position: relative;
+  top: -0.25rem;
+}
+
 .amis-scope .a-Pagination > li.is-disabled > span,
 .amis-scope .a-Pagination > li.is-disabled > a {
   cursor: not-allowed;
@@ -35686,43 +37305,112 @@ readers do not read off random characters that represent icons */
   border-radius: 0.142rem;
 }
 
-.amis-scope .a-Pagination-prev > span {
-  cursor: pointer;
+.amis-scope .a-Pagination-simple > ul > li:hover,
+.amis-scope .a-Pagination-simple > ul > li:focus {
+  outline: none;
 }
 
-.amis-scope .a-Pagination-ellipsis > a > span {
-  position: relative;
-  top: -0.25rem;
+.amis-scope .a-Pagination-simple > ul > li.is-active > a {
+  border: none;
+}
+
+.amis-scope .a-Pagination-simple > ul > li.is-active > a:hover,
+.amis-scope .a-Pagination-simple > ul > li.is-active > a:focus {
+  border: none;
+}
+
+.amis-scope .a-Pagination-prev > span {
+  cursor: pointer;
 }
 
 .amis-scope .a-Pagination-next > span {
   cursor: pointer;
 }
 
+.amis-scope .a-Pagination-total {
+  display: inline-block;
+  color: #84868c;
+}
+
 .amis-scope .a-Pagination-inputGroup {
   display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
+  height: 1.875rem;
+}
+
+.amis-scope .a-Pagination-inputGroup-left {
+  color: #84868c;
 }
 
 .amis-scope .a-Pagination-inputGroup input {
-  width: 3.5rem;
+  min-width: 3.125rem;
+  width: 3.125rem;
   height: 1.875rem;
+  line-height: 1.875rem;
+  border: none;
   border: 0.0625rem solid #d1d5db;
-  border-radius: 0.142rem;
-  padding: 0.25rem 0.625rem;
-  margin: 0 0.625rem;
+  border-radius: 0.142rem 0 0 0.142rem;
+  padding: 0 0.5rem;
+  margin-left: 0.625rem;
   text-align: center;
-}
-
-.amis-scope .a-Pagination-inputGroup input:focus {
-  width: auto;
 }
 
 .amis-scope .a-Pagination-inputGroup input:focus,
 .amis-scope .a-Pagination-inputGroup input:hover {
   outline: none;
-  border: 0.0625rem solid #7266ba;
+  border-color: #7266ba;
+}
+
+.amis-scope .a-Pagination-inputGroup-right {
+  display: inline-block;
+  width: 2rem;
+  cursor: pointer;
+  text-align: center;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  border: 0.0625rem solid #d1d5db;
+  border-left: none;
+  border-radius: 0 0.142rem 0.142rem 0;
+  font-size: 0.75rem;
+}
+
+.amis-scope .a-Pagination-inputGroup-right:hover {
+  color: #7266ba;
+  border-color: #7266ba;
+  border-left: 0.0625rem solid #7266ba;
+}
+
+.amis-scope .a-Pagination-wrap {
+  line-height: 1.875rem;
+}
+
+.amis-scope .a-Pagination-wrap .a-Pagination-item {
+  margin-left: 0.625rem;
+}
+
+.amis-scope .a-Pagination-wrap .a-Pagination-item:nth-child(1) {
+  margin-left: 0;
+}
+
+.amis-scope .a-Pagination-wrap.disabled {
+  background-color: #fff;
+}
+
+.amis-scope .a-Pagination-wrap.disabled .a-Pagination > li > a,
+.amis-scope .a-Pagination-wrap.disabled .a-Pagination > li > span {
+  color: #99a6ad;
+  cursor: not-allowed;
+}
+
+.amis-scope .a-Pagination-wrap.disabled .a-Pagination > li.is-active > a,
+.amis-scope .a-Pagination-wrap.disabled .a-Pagination > li.is-active > span,
+.amis-scope .a-Pagination-wrap.disabled .a-Pagination > li.is-active > a:hover,
+.amis-scope .a-Pagination-wrap.disabled .a-Pagination > li.is-active > span:hover,
+.amis-scope .a-Pagination-wrap.disabled .a-Pagination > li.is-active > a:focus,
+.amis-scope .a-Pagination-wrap.disabled .a-Pagination > li.is-active > span:focus {
+  background-color: #e5e7eb;
+  border-color: #99a6ad;
 }
 
 .amis-scope .a-PaginationWrapper-pager {
@@ -36586,6 +38274,132 @@ readers do not read off random characters that represent icons */
   cursor: pointer;
 }
 
+.amis-scope .a-SchemaEditorProps {
+  width: 100%;
+}
+
+.amis-scope .a-SchemaEditorProps > button {
+  margin-top: 7px;
+}
+
+.amis-scope .a-SchemaEditorProps-placeholder {
+  color: #99a6ad;
+}
+
+.amis-scope .a-SchemaEditorProps--depth {
+  position: relative;
+  margin-left: 2.5rem;
+}
+
+.amis-scope .a-SchemaEditorProps--depth:before {
+  width: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  bottom: 10px;
+  left: -35px;
+  border-left: dashed 1px #4b5563;
+}
+
+.amis-scope .a-SchemaEditorProps--depth .a-SchemaEditorItem:before {
+  height: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 17px;
+  width: 25px;
+  left: -35px;
+  border-top: dashed 1px #4b5563;
+}
+
+.amis-scope .a-SchemaEditorProps--depth > button {
+  position: relative;
+}
+
+.amis-scope .a-SchemaEditorProps--depth > button:before {
+  height: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  width: 25px;
+  left: -35px;
+  border-top: dashed 1px #4b5563;
+}
+
+.amis-scope .a-SchemaEditorArrayProps:before {
+  bottom: 15px;
+}
+
+.amis-scope .a-SchemaEditorItem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.amis-scope .a-SchemaEditorItem + .a-SchemaEditorItem {
+  margin-top: 0.5rem;
+}
+
+.amis-scope .a-SchemaEditorObject,
+.amis-scope .a-SchemaEditorArray {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.amis-scope .a-SchemaEditor-itemsLabel {
+  margin-top: calc((1.875rem - 1.375rem) / 2);
+}
+
+.amis-scope .a-SchemaEditor-caret {
+  display: inline-block;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 0s;
+  color: #4b5563;
+  margin-top: calc((1.875rem - 1.375rem) / 2);
+}
+
+.amis-scope .a-SchemaEditor-caret > svg {
+  width: 10px;
+  height: 10px;
+  top: 0;
+}
+
+.amis-scope .a-SchemaEditor-caret.is-collapsed {
+  transform: rotate(-90deg);
+}
+
+.amis-scope .a-SchemaEditor-required {
+  padding-top: 4px;
+}
+
+.amis-scope .a-SchemaEditor-key,
+.amis-scope .a-SchemaEditor-title,
+.amis-scope .a-SchemaEditor-description {
+  flex: 1;
+  max-width: 200px;
+  min-width: 80px;
+}
+
+.amis-scope .a-SchemaEditor-key > input,
+.amis-scope .a-SchemaEditor-title > input,
+.amis-scope .a-SchemaEditor-description > input {
+  flex-basis: 0;
+}
+
 .amis-scope .a-ResultBox {
   display: flex;
   background: #fff;
@@ -36602,7 +38416,7 @@ readers do not read off random characters that represent icons */
   flex-wrap: wrap;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding: 0 1.625rem 0 0.1875rem;
+  padding: 0 0.3125rem;
   min-height: 1.875rem;
   align-items: center;
   border-radius: 3px;
@@ -38253,6 +40067,11 @@ readers do not read off random characters that represent icons */
   fill: #2d323c;
 }
 
+.amis-scope .a-TextControl-passwordReveal {
+  cursor: pointer;
+  color: #99a6ad;
+}
+
 @media (min-width: 576px) {
   .amis-scope .a-TextControl.a-Form-control--sizeXs > .a-TextControl-input,
   .amis-scope .a-TextControl.a-Form-control--sizeSm > .a-TextControl-input,
@@ -38407,7 +40226,7 @@ readers do not read off random characters that represent icons */
   border: 0.0625rem solid #23b7e5;
   left: -0.0625rem;
   right: -0.0625rem;
-  top: 100%;
+  top: calc(100% + 0.25rem);
   z-index: 10;
   max-height: 18.75rem;
   overflow: auto;
@@ -38619,6 +40438,11 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-TextareaControl-clear:active svg {
   fill: #2d323c;
+}
+
+.amis-scope .a-TextareaControl-passwordReveal {
+  cursor: pointer;
+  color: #99a6ad;
 }
 
 @media (min-width: 576px) {
@@ -39292,6 +41116,10 @@ readers do not read off random characters that represent icons */
   bottom: 0;
 }
 
+.amis-scope .a-TreeSelection-item.is-disabled {
+  color: #99a6ad;
+}
+
 .amis-scope .a-TreeSelection-sublist .a-TreeSelection-item:before {
   height: 1px;
   content: "";
@@ -39312,7 +41140,6 @@ readers do not read off random characters that represent icons */
   flex-direction: row;
   cursor: pointer;
   user-select: none;
-  position: relative;
 }
 
 .amis-scope .a-TreeSelection-itemInner > .a-Checkbox {
@@ -39320,19 +41147,7 @@ readers do not read off random characters that represent icons */
   margin-left: 0.5rem;
 }
 
-.amis-scope .a-TreeSelection-itemInner > * {
-  position: relative;
-  z-index: 2;
-}
-
-.amis-scope .a-TreeSelection-itemInner:hover:after {
-  position: absolute;
-  content: "";
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: -99999px;
+.amis-scope .a-TreeSelection-itemInner:hover {
   background: rgba(0, 126, 255, 0.08);
 }
 
@@ -39699,17 +41514,7 @@ readers do not read off random characters that represent icons */
   border-color: #23b7e5;
 }
 
-.amis-scope .a-Number:hover .a-Number-handler-up,
-.amis-scope .a-Number:hover .a-Number-handler-wrap {
-  border-color: #23b7e5;
-}
-
 .amis-scope .a-Number-disabled:hover {
-  border-color: #d1d5db;
-}
-
-.amis-scope .a-Number-disabled:hover .a-Number-handler-up,
-.amis-scope .a-Number-disabled:hover .a-Number-handler-wrap {
   border-color: #d1d5db;
 }
 
@@ -39731,7 +41536,7 @@ readers do not read off random characters that represent icons */
   border: 0;
   border-radius: 0.142rem;
   color: #58666e;
-  padding: 0 0.5rem;
+  padding: 0 0.75rem;
 }
 
 .amis-scope .a-Number-handler {
@@ -39744,6 +41549,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Number-handler:hover {
   background: #f2f2f2;
   color: #58666e;
+  cursor: pointer;
 }
 
 .amis-scope .a-Number-handler:hover:active {
@@ -39786,20 +41592,39 @@ readers do not read off random characters that represent icons */
   color: #99a6ad;
 }
 
+.amis-scope .a-Number-disabled {
+  border-color: #d1d5db;
+}
+
 .amis-scope .a-Number-disabled .a-Number-input {
+  opacity: 0.72;
   cursor: not-allowed;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   color: #99a6ad;
   background: #e5e7eb;
   border-color: #d1d5db;
 }
 
+.amis-scope .a-Number-disabled .a-Number-handler-wrap {
+  border-color: #d1d5db;
+}
+
 .amis-scope .a-Number-disabled .a-Number-handler {
+  cursor: not-allowed;
+  color: #99a6ad;
+  background: #e5e7eb;
+  border-color: #d1d5db;
   opacity: 0.72;
 }
 
 .amis-scope .a-Number-disabled .a-Number-handler:hover {
   color: #99a6ad;
   border-color: #d1d5db;
+}
+
+.amis-scope .a-Number-disabled .a-Number-handler:hover:active {
+  background: #e5e7eb;
 }
 
 .amis-scope .a-NumberControl:not(.is-inline) > .a-Number {
@@ -39821,6 +41646,131 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-NumberControl--withUnit .a-Select {
   border-left: 0;
+}
+
+.amis-scope .a-Number--enhance {
+  display: inline-flex;
+  align-items: center;
+  border: 0.0625rem solid #d1d5db;
+  border-radius: 0.142rem;
+  overflow: hidden;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-left-icon,
+.amis-scope .a-Number--enhance .a-Number--enhance-right-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #58666e;
+  background: #fff;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-left-icon:hover,
+.amis-scope .a-Number--enhance .a-Number--enhance-right-icon:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #23b7e5;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-left-icon-focused,
+.amis-scope .a-Number--enhance .a-Number--enhance-right-icon-focused {
+  background: #fff;
+  color: #23b7e5;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-left-icon > svg,
+.amis-scope .a-Number--enhance .a-Number--enhance-right-icon > svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-left-icon {
+  border-top-left-radius: 0.142rem;
+  border-bottom-left-radius: 0.142rem;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-right-icon {
+  border-top-right-radius: 0.142rem;
+  border-bottom-right-radius: 0.142rem;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-input {
+  flex: 1;
+  border: 0;
+  border-left: 0.0625rem solid #d1d5db;
+  border-right: 0.0625rem solid #d1d5db;
+  border-radius: 0;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-input .a-Number-handler-wrap {
+  display: none;
+}
+
+.amis-scope .a-Number--enhance:hover {
+  border-color: #23b7e5;
+}
+
+.amis-scope .a-Number--enhance:focus-within {
+  border-color: #23b7e5;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-border-min,
+.amis-scope .a-Number--enhance .a-Number--enhance-border-max {
+  background: #e5e7eb;
+  pointer-events: none;
+  color: #99a6ad;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-border-min:hover,
+.amis-scope .a-Number--enhance .a-Number--enhance-border-max:hover {
+  background: #e5e7eb;
+  color: #99a6ad;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-border-disabled {
+  background: #e5e7eb;
+  color: #b4b6ba;
+  cursor: not-allowed;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-border-disabled:hover {
+  cursor: not-allowed;
+  background: #e5e7eb;
+  color: #b4b6ba;
+}
+
+.amis-scope .a-Number--enhance .a-Number--enhance-border-readOnly:hover,
+.amis-scope .a-Number--enhance .a-Number--enhance-border-readOnly:hover {
+  color: #58666e;
+}
+
+.amis-scope .a-Number--enhance-no-steps .a-Number--enhance-left-icon,
+.amis-scope .a-Number--enhance-no-steps .a-Number--enhance-right-icon {
+  display: none;
+}
+
+.amis-scope .a-Number--enhance-no-steps .a-Number--enhance-input {
+  border: none;
+  border-radius: 0.142rem;
+}
+
+.amis-scope .a-Number--enhance-disabled {
+  border-color: #d1d5db;
+}
+
+.amis-scope .a-Number--enhance-disabled .a-Number--enhance-input {
+  border-color: #d1d5db;
+}
+
+.amis-scope .a-Number--enhance-disabled:hover {
+  border-color: #d1d5db;
+}
+
+.amis-scope .a-Number--enhance-borderNone,
+.amis-scope .a-Number--enhance-borderHalf {
+  border: none;
 }
 
 .amis-scope .a-Select {
@@ -39885,9 +41835,11 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Select-placeholder {
+  color: #99a6ad;
   line-height: 1.4285714286;
   user-select: none;
   white-space: nowrap;
+  color: #99a6ad;
 }
 
 .amis-scope .a-Select-value {
@@ -39896,6 +41848,10 @@ readers do not read off random characters that represent icons */
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.amis-scope .a-Select-value.is-invalid {
+  color: #f05050;
 }
 
 .amis-scope .a-Select-value.is-disabled {
@@ -40077,10 +42033,6 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Select-option.is-disabled {
   color: #99a6ad;
   background: transparent;
-}
-
-.amis-scope .a-Select-option--placeholder {
-  color: #99a6ad;
 }
 
 .amis-scope .a-Select-option > label {
@@ -40722,7 +42674,8 @@ readers do not read off random characters that represent icons */
   background: #fff;
   border-radius: 0.142rem;
   min-width: calc(
-    1rem * 5 +var(--DatePicker-paddingX) * 2 + 0.875rem * 2
+    1rem * 5 + 0.75rem * 2 +
+      0.875rem * 2
   );
 }
 
@@ -40864,13 +42817,15 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-DateControl.is-date > .a-DatePicker {
   min-width: calc(calc(
-    1rem * 5 +var(--DatePicker-paddingX) * 2 + 0.875rem * 2
+    1rem * 5 + 0.75rem * 2 +
+      0.875rem * 2
   ) + 1rem * 2);
 }
 
 .amis-scope .a-DateControl.is-datetime > .a-DatePicker {
   min-width: calc(calc(
-    1rem * 5 +var(--DatePicker-paddingX) * 2 + 0.875rem * 2
+    1rem * 5 + 0.75rem * 2 +
+      0.875rem * 2
   ) + 1rem * 6);
 }
 
@@ -40995,7 +42950,6 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .rdt .rdtPickerDate {
-  width: 17rem;
   height: 100%;
 }
 
@@ -41431,7 +43385,8 @@ readers do not read off random characters that represent icons */
   color: #58666e;
   background: #fff;
   min-width: calc(
-    1rem * 8 +var(--DatePicker-paddingX) * 2 + 0.875rem * 2
+    1rem * 8 + 0.75rem * 2 +
+      0.875rem * 2
   );
 }
 
@@ -41613,13 +43568,15 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-DateRangeControl.is-date > .a-DateRangePicker {
   min-width: calc(calc(
-    1rem * 8 +var(--DatePicker-paddingX) * 2 + 0.875rem * 2
+    1rem * 8 + 0.75rem * 2 +
+      0.875rem * 2
   ) + 1rem * 5.5);
 }
 
 .amis-scope .a-DateRangeControl.is-datetime > .a-DateRangePicker {
   min-width: calc(calc(
-    1rem * 8 +var(--DatePicker-paddingX) * 2 + 0.875rem * 2
+    1rem * 8 + 0.75rem * 2 +
+      0.875rem * 2
   ) + 1rem * 11);
 }
 
@@ -42099,7 +44056,6 @@ readers do not read off random characters that represent icons */
   background: #23b7e5;
   border-radius: 0;
   height: 100%;
-  min-width: 10%;
   transition: ease-out width 0s;
 }
 
@@ -42806,10 +44762,37 @@ readers do not read off random characters that represent icons */
   display: flex;
   align-items: center;
   position: relative;
+  user-select: none;
+  margin-bottom: 0.25rem;
+  padding-left: 0.25rem;
+}
+
+.amis-scope .a-Tree-itemLabel > * {
+  position: relative;
+  z-index: 2;
+}
+
+.amis-scope .a-Tree-itemLabel > .a-Checkbox {
+  display: inline-flex;
+  align-self: center;
 }
 
 .amis-scope .a-Tree-itemLabel:hover {
   background: rgba(0, 126, 255, 0.08);
+}
+
+.amis-scope .a-Tree-item .is-checked {
+  background: var(--Tree-item-onChekced-bg);
+  border-radius: var(--Tree-item-onChekced-bg-borderRadius);
+}
+
+.amis-scope .a-Tree-item .is-disabled {
+  color: #99a6ad;
+  background: none;
+}
+
+.amis-scope .a-Tree-item .is-disabled:hover {
+  background: none;
 }
 
 .amis-scope .a-Tree.is-draggable .a-Tree-itemLabel:hover::after {
@@ -42849,7 +44832,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Tree-itemInput > a {
   display: inline-block;
   cursor: pointer;
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
   color: #4b5563;
 }
 
@@ -42908,7 +44891,7 @@ readers do not read off random characters that represent icons */
   cursor: pointer;
   width: 0.75rem;
   display: inline-flex;
-  margin-right: 0.25rem;
+  margin-right: 0.625rem;
 }
 
 .amis-scope .a-Tree-itemArrow > svg {
@@ -42951,29 +44934,15 @@ readers do not read off random characters that represent icons */
   height: 0.875rem;
 }
 
-.amis-scope .a-Tree-itemLabel {
-  user-select: none;
-}
-
-.amis-scope .a-Tree-itemLabel.is-checked,
-.amis-scope .a-Tree-itemLabel.is-children-checked {
-  color: #23b7e5;
-}
-
-.amis-scope .a-Tree-itemLabel.is-disabled {
-  color: #99a6ad;
-}
-
-.amis-scope .a-Tree-itemLabel > .a-Checkbox {
-  display: inline-flex;
-  align-self: center;
-}
-
 .amis-scope .a-Tree-itemText {
   cursor: pointer;
   flex: 1 auto;
+  color: #58666e;
   line-height: 1.5;
-  padding: 0.25rem 0;
+}
+
+.amis-scope .is-disabled .a-Tree-itemText {
+  color: #99a6ad;
 }
 
 .amis-scope .a-Tree-placeholder {
@@ -43126,6 +45095,11 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-TreeSelect-clear:active svg {
   fill: #2d323c;
+}
+
+.amis-scope .a-TreeSelect-passwordReveal {
+  cursor: pointer;
+  color: #99a6ad;
 }
 
 @media (min-width: 576px) {
@@ -43771,6 +45745,11 @@ readers do not read off random characters that represent icons */
   fill: #2d323c;
 }
 
+.amis-scope .a-Picker-passwordReveal {
+  cursor: pointer;
+  color: #99a6ad;
+}
+
 @media (min-width: 576px) {
   .amis-scope .a-Picker.a-Form-control--sizeXs > .a-Picker-input,
   .amis-scope .a-Picker.a-Form-control--sizeSm > .a-Picker-input,
@@ -44159,6 +46138,10 @@ readers do not read off random characters that represent icons */
   overflow: initial;
 }
 
+.amis-scope .a-Transfer-select {
+  overflow: hidden;
+}
+
 .amis-scope .a-Transfer-search + .a-Transfer-selection {
   border-top: 1px solid #d1d5db;
 }
@@ -44467,6 +46450,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-NestedSelect-menu .a-NestedSelect-option.no-result {
   justify-content: center;
   cursor: default;
+  color: #99a6ad;
 }
 
 .amis-scope .a-NestedSelect-menu .a-NestedSelect-option.no-result:hover {
@@ -44701,6 +46685,11 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-IconPickerControl-clear:active svg {
   fill: #2d323c;
+}
+
+.amis-scope .a-IconPickerControl-passwordReveal {
+  cursor: pointer;
+  color: #99a6ad;
 }
 
 @media (min-width: 576px) {
@@ -46313,6 +48302,8 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-FormulaPicker-input {
   flex: 1;
   margin-right: 0.625rem;
+  padding-right: 0;
+  max-width: calc(100% - 2.625rem);
 }
 
 .amis-scope .a-FormulaPicker-action {
@@ -46337,6 +48328,9 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-FormulaPicker-ResultBox {
   padding-right: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .amis-scope .a-FormulaPicker-ResultBox span.c-field {
@@ -46420,7 +48414,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Timeline-vertical .a-TimelineItem-content {
   padding-bottom: 1rem;
-  margin-left: 0.75rem;
+  margin-left: 0.125rem;
 }
 
 .amis-scope .a-Timeline-vertical .a-TimelineItem-content .a-TimelineItem-time {
@@ -46550,6 +48544,209 @@ readers do not read off random characters that represent icons */
   margin: 0 auto;
 }
 
+.amis-scope .a-Tag {
+  display: inline-flex;
+  height: 1.5rem;
+  padding: 0 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  max-width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.3;
+  border-radius: 0.125rem;
+  background-color: #f2f2f4;
+  color: #151a26;
+}
+
+.amis-scope .a-Tag:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.amis-scope .a-Tag--normal {
+  border-radius: 0.125rem;
+}
+
+.amis-scope .a-Tag--normal--hasColor {
+  color: #fff;
+}
+
+.amis-scope .a-Tag--normal--inactive {
+  background: #b4b6ba;
+}
+
+.amis-scope .a-Tag--normal--active {
+  background: #2468f2;
+}
+
+.amis-scope .a-Tag--normal--processing {
+  background: #1ac5ff;
+}
+
+.amis-scope .a-Tag--normal--success {
+  background: #0bc286;
+}
+
+.amis-scope .a-Tag--normal--error {
+  background: #e8684a;
+}
+
+.amis-scope .a-Tag--normal--warning {
+  background: #ffb200;
+}
+
+.amis-scope .a-Tag--rounded {
+  background-color: #fff;
+  border-radius: calc((1.5rem + 2px) / 2);
+  border: 1px solid #f2f2f4;
+  color: #f2f2f4;
+}
+
+.amis-scope .a-Tag--rounded--inactive {
+  border-color: #b4b6ba;
+  color: #b4b6ba;
+}
+
+.amis-scope .a-Tag--rounded--active {
+  border-color: #2468f2;
+  color: #2468f2;
+}
+
+.amis-scope .a-Tag--rounded--processing {
+  border-color: #1ac5ff;
+  color: #1ac5ff;
+}
+
+.amis-scope .a-Tag--rounded--success {
+  border-color: #0bc286;
+  color: #0bc286;
+}
+
+.amis-scope .a-Tag--rounded--error {
+  border-color: #e8684a;
+  color: #e8684a;
+}
+
+.amis-scope .a-Tag--rounded--warning {
+  border-color: #ffb200;
+  color: #ffb200;
+}
+
+.amis-scope .a-Tag--status {
+  background-color: #fff;
+}
+
+.amis-scope .a-Tag--status--inactive .a-Tag--prev {
+  color: #b4b6ba;
+}
+
+.amis-scope .a-Tag--status--active .a-Tag--prev {
+  color: #2468f2;
+}
+
+.amis-scope .a-Tag--status--processing .a-Tag--prev {
+  color: #1ac5ff;
+}
+
+.amis-scope .a-Tag--status--success .a-Tag--prev {
+  color: #0bc286;
+}
+
+.amis-scope .a-Tag--status--error .a-Tag--prev {
+  color: #e8684a;
+}
+
+.amis-scope .a-Tag--status--warning .a-Tag--prev {
+  color: #ffb200;
+}
+
+.amis-scope .a-Tag--status:not(.a-Tag--status--processing):not(.a-Tag--status--active) .icon-dot #dotWave {
+  display: none;
+}
+
+.amis-scope .a-Tag--prev {
+  color: #f2f2f4;
+  margin-right: 0.5rem;
+}
+
+.amis-scope .a-Tag--prev i {
+  font-size: 0.5rem;
+}
+
+.amis-scope .a-Tag--prev .icon {
+  width: 0.5rem;
+  height: 0.5rem;
+  top: 0;
+}
+
+.amis-scope .a-Tag--close {
+  margin-left: 0.5rem;
+  margin-right: 0.25rem;
+  cursor: pointer;
+}
+
+.amis-scope .a-Tag--close i {
+  font-size: 0.5rem;
+}
+
+.amis-scope .a-Tag--close .icon {
+  width: 0.5rem;
+  height: 0.5rem;
+  position: inherit;
+}
+
+.amis-scope .a-Tag--close:hover {
+  opacity: 0.7;
+}
+
+.amis-scope .a-Tag--close:active {
+  opacity: 0.3;
+}
+
+.amis-scope .a-Tag--disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.amis-scope .a-Tag--disabled .a-Tag--close {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.amis-scope .a-Tag--checkable {
+  background-color: #f2f2f4;
+  cursor: pointer;
+}
+
+.amis-scope .a-Tag--checkable:hover {
+  background-color: #e6e6e8;
+}
+
+.amis-scope .a-Tag--checkable:active {
+  background-color: #e6e6e8;
+}
+
+.amis-scope .a-Tag--checkable--disabled {
+  cursor: not-allowed;
+  background-color: #e6e6e8;
+  color: #b4b6ba;
+}
+
+.amis-scope .a-Tag--checkable--checked:not(.a-Tag--checkable--disabled) {
+  color: #fff;
+  background-color: #2468f2;
+}
+
+.amis-scope .a-Tag--checkable--checked:not(.a-Tag--checkable--disabled):hover {
+  background-color: #4f86f4;
+}
+
+.amis-scope .a-Tag--checkable--checked:not(.a-Tag--checkable--disabled):active {
+  background-color: #1c53c1;
+}
+
 .amis-scope .a-PullRefresh-wrap {
   position: relative;
   height: 100%;
@@ -46584,6 +48781,7 @@ readers do not read off random characters that represent icons */
   right: 0;
   height: 100vh;
   width: 24px;
+  pointer-events: none;
 }
 
 .AMISDebug h3 {
@@ -46638,6 +48836,7 @@ readers do not read off random characters that represent icons */
 }
 
 .AMISDebug-toggle {
+  pointer-events: all;
   background: #edf1f2;
   position: fixed;
   top: 50%;
@@ -46660,6 +48859,7 @@ readers do not read off random characters that represent icons */
 }
 
 .AMISDebug-content {
+  pointer-events: all;
   display: none;
 }
 

@@ -68,8 +68,8 @@ DYCMS的主要特性包括：
 ## 友情赞助
 > 如果您觉得这个平台对你有帮助，可以请开发者喝瓶可乐吗？
 
-<img src="http://docs.dongyao.ren/dycms-docs/static/donate/wechat.jpg" width="250">
-<img src="http://docs.dongyao.ren/dycms-docs/static/donate/alipay.jpg" width="250">
+<img src="http://cdn.dongyao.ren/donate/wechat.jpg" width="250">
+<img src="http://cdn.dongyao.ren/donate/alipay.jpg" width="250">
 
 
 ## 免责声明

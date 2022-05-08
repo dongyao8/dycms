@@ -15,4 +15,3 @@ yarn-error.log
 /.idea
 /.vscode
 .DS_Store
-composer.lock

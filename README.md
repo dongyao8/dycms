@@ -64,11 +64,10 @@ DYCMS的主要特性包括：
 
 不定时更新最新动态，获取最新讯息。
 
-![](http://docs.dongyao.ren/dycms-docs/static/images/wechat.jpg)
+![](./public/static/dycms/images/qrcode.jpg)
 
 ## 友情赞助
 > 如果您觉得这个平台对你有帮助，可以通过下方二维码打赏支持一下！
-
 
 <img src="./public/static/dycms/images/wechat.jpg" width="250">
 <img src="./public/static/dycms/images/alipay.jpg" width="250">

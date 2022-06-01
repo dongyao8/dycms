@@ -1,4 +1,5 @@
 <div align="center">
+<img src="./public/static/dycms/images/logo2.png" width="250">
     <h1>DYcms[开发版] - 内容导航平台2.x-dev</h1>
     <p>无插件，无广告，回归最纯净的导航体验</p>
       <a href="https://github.com/dongyao8/dycms/releases"><img src="https://img.shields.io/github/v/release/dongyao8/dycms.svg?logo=git&" alt="Release-Version"></a>
@@ -68,8 +69,9 @@ DYCMS的主要特性包括：
 ## 友情赞助
 > 如果您觉得这个平台对你有帮助，可以通过下方二维码打赏支持一下！
 
-<img src="http://cdn.dongyao.ren/donate/wechat.jpg" width="250">
-<img src="http://cdn.dongyao.ren/donate/alipay.jpg" width="250">
+
+<img src="./public/static/dycms/images/wechat.jpg" width="250">
+<img src="./public/static/dycms/images/alipay.jpg" width="250">
 
 
 ## 免责声明

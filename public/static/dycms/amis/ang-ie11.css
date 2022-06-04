@@ -23663,7 +23663,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .rdtPicker {
   display: none;
   position: absolute;
-  width: 250px;
+  width: 240px;
   padding: 4px;
   margin-top: 1px;
   z-index: 99999 !important;
@@ -23688,16 +23688,38 @@ readers do not read off random characters that represent icons */
 .amis-scope .rdtPicker table {
   width: 100%;
   margin: 0;
+  padding: 0 12px;
+  border-spacing: 0 8px;
+}
+
+.amis-scope .rdtMonths table,
+.amis-scope .rdtYears table {
+  border-spacing: 0 12px;
+}
+
+.amis-scope .rdtMonths .headerTable,
+.amis-scope .rdtYears .headerTable {
+  border-spacing: 0;
+  border-bottom: 1px solid #E8E9EB;
 }
 
 .amis-scope .rdtPicker td,
 .amis-scope .rdtPicker th {
   text-align: center;
-  height: 28px;
+  height: 24px;
+  line-height: 24px;
+  width: 24px;
 }
 
 .amis-scope .rdtPicker td {
   cursor: pointer;
+}
+
+.amis-scope .rdtPicker td > span {
+  display: inline-block;
+  border-radius: 2px;
+  height: 100%;
+  width: 24px;
 }
 
 .amis-scope .rdtPicker td.rdtDay:hover,
@@ -23711,22 +23733,15 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .rdtPicker td.rdtOld,
 .amis-scope .rdtPicker td.rdtNew {
-  color: #999999;
+  color: #B8BABF;
 }
 
 .amis-scope .rdtPicker td.rdtToday {
   position: relative;
 }
 
-.amis-scope .rdtPicker td.rdtToday:before {
-  content: "";
-  display: inline-block;
-  border-left: 7px solid transparent;
-  border-bottom: 7px solid #428bca;
-  border-top-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  bottom: 4px;
-  right: 4px;
+.amis-scope .rdtPicker td.rdtToday > span {
+  border: 1px solid #2468F2;
 }
 
 .amis-scope .rdtPicker td.rdtActive,
@@ -23743,19 +23758,24 @@ readers do not read off random characters that represent icons */
 .amis-scope .rdtPicker td.rdtDisabled,
 .amis-scope .rdtPicker td.rdtDisabled:hover {
   background: none;
-  color: #999999;
+  color: #B8BABF;
   cursor: not-allowed;
 }
 
 .amis-scope .rdtPicker td span.rdtOld {
-  color: #999999;
+  color: #B8BABF;
 }
 
 .amis-scope .rdtPicker td span.rdtDisabled,
 .amis-scope .rdtPicker td span.rdtDisabled:hover {
   background: none;
-  color: #999999;
+  color: #B8BABF;
   cursor: not-allowed;
+}
+
+.amis-scope .rdtPicker td span.rdtDisabled > span,
+.amis-scope .rdtPicker td span.rdtDisabled:hover > span {
+  border-color: #E8E9EB;
 }
 
 .amis-scope .rdtPicker th {
@@ -23770,12 +23790,16 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .rdtPicker th.rdtSwitch {
   width: 100px;
+  height: 40px;
+  line-height: 40px;
 }
 
 .amis-scope .rdtPicker th.rdtNext,
 .amis-scope .rdtPicker th.rdtPrev {
   font-size: 21px;
   vertical-align: top;
+  height: 40px;
+  line-height: 40px;
 }
 
 .amis-scope .rdtPrev span,
@@ -23797,7 +23821,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .rdtPicker th.rdtDisabled,
 .amis-scope .rdtPicker th.rdtDisabled:hover {
   background: none;
-  color: #999999;
+  color: #B8BABF;
   cursor: not-allowed;
 }
 
@@ -23829,14 +23853,24 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope td.rdtMonth,
-.amis-scope td.rdtYear {
-  height: 50px;
-  width: 25%;
+.amis-scope td.rdtYear,
+.amis-scope td.rdtQuarter {
+  height: 24px;
+  width: 48px;
+  line-height: 24px;
+  text-align: center;
   cursor: pointer;
 }
 
+.amis-scope td.rdtMonth > span,
+.amis-scope td.rdtYear > span,
+.amis-scope td.rdtQuarter > span {
+  width: 48px;
+}
+
 .amis-scope td.rdtMonth:hover,
-.amis-scope td.rdtYear:hover {
+.amis-scope td.rdtYear:hover,
+.amis-scope td.rdtQuarter:hover {
   background: #eee;
 }
 
@@ -26947,7 +26981,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Modal-footer .a-Button {
-  width: 4.5rem;
+  min-width: 4.5rem;
   margin-left: 0.5rem;
 }
 
@@ -27083,7 +27117,6 @@ readers do not read off random characters that represent icons */
   background-clip: padding-box;
   outline: 0;
   z-index: 2;
-  border: 0.0625rem solid #d1d5db;
   border-radius: 0;
   transition: transform ease-in-out 0s;
 }
@@ -27129,15 +27162,16 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Drawer-close {
   position: absolute;
-  color: rgba(255, 255, 255, 0.8);
+  color: #99a6ad;
   line-height: 1;
   text-decoration: none;
 }
 
 .amis-scope .a-Drawer-close svg {
-  width: 30px;
-  height: 30px;
-  fill: rgba(255, 255, 255, 0.8);
+  margin-top: 0.125rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  fill: #99a6ad;
 }
 
 .amis-scope .a-Drawer-close:not(.is-disabled) {
@@ -27146,11 +27180,11 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Drawer-close:not(.is-disabled):hover {
   text-decoration: none;
-  color: rgba(255, 255, 255, 1);
+  color: #58666e;
 }
 
 .amis-scope .a-Drawer-close:not(.is-disabled):hover svg {
-  fill: rgba(255, 255, 255, 1);
+  fill: #58666e;
 }
 
 .amis-scope .a-Drawer-body {
@@ -27188,13 +27222,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Drawer.a-Drawer--noOverlay {
   pointer-events: none;
-}
-
-.amis-scope .a-Drawer.a-Drawer--noOverlay .a-Drawer-close svg {
-  margin-top: 0.125rem;
-  width: 1rem;
-  height: 1rem;
-  fill: #99a6ad;
 }
 
 .amis-scope .a-Drawer .a-Drawer-resizeCtrl {
@@ -27248,12 +27275,6 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Drawer--top .a-Drawer-close {
-  top: 100%;
-  margin-top: 0.5rem;
-  left: 0.5rem;
-}
-
-.amis-scope .a-Drawer--top.a-Drawer--noOverlay .a-Drawer-close {
   top: 0.75rem;
   right: 0.75rem;
   left: auto;
@@ -27281,14 +27302,8 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Drawer--right .a-Drawer-close {
-  right: 100%;
-  margin-right: 0.5rem;
-  top: 0.5rem;
-}
-
-.amis-scope .a-Drawer--right.a-Drawer--noOverlay .a-Drawer-close {
-  top: 0.75rem;
-  right: 0.75rem;
+  top: 1rem;
+  right: 1rem;
   margin-right: 0;
   z-index: 10;
 }
@@ -27335,12 +27350,6 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Drawer--bottom .a-Drawer-close {
-  bottom: 100%;
-  margin-bottom: 0.5rem;
-  left: 0.5rem;
-}
-
-.amis-scope .a-Drawer--bottom.a-Drawer--noOverlay .a-Drawer-close {
   top: 0.75rem;
   right: 0.75rem;
   left: auto;
@@ -27368,12 +27377,6 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Drawer--left .a-Drawer-close {
-  left: 100%;
-  margin-left: 0.5rem;
-  top: 0.5rem;
-}
-
-.amis-scope .a-Drawer--left.a-Drawer--noOverlay .a-Drawer-close {
   left: auto;
   right: 0.75rem;
   top: 0.75rem;
@@ -28130,7 +28133,7 @@ readers do not read off random characters that represent icons */
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 18.75rem;
+  max-width: 25rem;
   pointer-events: auto;
   margin-bottom: 0.25rem;
   padding: 0.25rem 1rem;
@@ -28142,6 +28145,7 @@ readers do not read off random characters that represent icons */
   opacity: 0.8;
   opacity: 0;
   transform: translateZ(0);
+  width: 25rem;
 }
 
 .amis-scope .a-Toast-wrap {
@@ -28304,6 +28308,7 @@ readers do not read off random characters that represent icons */
   justify-content: center;
   padding: 0.75rem 1rem;
   text-align: center;
+  width: auto;
 }
 
 .amis-scope .a-Toast-mobile .a-Toast-title {
@@ -30771,6 +30776,10 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-ButtonGroup > .a-Button {
   position: relative;
   flex: 0 1 auto;
+  max-width: 8.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .amis-scope .a-ButtonGroup > .a-Button:hover {
@@ -31088,11 +31097,15 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-ScheduleCalendar .rdt .rdtPicker td.rdtActive {
   background: transparent;
-  color: #58666e;
+  color: #151b26;
+}
+
+.amis-scope .a-ScheduleCalendar .rdt .rdtPicker td.rdtActive > span {
+  background: transparent !important;
 }
 
 .amis-scope .a-ScheduleCalendar .rdt .rdtPicker td.rdtActive:hover {
-  background: #ededed;
+  background: #f7f7f9;
 }
 
 .amis-scope .a-ScheduleCalendar-large {
@@ -31242,7 +31255,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-CalendarMobile-body .rdt .rdtPicker td.rdtActive,
 .amis-scope .a-CalendarMobile-body .rdt .rdtPicker td.rdtActive:hover {
   background: transparent;
-  color: #58666e;
+  color: #151b26;
   text-shadow: none;
 }
 
@@ -31351,6 +31364,10 @@ readers do not read off random characters that represent icons */
   color: #7266ba;
 }
 
+.amis-scope .a-CalendarMobile .a-CalendarMobile-calendar-wrap .a-CalendarMobile-calendar .rdtPicker .rdtBetween::after {
+  width: 0;
+}
+
 .amis-scope .a-CalendarMobile .a-CalendarMobile-calendar-wrap .a-CalendarMobile-calendar .rdtPicker .rdtRangeStart .calendar-wrap,
 .amis-scope .a-CalendarMobile .a-CalendarMobile-calendar-wrap .a-CalendarMobile-calendar .rdtPicker .rdtRangeStart:hover .calendar-wrap,
 .amis-scope .a-CalendarMobile .a-CalendarMobile-calendar-wrap .a-CalendarMobile-calendar .rdtPicker .rdtRangeEnd .calendar-wrap,
@@ -31368,6 +31385,14 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-CalendarMobile .a-CalendarMobile-calendar-wrap .a-CalendarMobile-calendar .rdtPicker .rdtRangeEnd,
 .amis-scope .a-CalendarMobile .a-CalendarMobile-calendar-wrap .a-CalendarMobile-calendar .rdtPicker .rdtRangeEnd:hover {
   background: linear-gradient(to right, rgba(35, 183, 229, 0.1) 0%, rgba(35, 183, 229, 0.1) 50%, transparent 51%, transparent 100%) !important;
+}
+
+.amis-scope .a-CalendarMobile .a-CalendarMobile-calendar-wrap .a-CalendarMobile-calendar .rdtPicker .rdtToday {
+  border: none;
+}
+
+.amis-scope .a-CalendarMobile .a-CalendarMobile-calendar-wrap .a-CalendarMobile-calendar .rdtPicker .rdtToday .calendar-wrap {
+  border: 1px solid #2468F2;
 }
 
 .amis-scope .a-CalendarMobile-calendar-header {
@@ -31446,6 +31471,7 @@ readers do not read off random characters that represent icons */
   border: none;
   padding: 0;
   line-height: 1.25rem;
+  border-radius: 4px;
 }
 
 .amis-scope .a-Collapse-header {
@@ -31485,7 +31511,7 @@ readers do not read off random characters that represent icons */
   width: 0.375rem;
   height: 0.375rem;
   top: -0.125rem;
-  border-color: #58666e;
+  border-color: #84868C;
   border-style: solid;
   border-width: 0.0625rem 0.0625rem 0 0;
   transform: rotate(45deg);
@@ -31563,6 +31589,18 @@ readers do not read off random characters that represent icons */
   color: #58666e;
   font-size: 0.875rem;
   font-weight: 400;
+}
+
+.amis-scope .a-CollapseGroup .a-Collapse {
+  border-radius: 0;
+}
+
+.amis-scope .a-CollapseGroup .a-Collapse:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.amis-scope .a-CollapseGroup .a-Collapse:last-child {
+  border-radius: 0 0 4px 4px;
 }
 
 .amis-scope .a-CollapseGroup .a-Collapse:not(:last-child) {
@@ -32595,7 +32633,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Table-placeholder {
   color: #99a6ad;
   text-align: center;
-  height: 6.25rem;
+  height: 12.5rem;
   background: transparent !important;
 }
 
@@ -32607,6 +32645,13 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Table-placeholder > td {
   vertical-align: middle !important;
   text-align: center;
+}
+
+.amis-scope .a-Table-placeholder-empty-icon.icon {
+  display: block;
+  margin: 0 auto;
+  width: 4.625rem;
+  height: 4.625rem;
 }
 
 .amis-scope .a-Table-searchableForm {
@@ -32710,7 +32755,7 @@ readers do not read off random characters that represent icons */
   background: #fff;
   border-spacing: 0;
   border-collapse: collapse;
-  border: 0.0625rem solid #d1d5db;
+  border-bottom: 0.0625rem solid #d1d5db;
 }
 
 .amis-scope .a-Table-table th,
@@ -33722,6 +33767,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Table-table > thead > tr > th.a-Table-dragCell > svg,
 .amis-scope .a-Table-table > tbody > tr > td.a-Table-dragCell > svg {
   vertical-align: middle;
+  top: 0;
 }
 
 .amis-scope .a-Table-table > tbody > tr > td.a-Table-expandCell {
@@ -33809,38 +33855,34 @@ readers do not read off random characters that represent icons */
   background: #d1d5db;
 }
 
-.amis-scope .a-Table-table > thead > tr > th.a-TableCell--sortable {
-  padding-right: calc( 0.5rem + 0.5rem );
-  position: relative;
+.amis-scope .a-Table-table > thead > tr > th.a-TableCell--sortable > .a-TableCell--title,
+.amis-scope .a-Table-table > thead > tr > th.a-TableCell--searchable > .a-TableCell--title,
+.amis-scope .a-Table-table > thead > tr > th.a-TableCell--filterable > .a-TableCell--title {
+  display: inline-block;
 }
 
-.amis-scope .a-Table-table > thead > tr > th.a-TableCell--searchable {
-  padding-right: calc( 0.5rem + 1rem );
-  position: relative;
+.amis-scope .a-TableCell-sortBtn,
+.amis-scope .a-TableCell-searchBtn,
+.amis-scope .a-TableCell-filterBtn {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 0.5rem;
 }
 
-.amis-scope .a-Table-table > thead > tr > th.a-TableCell--filterable {
-  padding-right: calc( 0.5rem + 1rem );
-  position: relative;
+.amis-scope .a-TableCell-sortBtn:hover,
+.amis-scope .a-TableCell-searchBtn:hover,
+.amis-scope .a-TableCell-filterBtn:hover {
+  color: #7266ba;
 }
 
 .amis-scope .a-TableCell-sortBtn {
   cursor: pointer;
   width: 0.5rem;
   height: 1rem;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: calc(0.5rem - 0.5rem / 2);
-  top: 50%;
-  transform: translateY(-50%);
   color: #4b5563;
-}
-
-.amis-scope .a-TableCell-sortBtn:hover {
-  color: #111827;
 }
 
 .amis-scope .a-TableCell-sortBtn--up > svg,
@@ -33871,7 +33913,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-TableCell-sortBtn--default.is-active:hover {
-  color: #58666e;
+  color: #7266ba;
 }
 
 .amis-scope .a-TableCell-sortBtn--up.is-active,
@@ -33881,10 +33923,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-TableCell-searchBtn {
   cursor: pointer;
-  position: absolute;
-  right: 0.25rem;
-  top: 50%;
-  transform: translateY(-50%);
   color: #99a6ad;
 }
 
@@ -33914,20 +33952,12 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-TableCell-filterBtn {
   cursor: pointer;
   width: 1rem;
-  position: absolute;
-  right: calc( 0.5rem - 1rem / 2 );
-  top: 50%;
-  transform: translateY(-50%);
   color: #99a6ad;
 }
 
 .amis-scope .a-TableCell-filterBtn svg.icon {
   width: 12px;
   height: 12px;
-}
-
-.amis-scope .a-TableCell-filterBtn:hover {
-  color: #58666e;
 }
 
 .amis-scope .a-TableCell-filterBtn.is-active {
@@ -34204,23 +34234,29 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Table-v2.a-Table-large .a-Table-table > thead > tr > th {
   padding: calc(
-    (3.8125rem - 0.875rem * 1.5) /
-      2
+    (
+        3.8125rem - 0.875rem *
+          1.5
+      ) / 2
   ) 0.75rem;
 }
 
 .amis-scope .a-Table-v2.a-Table-large .a-Table-table > tbody > tr > td,
 .amis-scope .a-Table-v2.a-Table-large .a-Table-table > tbody > tr > th {
   padding: calc(
-    (3.8125rem - 0.875rem * 1.5) /
-      2
+    (
+        3.8125rem - 0.875rem *
+          1.5
+      ) / 2
   ) 0.75rem;
 }
 
 .amis-scope .a-Table-v2.a-Table-large .a-Table-table > tfoot > tr > td {
   padding: calc(
-    (3.8125rem - 0.875rem * 1.5) /
-      2
+    (
+        3.8125rem - 0.875rem *
+          1.5
+      ) / 2
   ) 0.75rem;
 }
 
@@ -34230,23 +34266,29 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Table-v2.a-Table-small .a-Table-table > thead > tr > th {
   padding: calc(
-    (2.0625rem - 0.875rem * 1.5) /
-      2
+    (
+        2.0625rem - 0.875rem *
+          1.5
+      ) / 2
   ) 0.25rem;
 }
 
 .amis-scope .a-Table-v2.a-Table-small .a-Table-table > tbody > tr > td,
 .amis-scope .a-Table-v2.a-Table-small .a-Table-table > tbody > tr > th {
   padding: calc(
-    (2.0625rem - 0.875rem * 1.5) /
-      2
+    (
+        2.0625rem - 0.875rem *
+          1.5
+      ) / 2
   ) 0.25rem;
 }
 
 .amis-scope .a-Table-v2.a-Table-small .a-Table-table > tfoot > tr > td {
   padding: calc(
-    (2.0625rem - 0.875rem * 1.5) /
-      2
+    (
+        2.0625rem - 0.875rem *
+          1.5
+      ) / 2
   ) 0.25rem;
 }
 
@@ -34341,8 +34383,10 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Table-v2 .a-Table-table > thead > tr > th {
   background: #f6f8f8;
   padding: calc(
-    (2.5625rem - 0.875rem * 1.5) /
-      2
+    (
+        2.5625rem - 0.875rem *
+          1.5
+      ) / 2
   ) 0.5rem;
   font-size: 0.875rem;
   color: #414c52;
@@ -34401,8 +34445,10 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Table-v2 .a-Table-table > tbody > tr > td,
 .amis-scope .a-Table-v2 .a-Table-table > tbody > tr > th {
   padding: calc(
-    (2.5625rem - 0.875rem * 1.5) /
-      2
+    (
+        2.5625rem - 0.875rem *
+          1.5
+      ) / 2
   ) 0.5rem;
 }
 
@@ -35480,8 +35526,10 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Table-v2 .a-Table-table > tfoot > tr > td {
   padding: calc(
-    (2.5625rem - 0.875rem * 1.5) /
-      2
+    (
+        2.5625rem - 0.875rem *
+          1.5
+      ) / 2
   ) 0.5rem;
   background: #f6f8f8;
 }
@@ -36921,14 +36969,21 @@ readers do not read off random characters that represent icons */
   color: inherit;
   margin-left: 0.25rem;
   display: inline-block;
-  vertical-align: text-top;
+  vertical-align: text-bottom;
   cursor: pointer;
   opacity: 0.6;
+  font-size: 0;
 }
 
 .amis-scope .a-Field-quickEditBtn:hover {
   color: inherit;
   opacity: 1;
+}
+
+.amis-scope .a-Field-quickEditBtn > svg {
+  width: 0.8125rem;
+  height: 0.8125rem;
+  top: 0;
 }
 
 .amis-scope .a-Field--quickEditable {
@@ -38212,7 +38267,8 @@ readers do not read off random characters that represent icons */
   cursor: inherit;
 }
 
-.amis-scope .a-InputBox.is-error {
+.amis-scope .a-InputBox.is-error,
+.amis-scope .is-error > .a-InputBox {
   border-color: #f05050;
   background: #fff;
 }
@@ -38272,6 +38328,153 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-InputBox > a {
   cursor: pointer;
+}
+
+.amis-scope .a-InputBox-caret {
+  transition: transform 0s ease-out;
+  margin: 5px;
+  display: flex;
+  color: #4b5563;
+}
+
+.amis-scope .a-InputBox-caret:hover {
+  color: #111827;
+}
+
+.amis-scope .a-InputBox-caret > svg {
+  width: 0.625rem;
+  height: 0.625rem;
+  top: 0;
+}
+
+.amis-scope .a-InputBox.is-active .a-InputBox-caret {
+  transform: rotate(180deg);
+}
+
+.amis-scope .a-JSONSchemaMember {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+.amis-scope .a-JSONSchemaMember-key {
+  min-width: 80px;
+  max-width: 150px;
+  flex: 1;
+}
+
+.amis-scope .a-JSONSchemaMember-key > span {
+  display: flex;
+  background: #fff;
+  border: 0.0625rem solid #d1d5db;
+  border-radius: 0.142rem;
+  line-height: 1.4285714286;
+  padding: calc(
+    (
+        1.875rem - 1.4285714286 *
+          0.875rem - 0.125rem
+      ) / 2
+  ) 0.5rem;
+  font-size: 0.875rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: #58666e;
+}
+
+.amis-scope .a-JSONSchemaMember-value {
+  flex: 1;
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.amis-scope .a-JSONSchemaMember-value > a {
+  display: inline-block;
+}
+
+.amis-scope .a-JSONSchemaMember-value > div {
+  flex: 1;
+  flex-wrap: nowrap;
+}
+
+.amis-scope .a-JSONSchemaMember + .a-JSONSchemaMember {
+  margin-top: 0.5rem;
+}
+
+.amis-scope .a-JSONSchemaObject-caret {
+  display: inline-block;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 0s;
+  color: #4b5563;
+  margin-top: calc((1.875rem - 1.375rem) / 2);
+}
+
+.amis-scope .a-JSONSchemaObject-caret > svg {
+  width: 10px;
+  height: 10px;
+  top: 0;
+}
+
+.amis-scope .a-JSONSchemaObject-caret.is-collapsed {
+  transform: rotate(-90deg);
+}
+
+.amis-scope .a-JSONSchemaObject.is-expanded {
+  position: relative;
+  margin-left: 1.25rem;
+}
+
+.amis-scope .a-JSONSchemaObject.is-expanded:before {
+  width: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30px;
+  bottom: 10px;
+  left: -33px;
+  border-left: dashed 1px #4b5563;
+}
+
+.amis-scope .a-JSONSchemaObject.is-expanded .a-JSONSchemaMember {
+  position: relative;
+}
+
+.amis-scope .a-JSONSchemaObject.is-expanded .a-JSONSchemaMember:before {
+  height: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 17px;
+  width: 25px;
+  left: -33px;
+  border-top: dashed 1px #4b5563;
+}
+
+.amis-scope .a-JSONSchemaObject.is-expanded .a-JSONSchemaMember:first-child:before {
+  left: -20px;
+  width: 12px;
+}
+
+.amis-scope .a-JSONSchemaObject.is-expanded > button {
+  position: relative;
+}
+
+.amis-scope .a-JSONSchemaObject.is-expanded > button:before {
+  height: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  width: 25px;
+  left: -33px;
+  border-top: dashed 1px #4b5563;
 }
 
 .amis-scope .a-SchemaEditorProps {
@@ -38490,10 +38693,22 @@ readers do not read off random characters that represent icons */
   background: #e5e7eb;
   border-color: #d1d5db;
   pointer-events: none;
+  background: #f7f7f9;
+}
+
+.amis-scope .a-ResultBox.is-disabled div.a-ResultBox-value {
+  background: #e8e9eb;
+}
+
+.amis-scope .a-ResultBox.is-disabled div.a-ResultBox-value .a-ResultBox-valueLabel {
+  color: #84868c;
+}
+
+.amis-scope .a-ResultBox.a-NestedSelect {
+  padding-left: 0.75rem;
 }
 
 .amis-scope .a-ResultBox-singleValue {
-  padding: 0 calc(0.5rem - 0.1875rem);
   display: inline-block;
   max-width: 100%;
   overflow: hidden;
@@ -38508,16 +38723,18 @@ readers do not read off random characters that represent icons */
   display: flex;
   align-items: center;
   transition: transform 0s ease;
+  transform: rotate(90deg);
 }
 
 .amis-scope .a-ResultBox-pc-arrow > svg {
   width: 0.625rem;
   height: 0.625rem;
   top: 0.125em;
+  color: #84868c;
 }
 
 .amis-scope .a-ResultBox.is-opened .a-ResultBox-pc-arrow {
-  transform: rotate(180deg);
+  transform: rotate(270deg);
 }
 
 .amis-scope .a-ResultBox-clear {
@@ -38583,13 +38800,15 @@ readers do not read off random characters that represent icons */
   flex-wrap: nowrap;
   display: inline-flex;
   align-items: center;
-  margin: 2px 3px;
+  margin-right: 0.25rem;
+  margin-bottom: 0.125rem;
   user-select: none;
+  border-radius: 0.125rem;
 }
 
 .amis-scope .a-ResultBox-value > a {
   cursor: pointer;
-  margin-left: 0.25rem;
+  margin-left: 0.625rem;
   color: #999;
 }
 
@@ -38622,7 +38841,6 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-ResultBox-placeholder {
   color: #99a6ad;
   user-select: none;
-  margin-left: 8px;
 }
 
 .amis-scope .a-ResultBox > input {
@@ -38631,7 +38849,19 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-ResultBox.a-TransferDropDown {
-  padding: 0;
+  padding: 0 0.75rem;
+}
+
+.amis-scope .a-ResultBox.a-TransferDropDown.is-group {
+  padding: 0.25rem;
+}
+
+.amis-scope .a-ResultBox.a-TransferDropDown.is-group > .a-TransferDropDown-icon {
+  margin-right: 0.5rem;
+}
+
+.amis-scope .a-ResultBox.a-TransferDropDown.is-group > .a-ResultBox-placeholder {
+  padding-left: 0.5rem;
 }
 
 .amis-scope .a-ResultBox.a-TransferDropDown > .a-ResultBox-value {
@@ -38640,6 +38870,29 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-ResultBox.a-TransferDropDown > .a-ResultBox-value:hover {
   background: #d1d5db;
+}
+
+.amis-scope .a-ResultBox-overflow-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: calc( (1.5rem + 0.125rem) * 5 );
+}
+
+.amis-scope .a-ResultBox-overflow.a-Tooltip--dark .a-ResultBox-overflow-wrapper .a-ResultBox-value {
+  color: #fff;
+  background-color: #46474f;
+}
+
+.amis-scope .a-ResultBox-overflow.a-Tooltip--dark .a-ResultBox-overflow-wrapper .a-ResultBox-value:hover {
+  background-color: #b8babf;
+}
+
+.amis-scope .a-ResultBox-overflow.a-Tooltip--dark .a-ResultBox-overflow-wrapper .a-ResultBox-value > a {
+  color: #e9e9e9;
 }
 
 .amis-scope .a-ResultBox.is-mobile {
@@ -38717,10 +38970,11 @@ readers do not read off random characters that represent icons */
   justify-content: flex-end;
   height: 30px;
   width: 30px;
-  padding: 0 8px;
+  padding-left: 8px;
   transition: all 0s ease-in-out;
   border: 0.0625rem solid transparent;
   border-radius: 0.142rem;
+  overflow: hidden;
   height: 30px;
 }
 
@@ -38738,11 +38992,35 @@ readers do not read off random characters that represent icons */
   flex-grow: 1;
 }
 
+.amis-scope .a-SearchBox.is-active:hover {
+  border-color: var(--SearchBox-hover-color);
+}
+
+.amis-scope .a-SearchBox.is-active.is-focused {
+  border-color: var(--SearchBox-focus-color);
+}
+
+.amis-scope .a-SearchBox-searchBtn {
+  display: flex;
+  width: var(--SearchBox-height);
+  align-items: center;
+  justify-content: center;
+}
+
+.amis-scope .a-SearchBox-searchBtn .icon {
+  top: 0;
+}
+
+.amis-scope .a-SearchBox-activeBtn,
+.amis-scope .a-SearchBox-cancelBtn {
+  margin-right: 8px;
+}
+
 .amis-scope .a-SearchBox-activeBtn,
 .amis-scope .a-SearchBox-searchBtn,
 .amis-scope .a-SearchBox-cancelBtn {
   cursor: pointer;
-  color: #4b5563;
+  color: var(--SearchBox-search-icon-color);
 }
 
 .amis-scope .a-SearchBox-activeBtn:hover,
@@ -38758,6 +39036,19 @@ readers do not read off random characters that represent icons */
   pointer-events: none;
 }
 
+.amis-scope .a-SearchBox.is-disabled {
+  background-color: var(--SearchBox-disabled-color);
+  cursor: not-allowed;
+}
+
+.amis-scope .a-SearchBox.is-disabled:hover {
+  border-color: #d1d5db;
+}
+
+.amis-scope .a-SearchBox.is-disabled > input {
+  cursor: not-allowed;
+}
+
 .amis-scope .a-SearchBox > input {
   outline: none;
   border: none;
@@ -38770,6 +39061,39 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-SearchBox > input::placeholder {
   color: #99a6ad;
   user-select: none;
+}
+
+.amis-scope .a-SearchBox-clearable {
+  display: flex;
+  width: var(--SearchBox-clearable-icon-size);
+  height: var(--SearchBox-clearable-icon-size);
+  color: var(--SearchBox-clearable-icon-color);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.amis-scope .a-SearchBox-clearable .icon {
+  top: 0;
+}
+
+.amis-scope .a-SearchBox-clearable:hover {
+  color: #5e626a;
+}
+
+.amis-scope .a-SearchBox--enhance.is-active .a-SearchBox-searchBtn {
+  height: 100%;
+  color: var(--SearchBox-enhonce-icon-color);
+  background: var(--SearchBox-hover-color);
+}
+
+.amis-scope .a-SearchBox--enhance .a-SearchBox-clearable {
+  margin-right: var(--SearchBox-enhonce-clearable-gap);
+}
+
+.amis-scope .a-SearchBox--enhance.is-active.is-disabled .a-SearchBox-searchBtn {
+  background: var(--SearchBox-enhonce-disabled-color);
+  color: var(--SearchBox-enhonce-disabled-search-color);
 }
 
 .amis-scope .a-ListMenu {
@@ -38829,16 +39153,20 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Log {
+  position: relative;
+}
+
+.amis-scope .a-Log-body {
   background: #222;
   color: #f1f1f1;
-  padding: 0.25rem 0;
+  padding: 0.5rem 0;
   overflow-y: auto;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 }
 
 .amis-scope .a-Log-line {
-  padding: 0 0.25rem;
+  padding: 0 0.5rem;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
@@ -38850,6 +39178,35 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Log-line:hover {
   background: #444;
+}
+
+.amis-scope .a-Log-line-number {
+  color: #999;
+  font-style: italic;
+  margin-right: 5px;
+}
+
+.amis-scope .a-Log-operation {
+  position: absolute;
+  top: 0;
+  left: -16px;
+}
+
+.amis-scope .a-Log-operation .a-Button {
+  margin-right: 0.25rem;
+}
+
+.amis-scope .a-Log-operation-hidden {
+  background: #f0f2f5;
+  width: 24px;
+  height: 48px;
+  box-shadow: 0 4px 6px 0 rgba(8, 14, 26, 0.04), 0 1px 10px 0 rgba(8, 14, 26, 0.05), 0 2px 4px -1px rgba(8, 14, 26, 0.06);
+  border-radius: 0 2px 2px 0;
+  padding-top: 14px;
+  padding-left: 6px;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.3s;
 }
 
 .amis-scope .a-Log .ansi-bold {
@@ -40067,7 +40424,7 @@ readers do not read off random characters that represent icons */
   fill: #2d323c;
 }
 
-.amis-scope .a-TextControl-passwordReveal {
+.amis-scope .a-TextControl-revealPassword {
   cursor: pointer;
   color: #99a6ad;
 }
@@ -40252,6 +40609,10 @@ readers do not read off random characters that represent icons */
   background: rgba(0, 126, 255, 0.08);
 }
 
+.amis-scope .a-TextControl-sugItem .is-matched {
+  color: #23b7e5;
+}
+
 .amis-scope .a-TextControl-value {
   user-select: none;
   line-height: calc( 1.4285714286 * 0.875rem );
@@ -40291,25 +40652,28 @@ readers do not read off random characters that represent icons */
   white-space: nowrap;
   line-height: calc( 1.4285714286 * 0.875rem - 0.125rem );
   font-size: 0.75rem;
-  color: #23b7e5;
-  background: #d9f3fb;
-  border: 0.0625rem solid #abe4f6;
+  background: var(--Form-select-multiple-bgColor);
   border-radius: 0.125rem;
   margin: 2px 3px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
 }
 
-.amis-scope .a-TextControl-valueIcon {
+.amis-scope .a-TextControl-valueIcon.icon-close {
+  top: 0;
   cursor: pointer;
-  border-right: 0.0625rem solid #abe4f6;
-  padding: 1px 5px;
-}
-
-.amis-scope .a-TextControl-valueIcon:hover {
-  background: #c2ecf9;
+  margin-left: 0.5rem;
+  width: 0.625rem;
+  color: #84868c;
 }
 
 .amis-scope .a-TextControl-input--multiple .a-TextControl-valueLabel {
-  padding: 0 0.25rem;
+  line-height: 1.5rem;
+  max-width: 3.75rem;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .amis-scope .a-TextControl-counter {
@@ -40322,6 +40686,23 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-TextControl-input:hover {
   border-color: #23b7e5;
+}
+
+.amis-scope .a-TextControl-revealPassword {
+  font-size: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.amis-scope .a-TextControl-revealPassword .icon {
+  width: var(--Form-input-password-icon-size);
+  height: var(--Form-input-password-icon-size);
+  color: var(--Form-input-password-icon-color);
+  cursor: pointer;
+}
+
+.amis-scope input.a-TextControl-input-password {
+  flex-basis: 0;
 }
 
 .amis-scope .a-TextControl.is-disabled-input input {
@@ -40440,7 +40821,7 @@ readers do not read off random characters that represent icons */
   fill: #2d323c;
 }
 
-.amis-scope .a-TextareaControl-passwordReveal {
+.amis-scope .a-TextareaControl-revealPassword {
   cursor: pointer;
   color: #99a6ad;
 }
@@ -40470,7 +40851,7 @@ readers do not read off random characters that represent icons */
   width: 100%;
   line-height: 1.4285714286;
   outline: none;
-  resize: none;
+  resize: vertical;
 }
 
 .amis-scope .a-TextareaControl > textarea--borderHalf {
@@ -40503,13 +40884,11 @@ readers do not read off random characters that represent icons */
   font-size: 0.75rem;
   padding: 0 5px;
   border-radius: 3px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.6);
+  color: #84868c;
 }
 
 .amis-scope .a-TextareaControl-counter.is-empty {
-  color: #666;
-  background: rgba(0, 0, 0, 0.4);
+  color: #84868c;
 }
 
 .amis-scope .a-TextareaControl-counter.is-clearable {
@@ -40571,6 +40950,10 @@ readers do not read off random characters that represent icons */
   border-color: #23b7e5;
 }
 
+.amis-scope .a-Checkbox.a-Checkbox--checkbox.a-Checkbox--button > i + span {
+  margin-left: 0;
+}
+
 .amis-scope .a-Checkbox > i {
   cursor: pointer;
   line-height: 1;
@@ -40583,10 +40966,10 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Checkbox > i + span {
   pointer-events: all;
-  margin-left: 0.25rem;
+  margin-left: 0.5rem;
   cursor: pointer;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 
 .amis-scope .a-Checkbox > i + span > a {
@@ -40641,7 +41024,6 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Checkbox--checkbox input[disabled] + i:before {
   width: calc(1rem / 2);
   height: calc(calc(1rem / 2) / 2);
-  background: #e5e7eb;
 }
 
 .amis-scope .a-Checkbox--checkbox input[disabled] + i + span {
@@ -40657,8 +41039,36 @@ readers do not read off random characters that represent icons */
   margin-left: calc(1rem * -1);
 }
 
+.amis-scope .a-Checkbox--checkbox.a-Checkbox:hover > i:before {
+  background: #4f86f4;
+}
+
+.amis-scope .a-Checkbox--checkbox.a-Checkbox:active > i:before {
+  background: var(--Switch-checked-onHover-bgColor);
+}
+
 .amis-scope .a-Checkbox--full.a-Checkbox--checkbox:not(:disabled) + i:hover {
   border-color: #d1d5db;
+}
+
+.amis-scope .a-Checkbox--full.a-Checkbox--checkbox:hover input:checked + i {
+  background: #4f86f4;
+}
+
+.amis-scope .a-Checkbox--full.a-Checkbox--checkbox:hover input:checked + i:before {
+  background: #4f86f4;
+}
+
+.amis-scope .a-Checkbox--full.a-Checkbox--checkbox:hover > i:before {
+  background: transparent;
+}
+
+.amis-scope .a-Checkbox--full.a-Checkbox--checkbox:active input:checked + i {
+  background: var(--Switch-checked-onHover-bgColor);
+}
+
+.amis-scope .a-Checkbox--full.a-Checkbox--checkbox:active input:checked + i:before {
+  background: var(--Switch-checked-onHover-bgColor);
 }
 
 .amis-scope .a-Checkbox--full.a-Checkbox--checkbox input:checked + i {
@@ -40674,7 +41084,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Checkbox--full.a-Checkbox--checkbox input[disabled] + i {
   border-color: #99a6ad;
-  background: #e5e7eb;
+  background: #f7f7f9;
 }
 
 .amis-scope .a-Checkbox--full.a-Checkbox--checkbox input[disabled]:checked + i:before {
@@ -40683,7 +41093,12 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Checkbox--full.a-Checkbox--checkbox input:checked[disabled] + i {
   border-color: #99a6ad;
-  background: #e5e7eb;
+  background: #f7f7f9;
+}
+
+.amis-scope .a-Checkbox--full.a-Checkbox--checkbox input:checked[disabled] + i:before {
+  background: #f7f7f9;
+  border-color: #d4d6d9;
 }
 
 .amis-scope .a-Checkbox--full.a-Checkbox--checkbox > i {
@@ -40757,6 +41172,16 @@ readers do not read off random characters that represent icons */
   color: #23b7e5;
 }
 
+.amis-scope .a-Checkbox--button.a-Checkbox--checkbox:hover input:checked + i {
+  background: transparent;
+  border-color: #4f86f4 transparent transparent #4f86f4;
+}
+
+.amis-scope .a-Checkbox--button.a-Checkbox--checkbox:active input:checked + i {
+  background: transparent;
+  border-color: var(--Switch-checked-onHover-bgColor) transparent transparent var(--Switch-checked-onHover-bgColor);
+}
+
 .amis-scope .a-Checkbox--button.a-Checkbox--checkbox input:checked + i {
   background: transparent;
   top: 0;
@@ -40800,6 +41225,7 @@ readers do not read off random characters that represent icons */
   margin-left: 0;
   border: 0;
   border-style: solid;
+  background: transparent;
 }
 
 .amis-scope .a-Checkbox--button.a-Checkbox--checkbox > i + span {
@@ -40809,13 +41235,23 @@ readers do not read off random characters that represent icons */
   overflow: hidden;
 }
 
-.amis-scope .a-Checkbox--button--checked.a-Checkbox--checkbox {
+.amis-scope .a-Checkbox--button--checked.a-Checkbox--checkbox.a-Checkbox--button {
   border-color: #23b7e5;
   color: #23b7e5;
 }
 
-.amis-scope .a-Checkbox--button--disabled--unchecked.a-Checkbox--checkbox {
-  background: #f2f3f3;
+.amis-scope .a-Checkbox--button--checked.a-Checkbox--checkbox.a-Checkbox--button:hover {
+  border-color: #2468f2;
+  color: #2468f2;
+}
+
+.amis-scope .a-Checkbox--button--checked.a-Checkbox--checkbox.a-Checkbox--button:active {
+  border-color: var(--Switch-checked-onHover-bgColor);
+  color: var(--Switch-checked-onHover-bgColor);
+}
+
+.amis-scope .a-Checkbox--button--disabled--unchecked.a-Checkbox--checkbox.a-Checkbox--full i {
+  background: #f7f7f9;
 }
 
 .amis-scope .a-Checkbox--radio {
@@ -40864,6 +41300,19 @@ readers do not read off random characters that represent icons */
   margin-left: calc(1rem * -1);
   margin-top: -0.125rem;
   border-radius: 50%;
+}
+
+.amis-scope .a-Checkbox--radio.a-Checkbox--button--disabled--unchecked.a-Checkbox--full {
+  background: none;
+}
+
+.amis-scope .a-Checkbox--radio.a-Checkbox--button--disabled--unchecked.a-Checkbox--full i {
+  background: #f7f7f9;
+  border: 1px solid #e8e9eb;
+}
+
+.amis-scope .a-Checkbox--radio.a-Checkbox--button--disabled--unchecked.a-Checkbox--full i:before {
+  background: #d4d6d9;
 }
 
 .amis-scope .a-Checkbox--sm {
@@ -40922,6 +41371,16 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-RadiosControl .a-Checkbox--button,
 .amis-scope .a-CheckboxesControl .a-Checkbox--button {
   margin-bottom: 0;
+}
+
+.amis-scope .a-RadiosControl .a-Checkbox--button--disabled--unchecked,
+.amis-scope .a-CheckboxesControl .a-Checkbox--button--disabled--unchecked {
+  background: #f7f7f9;
+}
+
+.amis-scope .a-RadiosControl .a-Checkbox--button-checked:active,
+.amis-scope .a-CheckboxesControl .a-Checkbox--button-checked:active {
+  border-color: var(--Switch-checked-onHover-bgColor);
 }
 
 .amis-scope .a-RadiosControl.is-inline .a-Checkbox,
@@ -40986,15 +41445,12 @@ readers do not read off random characters that represent icons */
   max-height: 18.75rem;
   overflow: auto;
   user-select: none;
-}
-
-.amis-scope .a-GroupedSelection-group:not(:first-child) > .a-GroupedSelection-itemLabel {
-  border-top: 0.0625rem solid #dfe2e6;
+  padding: 0.25rem 0;
 }
 
 .amis-scope .a-GroupedSelection-group > .a-GroupedSelection-itemLabel {
   padding: 0.25rem 0.75rem;
-  color: #99a6ad;
+  color: #84868c;
 }
 
 .amis-scope .a-GroupedSelection-item {
@@ -41008,16 +41464,19 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-GroupedSelection-item > .a-Checkbox {
-  margin-right: 0.5rem;
+  margin-right: 0.625rem;
 }
 
 .amis-scope .a-GroupedSelection-item.is-active {
-  color: #23b7e5;
   background: transparent;
 }
 
 .amis-scope .a-GroupedSelection-item:hover {
   background: rgba(0, 126, 255, 0.08);
+}
+
+.amis-scope .a-GroupedSelection-item:hover i {
+  border: 1px solid #2468f2;
 }
 
 .amis-scope .a-GroupedSelection-item.is-disabled {
@@ -41044,10 +41503,18 @@ readers do not read off random characters that represent icons */
   font-size: 0.875rem;
   padding: calc( ( 1.875rem - 1.4285714286 * 0.875rem ) / 2 ) 0.5rem;
   color: #99a6ad;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .amis-scope .a-TableSelection .a-Table-content {
   border-top: 0.0625rem solid #d1d5db;
+}
+
+.amis-scope .a-TableSelection .a-Table-table > tbody > tr {
+  cursor: pointer;
 }
 
 .amis-scope .a-TableSelection .a-Table-table > thead > tr > th,
@@ -41073,10 +41540,6 @@ readers do not read off random characters that represent icons */
   padding-right: 1rem;
 }
 
-.amis-scope .a-TableSelection .a-Table-table > tbody > tr {
-  cursor: pointer;
-}
-
 .amis-scope .a-TableSelection .a-Table-table > tbody > tr.is-active {
   color: #23b7e5;
   background: transparent;
@@ -41084,24 +41547,13 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-TreeSelection .a-Table-expandBtn {
   color: #4b5563;
-  margin-right: 5px;
+  margin-right: 0.25rem;
 }
 
 .amis-scope .a-TreeSelection-sublist {
   position: relative;
   margin: 0 0 0 2.1875rem;
   display: none;
-}
-
-.amis-scope .a-TreeSelection-sublist:before {
-  width: 1px;
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(0.25rem * -1);
-  bottom: calc(1.875rem / 2);
-  left: -19px;
-  border-left: dashed 1px #4b5563;
 }
 
 .amis-scope .a-TreeSelection-item {
@@ -41120,31 +41572,20 @@ readers do not read off random characters that represent icons */
   color: #99a6ad;
 }
 
-.amis-scope .a-TreeSelection-sublist .a-TreeSelection-item:before {
-  height: 1px;
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(1.875rem / 2);
-  width: 19px;
-  left: -19px;
-  border-top: dashed 1px #4b5563;
-}
-
 .amis-scope .a-TreeSelection-itemInner {
   display: flex;
   align-items: center;
-  line-height: 1.4285714286;
+  line-height: 1.875rem;
+  position: relative;
   font-size: 0.875rem;
-  padding: calc( ( 1.875rem - 1.4285714286 * 0.875rem ) / 2 ) 0.5rem;
+  padding: 0 0.5rem;
   flex-direction: row;
   cursor: pointer;
   user-select: none;
 }
 
 .amis-scope .a-TreeSelection-itemInner > .a-Checkbox {
-  margin-right: 0;
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .amis-scope .a-TreeSelection-itemInner:hover {
@@ -41160,12 +41601,15 @@ readers do not read off random characters that represent icons */
   color: #99a6ad;
 }
 
+.amis-scope .a-TreeSelection-itemInner .a-TreeSelection-itemLabel {
+  margin-left: 0.25rem;
+}
+
 .amis-scope .a-TreeSelection-itemLabel {
   flex-grow: 1;
 }
 
 .amis-scope .a-TreeSelection-itemLabel span {
-  margin-left: 0.25rem;
   vertical-align: middle;
 }
 
@@ -41231,7 +41675,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-ChainedSelection-itemLabel span {
-  margin-left: 0.25rem;
+  margin-left: 0.625rem;
   vertical-align: middle;
 }
 
@@ -41287,6 +41731,21 @@ readers do not read off random characters that represent icons */
   text-align: center;
   margin: 10px 0 20px;
   color: #99a6ad;
+}
+
+.amis-scope .a-ResultTreeList {
+  height: 100%;
+  width: 100%;
+}
+
+.amis-scope .a-ResultTableList {
+  height: 100%;
+  width: 100%;
+}
+
+.amis-scope .a-ResultTableList-close-btn {
+  float: right;
+  cursor: pointer;
 }
 
 .amis-scope .a-CityPicker .a-Select {
@@ -41372,6 +41831,7 @@ readers do not read off random characters that represent icons */
   margin: 0;
   vertical-align: middle;
   text-align: left;
+  transition: all 0.5s ease;
 }
 
 .amis-scope .a-Switch.is-disabled {
@@ -41775,6 +42235,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Select {
   display: inline-flex;
+  /* select 标签样式 */
   vertical-align: middle;
   text-align: left;
   align-items: center;
@@ -41788,6 +42249,10 @@ readers do not read off random characters that represent icons */
   padding: calc( ( 1.875rem - 1.4285714286 * 0.875rem - 0.0625rem * 2 ) / 2 ) 0 calc( ( 1.875rem - 1.4285714286 * 0.875rem - 0.0625rem * 2 ) / 2 ) 0.5rem;
   cursor: pointer;
   color: #58666e;
+}
+
+.amis-scope .a-Select--block {
+  display: flex;
 }
 
 .amis-scope .a-Select:hover {
@@ -41807,6 +42272,16 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Select:focus {
   box-shadow: none;
+}
+
+.amis-scope .a-Select .a-PopOver.a-Select-popover .a-Select-menu .a-Select-option {
+  height: 2rem;
+  line-height: 1.375rem;
+}
+
+.amis-scope .a-Select .a-PopOver.a-Select-popover .a-Select-menu .a-Select-addBtn {
+  height: 2rem;
+  line-height: 1.875rem;
 }
 
 .amis-scope .a-Select--borderHalf {
@@ -41861,12 +42336,17 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Select--multi {
   height: auto;
   min-height: 1.875rem;
+  padding: 0.25rem 0 0.25rem 0.25rem;
 }
 
 .amis-scope .a-Select--multi .a-Select-valueWrap > input {
   display: inline-block;
   width: 6.25rem;
   margin-bottom: 0.25rem;
+}
+
+.amis-scope .a-Select--multi .a-Select-valueWrap .a-Select-placeholder {
+  margin-left: 0.5rem;
 }
 
 .amis-scope .a-Select--multi .a-Select-values + .a-Select-input {
@@ -41919,6 +42399,11 @@ readers do not read off random characters that represent icons */
   background: #f0fafd;
 }
 
+.amis-scope .a-Select-valueIcon svg {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
 .amis-scope .a-Select-arrow {
   margin-right: 0.75rem;
   width: 1rem;
@@ -41927,6 +42412,7 @@ readers do not read off random characters that represent icons */
   align-items: center;
   justify-content: center;
   line-height: 1;
+  transform: rotate(90deg);
 }
 
 .amis-scope .a-Select-arrow > svg {
@@ -42006,6 +42492,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Select-input > input {
+  width: 100%;
   outline: none;
   border: none;
   flex-grow: 1;
@@ -42016,7 +42503,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Select-option {
   cursor: pointer;
-  min-width: 7.5rem;
   padding: calc( ( 1.875rem - 1.4285714286 * 0.875rem ) / 2 ) 0.5rem;
 }
 
@@ -42047,6 +42533,16 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Select-option.is-highlight > a {
   display: block;
+}
+
+.amis-scope .a-Select-option .a-Select-option-content,
+.amis-scope .a-Select-option .a-Select-option-content > span > div {
+  flex: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .amis-scope .a-Select-noResult {
@@ -42112,6 +42608,58 @@ readers do not read off random characters that represent icons */
   height: 20rem;
 }
 
+.amis-scope .a-Select-overflow-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: calc( ( 1.4285714286 * 0.875rem - 0.125rem + 0.25rem ) * 5 );
+}
+
+.amis-scope .a-Select-overflow-wrapper .a-Select-value {
+  position: static;
+  white-space: normal;
+  user-select: none;
+  line-height: calc( 1.4285714286 * 0.875rem - 0.125rem );
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.75rem;
+  background: #e5e7eb;
+  border: 0.0625rem solid var(--Form-select-value-borderColor);
+  border-radius: 0.125rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.amis-scope .a-Select-overflow-wrapper .a-Select-value:hover {
+  background-color: #d1d5db;
+}
+
+.amis-scope .a-Select-overflow-wrapper .a-Select-valueLabel {
+  display: inline-block;
+  max-width: 7.5rem;
+  padding: 0 0.25rem;
+  overflow: hidden;
+  vertical-align: top;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.amis-scope .a-Select-overflow.a-Tooltip--dark .a-Select-overflow-wrapper .a-Select-value {
+  background-color: #46474f;
+  border: none;
+}
+
+.amis-scope .a-Select-overflow.a-Tooltip--dark .a-Select-overflow-wrapper .a-Select-value:hover {
+  background-color: #b8babf;
+}
+
+.amis-scope .a-Select-overflow.a-Tooltip--dark .a-Select-overflow-wrapper .a-Select-value .a-Select-valueIcon {
+  color: #e9e9e9;
+}
+
 .amis-scope .a-Select-popover {
   margin-top: calc(0.0625rem * -1);
   background: #fff;
@@ -42120,7 +42668,6 @@ readers do not read off random characters that represent icons */
   box-shadow: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  min-width: 6.25rem;
 }
 
 .amis-scope .a-Select-popover.a-PopOver--leftTopLeftBottom {
@@ -42132,6 +42679,11 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-SelectControl.is-error > .a-Select {
+  border-color: #f05050;
+  background: #fff;
+}
+
+.amis-scope .a-Select.is-error {
   border-color: #f05050;
   background: #fff;
 }
@@ -42173,6 +42725,7 @@ readers do not read off random characters that represent icons */
   color: #99a6ad;
   text-align: center;
   width: 100%;
+  height: 100%;
   flex-basis: 1.875rem;
   flex-grow: 1;
   display: flex;
@@ -42354,17 +42907,17 @@ readers do not read off random characters that represent icons */
   display: inline-flex;
   flex-wrap: nowrap;
   border: 0.0625rem solid #d1d5db;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   padding: calc(
     (
         1.875rem - 1.4285714286 *
-          0.875rem
+          0.75rem
       ) / 2 - 0.0625rem
   ) 0.75rem;
   height: 1.875rem;
   outline: none;
   white-space: nowrap;
-  color: #58666e;
+  color: #151b26;
   background: #fff;
   border-radius: 0.0625rem;
 }
@@ -42660,17 +43213,17 @@ readers do not read off random characters that represent icons */
   display: inline-flex;
   flex-wrap: nowrap;
   border: 0.0625rem solid #d1d5db;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   padding: calc(
     (
         1.875rem - 1.4285714286 *
-          0.875rem
+          0.75rem
       ) / 2 - 0.0625rem
   ) 0.75rem;
   height: 1.875rem;
   outline: none;
   white-space: nowrap;
-  color: #58666e;
+  color: #151b26;
   background: #fff;
   border-radius: 0.142rem;
   min-width: calc(
@@ -42693,6 +43246,10 @@ readers do not read off random characters that represent icons */
   box-sizing: none;
 }
 
+.amis-scope .a-DatePicker .a-DatePicker-clear {
+  display: none;
+}
+
 .amis-scope .a-DatePicker--borderHalf {
   border-left-color: transparent !important;
   border-right-color: transparent !important;
@@ -42712,8 +43269,12 @@ readers do not read off random characters that represent icons */
   border-color: #23b7e5;
 }
 
-.amis-scope .a-DatePicker:not(.is-disabled):hover .a-DatePicker-toggler:before {
-  color: #111827;
+.amis-scope .a-DatePicker:not(.is-disabled):hover .a-DatePicker-clear {
+  display: flex;
+}
+
+.amis-scope .a-DatePicker:not(.is-disabled):hover .a-DatePicker-clear + .a-DatePicker-toggler {
+  display: none;
 }
 
 .amis-scope .a-DatePicker.is-focused {
@@ -42770,16 +43331,6 @@ readers do not read off random characters that represent icons */
   fill: #2d323c;
 }
 
-.amis-scope .a-DatePicker-toggler svg polyline,
-.amis-scope .a-DatePicker-toggler svg circle {
-  stroke: #4b5563;
-}
-
-.amis-scope .a-DatePicker-toggler:hover svg polyline,
-.amis-scope .a-DatePicker-toggler:hover svg circle {
-  stroke: #111827;
-}
-
 .amis-scope .a-DatePicker-clear {
   padding: 0.1875rem;
   cursor: pointer;
@@ -42789,7 +43340,6 @@ readers do not read off random characters that represent icons */
   margin-left: auto;
   text-decoration: none;
   line-height: 1;
-  margin-right: 0.25rem;
 }
 
 .amis-scope .a-DatePicker-clear svg {
@@ -42811,43 +43361,24 @@ readers do not read off random characters that represent icons */
   display: flex;
 }
 
-.amis-scope .a-DateControl {
-  width: auto !important;
-}
-
-.amis-scope .a-DateControl.is-date > .a-DatePicker {
-  min-width: calc(calc(
-    1rem * 5 + 0.75rem * 2 +
-      0.875rem * 2
-  ) + 1rem * 2);
-}
-
-.amis-scope .a-DateControl.is-datetime > .a-DatePicker {
-  min-width: calc(calc(
-    1rem * 5 + 0.75rem * 2 +
-      0.875rem * 2
-  ) + 1rem * 6);
-}
-
 .amis-scope .a-DatePicker-shortcuts {
   margin: 0;
-  padding: calc( ( 1.875rem - 0.875rem * 1.5 ) / 2 ) 0.5rem;
+  padding-left: 0.625rem;
   list-style: none;
-}
-
-.amis-scope .a-DatePicker-shortcuts + .rdt .rdtPicker {
-  padding-top: 0;
+  background: #f7f7f9;
+  line-height: 2rem;
 }
 
 .amis-scope .a-DatePicker-shortcut {
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 2rem;
+  font-size: 0.75rem;
 }
 
 .amis-scope .a-DatePicker-shortcut a {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   cursor: pointer;
-  color: #23b7e5;
+  color: #151b26;
   text-decoration: none;
 }
 
@@ -42914,8 +43445,8 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .rdt {
   user-select: none;
-  font-size: 0.875rem;
-  color: #58666e;
+  font-size: 0.75rem;
+  color: #151b26;
 }
 
 .amis-scope .rdt .rdtDays {
@@ -42957,6 +43488,10 @@ readers do not read off random characters that represent icons */
   width: 100%;
 }
 
+.amis-scope .rdt .rdtPickerTimeWithoutD .TimeContentWrapper {
+  display: flex;
+}
+
 .amis-scope .rdt .rdtPicker {
   margin-top: 0;
   padding: 0;
@@ -42981,7 +43516,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .rdt .rdtPicker td.rdtMinute:hover,
 .amis-scope .rdt .rdtPicker td.rdtSecond:hover,
 .amis-scope .rdt .rdtPicker .rdtTimeToggle:hover {
-  background: #ededed;
+  background: #f7f7f9;
 }
 
 .amis-scope .rdt .rdtPicker td.rdtBetween {
@@ -42996,14 +43531,29 @@ readers do not read off random characters that represent icons */
   border-bottom-color: #fff;
 }
 
-.amis-scope .rdt .rdtPicker td.rdtActive,
-.amis-scope .rdt .rdtPicker td.rdtActive:hover {
+.amis-scope .rdt .rdtPicker .rdtDisabled.rdtToday > span,
+.amis-scope .rdt .rdtPicker .rdtOld.rdtToday > span,
+.amis-scope .rdt .rdtPicker .rdtNew.rdtToday > span {
+  border-color: #e8e9eb;
+}
+
+.amis-scope .rdt .rdtPicker td.rdtActive > span,
+.amis-scope .rdt .rdtPicker td.rdtActive:hover > span {
   background: #23b7e5;
 }
 
-.amis-scope .rdt .rdtPicker td.rdtDisabled,
-.amis-scope .rdt .rdtPicker td.rdtDisabled:hover {
-  background: #edf1f2;
+.amis-scope .rdt .rdtPicker .rdtActive.rdtToday {
+  color: #151b26;
+}
+
+.amis-scope .rdt .rdtPicker .rdtActive.rdtToday > span {
+  background: transparent;
+  border-color: #144bcc;
+}
+
+.amis-scope .rdt .rdtPicker td.rdtDisabled > span,
+.amis-scope .rdt .rdtPicker td.rdtDisabled:hover > span {
+  background: #f7f7f9;
 }
 
 .amis-scope .rdt thead tr:first-child th {
@@ -43014,10 +43564,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .rdt thead tr:first-child th:hover {
   background: transparent;
-}
-
-.amis-scope .rdt tbody {
-  height: 12.125rem;
 }
 
 .amis-scope .rdt tfoot {
@@ -43085,6 +43631,21 @@ readers do not read off random characters that represent icons */
   padding-top: 10px;
   text-align: center;
   border-bottom: 1px solid #d1d5db;
+}
+
+.amis-scope .a-TimeFooterWrapper {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.amis-scope .a-TimeFooterWrapper .a-Button {
+  height: 24px;
+  line-height: 24px;
+  padding: 0 8px;
+  border-radius: 2px;
 }
 
 .amis-scope .a-CalendarInput {
@@ -43259,7 +43820,7 @@ readers do not read off random characters that represent icons */
   cursor: pointer !important;
   width: 1rem;
   padding: 0;
-  color: #999;
+  color: #84868c;
   font-size: 1.25rem;
   text-decoration: none;
   font-family: auto;
@@ -43269,17 +43830,22 @@ readers do not read off random characters that represent icons */
 .amis-scope .rdtPrev:hover,
 .amis-scope .rdtNext:hover {
   text-decoration: none;
-  color: #000;
+  color: #151b26;
+}
+
+.amis-scope .rdtCenter {
+  color: #151b26;
 }
 
 .amis-scope .rdtSwitch {
   text-align: center;
   cursor: pointer;
   font-weight: normal;
+  color: #151b26;
 }
 
 .amis-scope .rdtSwitch:hover {
-  color: #18a0ca;
+  color: #1485a8;
   text-decoration: none;
 }
 
@@ -43290,6 +43856,7 @@ readers do not read off random characters that represent icons */
   border-bottom: 1px solid #d1d5db;
   height: 40px;
   width: 100%;
+  margin-top: -8px;
 }
 
 .amis-scope .rdtHeader > * {
@@ -43302,62 +43869,59 @@ readers do not read off random characters that represent icons */
   margin-left: 0.25rem;
 }
 
-.amis-scope td.rdtMonth,
-.amis-scope td.rdtYear,
-.amis-scope td.rdtQuarter {
-  width: 3.125rem;
-  height: 2.5rem;
-}
-
 .amis-scope td.rdtMonth > span,
 .amis-scope td.rdtYear > span,
 .amis-scope td.rdtQuarter > span {
-  height: 1.5rem;
-  display: block;
+  display: inline-block;
 }
 
 .amis-scope td.rdtMonth.rdtBetween,
 .amis-scope td.rdtYear.rdtBetween,
 .amis-scope td.rdtQuarter.rdtBetween {
-  background: transparent !important;
-}
-
-.amis-scope td.rdtMonth.rdtBetween > span,
-.amis-scope td.rdtYear.rdtBetween > span,
-.amis-scope td.rdtQuarter.rdtBetween > span {
   background: rgba(35, 183, 229, 0.1);
 }
 
 .amis-scope td.rdtMonth:hover,
 .amis-scope td.rdtMonth.rdtActive,
+.amis-scope td.rdtMonth.rdtActive:hover,
 .amis-scope td.rdtYear:hover,
 .amis-scope td.rdtYear.rdtActive,
+.amis-scope td.rdtYear.rdtActive:hover,
 .amis-scope td.rdtQuarter:hover,
-.amis-scope td.rdtQuarter.rdtActive {
-  background: transparent !important;
+.amis-scope td.rdtQuarter.rdtActive,
+.amis-scope td.rdtQuarter.rdtActive:hover {
+  background: transparent;
 }
 
 .amis-scope td.rdtMonth:hover > span,
 .amis-scope td.rdtMonth.rdtActive > span,
+.amis-scope td.rdtMonth.rdtActive:hover > span,
 .amis-scope td.rdtYear:hover > span,
 .amis-scope td.rdtYear.rdtActive > span,
+.amis-scope td.rdtYear.rdtActive:hover > span,
 .amis-scope td.rdtQuarter:hover > span,
-.amis-scope td.rdtQuarter.rdtActive > span {
-  background: #23b7e5;
+.amis-scope td.rdtQuarter.rdtActive > span,
+.amis-scope td.rdtQuarter.rdtActive:hover > span {
+  background: #23b7e5 !important;
   color: #fff;
 }
 
 .amis-scope td.rdtMonth.rdtDisabled,
+.amis-scope td.rdtMonth.rdtDisabled:hover,
 .amis-scope td.rdtYear.rdtDisabled,
-.amis-scope td.rdtQuarter.rdtDisabled {
-  background: transparent !important;
+.amis-scope td.rdtYear.rdtDisabled:hover,
+.amis-scope td.rdtQuarter.rdtDisabled,
+.amis-scope td.rdtQuarter.rdtDisabled:hover {
+  background: #f7f7f9;
+  color: #b8babf;
 }
 
-.amis-scope td.rdtMonth.rdtDisabled > span,
-.amis-scope td.rdtYear.rdtDisabled > span,
-.amis-scope td.rdtQuarter.rdtDisabled > span {
-  background: #edf1f2;
-  color: #999;
+.amis-scope .a-DateRangePicker-start .rdtPicker .rdtActive.rdtBetween {
+  background: linear-gradient(to right, transparent 0%, transparent 50%, rgba(35, 183, 229, 0.1) 51%, rgba(35, 183, 229, 0.1) 100%);
+}
+
+.amis-scope .a-DateRangePicker-end .rdtPicker .rdtActive.rdtBetween {
+  background: linear-gradient(to right, rgba(35, 183, 229, 0.1) 0%, rgba(35, 183, 229, 0.1) 50%, transparent 51%, transparent 100%);
 }
 
 .amis-scope .a-DateCalendar {
@@ -43372,17 +43936,17 @@ readers do not read off random characters that represent icons */
   display: inline-flex;
   flex-wrap: nowrap;
   border: 0.0625rem solid #d1d5db;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   padding: calc(
     (
         1.875rem - 1.4285714286 *
-          0.875rem
+          0.75rem
       ) / 2 - 0.0625rem
   ) 0.75rem;
   height: 1.875rem;
   outline: none;
   border-radius: 0.142rem;
-  color: #58666e;
+  color: #151b26;
   background: #fff;
   min-width: calc(
     1rem * 8 + 0.75rem * 2 +
@@ -43400,6 +43964,10 @@ readers do not read off random characters that represent icons */
   border-color: transparent !important;
 }
 
+.amis-scope .a-DateRangePicker .a-DateRangePicker-clear {
+  display: none;
+}
+
 .amis-scope .a-DateRangePicker:not(.is-disabled) {
   cursor: pointer;
 }
@@ -43409,8 +43977,12 @@ readers do not read off random characters that represent icons */
   border-color: #23b7e5;
 }
 
-.amis-scope .a-DateRangePicker:not(.is-disabled):hover .a-DateRangePicker-toggler {
-  color: #111827;
+.amis-scope .a-DateRangePicker:not(.is-disabled):hover .a-DateRangePicker-clear {
+  display: flex;
+}
+
+.amis-scope .a-DateRangePicker:not(.is-disabled):hover .a-DateRangePicker-clear + .a-DateRangePicker-toggler {
+  display: none;
 }
 
 .amis-scope .a-DateRangePicker.is-focused {
@@ -43424,6 +43996,7 @@ readers do not read off random characters that represent icons */
   outline: none;
   padding: 0;
   background: 0;
+  flex: 1;
 }
 
 .amis-scope .a-DateRangePicker .a-DateRangePicker-input.isActive {
@@ -43482,16 +44055,6 @@ readers do not read off random characters that represent icons */
   fill: #2d323c;
 }
 
-.amis-scope .a-DateRangePicker-toggler svg polyline,
-.amis-scope .a-DateRangePicker-toggler svg circle {
-  stroke: #4b5563;
-}
-
-.amis-scope .a-DateRangePicker-toggler:hover svg polyline,
-.amis-scope .a-DateRangePicker-toggler:hover svg circle {
-  stroke: #111827;
-}
-
 .amis-scope .a-DateRangePicker-clear {
   padding: 0.1875rem;
   cursor: pointer;
@@ -43501,7 +44064,6 @@ readers do not read off random characters that represent icons */
   margin-left: auto;
   text-decoration: none;
   line-height: 1;
-  margin-right: 0.25rem;
 }
 
 .amis-scope .a-DateRangePicker-clear svg {
@@ -43543,17 +44105,25 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-DateRangePicker-rangers {
   margin: 0;
-  padding: 10px 0 0 10px;
+  padding-left: 0.625rem;
   list-style: none;
+  background: #F7F7F9;
+  line-height: 2rem;
 }
 
 .amis-scope .a-DateRangePicker-ranger {
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 2rem;
+  font-size: 0.75rem;
 }
 
 .amis-scope .a-DateRangePicker-ranger a {
   cursor: pointer;
+  color: #151b26;
+}
+
+.amis-scope .a-DateRangePicker-ranger a:hover {
+  color: #1485a8;
 }
 
 .amis-scope .a-DateRangePicker-actions {
@@ -43570,14 +44140,14 @@ readers do not read off random characters that represent icons */
   min-width: calc(calc(
     1rem * 8 + 0.75rem * 2 +
       0.875rem * 2
-  ) + 1rem * 5.5);
+  ) + 1rem * 10);
 }
 
 .amis-scope .a-DateRangeControl.is-datetime > .a-DateRangePicker {
   min-width: calc(calc(
     1rem * 8 + 0.75rem * 2 +
       0.875rem * 2
-  ) + 1rem * 11);
+  ) + 1rem * 10);
 }
 
 .amis-scope .a-DateRangePicker-popover {
@@ -43693,6 +44263,10 @@ readers do not read off random characters that represent icons */
   margin-bottom: 0.5rem;
 }
 
+.amis-scope .a-ImageControl-addBtn-text {
+  color: #58666e;
+}
+
 .amis-scope .a-ImageControl-addBtn.is-disabled {
   pointer-events: none;
   border: 0.0625rem solid #d1d5db;
@@ -43723,11 +44297,21 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-ImageControl-dropzone:focus .a-ImageControl-addBtn {
   border-color: #b4bbc5;
   background: #ececec;
+  color: #58666e !important;
+}
+
+.amis-scope .a-ImageControl-dropzone:hover .a-ImageControl-addBtn {
+  border-color: #b4bbc5;
+  background: #ececec;
+  color: #58666e;
+  border-color: #b4bbc5;
+}
+
+.amis-scope .a-ImageControl-dropzone:hover .a-ImageControl-addBtn-text {
   color: #58666e;
 }
 
 .amis-scope .a-ImageControl-item {
-  border: 0.0625rem solid #d1d5db;
   border-radius: 0;
   vertical-align: top;
   padding: 0.25rem;
@@ -44002,10 +44586,11 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-FileControl-clear {
-  float: right;
   color: #84868c;
   display: none;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: 0.25rem;
 }
 
 .amis-scope .a-FileControl-clear:hover {
@@ -44088,6 +44673,15 @@ readers do not read off random characters that represent icons */
   border-radius: 0.142rem;
   background: #fff;
   cursor: pointer;
+}
+
+.amis-scope .a-FileControl-acceptTip-click {
+  color: #2468f2;
+}
+
+.amis-scope .a-FileControl-acceptTip-help a {
+  color: #84868c;
+  font-size: 0.75rem;
 }
 
 .amis-scope .a-FileControl-acceptTip:hover {
@@ -44535,8 +45129,8 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-InputRange-track-dot {
-  width: 0.25rem;
-  height: 0.25rem;
+  width: 0.375rem;
+  height: 0.375rem;
   border-radius: 50%;
   background-color: #fff;
   position: absolute;
@@ -44823,7 +45417,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Tree-itemInput {
-  padding-left: 0.75rem;
+  padding-left: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -44889,27 +45483,26 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Tree-itemArrow {
   cursor: pointer;
-  width: 0.75rem;
+  width: 1rem;
   display: inline-flex;
   margin-right: 0.625rem;
 }
 
 .amis-scope .a-Tree-itemArrow > svg {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1rem;
+  height: 1rem;
   display: block;
   transition: transform 0s;
   top: 0;
-  transform: rotate(90deg);
 }
 
 .amis-scope .a-Tree-itemArrow.is-folded > svg {
-  transform: rotate(0deg);
+  transform: rotate(-90deg);
 }
 
 .amis-scope .a-Tree-itemArrowPlaceholder {
   display: inline-block;
-  width: calc(0.75rem + 0.25rem);
+  width: calc(1rem + 0.25rem);
 }
 
 .amis-scope .a-Tree-itemDrager {
@@ -45097,7 +45690,7 @@ readers do not read off random characters that represent icons */
   fill: #2d323c;
 }
 
-.amis-scope .a-TreeSelect-passwordReveal {
+.amis-scope .a-TreeSelect-revealPassword {
   cursor: pointer;
   color: #99a6ad;
 }
@@ -45745,7 +46338,7 @@ readers do not read off random characters that represent icons */
   fill: #2d323c;
 }
 
-.amis-scope .a-Picker-passwordReveal {
+.amis-scope .a-Picker-revealPassword {
   cursor: pointer;
   color: #99a6ad;
 }
@@ -46089,6 +46682,10 @@ readers do not read off random characters that represent icons */
   position: relative;
 }
 
+.amis-scope .a-Transfer-searchbox {
+  width: 100%;
+}
+
 .amis-scope .a-Transfer--inline {
   display: inline-flex;
   flex-wrap: nowrap;
@@ -46114,6 +46711,10 @@ readers do not read off random characters that represent icons */
   flex-grow: 1;
 }
 
+.amis-scope .a-Transfer-select {
+  overflow: hidden;
+}
+
 .amis-scope .a-Transfer-select,
 .amis-scope .a-Transfer-result {
   width: 0;
@@ -46134,8 +46735,29 @@ readers do not read off random characters that represent icons */
   position: relative;
 }
 
-.amis-scope .a-Transfer-select > .a-Transfer-selection.a-AssociatedSelection {
-  overflow: initial;
+.amis-scope .a-Transfer-select > .a-ChainedSelection {
+  min-height: unset;
+  overflow: hidden;
+}
+
+.amis-scope .a-Transfer-select > .a-ChainedSelection .a-ChainedSelection-col {
+  height: 100%;
+  overflow: auto;
+  min-width: unset;
+  flex: 1 1 0;
+}
+
+.amis-scope .a-Transfer .a--ResultTreeList {
+  border-top: 1px solid #d1d5db;
+}
+
+.amis-scope .a-Transfer .a-AssociatedSelection {
+  overflow: hidden;
+}
+
+.amis-scope .a-Transfer .a-AssociatedSelection-left,
+.amis-scope .a-Transfer .a-AssociatedSelection-right {
+  min-height: unset;
 }
 
 .amis-scope .a-Transfer-select {
@@ -46192,6 +46814,14 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Transfer-clearAll.is-disabled {
   pointer-events: none;
   color: #99a6ad;
+}
+
+.amis-scope .a-Transfer .a-Tree {
+  padding: 0.125rem 0.625rem;
+}
+
+.amis-scope .a-Transfer .a-Tree-itemLabel:hover::after {
+  left: 0;
 }
 
 .amis-scope .a-TabsTransfer .a-Transfer-title {
@@ -46289,6 +46919,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-TransferControl {
   position: relative;
+  overflow: hidden;
 }
 
 .amis-scope .a-TransferControl.is-inline {
@@ -46312,9 +46943,14 @@ readers do not read off random characters that represent icons */
   top: 0;
 }
 
+.amis-scope .a-TransferDropDown:hover {
+  border: 0.0625rem solid ver(--menu-active-color);
+}
+
 .amis-scope .a-TransferDropDown-icon {
+  transform: rotate(90deg);
   transition: transform 0s ease-out;
-  margin: 5px 5px 5px auto;
+  margin: 0.3125rem 0 0.3125rem auto;
   display: flex;
   color: #4b5563;
 }
@@ -46330,7 +46966,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-TransferDropDown.is-active .a-TransferDropDown-icon {
-  transform: rotate(180deg);
+  transform: rotate(-90deg);
 }
 
 .amis-scope .a-TransferDropDown-content {
@@ -46338,6 +46974,7 @@ readers do not read off random characters that represent icons */
   min-width: 25rem;
   display: flex;
   flex-direction: column;
+  padding: 0.25rem 0;
 }
 
 .amis-scope .a-TransferDropDown-content.is-mobile {
@@ -46379,6 +47016,7 @@ readers do not read off random characters that represent icons */
   width: 0.75rem;
   height: 0.75rem;
   fill: #4b5563;
+  color: #84868c;
 }
 
 .amis-scope .a-NestedSelect-menuOuter {
@@ -46397,7 +47035,8 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-NestedSelect-menu {
   width: 10rem;
-  height: 10.9375rem;
+  min-height: 2rem;
+  max-height: 10.9375rem;
   background: #fff;
   color: #58666e;
   border: 0.0625rem solid #23b7e5;
@@ -46422,6 +47061,8 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-NestedSelect-menu .a-NestedSelect-option > .a-NestedSelect-optionLabel {
   flex: 1;
   height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .amis-scope .a-NestedSelect-menu .a-NestedSelect-option > .a-NestedSelect-optionLabel.is-disabled {
@@ -46687,7 +47328,7 @@ readers do not read off random characters that represent icons */
   fill: #2d323c;
 }
 
-.amis-scope .a-IconPickerControl-passwordReveal {
+.amis-scope .a-IconPickerControl-revealPassword {
   cursor: pointer;
   color: #99a6ad;
 }
@@ -46705,24 +47346,20 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-IconPickerControl-placeholder {
   color: #99a6ad;
   user-select: none;
-  position: absolute;
-  left: 0.5rem;
-  top: calc(
-    (
-        1.875rem - 1.4285714286 *
-          0.875rem - 0.125rem
-      ) / 2
-  );
-  margin-top: calc(2 * 0.0625rem);
   line-height: 1.4285714286;
+  position: absolute;
+  left: 2px;
+  overflow: hidden;
+  width: 100%;
 }
 
 .amis-scope .a-IconPickerControl-valueWrap {
-  display: flex;
   justify-content: space-between;
   flex-grow: 1;
   line-height: 1;
   white-space: nowrap;
+  width: 100%;
+  position: relative;
 }
 
 .amis-scope .a-IconPickerControl-valueWrap > input {
@@ -46734,6 +47371,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-IconPickerControl-input--withAC {
   position: relative;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .amis-scope .a-IconPickerControl-input--withAC > input {
@@ -46801,6 +47439,9 @@ readers do not read off random characters that represent icons */
   line-height: calc( 1.4285714286 * 0.875rem );
   vertical-align: middle;
   display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
 }
 
 .amis-scope .a-IconPickerControl-value > i {
@@ -46899,6 +47540,7 @@ readers do not read off random characters that represent icons */
   margin: 0.375rem 0 0;
   padding-left: 0.75rem;
   font-size: 0.75rem;
+  position: var(--Form-feedback-position);
 }
 
 .amis-scope .a-Form-description {
@@ -46928,6 +47570,10 @@ readers do not read off random characters that represent icons */
   margin-bottom: 0;
 }
 
+.amis-scope .a-Form-item:last-child .a-Form-feedback {
+  position: relative;
+}
+
 .amis-scope .a-Grid-form > .a-Form-item:last-child {
   margin-bottom: 0;
 }
@@ -46955,6 +47601,10 @@ readers do not read off random characters that represent icons */
 .amis-scope .a-Form-item--horizontal > .a-Form-label {
   text-align: right;
   white-space: "normal";
+}
+
+.amis-scope .a-Form-item--horizontal > .a-Form-label--left {
+  text-align: left;
 }
 
 .amis-scope .a-Form-item--horizontal-justify {
@@ -47185,6 +47835,14 @@ readers do not read off random characters that represent icons */
     flex: 0 0 100%;
     max-width: 100%;
     min-height: 1px;
+  }
+
+  .amis-scope .a-Form-item--horizontal .a-Form-itemColumn--align-left {
+    text-align: left;
+  }
+
+  .amis-scope .a-Form-item--horizontal .a-Form-itemColumn--align-right {
+    text-align: right;
   }
 
   .amis-scope .a-Form-item--inline {
@@ -47509,6 +48167,427 @@ readers do not read off random characters that represent icons */
   .amis-scope .a-Form .a-Form-item .a-Form-groupColumn > .a-Form-item {
     padding-bottom: 0.5rem;
   }
+}
+
+.amis-scope .a-UserSelect {
+  position: relative;
+}
+
+.amis-scope .a-UserSelect-popup {
+  height: 100vh;
+}
+
+.amis-scope .a-UserSelect-selectPopup {
+  width: 100vw;
+  height: 100vh;
+  z-index: var(3000)1;
+}
+
+.amis-scope .a-UserSelect-searchBox {
+  height: 3.25rem;
+  margin: 0 1rem;
+  flex: none;
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .a-UserSelect-search {
+  background: #f5f7f8;
+  flex: 1;
+}
+
+.amis-scope .a-UserSelect-searchResult {
+  width: 100vw;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #f5f7f8;
+}
+
+.amis-scope .a-UserSelect-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.amis-scope .a-UserSelect-navbar {
+  position: relative;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding-left: 0.75rem;
+  padding-right: 1rem;
+  flex: none;
+}
+
+.amis-scope .a-UserSelect-navbar-title {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  line-height: 44px;
+  text-align: center;
+}
+
+.amis-scope .a-UserSelect-navbar-btnEdit {
+  color: #2468f2;
+  font-size: 1rem;
+}
+
+.amis-scope .a-UserSelect-breadcrumb {
+  width: 100%;
+  line-height: 2.75rem;
+  padding-left: 1rem;
+  flex: none;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.amis-scope .a-UserSelect-breadcrumb-item {
+  cursor: pointer;
+  color: #2468f2;
+}
+
+.amis-scope .a-UserSelect-breadcrumb-item:last-child {
+  color: inherit;
+}
+
+.amis-scope .a-UserSelect-breadcrumb-separator {
+  margin: 0 0.5rem;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+.amis-scope .a-UserSelect-contentBox {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  background: #f5f7f8;
+}
+
+.amis-scope .a-UserSelect-scroll {
+  height: 100%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: left 0s ease-in-out;
+}
+
+.amis-scope .a-UserSelect-memberList-box {
+  width: 100vw;
+  margin-top: 1rem;
+}
+
+.amis-scope .a-UserSelect-memberList,
+.amis-scope .a-UserSelect-selection {
+  height: 100%;
+  list-style: none;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.amis-scope .a-UserSelect-memberList li,
+.amis-scope .a-UserSelect-selection li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.625rem;
+  line-height: 2.625rem;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 1rem;
+  border-bottom: 0.0625rem solid #f7f7f9;
+}
+
+.amis-scope .a-UserSelect-memberList li > span,
+.amis-scope .a-UserSelect-selection li > span {
+  flex: 1;
+}
+
+.amis-scope .a-UserSelect-selection {
+  margin: 0;
+  padding: 0;
+}
+
+.amis-scope .a-UserSelect-selection li {
+  padding: 0;
+}
+
+.amis-scope .a-UserSelect-memberName {
+  font-size: 14px;
+  flex: 2 !important;
+  text-align: left;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.amis-scope .a-UserSelect-label {
+  flex: 1;
+}
+
+.amis-scope .a-UserSelect-icon-box {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 100%;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amis-scope .a-UserSelect-icon-box > svg {
+  position: static;
+}
+
+.amis-scope .a-UserSelect-icon-box.role {
+  background-color: #0bc286;
+}
+
+.amis-scope .a-UserSelect-icon-box.department {
+  background-color: #ffab52;
+}
+
+.amis-scope .a-UserSelect-icon-box.post {
+  background-color: #528eff;
+}
+
+.amis-scope .a-UserSelect-userPic {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.amis-scope .a-UserSelect-userPic-box {
+  width: 1.75rem;
+  margin-right: 0.625rem;
+  flex: none !important;
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .a-UserSelect-text-userPic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #528eff;
+  text-align: center;
+  line-height: 1.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  overflow: hidden;
+  color: #fff;
+  margin: 0;
+}
+
+.amis-scope .a-UserSelect-more {
+  text-align: right;
+}
+
+.amis-scope .a-UserSelect-more svg {
+  width: 10px;
+  height: 10px;
+  transform: rotateZ(-90deg);
+}
+
+.amis-scope .a-UserSelect-resultBox {
+  width: 100vw;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  flex: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.amis-scope .a-UserSelect-selectNum {
+  flex: none;
+}
+
+.amis-scope .a-UserSelect-selectList {
+  width: 100%;
+  flex: 1;
+  padding: 0;
+  overflow-x: scroll;
+  white-space: nowrap;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .a-UserSelect-selectList-item {
+  list-style: none;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  background: #f7f7f9;
+  border-radius: 4px;
+  padding: 0 0.5rem;
+  padding-right: 0;
+}
+
+.amis-scope .a-UserSelect-selectList-item-closeBox {
+  height: 100%;
+  margin-left: 0.25rem;
+  padding: 0 0.375rem;
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .a-UserSelect-selectList-item-closeBox .icon {
+  font-size: 8px;
+}
+
+.amis-scope .a-UserSelect-selectSort-box {
+  margin-left: 0.625rem;
+  padding: 0.25rem 0.625rem;
+}
+
+.amis-scope .a-UserSelect-noRecord {
+  width: 100vw;
+  height: 100%;
+  margin: 0 1rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 6.25rem 0;
+  box-sizing: border-box;
+}
+
+.amis-scope .a-UserSelect-selectList-pop {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.amis-scope .a-UserSelect-selectList-pop li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .a-UserSelect-btnSure {
+  flex: none;
+}
+
+.amis-scope .a-UserSelect-del {
+  text-align: right;
+  flex: none !important;
+  padding: 0 10px;
+}
+
+.amis-scope .a-UserSelect-dragBar {
+  flex: none;
+  margin-right: 10px;
+}
+
+.amis-scope .a-UserSelect-checkContent li > label {
+  flex: 1 !important;
+}
+
+.amis-scope .a-UserSelect-selectBody {
+  width: 100%;
+  background: #f5f7f8;
+  display: flex;
+  flex-direction: column;
+}
+
+.amis-scope .a-UserSelect-searchLoadingBox {
+  flex: 1;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amis-scope .a-UserSelect-spinnerBox {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amis-scope .a-UserSelect-selectList-box {
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 4px;
+  padding: 0 1rem;
+  margin: 1rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.amis-scope .a-UserSelect-selectList-box .a-UserSelect-noRecord {
+  width: auto;
+}
+
+.amis-scope .a-UserSelect-select-head {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.amis-scope .a-UserSelect-select-head-text {
+  font-size: 1rem;
+  color: #151b26;
+}
+
+.amis-scope .a-UserSelect-select-head-btnClear {
+  color: #2468f2;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.amis-scope .a-UserTabSelect-popup {
+  width: 100vw;
+  height: 100vh;
+}
+
+.amis-scope .a-UserTabSelect-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.amis-scope .a-UserTabSelect-tabs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.amis-scope .a-UserTabSelect-tabs > div:first-child {
+  flex: none;
+}
+
+.amis-scope .a-UserTabSelect-tabs > div:last-child {
+  flex: 1;
+}
+
+.amis-scope .a-UserTabSelect-tabs > div:last-child > div {
+  height: 100%;
+}
+
+.amis-scope .a-UserTabSelect-tabs > div:last-child > div > div {
+  height: 100%;
 }
 
 .amis-scope .a-AnchorNav {
@@ -47961,13 +49040,17 @@ readers do not read off random characters that represent icons */
   margin-top: 0.625rem;
 }
 
+.amis-scope .a-FormulaEditor-settings.only-variable {
+  height: 21.875rem;
+}
+
 .amis-scope .a-FormulaEditor-panel {
   display: flex;
   flex: 1;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: stretch;
-  height: 15.625rem;
+  height: 100%;
   border-radius: 0.142rem;
   border: 0.0625rem solid #d1d5db;
 }
@@ -47996,11 +49079,12 @@ readers do not read off random characters that represent icons */
   flex: 1;
   display: flex;
   flex-flow: column nowrap;
-  max-height: 13.75rem;
+  max-height: calc(100% - 30px);
+  overflow: hidden;
 }
 
 .amis-scope .a-FormulaEditor-panel-body--tabs {
-  max-height: 15.625rem;
+  max-height: 100%;
 }
 
 .amis-scope .a-FormulaEditor-VariableList-root {
@@ -48145,10 +49229,13 @@ readers do not read off random characters that represent icons */
   vertical-align: middle;
   text-align: center;
   padding: 0 0.5rem;
-  line-height: 17px;
   border-radius: 0.142rem;
   background: #f5f5f5;
   color: #1c2b36;
+}
+
+.amis-scope .a-FormulaEditor-VariableList .a-GroupedSelection-item-tag {
+  line-height: 17px;
 }
 
 .amis-scope .a-FormulaEditor-FuncList {
@@ -48347,6 +49434,47 @@ readers do not read off random characters that represent icons */
   font-weight: bold;
   line-height: 14px;
   padding: 0 2px;
+}
+
+.amis-scope .a-FormulaPicker.is-input-group {
+  border: 0.0625rem solid #d1d5db;
+  padding: calc(
+    (
+        1.875rem - 1.4285714286 *
+          0.875rem - 0.125rem
+      ) / 2
+  ) 0.5rem;
+  border-radius: 0.142rem;
+  background-color: #fff;
+  height: 1.875rem;
+}
+
+.amis-scope .a-FormulaPicker.is-input-group .a-FormulaPicker-input {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: none;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.amis-scope .a-FormulaPicker.is-input-group .a-FormulaPicker-input:focus {
+  border: none;
+  outline: none;
+  box-sizing: none;
+}
+
+.amis-scope .a-FormulaPicker.is-input-group .a-FormulaPicker-toggler .icon-function {
+  transform: scale(1.8);
+}
+
+.amis-scope .a-FormulaPicker.is-input-group .a-FormulaPicker-toggler .icon-ellipsis-v {
+  transform: rotate(90deg);
+}
+
+.amis-scope .a-FormulaPicker.is-input-group .a-FormulaPicker-toggler:hover {
+  cursor: pointer;
 }
 
 .amis-scope .a-Timeline-vertical {

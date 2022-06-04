@@ -13549,10 +13549,10 @@ readers do not read off random characters that represent icons */
   --Calendar-cell-bg: var(--white);
   --Calendar-cell-onActive-bg: var(--info);
   --Calendar-cell-onBetween-bg: rgba(24, 144, 255, 0.1);
-  --Calendar-cell-onDisabled-bg: var(--light);
-  --Calendar-cell-onHover-bg: #ededed;
-  --Calendar-color: var(--text-color);
-  --Calendar-fontSize: var(--fontSizeBase);
+  --Calendar-cell-onDisabled-bg: #f7f7f9;
+  --Calendar-cell-onHover-bg: #f7f7f9;
+  --Calendar-color: #151b26;
+  --Calendar-fontSize: var(--fontSizeSm);
   --Calendar-input-borderColor: var(--borderColor);
   --Calendar-input-borderRadius: var(--borderRadius);
   --Calendar-input-color: var(--info);
@@ -13567,7 +13567,7 @@ readers do not read off random characters that represent icons */
           var(--Calendar-input-fontSize)
       ) / 2
   );
-  --Calendar-shortcut-color: var(--info);
+  --Calendar-shortcut-color: #151b26;
   --Calendar-shortcut-decoration: none;
   --Calendar-shortcut-onHover-color: #0069cb;
   --Calendar-shortcut-onHover-decoration: none;
@@ -13731,8 +13731,10 @@ readers do not read off random characters that represent icons */
   --DatePicker-borderColor: var(--Form-input-borderColor);
   --DatePicker-borderRadius: var(--Form-input-borderRadius);
   --DatePicker-borderWidth: var(--Form-input-borderWidth);
-  --DatePicker-color: var(--Form-input-color);
-  --DatePicker-fontSize: var(--Form-input-fontSize);
+  --DatePicker-color: #151b26;
+  --DatePicker-header-onHover-color: #0069cb;
+  --DatePicker-arrow-color: #84868c;
+  --DatePicker-fontSize: var(--fontSizeSm);
   --DatePicker-header-select-borderColor: #fff;
   --DatePicker-height: var(--Form-input-height);
   --DatePicker-iconColor: var(--icon-color);
@@ -13761,8 +13763,9 @@ readers do not read off random characters that represent icons */
   --Divider-borderStyle: solid;
   --Drawer-bg: var(--background);
   --Drawer-body-padding: var(--gap-base);
-  --Drawer-close-color: rgba(255, 255, 255, 0.8);
-  --Drawer-close-onHover-color: rgba(255, 255, 255, 1);
+  --Drawer-close-color: var(--text--muted-color);
+  --Drawer-close-onHover-color: var(--text-color);
+  --Drawer-close-size: 0.75rem;
   --Drawer-content-borderColor: var(--borderColor);
   --Drawer-content-borderRadius: 0;
   --Drawer-content-borderWidth: var(--borderWidth);
@@ -13909,8 +13912,10 @@ readers do not read off random characters that represent icons */
   --Form-select-popoverGap: 0;
   --Form-select-search-height: var(--Form-select-menu-height);
   --Form-select-value-bgColor: var(--Form-input-onDisabled-bg);
+  --Form-select-value-bgColor--dark: #46474f;
   --Form-select-value-borderColor: var(--Form-select-value-borderColor);
   --Form-select-valueIcon-color: var(--Form-select-valueIcon-color);
+  --Form-select-valueIcon-color--dark: #e9e9e9;
   --Form-select-valueIcon-onHover-color: var(--Form-select-color);
   --Form-selectOption-height: var(--Form-input-height);
   --Form-selectValue-bg: #e4f2ff;
@@ -13950,6 +13955,7 @@ readers do not read off random characters that represent icons */
   --ImageControl-addBtn-onHover-bg: #ececec;
   --ImageControl-addBtn-onHover-border: #b4bbc5;
   --ImageControl-addBtn-onHover-color: var(--Button--default-color);
+  --ImageControl-addBtn-upload-color: var(--Button--default-color);
   --ImageControl-progress-borderRadius: 0;
   --FileControl-danger-color: #f33e3e;
   --FileControl-drag-color: #303540;
@@ -13998,8 +14004,8 @@ readers do not read off random characters that represent icons */
   --InputRange-track-onActive-transition: transform var(--animation-duration)
     ease-out left;
   --InputRange-track-border-radius: 0.25rem;
-  --InputRange-track-dot-width: 0.25rem;
-  --InputRange-track-dot-height: 0.25rem;
+  --InputRange-track-dot-width: 0.375rem;
+  --InputRange-track-dot-height: 0.375rem;
   --InputRange-track-dot-bg: var(--white);
   --InputRange-track-transition: left var(--animation-duration) ease-out,
     width var(--animation-duration) ease-out;
@@ -14132,8 +14138,8 @@ readers do not read off random characters that represent icons */
   --ListMenu-item-color: var(--text-color);
   --ListMenu-item-height: 2.125rem;
   --Log-bg: #222;
-  --Log-padding: var(--gap-xs) 0;
-  --Log-line-padding: 0 var(--gap-xs);
+  --Log-padding: var(--gap-sm) 0;
+  --Log-line-padding: 0 var(--gap-sm);
   --Log-color: #f1f1f1;
   --Log-line--onHover-bg: #444;
   --Modal-bg: var(--background);
@@ -14166,8 +14172,7 @@ readers do not read off random characters that represent icons */
   --Modal-overlay-bg: rgba(0, 0, 0, 0.6);
   --Modal-title-color: var(--text--loud-color);
   --Modal-title-fontSize: var(--fontSizeBase);
-  --Modal-title-fontSize: var(--fontSizeBase);
-  --Modal-title-fontWeight: 500;
+  --Modal-title-fontWeight: var(--fontWeightMd);
   --Modal-title-lineHeight: var(--lineHeightBase);
   --Modal-widthBase: 31.25rem;
   --Modal-widthLg: 68.75rem;
@@ -14286,6 +14291,7 @@ readers do not read off random characters that represent icons */
   --Portlet-borderWidth: var(--borderWidth);
   --Portlet-borderRadius: var(--borderRadius);
   --QuickEdit-iconColor: inherit;
+  --QuickEdit-iconSize: 0.8125rem;
   --QuickEdit-onFocus-borderColor: var(--info);
   --QuickEdit-onFocus-borderWidth: var(--borderWidth);
   --QuickEdit-onHover-iconColor: inherit;
@@ -14307,11 +14313,14 @@ readers do not read off random characters that represent icons */
   --Remark-onHover-borderColor: var(--primary);
   --Remark-onHover-iconColor: #fff;
   --Remark-width: 1rem;
+  --ResultBox-tag-height: 1.5rem;
+  --ResultBox-tag-marginBottom: 0.125rem;
   --ResultBox-icon--onDisabled-color: #ebebeb;
   --ResultBox-icon--onHover-color: #666666;
   --ResultBox-icon-color: #999;
   --ResultBox-value--onDisabled-color: #cccccc;
   --ResultBox-value--onHover-bg: rgba(0, 145, 255, 0.1);
+  --ResultBox-value--onHover-bg--dark: #b8babf;
   --ResultBox-value-bg: #f5f5f5;
   --ResultBox-value-color: #000;
   --ResultBox-value-clear-bg: #d4d6d9;
@@ -14370,7 +14379,7 @@ readers do not read off random characters that represent icons */
   --Table-onModified-bg: #e8f0fe;
   --Table-onModified-borderColor: #d0e0fd;
   --Table-onModified-color: #4285f4;
-  --Table-placeholder-height: 6.25rem;
+  --Table-placeholder-height: 12.5rem;
   --Table-strip-bg: #f9fafa;
   --Table-tbody-borderTopColor: #d8dce1;
   --Table-thead-bg: #f6f8f8;
@@ -14384,6 +14393,7 @@ readers do not read off random characters that represent icons */
   --Table-tree-borderColor: var(--Table-borderColor);
   --Table-searchableForm-backgroundColor: #f6f7f8;
   --Table-searchableForm-borderRadius: 0.25rem;
+  --Table-empty-icon-size: 4.625rem;
   --TableCell--edge-paddingX: var(--gap-md);
   --TableCell--edge-paddingX-default: var(--gap-base);
   --TableCell-filterBtn--onActive-color: var(--primary);
@@ -14404,16 +14414,22 @@ readers do not read off random characters that represent icons */
       2
   );
   --TableCell-paddingY-default: calc(
-    (var(--TableCell-height-default) - var(--Table-fontSize) * var(--Table-lineHeight)) /
-      2
+    (
+        var(--TableCell-height-default) - var(--Table-fontSize) *
+          var(--Table-lineHeight)
+      ) / 2
   );
   --TableCell-paddingY-large: calc(
-    (var(--TableCell-height-large) - var(--Table-fontSize) * var(--Table-lineHeight)) /
-      2
+    (
+        var(--TableCell-height-large) - var(--Table-fontSize) *
+          var(--Table-lineHeight)
+      ) / 2
   );
   --TableCell-paddingY-small: calc(
-    (var(--TableCell-height-small) - var(--Table-fontSize) * var(--Table-lineHeight)) /
-      2
+    (
+        var(--TableCell-height-small) - var(--Table-fontSize) *
+          var(--Table-lineHeight)
+      ) / 2
   );
   --TableCell-searchBtn--onActive-color: var(--primary);
   --TableCell-searchBtn-width: 1rem;
@@ -14539,7 +14555,7 @@ readers do not read off random characters that represent icons */
   --Toast-paddingX: var(--gap-md);
   --Toast-paddingY: var(--gap-xs);
   --Toast-title-display: block;
-  --Toast-width: 18.75rem;
+  --Toast-width: 25rem;
   --Tooltip--attr-bg: rgba(0, 0, 0, 0.7);
   --Tooltip--attr-borderColor: var(--borderColor);
   --Tooltip--attr-borderRadius: var(--borderRadius);
@@ -14591,7 +14607,7 @@ readers do not read off random characters that represent icons */
   --Tree-inputHeight: calc(var(--Form-input-height) * 0.85);
   --Tree-item-onHover-bg: rgba(0, 126, 255, 0.08);
   --Tree-item-onHover-bg-pure: rgba(0, 126, 255, 0.08);
-  --Tree-itemArrowWidth: 0.75rem;
+  --Tree-itemArrowWidth: 1rem;
   --Tree-itemHeight: 1.875rem;
   --Tree-itemLabel--onChecked-color: var(--Form-selectValue-color);
   --TreeSelect-popover-bg: #fff;
@@ -14683,6 +14699,12 @@ readers do not read off random characters that represent icons */
   --Timeline--info-bg: var(--info);
   --Timeline--warning-bg: var(--warning);
   --Timeline--danger-bg: var(--danger);
+  --UserSelect--post-bg: #528eff;
+  --UserSelect--department-bg: #ffab52;
+  --UserSelect--role-bg: #0bc286;
+  --UserSelect--border-color: #f7f7f9;
+  --UserSelect--content-bg: #f5f7f8;
+  --UserSelect--bread-color: #2468f2;
   --Tag-content-fontSize: var(--fontSizeSm);
   --Tag-height: 1.5rem;
   --Tag-borderRadius: 0.125rem;
@@ -25325,7 +25347,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .rdtPicker {
   display: none;
   position: absolute;
-  width: 250px;
+  width: 240px;
   padding: 4px;
   margin-top: 1px;
   z-index: 99999 !important;
@@ -25350,16 +25372,38 @@ readers do not read off random characters that represent icons */
 .amis-scope .rdtPicker table {
   width: 100%;
   margin: 0;
+  padding: 0 12px;
+  border-spacing: 0 8px;
+}
+
+.amis-scope .rdtMonths table,
+.amis-scope .rdtYears table {
+  border-spacing: 0 12px;
+}
+
+.amis-scope .rdtMonths .headerTable,
+.amis-scope .rdtYears .headerTable {
+  border-spacing: 0;
+  border-bottom: 1px solid #E8E9EB;
 }
 
 .amis-scope .rdtPicker td,
 .amis-scope .rdtPicker th {
   text-align: center;
-  height: 28px;
+  height: 24px;
+  line-height: 24px;
+  width: 24px;
 }
 
 .amis-scope .rdtPicker td {
   cursor: pointer;
+}
+
+.amis-scope .rdtPicker td > span {
+  display: inline-block;
+  border-radius: 2px;
+  height: 100%;
+  width: 24px;
 }
 
 .amis-scope .rdtPicker td.rdtDay:hover,
@@ -25373,22 +25417,15 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .rdtPicker td.rdtOld,
 .amis-scope .rdtPicker td.rdtNew {
-  color: #999999;
+  color: #B8BABF;
 }
 
 .amis-scope .rdtPicker td.rdtToday {
   position: relative;
 }
 
-.amis-scope .rdtPicker td.rdtToday:before {
-  content: "";
-  display: inline-block;
-  border-left: 7px solid transparent;
-  border-bottom: 7px solid #428bca;
-  border-top-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  bottom: 4px;
-  right: 4px;
+.amis-scope .rdtPicker td.rdtToday > span {
+  border: 1px solid #2468F2;
 }
 
 .amis-scope .rdtPicker td.rdtActive,
@@ -25405,19 +25442,24 @@ readers do not read off random characters that represent icons */
 .amis-scope .rdtPicker td.rdtDisabled,
 .amis-scope .rdtPicker td.rdtDisabled:hover {
   background: none;
-  color: #999999;
+  color: #B8BABF;
   cursor: not-allowed;
 }
 
 .amis-scope .rdtPicker td span.rdtOld {
-  color: #999999;
+  color: #B8BABF;
 }
 
 .amis-scope .rdtPicker td span.rdtDisabled,
 .amis-scope .rdtPicker td span.rdtDisabled:hover {
   background: none;
-  color: #999999;
+  color: #B8BABF;
   cursor: not-allowed;
+}
+
+.amis-scope .rdtPicker td span.rdtDisabled > span,
+.amis-scope .rdtPicker td span.rdtDisabled:hover > span {
+  border-color: #E8E9EB;
 }
 
 .amis-scope .rdtPicker th {
@@ -25432,12 +25474,16 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .rdtPicker th.rdtSwitch {
   width: 100px;
+  height: 40px;
+  line-height: 40px;
 }
 
 .amis-scope .rdtPicker th.rdtNext,
 .amis-scope .rdtPicker th.rdtPrev {
   font-size: 21px;
   vertical-align: top;
+  height: 40px;
+  line-height: 40px;
 }
 
 .amis-scope .rdtPrev span,
@@ -25459,7 +25505,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .rdtPicker th.rdtDisabled,
 .amis-scope .rdtPicker th.rdtDisabled:hover {
   background: none;
-  color: #999999;
+  color: #B8BABF;
   cursor: not-allowed;
 }
 
@@ -25491,14 +25537,24 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope td.rdtMonth,
-.amis-scope td.rdtYear {
-  height: 50px;
-  width: 25%;
+.amis-scope td.rdtYear,
+.amis-scope td.rdtQuarter {
+  height: 24px;
+  width: 48px;
+  line-height: 24px;
+  text-align: center;
   cursor: pointer;
 }
 
+.amis-scope td.rdtMonth > span,
+.amis-scope td.rdtYear > span,
+.amis-scope td.rdtQuarter > span {
+  width: 48px;
+}
+
 .amis-scope td.rdtMonth:hover,
-.amis-scope td.rdtYear:hover {
+.amis-scope td.rdtYear:hover,
+.amis-scope td.rdtQuarter:hover {
   background: #eee;
 }
 
@@ -28549,7 +28605,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Modal-footer .antd-Button {
-  width: var(--Modal-footer-button-width);
+  min-width: var(--Modal-footer-button-width);
   margin-left: var(--gap-sm);
 }
 
@@ -28685,7 +28741,6 @@ readers do not read off random characters that represent icons */
   background-clip: padding-box;
   outline: 0;
   z-index: 2;
-  border: var(--Drawer-content-borderWidth) solid var(--Drawer-content-borderColor);
   border-radius: var(--Drawer-content-borderRadius);
   transition: transform ease-in-out var(--animation-duration);
 }
@@ -28737,8 +28792,9 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Drawer-close svg {
-  width: 30px;
-  height: 30px;
+  margin-top: 0.125rem;
+  width: var(--Drawer-close-size);
+  height: var(--Drawer-close-size);
   fill: var(--Drawer-close-color);
 }
 
@@ -28792,13 +28848,6 @@ readers do not read off random characters that represent icons */
   pointer-events: none;
 }
 
-.amis-scope .antd-Drawer.antd-Drawer--noOverlay .antd-Drawer-close svg {
-  margin-top: 0.125rem;
-  width: var(--gap-md);
-  height: var(--gap-md);
-  fill: #99a6ad;
-}
-
 .amis-scope .antd-Drawer .antd-Drawer-resizeCtrl {
   position: absolute;
   border: var(--borderWidth) solid var(--borderColor);
@@ -28850,12 +28899,6 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Drawer--top .antd-Drawer-close {
-  top: 100%;
-  margin-top: var(--gap-sm);
-  left: var(--gap-sm);
-}
-
-.amis-scope .antd-Drawer--top.antd-Drawer--noOverlay .antd-Drawer-close {
   top: var(--gap-base);
   right: var(--gap-base);
   left: auto;
@@ -28883,14 +28926,8 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Drawer--right .antd-Drawer-close {
-  right: 100%;
-  margin-right: var(--gap-sm);
-  top: var(--gap-sm);
-}
-
-.amis-scope .antd-Drawer--right.antd-Drawer--noOverlay .antd-Drawer-close {
-  top: var(--gap-base);
-  right: var(--gap-base);
+  top: var(--gap-md);
+  right: var(--gap-md);
   margin-right: 0;
   z-index: 10;
 }
@@ -28937,12 +28974,6 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Drawer--bottom .antd-Drawer-close {
-  bottom: 100%;
-  margin-bottom: var(--gap-sm);
-  left: var(--gap-sm);
-}
-
-.amis-scope .antd-Drawer--bottom.antd-Drawer--noOverlay .antd-Drawer-close {
   top: var(--gap-base);
   right: var(--gap-base);
   left: auto;
@@ -28970,12 +29001,6 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Drawer--left .antd-Drawer-close {
-  left: 100%;
-  margin-left: var(--gap-sm);
-  top: var(--gap-sm);
-}
-
-.amis-scope .antd-Drawer--left.antd-Drawer--noOverlay .antd-Drawer-close {
   left: auto;
   right: var(--gap-base);
   top: var(--gap-base);
@@ -29743,6 +29768,7 @@ readers do not read off random characters that represent icons */
   opacity: var(--Toast-opacity);
   opacity: 0;
   transform: translateZ(0);
+  width: 25rem;
 }
 
 .amis-scope .antd-Toast-wrap {
@@ -29905,6 +29931,7 @@ readers do not read off random characters that represent icons */
   justify-content: center;
   padding: var(--gap-base) var(--gap-md);
   text-align: center;
+  width: auto;
 }
 
 .amis-scope .antd-Toast-mobile .antd-Toast-title {
@@ -32355,6 +32382,10 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-ButtonGroup > .antd-Button {
   position: relative;
   flex: 0 1 auto;
+  max-width: 8.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .amis-scope .antd-ButtonGroup > .antd-Button:hover {
@@ -32672,6 +32703,10 @@ readers do not read off random characters that represent icons */
   color: var(--Calendar-color);
 }
 
+.amis-scope .antd-ScheduleCalendar .rdt .rdtPicker td.rdtActive > span {
+  background: transparent !important;
+}
+
 .amis-scope .antd-ScheduleCalendar .rdt .rdtPicker td.rdtActive:hover {
   background: var(--Calendar-cell-onHover-bg);
 }
@@ -32932,6 +32967,10 @@ readers do not read off random characters that represent icons */
   color: var(--Button--primary-bg);
 }
 
+.amis-scope .antd-CalendarMobile .antd-CalendarMobile-calendar-wrap .antd-CalendarMobile-calendar .rdtPicker .rdtBetween::after {
+  width: 0;
+}
+
 .amis-scope .antd-CalendarMobile .antd-CalendarMobile-calendar-wrap .antd-CalendarMobile-calendar .rdtPicker .rdtRangeStart .calendar-wrap,
 .amis-scope .antd-CalendarMobile .antd-CalendarMobile-calendar-wrap .antd-CalendarMobile-calendar .rdtPicker .rdtRangeStart:hover .calendar-wrap,
 .amis-scope .antd-CalendarMobile .antd-CalendarMobile-calendar-wrap .antd-CalendarMobile-calendar .rdtPicker .rdtRangeEnd .calendar-wrap,
@@ -32949,6 +32988,14 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-CalendarMobile .antd-CalendarMobile-calendar-wrap .antd-CalendarMobile-calendar .rdtPicker .rdtRangeEnd,
 .amis-scope .antd-CalendarMobile .antd-CalendarMobile-calendar-wrap .antd-CalendarMobile-calendar .rdtPicker .rdtRangeEnd:hover {
   background: linear-gradient(to right, var(--Calendar-cell-onBetween-bg) 0%, var(--Calendar-cell-onBetween-bg) 50%, transparent 51%, transparent 100%) !important;
+}
+
+.amis-scope .antd-CalendarMobile .antd-CalendarMobile-calendar-wrap .antd-CalendarMobile-calendar .rdtPicker .rdtToday {
+  border: none;
+}
+
+.amis-scope .antd-CalendarMobile .antd-CalendarMobile-calendar-wrap .antd-CalendarMobile-calendar .rdtPicker .rdtToday .calendar-wrap {
+  border: 1px solid #2468F2;
 }
 
 .amis-scope .antd-CalendarMobile-calendar-header {
@@ -33027,6 +33074,7 @@ readers do not read off random characters that represent icons */
   border: var(--Collapse-border);
   padding: 0;
   line-height: 1.25rem;
+  border-radius: 4px;
 }
 
 .amis-scope .antd-Collapse-header {
@@ -33066,7 +33114,7 @@ readers do not read off random characters that represent icons */
   width: 0.375rem;
   height: 0.375rem;
   top: -0.125rem;
-  border-color: var(--text-color);
+  border-color: #84868C;
   border-style: solid;
   border-width: 0.0625rem 0.0625rem 0 0;
   transform: rotate(45deg);
@@ -33143,6 +33191,18 @@ readers do not read off random characters that represent icons */
   color: var(--body-color);
   font-size: var(--Collapse-content-fontSize);
   font-weight: var(--Collapse-content-fontWeight);
+}
+
+.amis-scope .antd-CollapseGroup .antd-Collapse {
+  border-radius: 0;
+}
+
+.amis-scope .antd-CollapseGroup .antd-Collapse:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.amis-scope .antd-CollapseGroup .antd-Collapse:last-child {
+  border-radius: 0 0 4px 4px;
 }
 
 .amis-scope .antd-CollapseGroup .antd-Collapse:not(:last-child) {
@@ -34189,6 +34249,13 @@ readers do not read off random characters that represent icons */
   text-align: center;
 }
 
+.amis-scope .antd-Table-placeholder-empty-icon.icon {
+  display: block;
+  margin: 0 auto;
+  width: var(--Table-empty-icon-size);
+  height: var(--Table-empty-icon-size);
+}
+
 .amis-scope .antd-Table-searchableForm {
   background: var(--Table-searchableForm-backgroundColor);
   border-radius: var(--Table-searchableForm-borderRadius);
@@ -34290,7 +34357,7 @@ readers do not read off random characters that represent icons */
   background: var(--Table-bg);
   border-spacing: 0;
   border-collapse: collapse;
-  border: var(--Table-borderWidth) solid var(--Table-borderColor);
+  border-bottom: var(--Table-borderWidth) solid var(--Table-borderColor);
 }
 
 .amis-scope .antd-Table-table th,
@@ -35296,6 +35363,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-Table-table > thead > tr > th.antd-Table-dragCell > svg,
 .amis-scope .antd-Table-table > tbody > tr > td.antd-Table-dragCell > svg {
   vertical-align: middle;
+  top: 0;
 }
 
 .amis-scope .antd-Table-table > tbody > tr > td.antd-Table-expandCell {
@@ -35383,38 +35451,34 @@ readers do not read off random characters that represent icons */
   background: var(--Table-tree-borderColor);
 }
 
-.amis-scope .antd-Table-table > thead > tr > th.antd-TableCell--sortable {
-  padding-right: calc( var(--TableCell-paddingX) + var(--TableCell-sortBtn-width) );
-  position: relative;
+.amis-scope .antd-Table-table > thead > tr > th.antd-TableCell--sortable > .antd-TableCell--title,
+.amis-scope .antd-Table-table > thead > tr > th.antd-TableCell--searchable > .antd-TableCell--title,
+.amis-scope .antd-Table-table > thead > tr > th.antd-TableCell--filterable > .antd-TableCell--title {
+  display: inline-block;
 }
 
-.amis-scope .antd-Table-table > thead > tr > th.antd-TableCell--searchable {
-  padding-right: calc( var(--TableCell-paddingX) + var(--TableCell-searchBtn-width) );
-  position: relative;
+.amis-scope .antd-TableCell-sortBtn,
+.amis-scope .antd-TableCell-searchBtn,
+.amis-scope .antd-TableCell-filterBtn {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: var(--gap-sm);
 }
 
-.amis-scope .antd-Table-table > thead > tr > th.antd-TableCell--filterable {
-  padding-right: calc( var(--TableCell-paddingX) + var(--TableCell-filterBtn-width) );
-  position: relative;
+.amis-scope .antd-TableCell-sortBtn:hover,
+.amis-scope .antd-TableCell-searchBtn:hover,
+.amis-scope .antd-TableCell-filterBtn:hover {
+  color: var(--TableCell-searchBtn--onActive-color);
 }
 
 .amis-scope .antd-TableCell-sortBtn {
   cursor: pointer;
   width: var(--TableCell-sortBtn-width);
   height: var(--gap-md);
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: calc(var(--TableCell-paddingX) - var(--TableCell-sortBtn-width) / 2);
-  top: 50%;
-  transform: translateY(-50%);
   color: var(--icon-color);
-}
-
-.amis-scope .antd-TableCell-sortBtn:hover {
-  color: var(--icon-onHover-color);
 }
 
 .amis-scope .antd-TableCell-sortBtn--up > svg,
@@ -35445,7 +35509,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-TableCell-sortBtn--default.is-active:hover {
-  color: var(--text-color);
+  color: var(--TableCell-searchBtn--onActive-color);
 }
 
 .amis-scope .antd-TableCell-sortBtn--up.is-active,
@@ -35455,10 +35519,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-TableCell-searchBtn {
   cursor: pointer;
-  position: absolute;
-  right: var(--gap-xs);
-  top: 50%;
-  transform: translateY(-50%);
   color: var(--text--muted-color);
 }
 
@@ -35488,20 +35548,12 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-TableCell-filterBtn {
   cursor: pointer;
   width: var(--TableCell-filterBtn-width);
-  position: absolute;
-  right: calc( var(--TableCell-paddingX) - var(--TableCell-filterBtn-width) / 2 );
-  top: 50%;
-  transform: translateY(-50%);
   color: var(--text--muted-color);
 }
 
 .amis-scope .antd-TableCell-filterBtn svg.icon {
   width: 12px;
   height: 12px;
-}
-
-.amis-scope .antd-TableCell-filterBtn:hover {
-  color: var(--text-color);
 }
 
 .amis-scope .antd-TableCell-filterBtn.is-active {
@@ -38459,14 +38511,21 @@ readers do not read off random characters that represent icons */
   color: var(--QuickEdit-iconColor);
   margin-left: var(--gap-xs);
   display: inline-block;
-  vertical-align: text-top;
+  vertical-align: text-bottom;
   cursor: pointer;
   opacity: 0.6;
+  font-size: 0;
 }
 
 .amis-scope .antd-Field-quickEditBtn:hover {
   color: var(--QuickEdit-onHover-iconColor);
   opacity: 1;
+}
+
+.amis-scope .antd-Field-quickEditBtn > svg {
+  width: var(--QuickEdit-iconSize);
+  height: var(--QuickEdit-iconSize);
+  top: 0;
 }
 
 .amis-scope .antd-Field--quickEditable {
@@ -39745,7 +39804,8 @@ readers do not read off random characters that represent icons */
   cursor: inherit;
 }
 
-.amis-scope .antd-InputBox.is-error {
+.amis-scope .antd-InputBox.is-error,
+.amis-scope .is-error > .antd-InputBox {
   border-color: var(--Form-input-onError-borderColor);
   background: var(--Form-input-onError-bg);
 }
@@ -39805,6 +39865,148 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-InputBox > a {
   cursor: pointer;
+}
+
+.amis-scope .antd-InputBox-caret {
+  transition: transform var(--animation-duration) ease-out;
+  margin: 5px;
+  display: flex;
+  color: var(--Form-select-caret-iconColor);
+}
+
+.amis-scope .antd-InputBox-caret:hover {
+  color: var(--Form-select-caret-onHover-iconColor);
+}
+
+.amis-scope .antd-InputBox-caret > svg {
+  width: 0.625rem;
+  height: 0.625rem;
+  top: 0;
+}
+
+.amis-scope .antd-InputBox.is-active .antd-InputBox-caret {
+  transform: rotate(180deg);
+}
+
+.amis-scope .antd-JSONSchemaMember {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: var(--gap-sm);
+}
+
+.amis-scope .antd-JSONSchemaMember-key {
+  min-width: 80px;
+  max-width: 150px;
+  flex: 1;
+}
+
+.amis-scope .antd-JSONSchemaMember-key > span {
+  display: flex;
+  background: var(--Form-input-bg);
+  border: var(--Form-input-borderWidth) solid var(--Form-input-borderColor);
+  border-radius: var(--Form-input-borderRadius);
+  line-height: var(--Form-input-lineHeight);
+  padding: var(--Form-input-paddingY) var(--Form-input-paddingX);
+  font-size: var(--Form-input-fontSize);
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--Form-input-color);
+}
+
+.amis-scope .antd-JSONSchemaMember-value {
+  flex: 1;
+  margin-left: auto;
+  display: flex;
+  gap: var(--gap-sm);
+}
+
+.amis-scope .antd-JSONSchemaMember-value > a {
+  display: inline-block;
+}
+
+.amis-scope .antd-JSONSchemaMember-value > div {
+  flex: 1;
+  flex-wrap: nowrap;
+}
+
+.amis-scope .antd-JSONSchemaMember + .antd-JSONSchemaMember {
+  margin-top: var(--gap-sm);
+}
+
+.amis-scope .antd-JSONSchemaObject-caret {
+  display: inline-block;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform var(--animation-duration);
+  color: var(--icon-color);
+  margin-top: calc((var(--Form-input-height) - var(--Switch-height)) / 2);
+}
+
+.amis-scope .antd-JSONSchemaObject-caret > svg {
+  width: 10px;
+  height: 10px;
+  top: 0;
+}
+
+.amis-scope .antd-JSONSchemaObject-caret.is-collapsed {
+  transform: rotate(-90deg);
+}
+
+.amis-scope .antd-JSONSchemaObject.is-expanded {
+  position: relative;
+  margin-left: 1.25rem;
+}
+
+.amis-scope .antd-JSONSchemaObject.is-expanded:before {
+  width: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30px;
+  bottom: 10px;
+  left: -33px;
+  border-left: dashed 1px var(--icon-color);
+}
+
+.amis-scope .antd-JSONSchemaObject.is-expanded .antd-JSONSchemaMember {
+  position: relative;
+}
+
+.amis-scope .antd-JSONSchemaObject.is-expanded .antd-JSONSchemaMember:before {
+  height: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 17px;
+  width: 25px;
+  left: -33px;
+  border-top: dashed 1px var(--icon-color);
+}
+
+.amis-scope .antd-JSONSchemaObject.is-expanded .antd-JSONSchemaMember:first-child:before {
+  left: -20px;
+  width: 12px;
+}
+
+.amis-scope .antd-JSONSchemaObject.is-expanded > button {
+  position: relative;
+}
+
+.amis-scope .antd-JSONSchemaObject.is-expanded > button:before {
+  height: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  width: 25px;
+  left: -33px;
+  border-top: dashed 1px var(--icon-color);
 }
 
 .amis-scope .antd-SchemaEditorProps {
@@ -40018,10 +40220,22 @@ readers do not read off random characters that represent icons */
   background: var(--Form-input-onDisabled-bg);
   border-color: var(--Form-input-onDisabled-borderColor);
   pointer-events: none;
+  background: var(--TabsTransfer-title-bg);
+}
+
+.amis-scope .antd-ResultBox.is-disabled div.antd-ResultBox-value {
+  background: var(--TabsTransfer-border-color);
+}
+
+.amis-scope .antd-ResultBox.is-disabled div.antd-ResultBox-value .antd-ResultBox-valueLabel {
+  color: var(--Pagination-light-color);
+}
+
+.amis-scope .antd-ResultBox.antd-NestedSelect {
+  padding-left: var(--gap-base);
 }
 
 .amis-scope .antd-ResultBox-singleValue {
-  padding: 0 calc(var(--Form-input-paddingX) - 0.1875rem);
   display: inline-block;
   max-width: 100%;
   overflow: hidden;
@@ -40036,16 +40250,18 @@ readers do not read off random characters that represent icons */
   display: flex;
   align-items: center;
   transition: transform var(--animation-duration) ease;
+  transform: rotate(90deg);
 }
 
 .amis-scope .antd-ResultBox-pc-arrow > svg {
   width: 0.625rem;
   height: 0.625rem;
   top: 0.125em;
+  color: var(--default-icon-color);
 }
 
 .amis-scope .antd-ResultBox.is-opened .antd-ResultBox-pc-arrow {
-  transform: rotate(180deg);
+  transform: rotate(270deg);
 }
 
 .amis-scope .antd-ResultBox-clear {
@@ -40107,17 +40323,19 @@ readers do not read off random characters that represent icons */
   color: var(--ResultBox-value-color);
   font-size: var(--Form-input-fontSize);
   padding: 0 var(--gap-xs);
-  min-height: 1.5rem;
+  min-height: var(--ResultBox-tag-height);
   flex-wrap: nowrap;
   display: inline-flex;
   align-items: center;
-  margin: 2px 3px;
+  margin-right: var(--gap-xs);
+  margin-bottom: var(--ResultBox-tag-marginBottom);
   user-select: none;
+  border-radius: 0.125rem;
 }
 
 .amis-scope .antd-ResultBox-value > a {
   cursor: pointer;
-  margin-left: var(--gap-xs);
+  margin-left: 0.625rem;
   color: var(--ResultBox-icon-color);
 }
 
@@ -40150,7 +40368,6 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-ResultBox-placeholder {
   color: var(--Form-input-placeholderColor);
   user-select: none;
-  margin-left: 8px;
 }
 
 .amis-scope .antd-ResultBox > input {
@@ -40159,7 +40376,19 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-ResultBox.antd-TransferDropDown {
-  padding: 0;
+  padding: 0 var(--gap-base);
+}
+
+.amis-scope .antd-ResultBox.antd-TransferDropDown.is-group {
+  padding: var(--gap-xs);
+}
+
+.amis-scope .antd-ResultBox.antd-TransferDropDown.is-group > .antd-TransferDropDown-icon {
+  margin-right: var(--gap-sm);
+}
+
+.amis-scope .antd-ResultBox.antd-TransferDropDown.is-group > .antd-ResultBox-placeholder {
+  padding-left: var(--gap-sm);
 }
 
 .amis-scope .antd-ResultBox.antd-TransferDropDown > .antd-ResultBox-value {
@@ -40168,6 +40397,29 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-ResultBox.antd-TransferDropDown > .antd-ResultBox-value:hover {
   background: var(--Form-selectValue-onHover-bgColor);
+}
+
+.amis-scope .antd-ResultBox-overflow-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: calc( (var(--ResultBox-tag-height) + var(--ResultBox-tag-marginBottom)) * 5 );
+}
+
+.amis-scope .antd-ResultBox-overflow.antd-Tooltip--dark .antd-ResultBox-overflow-wrapper .antd-ResultBox-value {
+  color: var(--white);
+  background-color: var(--Form-select-value-bgColor--dark);
+}
+
+.amis-scope .antd-ResultBox-overflow.antd-Tooltip--dark .antd-ResultBox-overflow-wrapper .antd-ResultBox-value:hover {
+  background-color: var(--ResultBox-value--onHover-bg--dark);
+}
+
+.amis-scope .antd-ResultBox-overflow.antd-Tooltip--dark .antd-ResultBox-overflow-wrapper .antd-ResultBox-value > a {
+  color: var(--Form-select-valueIcon-color--dark);
 }
 
 .amis-scope .antd-ResultBox.is-mobile {
@@ -40245,10 +40497,11 @@ readers do not read off random characters that represent icons */
   justify-content: flex-end;
   height: 30px;
   width: 30px;
-  padding: 0 8px;
+  padding-left: 8px;
   transition: all var(--animation-duration) ease-in-out;
   border: var(--Form-input-borderWidth) solid transparent;
   border-radius: var(--Form-input-borderRadius);
+  overflow: hidden;
   height: 30px;
 }
 
@@ -40266,11 +40519,35 @@ readers do not read off random characters that represent icons */
   flex-grow: 1;
 }
 
+.amis-scope .antd-SearchBox.is-active:hover {
+  border-color: var(--SearchBox-hover-color);
+}
+
+.amis-scope .antd-SearchBox.is-active.is-focused {
+  border-color: var(--SearchBox-focus-color);
+}
+
+.amis-scope .antd-SearchBox-searchBtn {
+  display: flex;
+  width: var(--SearchBox-height);
+  align-items: center;
+  justify-content: center;
+}
+
+.amis-scope .antd-SearchBox-searchBtn .icon {
+  top: 0;
+}
+
+.amis-scope .antd-SearchBox-activeBtn,
+.amis-scope .antd-SearchBox-cancelBtn {
+  margin-right: 8px;
+}
+
 .amis-scope .antd-SearchBox-activeBtn,
 .amis-scope .antd-SearchBox-searchBtn,
 .amis-scope .antd-SearchBox-cancelBtn {
   cursor: pointer;
-  color: var(--icon-color);
+  color: var(--SearchBox-search-icon-color);
 }
 
 .amis-scope .antd-SearchBox-activeBtn:hover,
@@ -40286,6 +40563,19 @@ readers do not read off random characters that represent icons */
   pointer-events: none;
 }
 
+.amis-scope .antd-SearchBox.is-disabled {
+  background-color: var(--SearchBox-disabled-color);
+  cursor: not-allowed;
+}
+
+.amis-scope .antd-SearchBox.is-disabled:hover {
+  border-color: var(--Form-input-borderColor);
+}
+
+.amis-scope .antd-SearchBox.is-disabled > input {
+  cursor: not-allowed;
+}
+
 .amis-scope .antd-SearchBox > input {
   outline: none;
   border: none;
@@ -40298,6 +40588,39 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-SearchBox > input::placeholder {
   color: var(--Form-input-placeholderColor);
   user-select: none;
+}
+
+.amis-scope .antd-SearchBox-clearable {
+  display: flex;
+  width: var(--SearchBox-clearable-icon-size);
+  height: var(--SearchBox-clearable-icon-size);
+  color: var(--SearchBox-clearable-icon-color);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.amis-scope .antd-SearchBox-clearable .icon {
+  top: 0;
+}
+
+.amis-scope .antd-SearchBox-clearable:hover {
+  color: var(--Form-input-clearBtn-color-onHover);
+}
+
+.amis-scope .antd-SearchBox--enhance.is-active .antd-SearchBox-searchBtn {
+  height: 100%;
+  color: var(--SearchBox-enhonce-icon-color);
+  background: var(--SearchBox-hover-color);
+}
+
+.amis-scope .antd-SearchBox--enhance .antd-SearchBox-clearable {
+  margin-right: var(--SearchBox-enhonce-clearable-gap);
+}
+
+.amis-scope .antd-SearchBox--enhance.is-active.is-disabled .antd-SearchBox-searchBtn {
+  background: var(--SearchBox-enhonce-disabled-color);
+  color: var(--SearchBox-enhonce-disabled-search-color);
 }
 
 .amis-scope .antd-ListMenu {
@@ -40357,6 +40680,10 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Log {
+  position: relative;
+}
+
+.amis-scope .antd-Log-body {
   background: var(--Log-bg);
   color: var(--Log-color);
   padding: var(--Log-padding);
@@ -40377,6 +40704,35 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-Log-line:hover {
   background: var(--Log-line--onHover-bg);
+}
+
+.amis-scope .antd-Log-line-number {
+  color: #999;
+  font-style: italic;
+  margin-right: 5px;
+}
+
+.amis-scope .antd-Log-operation {
+  position: absolute;
+  top: 0;
+  left: -16px;
+}
+
+.amis-scope .antd-Log-operation .antd-Button {
+  margin-right: var(--gap-xs);
+}
+
+.amis-scope .antd-Log-operation-hidden {
+  background: #f0f2f5;
+  width: 24px;
+  height: 48px;
+  box-shadow: 0 4px 6px 0 rgba(8, 14, 26, 0.04), 0 1px 10px 0 rgba(8, 14, 26, 0.05), 0 2px 4px -1px rgba(8, 14, 26, 0.06);
+  border-radius: 0 2px 2px 0;
+  padding-top: 14px;
+  padding-left: 6px;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.3s;
 }
 
 .amis-scope .antd-Log .ansi-bold {
@@ -41579,7 +41935,7 @@ readers do not read off random characters that represent icons */
   fill: var(--Form-input-clearBtn-color-onActive);
 }
 
-.amis-scope .antd-TextControl-passwordReveal {
+.amis-scope .antd-TextControl-revealPassword {
   cursor: pointer;
   color: var(--text--muted-color);
 }
@@ -41759,6 +42115,10 @@ readers do not read off random characters that represent icons */
   background: var(--Form-select-menu-onHover-bg);
 }
 
+.amis-scope .antd-TextControl-sugItem .is-matched {
+  color: var(--Form-select-menu-onActive-color);
+}
+
 .amis-scope .antd-TextControl-value {
   user-select: none;
   line-height: calc( var(--Form-input-lineHeight) * var(--Form-input-fontSize) );
@@ -41793,25 +42153,28 @@ readers do not read off random characters that represent icons */
   white-space: nowrap;
   line-height: calc( var(--Form-input-lineHeight) * var(--Form-input-fontSize) - 0.125rem );
   font-size: var(--Form-selectValue-fontSize);
-  color: var(--Form-selectValue-color);
-  background: var(--Form-selectValue-bg);
-  border: 0.0625rem solid var(--Form-selectValue-borderColor);
+  background: var(--Form-select-multiple-bgColor);
   border-radius: 0.125rem;
   margin: 2px 3px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--gap-sm);
 }
 
-.amis-scope .antd-TextControl-valueIcon {
+.amis-scope .antd-TextControl-valueIcon.icon-close {
+  top: 0;
   cursor: pointer;
-  border-right: 0.0625rem solid var(--Form-selectValue-borderColor);
-  padding: 1px 5px;
-}
-
-.amis-scope .antd-TextControl-valueIcon:hover {
-  background: var(--Form-selectValue-onHover-bg);
+  margin-left: var(--gap-sm);
+  width: 0.625rem;
+  color: var(--default-icon-color);
 }
 
 .amis-scope .antd-TextControl-input--multiple .antd-TextControl-valueLabel {
-  padding: 0 var(--gap-xs);
+  line-height: var(--gap-xl);
+  max-width: 3.75rem;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .amis-scope .antd-TextControl-counter {
@@ -41824,6 +42187,23 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-TextControl-input:hover {
   border-color: var(--Form-input-onHover-borderColor);
+}
+
+.amis-scope .antd-TextControl-revealPassword {
+  font-size: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.amis-scope .antd-TextControl-revealPassword .icon {
+  width: var(--Form-input-password-icon-size);
+  height: var(--Form-input-password-icon-size);
+  color: var(--Form-input-password-icon-color);
+  cursor: pointer;
+}
+
+.amis-scope input.antd-TextControl-input-password {
+  flex-basis: 0;
 }
 
 .amis-scope .antd-TextControl.is-disabled-input input {
@@ -41937,7 +42317,7 @@ readers do not read off random characters that represent icons */
   fill: var(--Form-input-clearBtn-color-onActive);
 }
 
-.amis-scope .antd-TextareaControl-passwordReveal {
+.amis-scope .antd-TextareaControl-revealPassword {
   cursor: pointer;
   color: var(--text--muted-color);
 }
@@ -41962,7 +42342,7 @@ readers do not read off random characters that represent icons */
   width: 100%;
   line-height: var(--Form-input-lineHeight);
   outline: none;
-  resize: none;
+  resize: vertical;
 }
 
 .amis-scope .antd-TextareaControl > textarea--borderHalf {
@@ -41990,13 +42370,11 @@ readers do not read off random characters that represent icons */
   font-size: var(--fontSizeSm);
   padding: 0 5px;
   border-radius: 3px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.6);
+  color: #84868c;
 }
 
 .amis-scope .antd-TextareaControl-counter.is-empty {
-  color: #666;
-  background: rgba(0, 0, 0, 0.4);
+  color: #84868c;
 }
 
 .amis-scope .antd-TextareaControl-counter.is-clearable {
@@ -42053,6 +42431,10 @@ readers do not read off random characters that represent icons */
   border-color: var(--Checkbox-onHover-color);
 }
 
+.amis-scope .antd-Checkbox.antd-Checkbox--checkbox.antd-Checkbox--button > i + span {
+  margin-left: 0;
+}
+
 .amis-scope .antd-Checkbox > i {
   cursor: pointer;
   line-height: 1;
@@ -42065,10 +42447,10 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-Checkbox > i + span {
   pointer-events: all;
-  margin-left: var(--Checkbox-gap);
+  margin-left: var(--gap-sm);
   cursor: pointer;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 
 .amis-scope .antd-Checkbox > i + span > a {
@@ -42123,7 +42505,6 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-Checkbox--checkbox input[disabled] + i:before {
   width: var(--Checkbox-inner-size);
   height: calc(var(--Checkbox-inner-size) / 2);
-  background: var(--Checkbox-onDisabled-bg);
 }
 
 .amis-scope .antd-Checkbox--checkbox input[disabled] + i + span {
@@ -42139,8 +42520,36 @@ readers do not read off random characters that represent icons */
   margin-left: calc(var(--Checkbox-size) * -1);
 }
 
+.amis-scope .antd-Checkbox--checkbox.antd-Checkbox:hover > i:before {
+  background: var(--Button--primary-onHover-bg);
+}
+
+.amis-scope .antd-Checkbox--checkbox.antd-Checkbox:active > i:before {
+  background: var(--Switch-checked-onHover-bgColor);
+}
+
 .amis-scope .antd-Checkbox--full.antd-Checkbox--checkbox:not(:disabled) + i:hover {
   border-color: var(--Checkbox-color);
+}
+
+.amis-scope .antd-Checkbox--full.antd-Checkbox--checkbox:hover input:checked + i {
+  background: var(--Button--primary-onHover-bg);
+}
+
+.amis-scope .antd-Checkbox--full.antd-Checkbox--checkbox:hover input:checked + i:before {
+  background: var(--Button--primary-onHover-bg);
+}
+
+.amis-scope .antd-Checkbox--full.antd-Checkbox--checkbox:hover > i:before {
+  background: transparent;
+}
+
+.amis-scope .antd-Checkbox--full.antd-Checkbox--checkbox:active input:checked + i {
+  background: var(--Switch-checked-onHover-bgColor);
+}
+
+.amis-scope .antd-Checkbox--full.antd-Checkbox--checkbox:active input:checked + i:before {
+  background: var(--Switch-checked-onHover-bgColor);
 }
 
 .amis-scope .antd-Checkbox--full.antd-Checkbox--checkbox input:checked + i {
@@ -42156,7 +42565,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-Checkbox--full.antd-Checkbox--checkbox input[disabled] + i {
   border-color: var(--Checkbox-onDisabled-color);
-  background: var(--Checkbox-onDisabled-bg);
+  background: var(--FileControl-onDisabled-bg);
 }
 
 .amis-scope .antd-Checkbox--full.antd-Checkbox--checkbox input[disabled]:checked + i:before {
@@ -42165,7 +42574,12 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-Checkbox--full.antd-Checkbox--checkbox input:checked[disabled] + i {
   border-color: var(--Checkbox-onDisabled-color);
-  background: var(--Checkbox-onDisabled-bg);
+  background: var(--FileControl-onDisabled-bg);
+}
+
+.amis-scope .antd-Checkbox--full.antd-Checkbox--checkbox input:checked[disabled] + i:before {
+  background: var(--FileControl-onDisabled-bg);
+  border-color: var(--Checkbox-inner-onDisabled-bg);
 }
 
 .amis-scope .antd-Checkbox--full.antd-Checkbox--checkbox > i {
@@ -42239,6 +42653,16 @@ readers do not read off random characters that represent icons */
   color: var(--Checkbox-onHover-color);
 }
 
+.amis-scope .antd-Checkbox--button.antd-Checkbox--checkbox:hover input:checked + i {
+  background: transparent;
+  border-color: var(--Button--primary-onHover-bg) transparent transparent var(--Button--primary-onHover-bg);
+}
+
+.amis-scope .antd-Checkbox--button.antd-Checkbox--checkbox:active input:checked + i {
+  background: transparent;
+  border-color: var(--Switch-checked-onHover-bgColor) transparent transparent var(--Switch-checked-onHover-bgColor);
+}
+
 .amis-scope .antd-Checkbox--button.antd-Checkbox--checkbox input:checked + i {
   background: transparent;
   top: 0;
@@ -42282,6 +42706,7 @@ readers do not read off random characters that represent icons */
   margin-left: 0;
   border: 0;
   border-style: solid;
+  background: transparent;
 }
 
 .amis-scope .antd-Checkbox--button.antd-Checkbox--checkbox > i + span {
@@ -42291,13 +42716,23 @@ readers do not read off random characters that represent icons */
   overflow: hidden;
 }
 
-.amis-scope .antd-Checkbox--button--checked.antd-Checkbox--checkbox {
+.amis-scope .antd-Checkbox--button--checked.antd-Checkbox--checkbox.antd-Checkbox--button {
   border-color: var(--Checkbox-onHover-color);
   color: var(--Checkbox-onHover-color);
 }
 
-.amis-scope .antd-Checkbox--button--disabled--unchecked.antd-Checkbox--checkbox {
-  background: var(--Checkbox-disabled-unchecked-bg);
+.amis-scope .antd-Checkbox--button--checked.antd-Checkbox--checkbox.antd-Checkbox--button:hover {
+  border-color: var(--menu-active-color);
+  color: var(--menu-active-color);
+}
+
+.amis-scope .antd-Checkbox--button--checked.antd-Checkbox--checkbox.antd-Checkbox--button:active {
+  border-color: var(--Switch-checked-onHover-bgColor);
+  color: var(--Switch-checked-onHover-bgColor);
+}
+
+.amis-scope .antd-Checkbox--button--disabled--unchecked.antd-Checkbox--checkbox.antd-Checkbox--full i {
+  background: var(--FileControl-onDisabled-bg);
 }
 
 .amis-scope .antd-Checkbox--radio {
@@ -42346,6 +42781,19 @@ readers do not read off random characters that represent icons */
   margin-left: calc(var(--Radio-size) * -1);
   margin-top: -0.125rem;
   border-radius: 50%;
+}
+
+.amis-scope .antd-Checkbox--radio.antd-Checkbox--button--disabled--unchecked.antd-Checkbox--full {
+  background: none;
+}
+
+.amis-scope .antd-Checkbox--radio.antd-Checkbox--button--disabled--unchecked.antd-Checkbox--full i {
+  background: var(--FileControl-onDisabled-bg);
+  border: 1px solid var(--menu-border-color);
+}
+
+.amis-scope .antd-Checkbox--radio.antd-Checkbox--button--disabled--unchecked.antd-Checkbox--full i:before {
+  background: var(--Checkbox-inner-onDisabled-bg);
 }
 
 .amis-scope .antd-Checkbox--sm {
@@ -42399,6 +42847,16 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-RadiosControl .antd-Checkbox--button,
 .amis-scope .antd-CheckboxesControl .antd-Checkbox--button {
   margin-bottom: 0;
+}
+
+.amis-scope .antd-RadiosControl .antd-Checkbox--button--disabled--unchecked,
+.amis-scope .antd-CheckboxesControl .antd-Checkbox--button--disabled--unchecked {
+  background: var(--FileControl-onDisabled-bg);
+}
+
+.amis-scope .antd-RadiosControl .antd-Checkbox--button-checked:active,
+.amis-scope .antd-CheckboxesControl .antd-Checkbox--button-checked:active {
+  border-color: var(--Switch-checked-onHover-bgColor);
 }
 
 .amis-scope .antd-RadiosControl.is-inline .antd-Checkbox,
@@ -42463,15 +42921,12 @@ readers do not read off random characters that represent icons */
   max-height: 18.75rem;
   overflow: auto;
   user-select: none;
-}
-
-.amis-scope .antd-GroupedSelection-group:not(:first-child) > .antd-GroupedSelection-itemLabel {
-  border-top: 0.0625rem solid var(--ListMenu-divider-color);
+  padding: var(--gap-xs) 0;
 }
 
 .amis-scope .antd-GroupedSelection-group > .antd-GroupedSelection-itemLabel {
   padding: var(--gap-xs) var(--gap-base);
-  color: var(--text--muted-color);
+  color: var(--FileControl-icon-color);
 }
 
 .amis-scope .antd-GroupedSelection-item {
@@ -42485,16 +42940,19 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-GroupedSelection-item > .antd-Checkbox {
-  margin-right: 0.5rem;
+  margin-right: 0.625rem;
 }
 
 .amis-scope .antd-GroupedSelection-item.is-active {
-  color: var(--Form-select-menu-onActive-color);
   background: var(--Form-select-menu-onActive-bg);
 }
 
 .amis-scope .antd-GroupedSelection-item:hover {
   background: var(--Tree-item-onHover-bg);
+}
+
+.amis-scope .antd-GroupedSelection-item:hover i {
+  border: 1px solid var(--menu-active-color);
 }
 
 .amis-scope .antd-GroupedSelection-item.is-disabled {
@@ -42521,10 +42979,18 @@ readers do not read off random characters that represent icons */
   font-size: var(--Form-input-fontSize);
   padding: calc( ( var(--Form-input-height) - var(--Form-input-lineHeight) * var(--Form-input-fontSize) ) / 2 ) var(--gap-sm);
   color: var(--text--muted-color);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .amis-scope .antd-TableSelection .antd-Table-content {
   border-top: var(--Table-borderWidth) solid var(--Table-borderColor);
+}
+
+.amis-scope .antd-TableSelection .antd-Table-table > tbody > tr {
+  cursor: pointer;
 }
 
 .amis-scope .antd-TableSelection .antd-Table-table > thead > tr > th,
@@ -42550,10 +43016,6 @@ readers do not read off random characters that represent icons */
   padding-right: var(--gap-md);
 }
 
-.amis-scope .antd-TableSelection .antd-Table-table > tbody > tr {
-  cursor: pointer;
-}
-
 .amis-scope .antd-TableSelection .antd-Table-table > tbody > tr.is-active {
   color: var(--Form-select-menu-onActive-color);
   background: var(--Form-select-menu-onActive-bg);
@@ -42561,24 +43023,13 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-TreeSelection .antd-Table-expandBtn {
   color: var(--icon-color);
-  margin-right: 5px;
+  margin-right: var(--gap-xs);
 }
 
 .amis-scope .antd-TreeSelection-sublist {
   position: relative;
   margin: 0 0 0 2.1875rem;
   display: none;
-}
-
-.amis-scope .antd-TreeSelection-sublist:before {
-  width: 1px;
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(var(--gap-xs) * -1);
-  bottom: calc(var(--Form-input-height) / 2);
-  left: -19px;
-  border-left: dashed 1px var(--icon-color);
 }
 
 .amis-scope .antd-TreeSelection-item {
@@ -42597,31 +43048,20 @@ readers do not read off random characters that represent icons */
   color: var(--text--muted-color);
 }
 
-.amis-scope .antd-TreeSelection-sublist .antd-TreeSelection-item:before {
-  height: 1px;
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(var(--Form-input-height) / 2);
-  width: 19px;
-  left: -19px;
-  border-top: dashed 1px var(--icon-color);
-}
-
 .amis-scope .antd-TreeSelection-itemInner {
   display: flex;
   align-items: center;
-  line-height: var(--Form-input-lineHeight);
+  line-height: var(--Tree-itemHeight);
+  position: relative;
   font-size: var(--Form-input-fontSize);
-  padding: calc( ( var(--Form-input-height) - var(--Form-input-lineHeight) * var(--Form-input-fontSize) ) / 2 ) var(--gap-sm);
+  padding: 0 var(--gap-sm);
   flex-direction: row;
   cursor: pointer;
   user-select: none;
 }
 
 .amis-scope .antd-TreeSelection-itemInner > .antd-Checkbox {
-  margin-right: 0;
-  margin-left: var(--gap-sm);
+  margin-right: var(--gap-sm);
 }
 
 .amis-scope .antd-TreeSelection-itemInner:hover {
@@ -42637,12 +43077,15 @@ readers do not read off random characters that represent icons */
   color: var(--text--muted-color);
 }
 
+.amis-scope .antd-TreeSelection-itemInner .antd-TreeSelection-itemLabel {
+  margin-left: var(--gap-xs);
+}
+
 .amis-scope .antd-TreeSelection-itemLabel {
   flex-grow: 1;
 }
 
 .amis-scope .antd-TreeSelection-itemLabel span {
-  margin-left: var(--gap-xs);
   vertical-align: middle;
 }
 
@@ -42708,7 +43151,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-ChainedSelection-itemLabel span {
-  margin-left: var(--gap-xs);
+  margin-left: 0.625rem;
   vertical-align: middle;
 }
 
@@ -42764,6 +43207,21 @@ readers do not read off random characters that represent icons */
   text-align: center;
   margin: 10px 0 20px;
   color: var(--text--muted-color);
+}
+
+.amis-scope .antd-ResultTreeList {
+  height: 100%;
+  width: 100%;
+}
+
+.amis-scope .antd-ResultTableList {
+  height: 100%;
+  width: 100%;
+}
+
+.amis-scope .antd-ResultTableList-close-btn {
+  float: right;
+  cursor: pointer;
 }
 
 .amis-scope .antd-CityPicker .antd-Select {
@@ -42839,6 +43297,7 @@ readers do not read off random characters that represent icons */
   margin: 0;
   vertical-align: middle;
   text-align: left;
+  transition: all 0.5s ease;
 }
 
 .amis-scope .antd-Switch.is-disabled {
@@ -43242,6 +43701,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-Select {
   display: inline-flex;
+  /* select 标签样式 */
   vertical-align: middle;
   text-align: left;
   align-items: center;
@@ -43255,6 +43715,10 @@ readers do not read off random characters that represent icons */
   padding: calc( ( var(--Form-selectOption-height) - var(--Form-input-lineHeight) * var(--Form-input-fontSize) - var(--Form-select-borderWidth) * 2 ) / 2 ) 0 calc( ( var(--Form-selectOption-height) - var(--Form-input-lineHeight) * var(--Form-input-fontSize) - var(--Form-select-borderWidth) * 2 ) / 2 ) var(--Form-select-paddingX);
   cursor: pointer;
   color: var(--Form-select-color);
+}
+
+.amis-scope .antd-Select--block {
+  display: flex;
 }
 
 .amis-scope .antd-Select:hover {
@@ -43274,6 +43738,16 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-Select:focus {
   box-shadow: var(--Form-select-onFocus-boxShadow);
+}
+
+.amis-scope .antd-Select .antd-PopOver.antd-Select-popover .antd-Select-menu .antd-Select-option {
+  height: 2rem;
+  line-height: 1.375rem;
+}
+
+.amis-scope .antd-Select .antd-PopOver.antd-Select-popover .antd-Select-menu .antd-Select-addBtn {
+  height: 2rem;
+  line-height: 1.875rem;
 }
 
 .amis-scope .antd-Select--borderHalf {
@@ -43328,12 +43802,17 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-Select--multi {
   height: auto;
   min-height: var(--Form-selectOption-height);
+  padding: var(--gap-xs) 0 var(--gap-xs) var(--gap-xs);
 }
 
 .amis-scope .antd-Select--multi .antd-Select-valueWrap > input {
   display: inline-block;
   width: 6.25rem;
   margin-bottom: var(--gap-xs);
+}
+
+.amis-scope .antd-Select--multi .antd-Select-valueWrap .antd-Select-placeholder {
+  margin-left: var(--gap-sm);
 }
 
 .amis-scope .antd-Select--multi .antd-Select-values + .antd-Select-input {
@@ -43386,6 +43865,11 @@ readers do not read off random characters that represent icons */
   background: var(--Form-selectValue-onDisable-bg);
 }
 
+.amis-scope .antd-Select-valueIcon svg {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
 .amis-scope .antd-Select-arrow {
   margin-right: 0.75rem;
   width: var(--gap-md);
@@ -43394,6 +43878,7 @@ readers do not read off random characters that represent icons */
   align-items: center;
   justify-content: center;
   line-height: 1;
+  transform: rotate(90deg);
 }
 
 .amis-scope .antd-Select-arrow > svg {
@@ -43473,6 +43958,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-Select-input > input {
+  width: 100%;
   outline: none;
   border: none;
   flex-grow: 1;
@@ -43483,7 +43969,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-Select-option {
   cursor: pointer;
-  min-width: 7.5rem;
   padding: calc( ( var(--Form-select-menu-height) - var(--Form-input-lineHeight) * var(--Form-input-fontSize) ) / 2 ) var(--Form-select-paddingX);
 }
 
@@ -43514,6 +43999,16 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-Select-option.is-highlight > a {
   display: block;
+}
+
+.amis-scope .antd-Select-option .antd-Select-option-content,
+.amis-scope .antd-Select-option .antd-Select-option-content > span > div {
+  flex: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .amis-scope .antd-Select-noResult {
@@ -43579,6 +44074,58 @@ readers do not read off random characters that represent icons */
   height: 20rem;
 }
 
+.amis-scope .antd-Select-overflow-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: calc( ( var(--Form-input-lineHeight) * var(--Form-input-fontSize) - 0.125rem + var(--gap-xs) ) * 5 );
+}
+
+.amis-scope .antd-Select-overflow-wrapper .antd-Select-value {
+  position: static;
+  white-space: normal;
+  user-select: none;
+  line-height: calc( var(--Form-input-lineHeight) * var(--Form-input-fontSize) - 0.125rem );
+  display: inline-block;
+  vertical-align: middle;
+  font-size: var(--Form-selectValue-fontSize);
+  background: var(--Form-select-value-bgColor);
+  border: 0.0625rem solid var(--Form-select-value-borderColor);
+  border-radius: 0.125rem;
+  margin-right: var(--gap-xs);
+  margin-bottom: var(--gap-xs);
+}
+
+.amis-scope .antd-Select-overflow-wrapper .antd-Select-value:hover {
+  background-color: var(--Form-selectValue-onHover-bgColor);
+}
+
+.amis-scope .antd-Select-overflow-wrapper .antd-Select-valueLabel {
+  display: inline-block;
+  max-width: var(--Form-valueLabel-maxWidth);
+  padding: 0 var(--gap-xs);
+  overflow: hidden;
+  vertical-align: top;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.amis-scope .antd-Select-overflow.antd-Tooltip--dark .antd-Select-overflow-wrapper .antd-Select-value {
+  background-color: var(--Form-select-value-bgColor--dark);
+  border: none;
+}
+
+.amis-scope .antd-Select-overflow.antd-Tooltip--dark .antd-Select-overflow-wrapper .antd-Select-value:hover {
+  background-color: var(--ResultBox-value--onHover-bg--dark);
+}
+
+.amis-scope .antd-Select-overflow.antd-Tooltip--dark .antd-Select-overflow-wrapper .antd-Select-value .antd-Select-valueIcon {
+  color: var(--Form-select-valueIcon-color--dark);
+}
+
 .amis-scope .antd-Select-popover {
   margin-top: calc(var(--Form-select-outer-borderWidth) * -1);
   background: var(--Form-select-menu-bg);
@@ -43587,7 +44134,6 @@ readers do not read off random characters that represent icons */
   box-shadow: var(--Form-select-outer-boxShadow);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  min-width: 6.25rem;
 }
 
 .amis-scope .antd-Select-popover.antd-PopOver--leftTopLeftBottom {
@@ -43599,6 +44145,11 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-SelectControl.is-error > .antd-Select {
+  border-color: var(--Form-input-onError-borderColor);
+  background: var(--Form-input-onError-bg);
+}
+
+.amis-scope .antd-Select.is-error {
   border-color: var(--Form-input-onError-borderColor);
   background: var(--Form-input-onError-bg);
 }
@@ -43640,6 +44191,7 @@ readers do not read off random characters that represent icons */
   color: var(--Form-input-placeholderColor);
   text-align: center;
   width: 100%;
+  height: 100%;
   flex-basis: var(--Form-input-height);
   flex-grow: 1;
   display: flex;
@@ -44142,6 +44694,10 @@ readers do not read off random characters that represent icons */
   box-sizing: none;
 }
 
+.amis-scope .antd-DatePicker .antd-DatePicker-clear {
+  display: none;
+}
+
 .amis-scope .antd-DatePicker--borderHalf {
   border-left-color: transparent !important;
   border-right-color: transparent !important;
@@ -44161,8 +44717,12 @@ readers do not read off random characters that represent icons */
   border-color: var(--DatePicker-onHover-borderColor);
 }
 
-.amis-scope .antd-DatePicker:not(.is-disabled):hover .antd-DatePicker-toggler:before {
-  color: var(--DatePicker-onHover-iconColor);
+.amis-scope .antd-DatePicker:not(.is-disabled):hover .antd-DatePicker-clear {
+  display: flex;
+}
+
+.amis-scope .antd-DatePicker:not(.is-disabled):hover .antd-DatePicker-clear + .antd-DatePicker-toggler {
+  display: none;
 }
 
 .amis-scope .antd-DatePicker.is-focused {
@@ -44219,16 +44779,6 @@ readers do not read off random characters that represent icons */
   fill: var(--Form-input-clearBtn-color-onActive);
 }
 
-.amis-scope .antd-DatePicker-toggler svg polyline,
-.amis-scope .antd-DatePicker-toggler svg circle {
-  stroke: var(--DatePicker-iconColor);
-}
-
-.amis-scope .antd-DatePicker-toggler:hover svg polyline,
-.amis-scope .antd-DatePicker-toggler:hover svg circle {
-  stroke: var(--DatePicker-onHover-iconColor);
-}
-
 .amis-scope .antd-DatePicker-clear {
   padding: var(--Form-input-clearBtn-padding);
   cursor: pointer;
@@ -44238,7 +44788,6 @@ readers do not read off random characters that represent icons */
   margin-left: auto;
   text-decoration: none;
   line-height: 1;
-  margin-right: var(--gap-xs);
 }
 
 .amis-scope .antd-DatePicker-clear svg {
@@ -44260,31 +44809,18 @@ readers do not read off random characters that represent icons */
   display: flex;
 }
 
-.amis-scope .antd-DateControl {
-  width: auto !important;
-}
-
-.amis-scope .antd-DateControl.is-date > .antd-DatePicker {
-  min-width: calc(var(--DatePicker-minWidth) + var(--fontSizeLg) * 2);
-}
-
-.amis-scope .antd-DateControl.is-datetime > .antd-DatePicker {
-  min-width: calc(var(--DatePicker-minWidth) + var(--fontSizeLg) * 6);
-}
-
 .amis-scope .antd-DatePicker-shortcuts {
   margin: 0;
-  padding: calc( ( var(--Calendar-shortcuts-height) - var(--Calendar-fontSize) * var(--lineHeightBase) ) / 2 ) var(--gap-sm);
+  padding-left: 0.625rem;
   list-style: none;
-}
-
-.amis-scope .antd-DatePicker-shortcuts + .rdt .rdtPicker {
-  padding-top: 0;
+  background: #f7f7f9;
+  line-height: 2rem;
 }
 
 .amis-scope .antd-DatePicker-shortcut {
   display: inline-block;
-  margin-right: var(--gap-sm);
+  margin-right: 2rem;
+  font-size: var(--fontSizeSm);
 }
 
 .amis-scope .antd-DatePicker-shortcut a {
@@ -44400,6 +44936,10 @@ readers do not read off random characters that represent icons */
   width: 100%;
 }
 
+.amis-scope .rdt .rdtPickerTimeWithoutD .TimeContentWrapper {
+  display: flex;
+}
+
 .amis-scope .rdt .rdtPicker {
   margin-top: 0;
   padding: 0;
@@ -44439,13 +44979,28 @@ readers do not read off random characters that represent icons */
   border-bottom-color: var(--Calendar-cell-bg);
 }
 
-.amis-scope .rdt .rdtPicker td.rdtActive,
-.amis-scope .rdt .rdtPicker td.rdtActive:hover {
+.amis-scope .rdt .rdtPicker .rdtDisabled.rdtToday > span,
+.amis-scope .rdt .rdtPicker .rdtOld.rdtToday > span,
+.amis-scope .rdt .rdtPicker .rdtNew.rdtToday > span {
+  border-color: #e8e9eb;
+}
+
+.amis-scope .rdt .rdtPicker td.rdtActive > span,
+.amis-scope .rdt .rdtPicker td.rdtActive:hover > span {
   background: var(--Calendar-cell-onActive-bg);
 }
 
-.amis-scope .rdt .rdtPicker td.rdtDisabled,
-.amis-scope .rdt .rdtPicker td.rdtDisabled:hover {
+.amis-scope .rdt .rdtPicker .rdtActive.rdtToday {
+  color: #151b26;
+}
+
+.amis-scope .rdt .rdtPicker .rdtActive.rdtToday > span {
+  background: transparent;
+  border-color: #144bcc;
+}
+
+.amis-scope .rdt .rdtPicker td.rdtDisabled > span,
+.amis-scope .rdt .rdtPicker td.rdtDisabled:hover > span {
   background: var(--Calendar-cell-onDisabled-bg);
 }
 
@@ -44457,10 +45012,6 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .rdt thead tr:first-child th:hover {
   background: transparent;
-}
-
-.amis-scope .rdt tbody {
-  height: 12.125rem;
 }
 
 .amis-scope .rdt tfoot {
@@ -44528,6 +45079,21 @@ readers do not read off random characters that represent icons */
   padding-top: 10px;
   text-align: center;
   border-bottom: 1px solid var(--Calendar-input-borderColor);
+}
+
+.amis-scope .antd-TimeFooterWrapper {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.amis-scope .antd-TimeFooterWrapper .antd-Button {
+  height: 24px;
+  line-height: 24px;
+  padding: 0 8px;
+  border-radius: 2px;
 }
 
 .amis-scope .antd-CalendarInput {
@@ -44688,7 +45254,7 @@ readers do not read off random characters that represent icons */
   cursor: pointer !important;
   width: var(--gap-md);
   padding: 0;
-  color: #999;
+  color: var(--DatePicker-arrow-color);
   font-size: var(--fontSizeXl);
   text-decoration: none;
   font-family: auto;
@@ -44698,17 +45264,22 @@ readers do not read off random characters that represent icons */
 .amis-scope .rdtPrev:hover,
 .amis-scope .rdtNext:hover {
   text-decoration: none;
-  color: #000;
+  color: var(--DatePicker-color);
+}
+
+.amis-scope .rdtCenter {
+  color: var(--DatePicker-color);
 }
 
 .amis-scope .rdtSwitch {
   text-align: center;
   cursor: pointer;
   font-weight: normal;
+  color: var(--DatePicker-color);
 }
 
 .amis-scope .rdtSwitch:hover {
-  color: var(--link-onHover-color);
+  color: var(--DatePicker-header-onHover-color);
   text-decoration: none;
 }
 
@@ -44719,6 +45290,7 @@ readers do not read off random characters that represent icons */
   border-bottom: 1px solid var(--Calendar-input-borderColor);
   height: 40px;
   width: 100%;
+  margin-top: -8px;
 }
 
 .amis-scope .rdtHeader > * {
@@ -44731,62 +45303,59 @@ readers do not read off random characters that represent icons */
   margin-left: var(--gap-xs);
 }
 
-.amis-scope td.rdtMonth,
-.amis-scope td.rdtYear,
-.amis-scope td.rdtQuarter {
-  width: 3.125rem;
-  height: 2.5rem;
-}
-
 .amis-scope td.rdtMonth > span,
 .amis-scope td.rdtYear > span,
 .amis-scope td.rdtQuarter > span {
-  height: 1.5rem;
-  display: block;
+  display: inline-block;
 }
 
 .amis-scope td.rdtMonth.rdtBetween,
 .amis-scope td.rdtYear.rdtBetween,
 .amis-scope td.rdtQuarter.rdtBetween {
-  background: transparent !important;
-}
-
-.amis-scope td.rdtMonth.rdtBetween > span,
-.amis-scope td.rdtYear.rdtBetween > span,
-.amis-scope td.rdtQuarter.rdtBetween > span {
   background: var(--Calendar-cell-onBetween-bg);
 }
 
 .amis-scope td.rdtMonth:hover,
 .amis-scope td.rdtMonth.rdtActive,
+.amis-scope td.rdtMonth.rdtActive:hover,
 .amis-scope td.rdtYear:hover,
 .amis-scope td.rdtYear.rdtActive,
+.amis-scope td.rdtYear.rdtActive:hover,
 .amis-scope td.rdtQuarter:hover,
-.amis-scope td.rdtQuarter.rdtActive {
-  background: transparent !important;
+.amis-scope td.rdtQuarter.rdtActive,
+.amis-scope td.rdtQuarter.rdtActive:hover {
+  background: transparent;
 }
 
 .amis-scope td.rdtMonth:hover > span,
 .amis-scope td.rdtMonth.rdtActive > span,
+.amis-scope td.rdtMonth.rdtActive:hover > span,
 .amis-scope td.rdtYear:hover > span,
 .amis-scope td.rdtYear.rdtActive > span,
+.amis-scope td.rdtYear.rdtActive:hover > span,
 .amis-scope td.rdtQuarter:hover > span,
-.amis-scope td.rdtQuarter.rdtActive > span {
-  background: var(--info);
+.amis-scope td.rdtQuarter.rdtActive > span,
+.amis-scope td.rdtQuarter.rdtActive:hover > span {
+  background: var(--info) !important;
   color: var(--white);
 }
 
 .amis-scope td.rdtMonth.rdtDisabled,
+.amis-scope td.rdtMonth.rdtDisabled:hover,
 .amis-scope td.rdtYear.rdtDisabled,
-.amis-scope td.rdtQuarter.rdtDisabled {
-  background: transparent !important;
+.amis-scope td.rdtYear.rdtDisabled:hover,
+.amis-scope td.rdtQuarter.rdtDisabled,
+.amis-scope td.rdtQuarter.rdtDisabled:hover {
+  background: var(--Calendar-cell-onDisabled-bg);
+  color: #b8babf;
 }
 
-.amis-scope td.rdtMonth.rdtDisabled > span,
-.amis-scope td.rdtYear.rdtDisabled > span,
-.amis-scope td.rdtQuarter.rdtDisabled > span {
-  background: #edf1f2;
-  color: #999;
+.amis-scope .antd-DateRangePicker-start .rdtPicker .rdtActive.rdtBetween {
+  background: linear-gradient(to right, transparent 0%, transparent 50%, var(--Calendar-cell-onBetween-bg) 51%, var(--Calendar-cell-onBetween-bg) 100%);
+}
+
+.amis-scope .antd-DateRangePicker-end .rdtPicker .rdtActive.rdtBetween {
+  background: linear-gradient(to right, var(--Calendar-cell-onBetween-bg) 0%, var(--Calendar-cell-onBetween-bg) 50%, transparent 51%, transparent 100%);
 }
 
 .amis-scope .antd-DateCalendar {
@@ -44821,6 +45390,10 @@ readers do not read off random characters that represent icons */
   border-color: transparent !important;
 }
 
+.amis-scope .antd-DateRangePicker .antd-DateRangePicker-clear {
+  display: none;
+}
+
 .amis-scope .antd-DateRangePicker:not(.is-disabled) {
   cursor: pointer;
 }
@@ -44830,8 +45403,12 @@ readers do not read off random characters that represent icons */
   border-color: var(--DatePicker-onHover-borderColor);
 }
 
-.amis-scope .antd-DateRangePicker:not(.is-disabled):hover .antd-DateRangePicker-toggler {
-  color: var(--DatePicker-onHover-iconColor);
+.amis-scope .antd-DateRangePicker:not(.is-disabled):hover .antd-DateRangePicker-clear {
+  display: flex;
+}
+
+.amis-scope .antd-DateRangePicker:not(.is-disabled):hover .antd-DateRangePicker-clear + .antd-DateRangePicker-toggler {
+  display: none;
 }
 
 .amis-scope .antd-DateRangePicker.is-focused {
@@ -44845,6 +45422,7 @@ readers do not read off random characters that represent icons */
   outline: none;
   padding: 0;
   background: 0;
+  flex: 1;
 }
 
 .amis-scope .antd-DateRangePicker .antd-DateRangePicker-input.isActive {
@@ -44903,16 +45481,6 @@ readers do not read off random characters that represent icons */
   fill: var(--Form-input-clearBtn-color-onActive);
 }
 
-.amis-scope .antd-DateRangePicker-toggler svg polyline,
-.amis-scope .antd-DateRangePicker-toggler svg circle {
-  stroke: var(--DatePicker-iconColor);
-}
-
-.amis-scope .antd-DateRangePicker-toggler:hover svg polyline,
-.amis-scope .antd-DateRangePicker-toggler:hover svg circle {
-  stroke: var(--DatePicker-onHover-iconColor);
-}
-
 .amis-scope .antd-DateRangePicker-clear {
   padding: var(--Form-input-clearBtn-padding);
   cursor: pointer;
@@ -44922,7 +45490,6 @@ readers do not read off random characters that represent icons */
   margin-left: auto;
   text-decoration: none;
   line-height: 1;
-  margin-right: var(--gap-xs);
 }
 
 .amis-scope .antd-DateRangePicker-clear svg {
@@ -44964,17 +45531,25 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-DateRangePicker-rangers {
   margin: 0;
-  padding: 10px 0 0 10px;
+  padding-left: 0.625rem;
   list-style: none;
+  background: #F7F7F9;
+  line-height: 2rem;
 }
 
 .amis-scope .antd-DateRangePicker-ranger {
   display: inline-block;
-  margin-right: var(--gap-sm);
+  margin-right: 2rem;
+  font-size: var(--fontSizeSm);
 }
 
 .amis-scope .antd-DateRangePicker-ranger a {
   cursor: pointer;
+  color: var(--DatePicker-color);
+}
+
+.amis-scope .antd-DateRangePicker-ranger a:hover {
+  color: var(--DatePicker-header-onHover-color);
 }
 
 .amis-scope .antd-DateRangePicker-actions {
@@ -44988,11 +45563,11 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-DateRangeControl.is-date > .antd-DateRangePicker {
-  min-width: calc(var(--DateRangePicker-minWidth) + var(--fontSizeLg) * 5.5);
+  min-width: calc(var(--DateRangePicker-minWidth) + var(--fontSizeLg) * 10);
 }
 
 .amis-scope .antd-DateRangeControl.is-datetime > .antd-DateRangePicker {
-  min-width: calc(var(--DateRangePicker-minWidth) + var(--fontSizeLg) * 11);
+  min-width: calc(var(--DateRangePicker-minWidth) + var(--fontSizeLg) * 10);
 }
 
 .amis-scope .antd-DateRangePicker-popover {
@@ -45106,6 +45681,10 @@ readers do not read off random characters that represent icons */
   margin-bottom: 0.5rem;
 }
 
+.amis-scope .antd-ImageControl-addBtn-text {
+  color: var(--ImageControl-addBtn-upload-color);
+}
+
 .amis-scope .antd-ImageControl-addBtn.is-disabled {
   pointer-events: none;
   border: 0.0625rem solid var(--ImageControl-addBtn-onDisabled-border);
@@ -45136,11 +45715,21 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-ImageControl-dropzone:focus .antd-ImageControl-addBtn {
   border-color: var(--ImageControl-addBtn-onHover-border);
   background: var(--ImageControl-addBtn-onHover-bg);
+  color: var(--ImageControl-addBtn-onHover-color) !important;
+}
+
+.amis-scope .antd-ImageControl-dropzone:hover .antd-ImageControl-addBtn {
+  border-color: var(--ImageControl-addBtn-onHover-border);
+  background: var(--ImageControl-addBtn-onHover-bg);
+  color: var(--ImageControl-addBtn-onHover-color);
+  border-color: var(--ImageControl-addBtn-onHover-border);
+}
+
+.amis-scope .antd-ImageControl-dropzone:hover .antd-ImageControl-addBtn-text {
   color: var(--ImageControl-addBtn-onHover-color);
 }
 
 .amis-scope .antd-ImageControl-item {
-  border: var(--borderWidth) solid var(--borderColor);
   border-radius: var(--ImageControl-addBtn-borderRadius);
   vertical-align: top;
   padding: var(--gap-xs);
@@ -45410,10 +45999,11 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-FileControl-clear {
-  float: right;
   color: var(--FileControl-icon-color);
   display: none;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: var(--gap-xs);
 }
 
 .amis-scope .antd-FileControl-clear:hover {
@@ -45496,6 +46086,15 @@ readers do not read off random characters that represent icons */
   border-radius: var(--borderRadius);
   background: var(--white);
   cursor: pointer;
+}
+
+.amis-scope .antd-FileControl-acceptTip-click {
+  color: var(--Spinner-color);
+}
+
+.amis-scope .antd-FileControl-acceptTip-help a {
+  color: var(--FileControl-icon-color);
+  font-size: var(--fontSizeSm);
 }
 
 .amis-scope .antd-FileControl-acceptTip:hover {
@@ -46306,11 +46905,10 @@ readers do not read off random characters that represent icons */
   display: block;
   transition: transform var(--animation-duration);
   top: 0;
-  transform: rotate(90deg);
 }
 
 .amis-scope .antd-Tree-itemArrow.is-folded > svg {
-  transform: rotate(0deg);
+  transform: rotate(-90deg);
 }
 
 .amis-scope .antd-Tree-itemArrowPlaceholder {
@@ -46498,7 +47096,7 @@ readers do not read off random characters that represent icons */
   fill: var(--Form-input-clearBtn-color-onActive);
 }
 
-.amis-scope .antd-TreeSelect-passwordReveal {
+.amis-scope .antd-TreeSelect-revealPassword {
   cursor: pointer;
   color: var(--text--muted-color);
 }
@@ -47114,7 +47712,7 @@ readers do not read off random characters that represent icons */
   fill: var(--Form-input-clearBtn-color-onActive);
 }
 
-.amis-scope .antd-Picker-passwordReveal {
+.amis-scope .antd-Picker-revealPassword {
   cursor: pointer;
   color: var(--text--muted-color);
 }
@@ -47450,6 +48048,10 @@ readers do not read off random characters that represent icons */
   position: relative;
 }
 
+.amis-scope .antd-Transfer-searchbox {
+  width: 100%;
+}
+
 .amis-scope .antd-Transfer--inline {
   display: inline-flex;
   flex-wrap: nowrap;
@@ -47475,6 +48077,10 @@ readers do not read off random characters that represent icons */
   flex-grow: 1;
 }
 
+.amis-scope .antd-Transfer-select {
+  overflow: hidden;
+}
+
 .amis-scope .antd-Transfer-select,
 .amis-scope .antd-Transfer-result {
   width: 0;
@@ -47495,8 +48101,29 @@ readers do not read off random characters that represent icons */
   position: relative;
 }
 
-.amis-scope .antd-Transfer-select > .antd-Transfer-selection.antd-AssociatedSelection {
-  overflow: initial;
+.amis-scope .antd-Transfer-select > .antd-ChainedSelection {
+  min-height: unset;
+  overflow: hidden;
+}
+
+.amis-scope .antd-Transfer-select > .antd-ChainedSelection .antd-ChainedSelection-col {
+  height: 100%;
+  overflow: auto;
+  min-width: unset;
+  flex: 1 1 0;
+}
+
+.amis-scope .antd-Transfer .antd--ResultTreeList {
+  border-top: 1px solid var(--borderColor);
+}
+
+.amis-scope .antd-Transfer .antd-AssociatedSelection {
+  overflow: hidden;
+}
+
+.amis-scope .antd-Transfer .antd-AssociatedSelection-left,
+.amis-scope .antd-Transfer .antd-AssociatedSelection-right {
+  min-height: unset;
 }
 
 .amis-scope .antd-Transfer-select {
@@ -47553,6 +48180,14 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-Transfer-clearAll.is-disabled {
   pointer-events: none;
   color: var(--text--muted-color);
+}
+
+.amis-scope .antd-Transfer .antd-Tree {
+  padding: 0.125rem 0.625rem;
+}
+
+.amis-scope .antd-Transfer .antd-Tree-itemLabel:hover::after {
+  left: 0;
 }
 
 .amis-scope .antd-TabsTransfer .antd-Transfer-title {
@@ -47650,6 +48285,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-TransferControl {
   position: relative;
+  overflow: hidden;
 }
 
 .amis-scope .antd-TransferControl.is-inline {
@@ -47673,9 +48309,14 @@ readers do not read off random characters that represent icons */
   top: 0;
 }
 
+.amis-scope .antd-TransferDropDown:hover {
+  border: 0.0625rem solid ver(--menu-active-color);
+}
+
 .amis-scope .antd-TransferDropDown-icon {
+  transform: rotate(90deg);
   transition: transform var(--animation-duration) ease-out;
-  margin: 5px 5px 5px auto;
+  margin: 0.3125rem 0 0.3125rem auto;
   display: flex;
   color: var(--Form-select-caret-iconColor);
 }
@@ -47691,7 +48332,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .antd-TransferDropDown.is-active .antd-TransferDropDown-icon {
-  transform: rotate(180deg);
+  transform: rotate(-90deg);
 }
 
 .amis-scope .antd-TransferDropDown-content {
@@ -47699,6 +48340,7 @@ readers do not read off random characters that represent icons */
   min-width: 25rem;
   display: flex;
   flex-direction: column;
+  padding: var(--gap-xs) 0;
 }
 
 .amis-scope .antd-TransferDropDown-content.is-mobile {
@@ -47740,6 +48382,7 @@ readers do not read off random characters that represent icons */
   width: 0.75rem;
   height: 0.75rem;
   fill: var(--Form-input-iconColor);
+  color: var(--default-icon-color);
 }
 
 .amis-scope .antd-NestedSelect-menuOuter {
@@ -47758,7 +48401,8 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .antd-NestedSelect-menu {
   width: 10rem;
-  height: 10.9375rem;
+  min-height: 2rem;
+  max-height: 10.9375rem;
   background: var(--Form-select-menu-bg);
   color: var(--Form-select-menu-color);
   border: var(--Form-select-outer-borderWidth) solid var(--Form-input-onFocused-borderColor);
@@ -47783,6 +48427,8 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-NestedSelect-menu .antd-NestedSelect-option > .antd-NestedSelect-optionLabel {
   flex: 1;
   height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .amis-scope .antd-NestedSelect-menu .antd-NestedSelect-option > .antd-NestedSelect-optionLabel.is-disabled {
@@ -48043,7 +48689,7 @@ readers do not read off random characters that represent icons */
   fill: var(--Form-input-clearBtn-color-onActive);
 }
 
-.amis-scope .antd-IconPickerControl-passwordReveal {
+.amis-scope .antd-IconPickerControl-revealPassword {
   cursor: pointer;
   color: var(--text--muted-color);
 }
@@ -48061,19 +48707,20 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-IconPickerControl-placeholder {
   color: var(--Form-input-placeholderColor);
   user-select: none;
-  position: absolute;
-  left: var(--Form-input-paddingX);
-  top: var(--Form-input-paddingY);
-  margin-top: calc(2 * var(--Form-input-borderWidth));
   line-height: var(--Form-input-lineHeight);
+  position: absolute;
+  left: 2px;
+  overflow: hidden;
+  width: 100%;
 }
 
 .amis-scope .antd-IconPickerControl-valueWrap {
-  display: flex;
   justify-content: space-between;
   flex-grow: 1;
   line-height: 1;
   white-space: nowrap;
+  width: 100%;
+  position: relative;
 }
 
 .amis-scope .antd-IconPickerControl-valueWrap > input {
@@ -48085,6 +48732,7 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-IconPickerControl-input--withAC {
   position: relative;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .amis-scope .antd-IconPickerControl-input--withAC > input {
@@ -48152,6 +48800,9 @@ readers do not read off random characters that represent icons */
   line-height: calc( var(--Form-input-lineHeight) * var(--Form-input-fontSize) );
   vertical-align: middle;
   display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
 }
 
 .amis-scope .antd-IconPickerControl-value > i {
@@ -48225,6 +48876,7 @@ readers do not read off random characters that represent icons */
   margin: var(--Form-input-marginBottom) 0 0;
   padding-left: var(--gap-base);
   font-size: var(--fontSizeSm);
+  position: var(--Form-feedback-position);
 }
 
 .amis-scope .antd-Form-description {
@@ -48249,6 +48901,10 @@ readers do not read off random characters that represent icons */
   margin-bottom: 0;
 }
 
+.amis-scope .antd-Form-item:last-child .antd-Form-feedback {
+  position: relative;
+}
+
 .amis-scope .antd-Grid-form > .antd-Form-item:last-child {
   margin-bottom: 0;
 }
@@ -48271,6 +48927,10 @@ readers do not read off random characters that represent icons */
 .amis-scope .antd-Form-item--horizontal > .antd-Form-label {
   text-align: var(--Form--horizontal-label-align);
   white-space: var(--Form--horizontal-label-whiteSpace);
+}
+
+.amis-scope .antd-Form-item--horizontal > .antd-Form-label--left {
+  text-align: left;
 }
 
 .amis-scope .antd-Form-item--horizontal-justify {
@@ -48496,6 +49156,14 @@ readers do not read off random characters that represent icons */
     flex: 0 0 100%;
     max-width: 100%;
     min-height: 1px;
+  }
+
+  .amis-scope .antd-Form-item--horizontal .antd-Form-itemColumn--align-left {
+    text-align: left;
+  }
+
+  .amis-scope .antd-Form-item--horizontal .antd-Form-itemColumn--align-right {
+    text-align: right;
   }
 
   .amis-scope .antd-Form-item--inline {
@@ -48805,6 +49473,427 @@ readers do not read off random characters that represent icons */
   .amis-scope .antd-Form .antd-Form-item .antd-Form-groupColumn > .antd-Form-item {
     padding-bottom: var(--Form-input-paddingX);
   }
+}
+
+.amis-scope .antd-UserSelect {
+  position: relative;
+}
+
+.amis-scope .antd-UserSelect-popup {
+  height: 100vh;
+}
+
+.amis-scope .antd-UserSelect-selectPopup {
+  width: 100vw;
+  height: 100vh;
+  z-index: var(3000)1;
+}
+
+.amis-scope .antd-UserSelect-searchBox {
+  height: 3.25rem;
+  margin: 0 1rem;
+  flex: none;
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .antd-UserSelect-search {
+  background: var(--UserSelect--content-bg);
+  flex: 1;
+}
+
+.amis-scope .antd-UserSelect-searchResult {
+  width: 100vw;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--UserSelect--content-bg);
+}
+
+.amis-scope .antd-UserSelect-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.amis-scope .antd-UserSelect-navbar {
+  position: relative;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  padding-left: 0.75rem;
+  padding-right: 1rem;
+  flex: none;
+}
+
+.amis-scope .antd-UserSelect-navbar-title {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  line-height: 44px;
+  text-align: center;
+}
+
+.amis-scope .antd-UserSelect-navbar-btnEdit {
+  color: var(--UserSelect--bread-color);
+  font-size: 1rem;
+}
+
+.amis-scope .antd-UserSelect-breadcrumb {
+  width: 100%;
+  line-height: 2.75rem;
+  padding-left: 1rem;
+  flex: none;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.amis-scope .antd-UserSelect-breadcrumb-item {
+  cursor: pointer;
+  color: var(--UserSelect--bread-color);
+}
+
+.amis-scope .antd-UserSelect-breadcrumb-item:last-child {
+  color: inherit;
+}
+
+.amis-scope .antd-UserSelect-breadcrumb-separator {
+  margin: 0 0.5rem;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+.amis-scope .antd-UserSelect-contentBox {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  background: var(--UserSelect--content-bg);
+}
+
+.amis-scope .antd-UserSelect-scroll {
+  height: 100%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: left var(--animation-duration) ease-in-out;
+}
+
+.amis-scope .antd-UserSelect-memberList-box {
+  width: 100vw;
+  margin-top: 1rem;
+}
+
+.amis-scope .antd-UserSelect-memberList,
+.amis-scope .antd-UserSelect-selection {
+  height: 100%;
+  list-style: none;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--white);
+}
+
+.amis-scope .antd-UserSelect-memberList li,
+.amis-scope .antd-UserSelect-selection li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.625rem;
+  line-height: 2.625rem;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 1rem;
+  border-bottom: 0.0625rem solid var(--UserSelect--border-color);
+}
+
+.amis-scope .antd-UserSelect-memberList li > span,
+.amis-scope .antd-UserSelect-selection li > span {
+  flex: 1;
+}
+
+.amis-scope .antd-UserSelect-selection {
+  margin: 0;
+  padding: 0;
+}
+
+.amis-scope .antd-UserSelect-selection li {
+  padding: 0;
+}
+
+.amis-scope .antd-UserSelect-memberName {
+  font-size: 14px;
+  flex: 2 !important;
+  text-align: left;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.amis-scope .antd-UserSelect-label {
+  flex: 1;
+}
+
+.amis-scope .antd-UserSelect-icon-box {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 100%;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amis-scope .antd-UserSelect-icon-box > svg {
+  position: static;
+}
+
+.amis-scope .antd-UserSelect-icon-box.role {
+  background-color: var(--UserSelect--role-bg);
+}
+
+.amis-scope .antd-UserSelect-icon-box.department {
+  background-color: var(--UserSelect--department-bg);
+}
+
+.amis-scope .antd-UserSelect-icon-box.post {
+  background-color: var(--UserSelect--post-bg);
+}
+
+.amis-scope .antd-UserSelect-userPic {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.amis-scope .antd-UserSelect-userPic-box {
+  width: 1.75rem;
+  margin-right: 0.625rem;
+  flex: none !important;
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .antd-UserSelect-text-userPic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--UserSelect--post-bg);
+  text-align: center;
+  line-height: 1.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  overflow: hidden;
+  color: var(--white);
+  margin: 0;
+}
+
+.amis-scope .antd-UserSelect-more {
+  text-align: right;
+}
+
+.amis-scope .antd-UserSelect-more svg {
+  width: 10px;
+  height: 10px;
+  transform: rotateZ(-90deg);
+}
+
+.amis-scope .antd-UserSelect-resultBox {
+  width: 100vw;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  flex: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.amis-scope .antd-UserSelect-selectNum {
+  flex: none;
+}
+
+.amis-scope .antd-UserSelect-selectList {
+  width: 100%;
+  flex: 1;
+  padding: 0;
+  overflow-x: scroll;
+  white-space: nowrap;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .antd-UserSelect-selectList-item {
+  list-style: none;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  background: var(--UserSelect--border-color);
+  border-radius: 4px;
+  padding: 0 0.5rem;
+  padding-right: 0;
+}
+
+.amis-scope .antd-UserSelect-selectList-item-closeBox {
+  height: 100%;
+  margin-left: 0.25rem;
+  padding: 0 0.375rem;
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .antd-UserSelect-selectList-item-closeBox .icon {
+  font-size: 8px;
+}
+
+.amis-scope .antd-UserSelect-selectSort-box {
+  margin-left: 0.625rem;
+  padding: 0.25rem 0.625rem;
+}
+
+.amis-scope .antd-UserSelect-noRecord {
+  width: 100vw;
+  height: 100%;
+  margin: 0 1rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  padding: 6.25rem 0;
+  box-sizing: border-box;
+}
+
+.amis-scope .antd-UserSelect-selectList-pop {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.amis-scope .antd-UserSelect-selectList-pop li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.amis-scope .antd-UserSelect-btnSure {
+  flex: none;
+}
+
+.amis-scope .antd-UserSelect-del {
+  text-align: right;
+  flex: none !important;
+  padding: 0 10px;
+}
+
+.amis-scope .antd-UserSelect-dragBar {
+  flex: none;
+  margin-right: 10px;
+}
+
+.amis-scope .antd-UserSelect-checkContent li > label {
+  flex: 1 !important;
+}
+
+.amis-scope .antd-UserSelect-selectBody {
+  width: 100%;
+  background: var(--UserSelect--content-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.amis-scope .antd-UserSelect-searchLoadingBox {
+  flex: 1;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amis-scope .antd-UserSelect-spinnerBox {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amis-scope .antd-UserSelect-selectList-box {
+  margin-top: 1rem;
+  background: var(--white);
+  border-radius: 4px;
+  padding: 0 1rem;
+  margin: 1rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.amis-scope .antd-UserSelect-selectList-box .antd-UserSelect-noRecord {
+  width: auto;
+}
+
+.amis-scope .antd-UserSelect-select-head {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.amis-scope .antd-UserSelect-select-head-text {
+  font-size: 1rem;
+  color: #151b26;
+}
+
+.amis-scope .antd-UserSelect-select-head-btnClear {
+  color: var(--UserSelect--bread-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.amis-scope .antd-UserTabSelect-popup {
+  width: 100vw;
+  height: 100vh;
+}
+
+.amis-scope .antd-UserTabSelect-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.amis-scope .antd-UserTabSelect-tabs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.amis-scope .antd-UserTabSelect-tabs > div:first-child {
+  flex: none;
+}
+
+.amis-scope .antd-UserTabSelect-tabs > div:last-child {
+  flex: 1;
+}
+
+.amis-scope .antd-UserTabSelect-tabs > div:last-child > div {
+  height: 100%;
+}
+
+.amis-scope .antd-UserTabSelect-tabs > div:last-child > div > div {
+  height: 100%;
 }
 
 .amis-scope .antd-AnchorNav {
@@ -49257,13 +50346,17 @@ readers do not read off random characters that represent icons */
   margin-top: 0.625rem;
 }
 
+.amis-scope .antd-FormulaEditor-settings.only-variable {
+  height: 21.875rem;
+}
+
 .amis-scope .antd-FormulaEditor-panel {
   display: flex;
   flex: 1;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: stretch;
-  height: 15.625rem;
+  height: 100%;
   border-radius: var(--borderRadius);
   border: var(--Form-input-borderWidth) solid var(--Form-input-borderColor);
 }
@@ -49292,11 +50385,12 @@ readers do not read off random characters that represent icons */
   flex: 1;
   display: flex;
   flex-flow: column nowrap;
-  max-height: 13.75rem;
+  max-height: calc(100% - 30px);
+  overflow: hidden;
 }
 
 .amis-scope .antd-FormulaEditor-panel-body--tabs {
-  max-height: 15.625rem;
+  max-height: 100%;
 }
 
 .amis-scope .antd-FormulaEditor-VariableList-root {
@@ -49441,10 +50535,13 @@ readers do not read off random characters that represent icons */
   vertical-align: middle;
   text-align: center;
   padding: 0 0.5rem;
-  line-height: 17px;
   border-radius: var(--borderRadius);
   background: #f5f5f5;
   color: var(--black);
+}
+
+.amis-scope .antd-FormulaEditor-VariableList .antd-GroupedSelection-item-tag {
+  line-height: 17px;
 }
 
 .amis-scope .antd-FormulaEditor-FuncList {
@@ -49643,6 +50740,42 @@ readers do not read off random characters that represent icons */
   font-weight: bold;
   line-height: 14px;
   padding: 0 2px;
+}
+
+.amis-scope .antd-FormulaPicker.is-input-group {
+  border: var(--Form-input-borderWidth) solid var(--Form-input-borderColor);
+  padding: var(--Form-input-paddingY) var(--Form-input-paddingX);
+  border-radius: var(--borderRadius);
+  background-color: #fff;
+  height: var(--Form-input-height);
+}
+
+.amis-scope .antd-FormulaPicker.is-input-group .antd-FormulaPicker-input {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: none;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.amis-scope .antd-FormulaPicker.is-input-group .antd-FormulaPicker-input:focus {
+  border: none;
+  outline: none;
+  box-sizing: none;
+}
+
+.amis-scope .antd-FormulaPicker.is-input-group .antd-FormulaPicker-toggler .icon-function {
+  transform: scale(1.8);
+}
+
+.amis-scope .antd-FormulaPicker.is-input-group .antd-FormulaPicker-toggler .icon-ellipsis-v {
+  transform: rotate(90deg);
+}
+
+.amis-scope .antd-FormulaPicker.is-input-group .antd-FormulaPicker-toggler:hover {
+  cursor: pointer;
 }
 
 .amis-scope .antd-Timeline-vertical {

@@ -58,7 +58,7 @@ class NavController extends Controller
                     'name' => 'title',
                     'label' => '分类名称',
                     'copyable' => true
-                ],[
+                ], [
                     'name' => 'navigation_count',
                     'label' => '网址数量'
                 ], [
@@ -87,7 +87,7 @@ class NavController extends Controller
         ];
         return $data;
     }
-    
+
     // 增加分类
     public function addnav()
     {
@@ -122,7 +122,6 @@ class NavController extends Controller
             ]
         ];
     }
-
     // 新增逻辑
     public function adds(Request $request)
     {
@@ -139,7 +138,8 @@ class NavController extends Controller
     }
 
     // 修改数据
-    public function edit(){
+    public function edit()
+    {
         //新增分类按钮
         return [
             'label' => '修改数据',
@@ -176,27 +176,52 @@ class NavController extends Controller
         ];
     }
     // 更新逻辑
-    public function update(Request $request){
+    public function update(Request $request)
+    {
         $device = new NavigationCategory();
         $title = $device->where('title', $request->input('title'))->first();
         if ($title) {
-            if($title->id != $request->input('id')){
+            if ($title->id != $request->input('id')) {
                 return $this->apiReturn(100, '该分类已存在', []);
             }
-        }else{
+        } else {
             return $this->apiReturn(100, '参数错误', []);
         }
         // 继续写入
         $device = NavigationCategory::find($request->input('id'));
         $device->title = $request->input('title');
         $device->sort = $request->input('sort');
-        
+
         $device->save();
         return $this->apiReturn(0);
     }
 
-     // 删除数据
-     public function delete(){
-        return [];
+    // 删除数据
+    public function delete()
+    {
+        //新增分类按钮
+        return [
+            'label' => '删除分类',
+            'type' => 'button',
+            'actionType' => 'ajax',
+            "level" => "danger",
+            "confirmText"=> "确定要删除该分类吗",
+            "api"=> url('admin/handdle/nav/deletedata').'?id=${id}',
+        ];
+    }
+    // 删除逻辑
+    public function deletedata(Request $request){
+        $navigation = NavigationCategory::withCount('navigation')->find($request->input('id'));
+        if($navigation){
+            if($navigation->navigation_count > 0){
+                return $this->apiReturn(100, '该分类下存在正在使用的网址，请删除所有网址后再删除分类', []);
+            }else{
+                $navigation->delete();
+                return $this->apiReturn(0, '已删除', []);
+            }
+        }else{
+            return $this->apiReturn(100, '参数错误', []);
+        }
+         
     }
 }

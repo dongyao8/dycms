@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 
 class NavigationController extends Controller
 {
-    //数据接口
+    //导航网址数据接口
     public function datalist(Request $request)
     {
         $canshu = $request->all();
@@ -182,7 +182,7 @@ class NavigationController extends Controller
     {
         //新增分类按钮
         return [
-            'label' => '修改数据',
+            'label' => '修改网址',
             'type' => 'button',
             'actionType' => 'dialog',
             "level" => "primary",
@@ -258,6 +258,25 @@ class NavigationController extends Controller
     // 删除数据
     public function delete()
     {
-        return [];
+        //新增分类按钮
+        return [
+            'label' => '删除网址',
+            'type' => 'button',
+            'actionType' => 'ajax',
+            "level" => "danger",
+            "confirmText"=> "确定要删除该网址吗",
+            "api"=> url('admin/handdle/navigation/deletedata').'?id=${id}',
+        ];
+    }
+    // 删除逻辑
+    public function deletedata(Request $request){
+        $navigation = Navigation::find($request->input('id'));
+        if($navigation){
+            $navigation->delete();
+            return $this->apiReturn(0, '已删除', []);
+        }else{
+            return $this->apiReturn(100, '参数错误', []);
+        }
+         
     }
 }

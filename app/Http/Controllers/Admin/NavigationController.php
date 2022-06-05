@@ -73,6 +73,20 @@ class NavigationController extends Controller
                     'name' => 'category.title',
                     'label' => '所属分类'
                 ], [
+                    'label' => '是否推荐',
+                    'name' => 'ishot',
+                    "type" => "status",
+                    "classNameExpr" => "<%= data.ishot == 1 ? 'text-danger leading-relaxed' : '' %>",
+                    "map" => [
+                        "0" => "fa fa-sitemap",
+                        "1" => 'fa fa-star'
+                    ],
+                    "labelMap"=>[
+                        "0" => '未推荐',
+                        "1" => '热门推荐',
+                    ]
+
+                ], [
                     'label' => '排序值[数字越大越靠前]',
                     'name' => 'sort'
 
@@ -152,6 +166,18 @@ class NavigationController extends Controller
                             'value' => 0,
                             'label' => '排序值',
                             'desc' => '【数字越大，排序越靠前】'
+                        ],
+                        [
+                            'type' => 'switch',
+                            'name' => 'ishot',
+                            'required' => true,
+                            'label' => '是否推荐',
+                            'onText' => '热门推荐',
+                            'offText' => '未推荐',
+                            'trueValue' => '1',
+                            'falseValue' => '0',
+                            'value' => 0,
+                            'desc' => '推荐内容将展示在首页突出位置'
                         ]
                     )
                 ]
@@ -224,9 +250,19 @@ class NavigationController extends Controller
                             'type' => 'input-number',
                             'name' => 'sort',
                             'required' => true,
-                            'value' => 0,
                             'label' => '排序值',
                             'desc' => '【数字越大，排序越靠前】'
+                        ],
+                        [
+                            'type' => 'switch',
+                            'name' => 'ishot',
+                            'required' => true,
+                            'label' => '是否推荐',
+                            'onText' => '热门推荐',
+                            'offText' => '未推荐',
+                            'trueValue' => '1',
+                            'falseValue' => '0',
+                            'desc' => '推荐内容将展示在首页突出位置'
                         ]
                     )
                 ]
@@ -245,6 +281,7 @@ class NavigationController extends Controller
         $device->url = $request->input('url');
         $device->navigation_category_id = $request->input('navigation_category_id');
         $device->sort = $request->input('sort');
+        $device->ishot = $request->input('ishot');
         if($request->input('cover')){
             $coverimg = str_replace(url('/') . '/storage/', "", $request->input('cover'));
             if($coverimg != $device->cover){

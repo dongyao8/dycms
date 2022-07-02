@@ -13,7 +13,7 @@ class HomeController extends Controller
         $body[] = [
             'type' => 'card',
             'header' => [
-                'title' => '欢迎访问后台管理系统',
+                'title' => '欢迎访问DYCMS后台管理系统',
                 'subTitle' => '首页内容'
             ]
         ];

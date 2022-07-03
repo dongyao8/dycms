@@ -199,6 +199,7 @@ class NavigationController extends Controller
         $device->url = $request->input('url');
         $device->navigation_category_id = $request->input('navigation_category_id');
         $device->sort = $request->input('sort');
+        $device->ishot = $request->input('ishot');
         $device->save();
         return $this->apiReturn(0);
     }

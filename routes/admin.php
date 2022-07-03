@@ -32,7 +32,8 @@ Route::any('handdle/{controller}/{action}', function ($controller, $action, Requ
 
 Route::get('system', [Admin\SystemController::class, 'index'])->name('system'); //管理
 Route::get('menu', [MenuController::class, 'index'])->name('menu'); //后台主菜单JSON数据
-Route::post('upfile', [FileController::class, 'upfile'])->name('upfile'); //上传文件
+Route::post('upfile', [FileController::class, 'upfile'])->name('upfile'); //上传文件-封面小图
+Route::post('attachment', [FileController::class, 'attachment'])->name('attachment'); //上传附件，正文内容
 //退出登录
 Route::get('gout', function () {
     Auth::guard('admin')->logout();

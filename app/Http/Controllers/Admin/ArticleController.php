@@ -21,7 +21,7 @@ class ArticleController extends Controller
         }
         $data = $data->paginate(10);
         foreach ($data as $d) {
-            $d->cover =  url('/') . Storage::url($d->cover);
+            $d->imgurl =  url('/') . Storage::url($d->imgurl);
             $d->class =  $d->category->c_title;
         }
         $cate['status'] = 0;
@@ -77,9 +77,9 @@ class ArticleController extends Controller
 
                 ], [
                     'label' => '是否推荐',
-                    'name' => 'is_hot',
+                    'name' => 'ishot',
                     "type" => "status",
-                    "classNameExpr" => "<%= data.is_hot == 1 ? 'text-danger leading-relaxed' : '' %>",
+                    "classNameExpr" => "<%= data.ishot == 1 ? 'text-danger leading-relaxed' : '' %>",
                     "map" => [
                         "0" => "fa fa-tag",
                         "1" => 'fa fa-star'
@@ -93,8 +93,8 @@ class ArticleController extends Controller
                     'type' => 'operation',
                     'label' => '操作',
                     'buttons' => [
-                        //  $this->edit(), //修改
-                        //  $this->delete() //删除
+                         $this->edit(), //修改
+                         $this->delete() //删除
                     ]
                 ]
             ),
@@ -121,7 +121,7 @@ class ArticleController extends Controller
     public function addnav()
     {
 
-        //新增分类按钮
+        //新增文章按钮
         return [
             'label' => '新增文章',
             'type' => 'button',
@@ -136,7 +136,7 @@ class ArticleController extends Controller
                     'body' => array(
                         [
                             'type' => 'input-image',
-                            'name' => 'cover',
+                            'name' => 'imgurl',
                             'label' => '封面图',
                             'required' => true,
                             "receiver" =>  route('admin.upfile') . "?path=article_cover",
@@ -155,13 +155,10 @@ class ArticleController extends Controller
                         ],
                         [
                             'type' => 'input-rich-text',
-                            "receiver" =>  route('admin.upfile') . "?path=article_content",
+                            "receiver" =>  route('admin.attachment') . "?path=article_content",
                             'name' => 'content',
                             'required' => true,
-                            'label' => '文章内容',
-                            'options' => [
-                                'images_upload_base_path' => 'http://www.baidu.com/'
-                            ]
+                            'label' => '文章内容'
                         ],
                         [
                             'type' => 'switch',
@@ -179,5 +176,131 @@ class ArticleController extends Controller
                 ]
             ]
         ];
+    }
+
+    // 新增逻辑
+    public function adds(Request $request)
+    {
+        $article = new Article();
+        // 继续写入
+        $article->user_id = 0; //默认0，后续可能会用到用户投稿功能
+        $article->title = $request->input('title');
+        $article->imgurl = $request->input('imgurl');
+        $article->category_id = $request->input('category_id');
+        $article->content = $request->input('content');
+        $article->ishot = $request->input('ishot');
+        $article->save();
+        return $this->apiReturn(0);
+    }
+
+    // 修改数据
+    public function edit()
+    {
+        //新增分类按钮
+        return [
+            'label' => '修改文章',
+            'type' => 'button',
+            'actionType' => 'dialog',
+            "level" => "primary",
+            'dialog' => [
+                'title' => '修改文章',
+                'size' => 'lg',
+                'body' => [
+                    'type' => 'form',
+                    'api' => url('admin/handdle/article/update'),
+                    'body' => array(
+                        [
+                            'type' => 'hidden',
+                            'name' => 'id'
+                        ],
+                        [
+                            'type' => 'input-image',
+                            'name' => 'imgurl',
+                            'label' => '封面图',
+                            'required' => true,
+                            "receiver" =>  route('admin.upfile') . "?path=article_cover",
+                        ], [
+                            'type' => 'input-text',
+                            'name' => 'title',
+                            'required' => true,
+                            'label' => '文章标题'
+                        ],
+                        [
+                            'type' => 'select',
+                            'name' => 'category_id',
+                            'required' => true,
+                            'label' => '所属分类',
+                            'options' => $this->getCat()->toArray()
+                        ],
+                        [
+                            'type' => 'input-rich-text',
+                            "receiver" =>  route('admin.attachment') . "?path=article_content",
+                            'name' => 'content',
+                            'required' => true,
+                            'label' => '文章内容'
+                        ],
+                        [
+                            'type' => 'switch',
+                            'name' => 'ishot',
+                            'required' => true,
+                            'label' => '是否推荐',
+                            'onText' => '热门推荐',
+                            'offText' => '未推荐',
+                            'trueValue' => '1',
+                            'falseValue' => '0',
+                            'value' => 0,
+                            'desc' => '推荐内容将展示在首页突出位置'
+                        ]
+                    )
+                ]
+            ]
+        ];
+    }
+    // 更新逻辑
+    public function update(Request $request)
+    {
+        $article = Article::find($request->input('id'));
+        if(!$article){
+            return $this->apiReturn(100, '参数错误', []);
+        }
+        // 继续写入
+        $article->title = $request->input('title');
+        $article->category_id = $request->input('category_id');
+        $article->content = $request->input('content');
+        $article->ishot = $request->input('ishot');
+        if($request->input('imgurl')){
+            $coverimg = str_replace(url('/') . '/storage/', "", $request->input('imgurl'));
+            if($coverimg != $article->imgurl){
+                $article->imgurl = $request->input('imgurl');
+            }
+        }
+        $article->save();
+        return $this->apiReturn(0);
+    }
+
+
+    // 删除数据
+    public function delete()
+    {
+        //新增分类按钮
+        return [
+            'label' => '删除文章',
+            'type' => 'button',
+            'actionType' => 'ajax',
+            "level" => "danger",
+            "confirmText"=> "确定要删除该文章吗",
+            "api"=> url('admin/handdle/article/deletedata').'?id=${id}',
+        ];
+    }
+    // 删除逻辑
+    public function deletedata(Request $request){
+        $article = Article::find($request->input('id'));
+        if($article){
+            $article->delete();
+            return $this->apiReturn(0, '已删除', []);
+        }else{
+            return $this->apiReturn(100, '参数错误', []);
+        }
+         
     }
 }

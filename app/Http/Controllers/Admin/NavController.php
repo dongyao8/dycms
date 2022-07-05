@@ -38,7 +38,7 @@ class NavController extends Controller
             ],
             'syncLocation' => false,
             'name' => 'duelist',
-            'api' => url('admin/handdle/nav/datalist'),
+            'api' => url(env('ADMIN_PREFIX', 'admin').'/handdle/nav/datalist'),
             'filter' => [
                 'title' => '搜索内容',
                 "mode" => "horizontal",
@@ -101,7 +101,7 @@ class NavController extends Controller
                 'title' => '新增分类',
                 'body' => [
                     'type' => 'form',
-                    'api' => url('admin/handdle/nav/adds'),
+                    'api' => url(env('ADMIN_PREFIX', 'admin').'/handdle/nav/adds'),
                     'body' => array(
                         [
                             'type' => 'input-text',
@@ -150,7 +150,7 @@ class NavController extends Controller
                 'title' => '修改数据',
                 'body' => [
                     'type' => 'form',
-                    'api' => url('admin/handdle/nav/update'),
+                    'api' => url(env('ADMIN_PREFIX', 'admin').'/handdle/nav/update'),
                     'body' => array(
                         [
                             'type' => 'hidden',
@@ -206,7 +206,7 @@ class NavController extends Controller
             'actionType' => 'ajax',
             "level" => "danger",
             "confirmText"=> "确定要删除该分类吗",
-            "api"=> url('admin/handdle/nav/deletedata').'?id=${id}',
+            "api"=> url(env('ADMIN_PREFIX', 'admin').'/handdle/nav/deletedata').'?id=${id}',
         ];
     }
     // 删除逻辑

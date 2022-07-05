@@ -11,7 +11,7 @@ class MenuController extends Controller
     public function __construct()
     {
         error_reporting(0);
-        $this->root_path = parse_url(url('/'))['path'].'/admin/';
+        $this->root_path = parse_url(url('/'))['path'].'/'.env('ADMIN_PREFIX', 'admin').'/';
     }
     //后台主菜单逻辑
     public function index()

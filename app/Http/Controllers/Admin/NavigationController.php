@@ -43,7 +43,7 @@ class NavigationController extends Controller
             ],
             'syncLocation' => false,
             'name' => 'duelist',
-            'api' => url('admin/handdle/navigation/datalist'),
+            'api' =>url(env('ADMIN_PREFIX', 'admin').'/handdle/navigation/datalist'),
             'filter' => [
                 'title' => '搜索内容',
                 "mode" => "horizontal",
@@ -73,6 +73,9 @@ class NavigationController extends Controller
                     'name' => 'category.title',
                     'label' => '所属分类'
                 ], [
+		            'name' => 'desc',
+		            'label' => '一句话描述'
+	            ], [
                     'label' => '是否推荐',
                     'name' => 'ishot',
                     "type" => "status",
@@ -133,7 +136,7 @@ class NavigationController extends Controller
                 'title' => '新增网站',
                 'body' => [
                     'type' => 'form',
-                    'api' => url('admin/handdle/navigation/adds'),
+                    'api' =>url(env('ADMIN_PREFIX', 'admin').'/handdle/navigation/adds'),
                     'body' => array(
                         [
                             'type' => 'input-image',
@@ -151,7 +154,12 @@ class NavigationController extends Controller
                             'name' => 'url',
                             'required' => true,
                             'label' => '网站地址'
-                        ],
+                        ], [
+		                    'type' => 'input-text',
+		                    'name' => 'desc',
+		                    'required' => true,
+		                    'label' => '一句话描述'
+	                    ],
                         [
                             'type' => 'select',
                             'name' => 'navigation_category_id',
@@ -199,6 +207,7 @@ class NavigationController extends Controller
         $device->url = $request->input('url');
         $device->navigation_category_id = $request->input('navigation_category_id');
         $device->sort = $request->input('sort');
+	    $device->desc = $request->input('desc');
         $device->ishot = $request->input('ishot');
         $device->save();
         return $this->apiReturn(0);
@@ -217,7 +226,7 @@ class NavigationController extends Controller
                 'title' => '修改数据',
                 'body' => [
                     'type' => 'form',
-                    'api' => url('admin/handdle/navigation/update'),
+                    'api' => url(env('ADMIN_PREFIX', 'admin').'/handdle/navigation/update'),
                     'body' => array(
                         [
                             'type' => 'hidden',
@@ -239,7 +248,12 @@ class NavigationController extends Controller
                             'name' => 'url',
                             'required' => true,
                             'label' => '网站地址'
-                        ],
+                        ], [
+		                    'type' => 'input-text',
+		                    'name' => 'desc',
+		                    'required' => true,
+		                    'label' => '一句话描述'
+	                    ],
                         [
                             'type' => 'select',
                             'name' => 'navigation_category_id',
@@ -280,6 +294,7 @@ class NavigationController extends Controller
         // 继续写入
         $device->title = $request->input('title');
         $device->url = $request->input('url');
+	    $device->desc= $request->input('desc');
         $device->navigation_category_id = $request->input('navigation_category_id');
         $device->sort = $request->input('sort');
         $device->ishot = $request->input('ishot');
@@ -303,7 +318,7 @@ class NavigationController extends Controller
             'actionType' => 'ajax',
             "level" => "danger",
             "confirmText"=> "确定要删除该网址吗",
-            "api"=> url('admin/handdle/navigation/deletedata').'?id=${id}',
+            "api"=> url(env('ADMIN_PREFIX', 'admin').'/handdle/navigation/deletedata').'?id=${id}',
         ];
     }
     // 删除逻辑

@@ -38,7 +38,7 @@ class CategoryController extends Controller
              ],
              'syncLocation' => false,
              'name' => 'duelist',
-             'api' => url('admin/handdle/category/datalist'),
+             'api' => url(env('ADMIN_PREFIX', 'admin').'/handdle/category/datalist'),
              'filter' => [
                  'title' => '搜索内容',
                  "mode" => "horizontal",
@@ -101,7 +101,7 @@ class CategoryController extends Controller
                  'title' => '新增文章分类',
                  'body' => [
                      'type' => 'form',
-                     'api' => url('admin/handdle/category/adds'),
+                     'api' => url(env('ADMIN_PREFIX', 'admin').'/handdle/category/adds'),
                      'body' => array(
                          [
                              'type' => 'input-text',
@@ -150,7 +150,7 @@ class CategoryController extends Controller
                  'title' => '修改数据',
                  'body' => [
                      'type' => 'form',
-                     'api' => url('admin/handdle/category/update'),
+                     'api' => url(env('ADMIN_PREFIX', 'admin').'/handdle/category/update'),
                      'body' => array(
                          [
                              'type' => 'hidden',
@@ -204,7 +204,7 @@ class CategoryController extends Controller
              'actionType' => 'ajax',
              "level" => "danger",
              "confirmText"=> "确定要删除该分类吗",
-             "api"=> url('admin/handdle/category/deletedata').'?id=${id}',
+             "api"=> url(env('ADMIN_PREFIX', 'admin').'/handdle/category/deletedata').'?id=${id}',
          ];
      }
      // 删除逻辑

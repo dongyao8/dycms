@@ -43,7 +43,7 @@ class ArticleController extends Controller
             ],
             'syncLocation' => false,
             'name' => 'duelist',
-            'api' => url(env('ADMIN_PREFIX', 'admin').'/handdle/article/datalist'),
+            'api' => $this->admin_url.'/handdle/article/datalist',
             'filter' => [
                 'title' => '搜索内容',
                 "mode" => "horizontal",
@@ -132,7 +132,7 @@ class ArticleController extends Controller
                 'size' => 'lg',
                 'body' => [
                     'type' => 'form',
-                    'api' => url(env('ADMIN_PREFIX', 'admin').'/handdle/article/adds'),
+                    'api' => $this->admin_url.'/handdle/article/adds',
                     'body' => array(
                         [
                             'type' => 'input-image',
@@ -207,7 +207,7 @@ class ArticleController extends Controller
                 'size' => 'lg',
                 'body' => [
                     'type' => 'form',
-                    'api' => url(env('ADMIN_PREFIX', 'admin').'/handdle/article/update'),
+                    'api' => $this->admin_url.'/handdle/article/update',
                     'body' => array(
                         [
                             'type' => 'hidden',
@@ -289,7 +289,7 @@ class ArticleController extends Controller
             'actionType' => 'ajax',
             "level" => "danger",
             "confirmText"=> "确定要删除该文章吗",
-            "api"=> url(env('ADMIN_PREFIX', 'admin').'/handdle/article/deletedata').'?id=${id}',
+            "api"=> $this->admin_url.'/handdle/article/deletedata'.'?id=${id}',
         ];
     }
     // 删除逻辑

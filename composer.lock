@@ -396,16 +396,16 @@
         },
         {
             "name": "dongyao8/commuse",
-            "version": "v1.0.0",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dongyao8/commuse.git",
-                "reference": "12465ec02fc89be86deb47135c85f8945be2478b"
+                "reference": "0a7a24d94ad93028822dc44b69469289c8156341"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dongyao8/commuse/zipball/12465ec02fc89be86deb47135c85f8945be2478b",
-                "reference": "12465ec02fc89be86deb47135c85f8945be2478b",
+                "url": "https://api.github.com/repos/dongyao8/commuse/zipball/0a7a24d94ad93028822dc44b69469289c8156341",
+                "reference": "0a7a24d94ad93028822dc44b69469289c8156341",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -429,7 +429,7 @@
             ],
             "authors": [
                 {
-                    "name": "MACBOOK",
+                    "name": "clark",
                     "email": "243512842@qq.com"
                 }
             ],
@@ -437,9 +437,9 @@
             "homepage": "http://www.dongyao.ren",
             "support": {
                 "issues": "https://github.com/dongyao8/commuse/issues",
-                "source": "https://github.com/dongyao8/commuse/tree/v1.0.0"
+                "source": "https://github.com/dongyao8/commuse/tree/v1.0.4"
             },
-            "time": "2022-02-23T03:50:46+00:00"
+            "time": "2022-07-19T18:49:27+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -1155,16 +1155,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.19.0",
+            "version": "v9.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "bbce25bd823133f6a5a724f2d62680b711f1d0df"
+                "reference": "c99868f1c9bf2f5d250993121838db905591864f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/bbce25bd823133f6a5a724f2d62680b711f1d0df",
-                "reference": "bbce25bd823133f6a5a724f2d62680b711f1d0df",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/c99868f1c9bf2f5d250993121838db905591864f",
+                "reference": "c99868f1c9bf2f5d250993121838db905591864f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1336,7 +1336,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-06-28T14:33:19+00:00"
+            "time": "2022-07-13T13:26:22+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -1411,16 +1411,16 @@
         },
         {
             "name": "laravel/serializable-closure",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/serializable-closure.git",
-                "reference": "9e4b005daa20b0c161f3845040046dc9ddc1d74e"
+                "reference": "09f0e9fb61829f628205b7c94906c28740ff9540"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/9e4b005daa20b0c161f3845040046dc9ddc1d74e",
-                "reference": "9e4b005daa20b0c161f3845040046dc9ddc1d74e",
+                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/09f0e9fb61829f628205b7c94906c28740ff9540",
+                "reference": "09f0e9fb61829f628205b7c94906c28740ff9540",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1472,7 +1472,7 @@
                 "issues": "https://github.com/laravel/serializable-closure/issues",
                 "source": "https://github.com/laravel/serializable-closure"
             },
-            "time": "2022-02-11T19:23:53+00:00"
+            "time": "2022-05-16T17:09:47+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -5537,16 +5537,16 @@
         },
         {
             "name": "voku/portable-ascii",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-ascii.git",
-                "reference": "9bd89e83cecdf8c37b64909454249eaed98b2c89"
+                "reference": "b56450eed252f6801410d810c8e1727224ae0743"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/9bd89e83cecdf8c37b64909454249eaed98b2c89",
-                "reference": "9bd89e83cecdf8c37b64909454249eaed98b2c89",
+                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/b56450eed252f6801410d810c8e1727224ae0743",
+                "reference": "b56450eed252f6801410d810c8e1727224ae0743",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -5589,7 +5589,7 @@
             ],
             "support": {
                 "issues": "https://github.com/voku/portable-ascii/issues",
-                "source": "https://github.com/voku/portable-ascii/tree/2.0.0"
+                "source": "https://github.com/voku/portable-ascii/tree/2.0.1"
             },
             "funding": [
                 {
@@ -5613,7 +5613,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-24T18:59:03+00:00"
+            "time": "2022-03-08T17:03:00+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -8361,16 +8361,16 @@
         },
         {
             "name": "spatie/ignition",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ignition.git",
-                "reference": "6aa8f1c8c46aff30c9bd4c354dc865eeee2ed59f"
+                "reference": "997363fbcce809b1e55f571997d49017f9c623d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ignition/zipball/6aa8f1c8c46aff30c9bd4c354dc865eeee2ed59f",
-                "reference": "6aa8f1c8c46aff30c9bd4c354dc865eeee2ed59f",
+                "url": "https://api.github.com/repos/spatie/ignition/zipball/997363fbcce809b1e55f571997d49017f9c623d9",
+                "reference": "997363fbcce809b1e55f571997d49017f9c623d9",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -8438,20 +8438,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-12T08:19:04+00:00"
+            "time": "2022-05-16T13:16:07+00:00"
         },
         {
             "name": "spatie/laravel-ignition",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-ignition.git",
-                "reference": "5409e699fc19f4d53e59427445b08f90593fda28"
+                "reference": "fe37a0eafe6ea040804255c70e9808af13314f87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/5409e699fc19f4d53e59427445b08f90593fda28",
-                "reference": "5409e699fc19f4d53e59427445b08f90593fda28",
+                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/fe37a0eafe6ea040804255c70e9808af13314f87",
+                "reference": "fe37a0eafe6ea040804255c70e9808af13314f87",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -8534,7 +8534,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-06-15T13:55:18+00:00"
+            "time": "2022-06-17T06:28:57+00:00"
         },
         {
             "name": "theseer/tokenizer",

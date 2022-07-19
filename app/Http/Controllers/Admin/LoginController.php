@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Dongyao8\Commuse\File\Bing;
 
 class LoginController extends Controller
 {
@@ -15,11 +16,12 @@ class LoginController extends Controller
             return redirect(route('admin.home',['home']));
         }
         //获取返回json，并解析成数组
-        $data = json_decode(file_get_contents("https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1"),true);
+        $bing = new Bing;
+        $data = $bing->dayimg();
         //构建返回的图片信息
         $days['code'] = 1;
-        $days['copyright'] = $data['images'][0]['copyright'];
-        $days['images'] = 'https://www.bing.com'.$data['images'][0]['url'];
+        $days['copyright'] = $data['copyright'];
+        $days['images'] = $data['images'];
         return view('admin.login.index',compact('days'));
     }
 

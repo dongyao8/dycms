@@ -20,7 +20,7 @@ class Checkadmin
         // 暂时屏蔽
         if (!Auth::guard('admin')->check()) {
 
-            return redirect(route(env('ADMIN_PREFIX', 'admin').'.login'));
+            return redirect('admin.login');
         }else{
             return $next($request);
         }

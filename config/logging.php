@@ -69,7 +69,7 @@ return [
 
         'admin' => [
             'driver' => 'daily',
-            'path' => storage_path('logs/admin.log'),
+            'path' => storage_path('logs/admin/admin.log'),
             'days' => 30,
             'ignore_exceptions' => false,
         ],

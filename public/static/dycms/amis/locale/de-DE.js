@@ -1,4 +1,4 @@
-
+import {registerLocale as register} from 'amis-core';
 
 amisRequire('amis').registerLocale('de-DE', {
   'Action.countDown': '${timeLeft} warten',
@@ -19,6 +19,7 @@ amisRequire('amis').registerLocale('de-DE', {
   'Time': 'Zeit',
   'Content': 'Inhalt',
   'cancel': 'Abbrechen',
+  'more': 'mehr',
   'Card.dragTip': 'Obere Schaltfläche zum Sortieren ziehen',
   'Card.toggleDrag': 'Zum Sortieren umschalten',
   'City.street': 'Straße eingeben',
@@ -28,8 +29,10 @@ amisRequire('amis').registerLocale('de-DE', {
   'add': 'Neu',
   'Combo.dragDropSort': 'Zum Sortieren ziehen',
   'Combo.invalidData': 'Ungültige Daten, bitte entfernen',
-  'Combo.maxLength': 'Maximale Anzahl ist {{MaxLength}}}. Löschen Sie einige Elemente.',
-  'Combo.minLength': 'Mindestens {{minLength}} erfoderlich. Fügen Sie weitere hinzu.',
+  'Combo.maxLength':
+    'Maximale Anzahl ist {{MaxLength}}}. Löschen Sie einige Elemente.',
+  'Combo.minLength':
+    'Mindestens {{minLength}} erfoderlich. Fügen Sie weitere hinzu.',
   'Combo.type': 'Typ',
   'confirm': 'Bestätigen',
   'Copyable.tip': 'Kopieren',
@@ -122,50 +125,61 @@ amisRequire('amis').registerLocale('de-DE', {
   'File.dragDrop': 'Dateien per Drag & Drop hier ablegen',
   'File.clickUpload': 'Klicken Sie hier zum Hochladen',
   'File.helpText': 'Hilfedokumentation',
-  'File.errorRetry': 'Fehler beim Hochladen der Datei, bitte versuchen Sie es erneut.',
+  'File.errorRetry':
+    'Fehler beim Hochladen der Datei, bitte versuchen Sie es erneut.',
   'File.failed': 'Fehlerhafte Dateien',
   'File.invalidType': '{{files}} entspricht nicht Typ `{{accept}}`',
-  'File.maxSize': '{{filename}} überschreitet die maximale Größe von {{maxsize}} (in Byte)',
+  'File.maxSize':
+    '{{filename}} überschreitet die maximale Größe von {{maxsize}} (in Byte)',
   'File.pause': 'Hochladen anhalten',
   'File.repick': 'Erneut suswählen',
-  'File.result': 'Erfolgreich hochgeladene Dateien: {{uploaded}}, nicht hochgeladene Dateien: {{failed}}',
+  'File.result':
+    'Erfolgreich hochgeladene Dateien: {{uploaded}}, nicht hochgeladene Dateien: {{failed}}',
   'File.retry': 'Wiederholen',
   'File.start': 'Hochladen beginnen',
   'File.upload': 'Hochladen',
   'Image.upload': 'Hochladen',
   'File.uploadFailed': 'Zurückgegebene Daten der Upload-API sind leer',
   'File.uploading': 'Wird hochgeladen...',
-  'FormItem.autoUpdateloadFaild': 'Die Schnittstelle hat einen Fehler zurückgegeben, bitte sorgfältig prüfen',
-  'Form.loadOptionsFailed': 'Optionen wurden auf folgendem Grund nicht geladen: {{reason}}',
+  'FormItem.autoFillLoadFailed':
+    'Die Schnittstelle hat einen Fehler zurückgegeben, bitte sorgfältig prüfen',
+  'FormItem.autoFillSuggest': 'Referenzdateneingabe',
+  'Form.loadOptionsFailed':
+    'Optionen wurden auf folgendem Grund nicht geladen: {{reason}}',
   'Form.submit': 'Absenden',
   'Form.title': 'Formular',
   'Form.unique': 'Aktueller Wert ist nicht eindeutig',
   'Form.validateFailed': 'Fehler bei der Überprüfung der Formulareingabe',
   'Form.nestedError': 'Form kann nicht als Nachkomme von Form erscheinen',
-  'Image.configError': 'Es können nur eine Beschneidung oder mehrere festgelegt werden',
+  'Image.configError':
+    'Es können nur eine Beschneidung oder mehrere festgelegt werden',
   'Image.crop': 'Bild beschneiden',
   'Image.dragDrop': 'Bilder per Drag & Drop hier ablegen',
   'Image.height': 'Höhe: {{height}} Pixel',
   'Image.limitMax': 'Minimale Bildgröße ist {{info}}',
   'Image.limitMin': 'Maximale Bildgröße ist {{info}}',
-  'Image.limitRatio': 'Laden Sie das Bild mit dem Seitenverhältnis {{ration}} hoch',
+  'Image.limitRatio':
+    'Laden Sie das Bild mit dem Seitenverhältnis {{ration}} hoch',
   'Image.pasteTip': 'Sie können das Bild aus der Zwischenablage einfügen',
-  'Image.placeholder': 'Klicken Sie, um das Bild einzufügen, oder ziehen Sie es in diesen Bereich.',
+  'Image.placeholder':
+    'Klicken Sie, um das Bild einzufügen, oder ziehen Sie es in diesen Bereich.',
   'Image.size': 'size: ({{width}} Pixel x {{height}} Pixel)',
-  'Image.sizeNotEqual': 'Das ausgwählte Bild entspricht nicht den Größenanforderungen {{info}}',
+  'Image.sizeNotEqual':
+    'Das ausgwählte Bild entspricht nicht den Größenanforderungen {{info}}',
   'Image.width': 'Weite: {{width}} Pixel',
   'Image.zoomIn': 'Vergrößern',
   'Log.mustHaveSource': 'Quelle muss in der Konfiguration vorhanden sein',
   'Log.showLineNumber': 'Zeilennummer anzeigen',
   'Log.notShowLineNumber': 'Zeilennummer ausblenden',
-  'Log.expand': 'Erweitern',
-  'Log.collapse': 'Zusammenbruch',
+  'Log.expand': 'Entfalten',
+  'Log.collapse': 'Falten',
   'link': 'Link',
   'loading': 'Wird geladen...',
   'LocationPicker.placeholder': 'Wählen Sie einen Ort',
   'Month.placeholder': 'Wählen Sie einen Monat',
   'Nav.sourceError': 'Fehler beim Abrufen des Links',
-  'networkError': 'Fehler beim Netzwerkzugriff oder fehlende CORS-Konfiguration',
+  'networkError':
+    'Fehler beim Netzwerkzugriff oder fehlende CORS-Konfiguration',
   'noResult': 'Keine Ergebnisse',
   'NumberInput.placeholder': 'Geben Sie eine Zahl ein',
   'Options.addPlaceholder': 'Geben Sie einen Namen ein',
@@ -184,6 +198,7 @@ amisRequire('amis').registerLocale('de-DE', {
   'saveFailed': 'Fehler beim Speichern',
   'saveSuccess': 'Erfolgreich gespeichert',
   'search': 'Suchen',
+  'searchHistory': 'Suchverlauf',
   'searchResult': 'Suchergebnis',
   'Checkboxes.selectAll': 'Alle auswählen/abwählen',
   'Select.checkAll': 'Alle markieren',
@@ -203,14 +218,16 @@ amisRequire('amis').registerLocale('de-DE', {
   'System.requestErrorStatus': 'Anfragefehler, Statuscode:',
   'Table.addRow': 'Zeile hinzufügen',
   'Table.copyRow': 'Zeile kopieren',
-  'Table.columnsVisibility': 'Klicken, um die Sichtbarkeit der Spalten zu steuern',
+  'Table.columnsVisibility':
+    'Klicken, um die Sichtbarkeit der Spalten zu steuern',
   'Table.deleteRow': 'Aktuele Zeile löschen',
   'Table.discard': 'Verwerfen',
   'Table.dragTip': 'Schaltfläche links zum Sortieren ziehen',
   'Table.editing': 'Sie müssen die Bearbeitung beenden.',
   'Table.editRow': 'Aktuelle Zeile bearbeiten',
   'Table.modified': 'Es wurden {{modified}} Datensätze geändert, Sie können:',
-  'Table.moved': 'Bei {{moved}} Datensätzen wurde die Reihenfolge geändert, Sie können:',
+  'Table.moved':
+    'Bei {{moved}} Datensätzen wurde die Reihenfolge geändert, Sie können:',
   'Table.operation': 'Vorgang',
   'Table.playload': 'Nutzlast muss vorhanden sein',
   'Table.startSort': 'Klicken, um Sortierung zu starten',
@@ -243,22 +260,51 @@ amisRequire('amis').registerLocale('de-DE', {
   'validate.isId': 'Ungültige ID-Kartennummer',
   'validate.isInt': 'Geben Sie eine ganze Zahl ein',
   'validate.isJson': 'Ungültiges JSON-Format',
-  'validate.isLength': 'Vergewissern Sie sich, dass die Länge des Inhalts $1 ist',
+  'validate.isLength':
+    'Vergewissern Sie sich, dass die Länge des Inhalts $1 ist',
   'validate.isNumeric': 'Geben Sie eine Nummer ein',
   'validate.isPhoneNumber': 'Ungültige Telefonnummer',
   'validate.isRequired': 'Dies ist erforderlich',
   'validate.isTelNumber': 'Ungültige Telefonnummer',
   'validate.isUrl': 'Falsches URL-Format',
-  'validate.isUrlPath': 'Sie können nur Buchstaben, Zahlen, "-" und "_" eingeben.',
+  'validate.isUrlPath':
+    'Sie können nur Buchstaben, Zahlen, "-" und "_" eingeben.',
   'validate.isWords': 'Geben Sie ein Wort ein',
   'validate.isZipcode': 'Ungültige Postleitzahl',
   'validate.lt': 'Geben Sie einen Wert ein, der kleiner ist als $1',
-  'validate.matchRegexp': 'Das Format ist nicht korrekt. Geben Sie den Inhalt mit der Regel `${1| raw}` ein.',
-  'validate.maximum': 'Der Eingabewert überschreitet den maximalen Wert von $1.',
-  'validate.maxLength': 'Kontrollieren Sie die Länge des Inhalts. Geben Sie nicht mehr als $1 Buchstaben ein.',
+  'validate.matchRegexp':
+    'Das Format ist nicht korrekt. Geben Sie den Inhalt mit der Regel `${1| raw}` ein.',
+  'validate.maximum':
+    'Der Eingabewert überschreitet den maximalen Wert von $1.',
+  'validate.maxLength':
+    'Kontrollieren Sie die Länge des Inhalts. Geben Sie nicht mehr als $1 Buchstaben ein.',
   'validate.minimum': 'Der Eingabewert ist kleiner als der Mindestwert von $1.',
   'validate.minLength': 'Geben Sie weitere Zeichen ein, mindestens $1.',
   'validate.notEmptyString': 'Geben Sie nicht nur Leerzeichen ein.',
+  'validate.isDateTimeSame':
+    'Der aktuelle Datumswert ist ungültig, bitte geben Sie denselben Datumswert wie $1 ein',
+  'validate.isDateTimeBefore':
+    'Der aktuelle Datumswert ist ungültig, bitte geben Sie einen Datumswert vor $1 ein',
+  'validate.isDateTimeAfter':
+    'Der aktuelle Datumswert ist ungültig, bitte geben Sie nach $1 einen Datumswert ein',
+  'validate.isDateTimeSameOrBefore':
+    'Der aktuelle Datumswert ist ungültig. Bitte geben Sie einen Datumswert ein, der gleich oder älter als $1 ist',
+  'validate.isDateTimeSameOrAfter':
+    'Der aktuelle Datumswert ist ungültig. Bitte geben Sie einen Datumswert ein, der gleich oder nach $1 ist',
+  'validate.isDateTimeBetween':
+    'Der aktuelle Datumswert ist ungültig, bitte geben Sie einen Datumswert zwischen $1 und $2 ein',
+  'validate.isTimeSame':
+    'Der aktuelle Zeitwert ist ungültig, bitte geben Sie denselben Zeitwert wie 1 $ ein',
+  'validate.isTimeBefore':
+    'Der aktuelle Zeitwert ist ungültig, bitte geben Sie einen Zeitwert vor $1 ein',
+  'validate.isTimeAfter':
+    'Der aktuelle Zeitwert ist ungültig, bitte geben Sie nach $1 einen Zeitwert ein',
+  'validate.isTimeSameOrBefore':
+    'Der aktuelle Zeitwert ist ungültig. Bitte geben Sie einen Zeitwert ein, der gleich oder älter als $1 ist',
+  'validate.isTimeSameOrAfter':
+    'Der aktuelle Zeitwert ist ungültig. Bitte geben Sie einen Zeitwert ein, der gleich oder nach $1 ist',
+  'validate.isTimeBetween':
+    'Der aktuelle Zeitwert ist ungültig, bitte geben Sie einen Zeitwert zwischen $1 und $2 ein',
   'validateFailed': 'Fehler bei der Überprüfung',
   'Wizard.configError': 'Konfigurationsfehler',
   'Wizard.finish': 'Ende',
@@ -269,6 +315,11 @@ amisRequire('amis').registerLocale('de-DE', {
   'Year.placeholder': 'Wählen Sie ein Jahr',
   'reload': 'Neu laden',
   'rotate': 'Drehen',
+  'rotate.left': 'Nach links drehen',
+  'rotate.right': 'Drehe nach rechts',
+  'zoomIn': 'Vergrößern',
+  'zoomOut': 'Verkleinern',
+  'scale.origin': 'Originalmaße',
   'Editor.fullscreen': 'Schirmfüllend Modus',
   'Editor.exitFullscreen': 'Zurücktreten Schirmfüllend Modus',
   'Condition.not': 'nicht',
@@ -303,13 +354,16 @@ amisRequire('amis').registerLocale('de-DE', {
   'Condition.formula_placeholder': 'Bitte geben Sie eine Formel ein',
   'Condition.fun_error': 'Funktion ist undefiniert',
   'InputTable.uniqueError': 'Column `{{label}}` unique validate failed',
-  'Timeline.collapseText': 'Entfalten',
-  'Timeline.expandText': 'Falten',
+  'Timeline.collapseText': 'Falten',
+  'Timeline.expandText': 'Entfalten',
+  'collapse': 'Falten',
+  'expand': 'Entfalten',
   'FormulaEditor.btnLabel': 'Formel Bearbeiten',
   'FormulaEditor.title': 'Formel Editor',
   'FormulaEditor.variable': 'Variable',
   'FormulaEditor.function': 'Funktion',
-  'FormulaEditor.invalidData': 'Überprüfungsfehler, position or reason is {{err}}',
+  'FormulaEditor.invalidData':
+    'Überprüfungsfehler, position or reason is {{err}}',
   'pullRefresh.pullingText': 'Zum Aktualisieren nach unten ziehen...',
   'pullRefresh.loosingText': 'Zum Aktualisieren freigeben...',
   'pullRefresh.loadingText': 'Laden...',

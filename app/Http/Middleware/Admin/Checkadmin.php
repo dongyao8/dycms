@@ -2,6 +2,8 @@
 
 namespace App\Http\Middleware\Admin;
 
+use App\Hook\Admin\Admin as AdminAdmin;
+use App\Hook\Admin\Login;
 use App\Models\Admin;
 use Closure;
 use Illuminate\Http\Request;
@@ -10,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 class Checkadmin
 {
     /**
-     * Handle an incoming request.
+     * 后台管理员请求中间件
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
@@ -18,12 +20,12 @@ class Checkadmin
      */
     public function handle(Request $request, Closure $next)
     {
-        // 暂时屏蔽
+        
+        // 判断登录信息
         if (!Auth::guard('admin')->check()) {
 
             return redirect(route(env('ADMIN_PREFIX', 'admin').'.login'));
         }else{
-            //检查管理员是否到期权限等
 	        $admin = Admin::find(Auth::guard('admin')->id());
 			if(!$admin){
 				echo '账号不存在';
@@ -32,7 +34,9 @@ class Checkadmin
 
 			}else{
 				$request->merge(['aid' => Auth::guard('admin')->id()]); //admin 合并进去
-				return $next($request);
+                //引入钩子，可以加入权限，以及到期期限等约束
+                $hook = new AdminAdmin;
+                return $hook->auth($next,$request,Auth::guard('admin')->user());
 			}
         }
 

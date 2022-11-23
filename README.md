@@ -1,6 +1,6 @@
 <div align="center">
 <img src="./public/static/dycms/images/logo2.png" width="250">
-    <h1>DYcms[开发版] - 内容导航平台2.x-测试版</h1>
+    <h1>DYcms 2.x-测试版</h1>
     <p>万能后端开发框架 - 测试版问题较多，谨慎使用</p>
       <a href="https://github.com/dongyao8/dycms/releases"><img src="https://img.shields.io/github/v/release/dongyao8/dycms.svg?logo=git&" alt="Release-Version"></a>
       <a href="https://github.com/dongyao8/dycms/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/dongyao8/dycms"></a>
@@ -10,15 +10,12 @@
     <br>
     <a href="https://www.dongyao.ren"><img src="https://img.shields.io/badge/author-clark-27c4f2.svg?logo=github" alt="Author"></a>
      <a href="https://weibo.com/u/21376252"><img src="https://img.shields.io/badge/微博-21376252-ff8200.svg?logo=Sina Weibo" alt="微博"></a>
-    <!-- <a href="/"><img src="https://img.shields.io/badge/赞赏-开发不易-CC3333.svg?logo=Buy-Me-A-Coffee" alt="赞赏支持"></a>
-    <a href="/"><img src="https://img.shields.io/badge/捐赠-微信-68b600.svg?logo=WeChat" alt="微信捐赠"></a>
-    <a href="/"><img src="https://img.shields.io/badge/捐赠-支付宝-00a2ef.svg?logo=AliPay" alt="支付宝捐赠"></a> -->
 
 </div>  
 
->  `DYCMS`是一款集网址导航，内容发布，用户管理等于一体的综合性网站平台，开发的初衷就是源于目前市面上导航网站混乱，广告插件满天飞，**弱化了导航网站本该具备的功能，全都变成了一个个的导购平台和民间花边新闻网站**(这其中也不乏一些知名大牌网站)，因此开源本套代码，方便各位用于自身需要，或者运营自己的业务使用。
+>  `DYCMS`前身是一款集网址导航，内容发布，用户管理等于一体的综合性网站平台，随着业务功能的迭代，索性2.X版本以后，将该平台定为一个全功能型框架，特此升级本套代码，方便各位用于自身需要，或者运营自己的业务使用。
 
-> 随着2.0版本的升级，DYCMS已经不仅仅可以实现网址导航，后续采用模块化结构之后，DYCMS也可以变身博客，企业网站，电商，APP，小程序等等全能型后台架构。
+> 随着2.X版本的升级，DYCMS已经不仅仅可以实现网址导航，后续采用模块化结构之后，DYCMS也可以变身博客，企业网站，电商，APP，小程序等等全能型后台架构。
 
 版本库：[ [gitee](https://gitee.com/dongyao/dycms) | [github](https://github.com/dongyao8/dycms)]
 
@@ -32,6 +29,7 @@
 
 ## 后续开发计划
 
+<!-- - [✓] 博客模块 -->
 - [ ] 博客模块
 - [ ] 收费阅读
 - [ ] 适配小程序

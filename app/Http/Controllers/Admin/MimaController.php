@@ -16,7 +16,7 @@
             $body[] = [
                 'type' => "form",
                 'title' => '修改密码',
-                'api' => url(env('ADMIN_PREFIX', 'admin').'/handdle/mima/upmm'),
+                'api' =>$this->admin_url.'/handdle/mima/upmm',
                 'body' => array(
                     [
                         'type' => 'input-password',

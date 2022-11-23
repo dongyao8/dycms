@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Log;
 class Admin
 {
     /**
-     * Handle an incoming request.
+     * 后台请求日志记录
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next

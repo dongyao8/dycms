@@ -11,6 +11,13 @@ use Illuminate\Support\Facades\Log;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    public $admin_url;
+
+    // 初始化服务地址
+    public function __construct()
+    {
+        $this->admin_url = url(env('ADMIN_PREFIX', 'admin'));
+    }
 
     /**
      * API接口返回格式化

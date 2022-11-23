@@ -43,7 +43,7 @@ class NavigationController extends Controller
             ],
             'syncLocation' => false,
             'name' => 'duelist',
-            'api' =>url(env('ADMIN_PREFIX', 'admin').'/handdle/navigation/datalist'),
+            'api' =>$this->admin_url.'/handdle/navigation/datalist',
             'filter' => [
                 'title' => '搜索内容',
                 "mode" => "horizontal",
@@ -136,7 +136,7 @@ class NavigationController extends Controller
                 'title' => '新增网站',
                 'body' => [
                     'type' => 'form',
-                    'api' =>url(env('ADMIN_PREFIX', 'admin').'/handdle/navigation/adds'),
+                    'api' =>$this->admin_url.'/handdle/navigation/adds',
                     'body' => array(
                         [
                             'type' => 'input-image',
@@ -226,7 +226,7 @@ class NavigationController extends Controller
                 'title' => '修改数据',
                 'body' => [
                     'type' => 'form',
-                    'api' => url(env('ADMIN_PREFIX', 'admin').'/handdle/navigation/update'),
+                    'api' => $this->admin_url.'/handdle/navigation/update',
                     'body' => array(
                         [
                             'type' => 'hidden',
@@ -318,7 +318,7 @@ class NavigationController extends Controller
             'actionType' => 'ajax',
             "level" => "danger",
             "confirmText"=> "确定要删除该网址吗",
-            "api"=> url(env('ADMIN_PREFIX', 'admin').'/handdle/navigation/deletedata').'?id=${id}',
+            "api"=> $this->admin_url.'/handdle/navigation/deletedata'.'?id=${id}',
         ];
     }
     // 删除逻辑

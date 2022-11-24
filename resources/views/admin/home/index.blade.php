@@ -63,7 +63,7 @@
                             },
                             {
                                 "size": "small",
-                                "className" :"float-right",
+                                "className" :"float-right mr-5",
                                 "type": "avatar",
                                 "src" : "{{$dycms_static}}images/admin.png",
                                 "icon": "fa fa-user"

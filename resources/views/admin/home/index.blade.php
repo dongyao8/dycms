@@ -74,7 +74,7 @@
                 ]
             }
             ,
-            footer: '<div class="p-2 text-center bg-light">Copyright © 2021 clark. All rights reserved.</div>',
+            footer: '<div class="p-2 text-center bg-light">Copyright © {{date("Y")}} clark. All rights reserved.</div>',
             asideBefore: '<div class="p-2 text-center">欢迎访问</div>',
             asideAfter: '<div class="p-2 text-center">Version : {{config("dycms.version")}}</div>',
             api: "{{ route('admin.menu') }}"

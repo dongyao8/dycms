@@ -24,13 +24,13 @@ class Checkadmin
         // 判断登录信息
         if (!Auth::guard('admin')->check()) {
 
-            return redirect(route(env('ADMIN_PREFIX', 'admin').'.login'));
+            return redirect(route('admin.login'));
         }else{
 	        $admin = Admin::find(Auth::guard('admin')->id());
 			if(!$admin){
 				echo '账号不存在';
 				Auth::guard('admin')->logout();
-				return redirect(route(env('ADMIN_PREFIX', 'admin').'.login'));
+				return redirect(route('admin.login'));
 
 			}else{
 				$request->merge(['aid' => Auth::guard('admin')->id()]); //admin 合并进去

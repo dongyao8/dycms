@@ -17,15 +17,26 @@ class NavController extends Controller
         if (isset($canshu['keywords']) && !empty($canshu['keywords'])) {
             $data = $data->where('title', 'like', "%" . $canshu['keywords'] . "%");
         }
+        $data = $data->where('parent_id',0);
         $data = $data->withCount('navigation');
         $data = $data->paginate(10);
+        $datas = $this->getMenu($data);
         $cate['status'] = 0;
         $cate['msg'] = 'success';
-        $cate['data']['items'] = $data->toarray()['data'];
+        $cate['data']['items'] = $datas->toarray()['data'];
         $cate['data']['total'] = $data->toarray()['total'];
         return $cate;
     }
-
+    //树形菜单
+	public function getMenu($menus_main)
+	{
+		foreach ($menus_main as $menu) {
+            $menu->children = $menu->recursiveChildren();
+            $menu->label = $menu->title;
+            $menu->value = $menu->id;
+        }
+		return $menus_main;
+	}
     //首页
     public function body()
     {
@@ -104,6 +115,14 @@ class NavController extends Controller
                     'api' => $this->admin_url.'/handdle/nav/adds',
                     'body' => array(
                         [
+							'type' => 'tree-select',
+							'name' => 'parent_id',
+							'required' => true,
+							'label' => '菜单级别',
+							'searchable' => true,
+							'options' => $this->getCat()
+						],
+                        [
                             'type' => 'input-text',
                             'name' => 'title',
                             'required' => true,
@@ -122,6 +141,20 @@ class NavController extends Controller
             ]
         ];
     }
+    // 菜单级别
+	public function getCat()
+	{
+		$datalist =NavigationCategory::orderBy('sort', 'desc')->get();
+        $data = $this->getMenu($datalist);
+		$father[] = [
+			'id' => 0,
+			'label' => '顶级菜单',
+			'value' => 0,
+			'icon' => 'fa fa-arrow-up'
+		];
+		$data = array_merge($father, $data->toArray());
+		return $data;
+	}
     // 新增逻辑
     public function adds(Request $request)
     {
@@ -131,6 +164,7 @@ class NavController extends Controller
             return $this->apiReturn(100, '该分类已存在', []);
         }
         // 继续写入
+        $device->parent_id = $request->input('parent_id');
         $device->title = $request->input('title');
         $device->sort = $request->input('sort');
         $device->save();
@@ -156,6 +190,14 @@ class NavController extends Controller
                             'type' => 'hidden',
                             'name' => 'id'
                         ],
+                        [
+							'type' => 'tree-select',
+							'name' => 'parent_id',
+							'required' => true,
+							'label' => '菜单级别',
+							'searchable' => true,
+							'options' => $this->getCat()
+						],
                         [
                             'type' => 'input-text',
                             'name' => 'title',
@@ -184,11 +226,10 @@ class NavController extends Controller
             if ($title->id != $request->input('id')) {
                 return $this->apiReturn(100, '该分类已存在', []);
             }
-        } else {
-            return $this->apiReturn(100, '参数错误', []);
         }
         // 继续写入
         $device = NavigationCategory::find($request->input('id'));
+        $device->parent_id = $request->input('parent_id');
         $device->title = $request->input('title');
         $device->sort = $request->input('sort');
 

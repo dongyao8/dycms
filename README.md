@@ -1,7 +1,7 @@
 <div align="center">
 <img src="./public/static/dycms/images/logo2.png" width="250">
-    <h1>DYcms 2.x-测试版</h1>
-    <p>万能后端开发框架 - 测试版问题较多，谨慎使用</p>
+    <h1>DYcms 2.0</h1>
+    <p>Dycms - 人人都是生活的导航者</p>
       <a href="https://github.com/dongyao8/dycms/releases"><img src="https://img.shields.io/github/v/release/dongyao8/dycms.svg?logo=git&" alt="Release-Version"></a>
       <a href="https://github.com/dongyao8/dycms/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/dongyao8/dycms"></a>
       <a href="https://github.com/dongyao8/dycms"><img src="https://img.shields.io/badge/Laravel-V9.x+-ff2c1f.svg?logo=laravel" alt="Laravel"></a>
@@ -15,11 +15,11 @@
 
 >  `DYCMS`前身是一款集网址导航，内容发布，用户管理等于一体的综合性网站平台，随着业务功能的迭代，索性2.X版本以后，将该平台定为一个全功能型框架，特此升级本套代码，方便各位用于自身需要，或者运营自己的业务使用。
 
-> 随着2.X版本的升级，DYCMS已经不仅仅可以实现网址导航，后续采用模块化结构之后，DYCMS也可以变身博客，企业网站，电商，APP，小程序等等全能型后台架构。
+> 随着2.0版本的升级，DYCMS已经不仅仅可以实现网址导航，后续采用模块化结构之后，DYCMS也可以变身博客，企业网站，电商，APP，小程序等等全能型后台架构。
 
 版本库：[ [gitee](https://gitee.com/dongyao/dycms) | [github](https://github.com/dongyao8/dycms)]
 
-> 使用文档：[2.x文档（完善中）](http://docs.dongyao.ren/dycms-docs)
+> 使用文档：[2.0文档（完善中）](http://docs.dongyao.ren/dycms-docs)
 
 ## 后台部分展示
 > 前端页面当前正在招募合作伙伴一起完善，欢迎推荐加入！
@@ -31,9 +31,7 @@
 
 <!-- - [✓] 博客模块 -->
 - [ ] 博客模块
-- [ ] 收费阅读
-- [ ] 适配小程序
-- [ ] [其他意见建议请点击提交issues](https://github.com/dongyao8/dycms/issues)
+- [ ] [请点击提交issues](https://github.com/dongyao8/dycms/issues)
 
 ## 感谢Star
 

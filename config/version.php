@@ -9,6 +9,6 @@ return [
     |
     */
 
-    'number' => '2.x-dev',
+    'number' => '2.0',
 
 ];

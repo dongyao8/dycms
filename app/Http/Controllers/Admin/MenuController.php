@@ -30,7 +30,7 @@ class MenuController extends Controller
 	//树形菜单
 	public function getMenu($menus_main, $parent_id = 0, $sub = 'children', $level = 1)
 	{
-		$menus_main = Menu::orderBy('sort', 'desc')->get()->toArray();
+		// $menus_main = Menu::orderBy('sort', 'desc')->get()->toArray();
 		$data = array();
 		foreach ($menus_main as $key => $val) {
 			$val['value'] = $val['id'];

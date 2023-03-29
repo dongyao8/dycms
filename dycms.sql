@@ -1,11 +1,17 @@
 /*
  Navicat MySQL Data Transfer
 
+ Source Server         : aliyun-test-mysql-20220505
+ Source Server Type    : MySQL
+ Source Server Version : 80022
+ Source Host           : rm-bp110oe2y2z487lg8jo.mysql.rds.aliyuncs.com:3306
+ Source Schema         : dycms
+
  Target Server Type    : MySQL
  Target Server Version : 80022
  File Encoding         : 65001
 
- Date: 24/11/2022 18:01:03
+ Date: 30/03/2023 01:10:13
 */
 
 SET NAMES utf8mb4;
@@ -263,6 +269,7 @@ COMMIT;
 DROP TABLE IF EXISTS `navigation_categories`;
 CREATE TABLE `navigation_categories` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `parent_id` int DEFAULT '0',
   `title` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '导航分类名称',
   `sort` int NOT NULL DEFAULT '0' COMMENT '排序值',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -274,27 +281,10 @@ CREATE TABLE `navigation_categories` (
 -- Records of navigation_categories
 -- ----------------------------
 BEGIN;
-INSERT INTO `navigation_categories` VALUES (2, '购物', 100, '2019-12-13 16:33:44', '2020-01-07 11:17:35');
-INSERT INTO `navigation_categories` VALUES (3, '视频', 90, '2019-12-13 16:34:24', '2022-06-01 23:44:12');
-INSERT INTO `navigation_categories` VALUES (4, '新闻', 98, '2019-12-13 16:34:29', '2020-01-07 11:18:38');
-INSERT INTO `navigation_categories` VALUES (5, '体育', 96, '2019-12-13 16:34:33', '2022-07-03 03:52:15');
-INSERT INTO `navigation_categories` VALUES (6, '银行', 95, '2019-12-13 16:34:42', '2020-01-07 11:21:05');
-INSERT INTO `navigation_categories` VALUES (7, '生活', 86, '2019-12-13 16:34:51', '2020-01-07 11:22:55');
-INSERT INTO `navigation_categories` VALUES (8, '游戏', 96, '2019-12-13 16:34:55', '2020-01-07 11:20:08');
-INSERT INTO `navigation_categories` VALUES (9, '社交', 92, '2019-12-13 16:35:03', '2020-01-07 11:21:53');
-INSERT INTO `navigation_categories` VALUES (10, '软件', 87, '2019-12-13 16:35:08', '2020-01-07 11:22:48');
-INSERT INTO `navigation_categories` VALUES (11, '手机', 93, '2019-12-13 16:35:18', '2020-01-07 11:21:45');
-INSERT INTO `navigation_categories` VALUES (12, '汽车', 88, '2019-12-13 16:35:25', '2020-01-07 11:22:41');
-INSERT INTO `navigation_categories` VALUES (13, '旅游', 94, '2019-12-13 16:35:32', '2020-01-07 11:21:39');
-INSERT INTO `navigation_categories` VALUES (14, '财经', 90, '2019-12-13 16:36:23', '2020-01-07 11:22:26');
-INSERT INTO `navigation_categories` VALUES (15, '小说', 91, '2019-12-13 16:36:28', '2020-01-07 11:22:01');
-INSERT INTO `navigation_categories` VALUES (16, '音乐', 89, '2019-12-13 16:36:37', '2020-01-07 11:22:36');
-INSERT INTO `navigation_categories` VALUES (17, '设计', 85, '2020-01-02 10:50:38', '2020-01-07 11:23:01');
-INSERT INTO `navigation_categories` VALUES (18, '开发', 84, '2020-01-07 11:24:50', '2020-01-07 11:24:50');
-INSERT INTO `navigation_categories` VALUES (19, '酷站', 83, '2020-01-07 11:25:28', '2020-01-07 11:25:28');
-INSERT INTO `navigation_categories` VALUES (20, '教育', 0, '2020-05-16 11:13:43', '2020-05-16 11:13:43');
-INSERT INTO `navigation_categories` VALUES (21, '邮箱', 97, '2020-05-16 11:30:26', '2020-05-16 11:30:55');
-INSERT INTO `navigation_categories` VALUES (22, '直播', 0, '2020-06-16 17:02:14', '2020-06-16 17:02:14');
+INSERT INTO `navigation_categories` VALUES (2, 0, '🛍 购物电商', 100, '2019-12-13 16:33:44', '2023-03-29 23:51:29');
+INSERT INTO `navigation_categories` VALUES (3, 0, '📽 视频点播', 90, '2019-12-13 16:34:24', '2022-06-01 23:44:12');
+INSERT INTO `navigation_categories` VALUES (4, 0, '🗞︎ 新闻资讯', 98, '2019-12-13 16:34:29', '2023-03-29 23:32:32');
+INSERT INTO `navigation_categories` VALUES (5, 0, '🏂 体育运动', 96, '2019-12-13 16:34:33', '2022-07-03 03:52:15');
 COMMIT;
 
 -- ----------------------------
@@ -325,9 +315,8 @@ CREATE TABLE `navigations` (
 -- ----------------------------
 BEGIN;
 INSERT INTO `navigations` VALUES (3, '小米有品', 2, 'https://www.xiaomiyoupin.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 1, '2019-12-13 17:20:50', '2022-06-06 02:14:29');
-INSERT INTO `navigations` VALUES (4, '京东', 2, 'https://union-click.jd.com/jdc?e=&p=AyIGZRprFDJWWA1FBCVbV0IUWVALHFRBEwQAQB1AWQkrL0llF3sIYyJ3VWR9AmUpXkR3TFVpHRkOIgdTE1IQAxMPXRtrFgsWBFISWx0CIjdVGmtebBM3VR1THQMUA1IdXCUCFgNSGFwRABMEVB1bJQUSDmUSWhwHEgdJGF4UAhsBURNrJTIRN2UrWxUyEjcKXwZIMhAGVB9S&t=W1dCFFlQCxxUQRMEAEAdQFkJ', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 17:22:03', '2019-12-13 17:22:03');
+INSERT INTO `navigations` VALUES (4, '京东', 2, 'https://union-click.jd.com/jdc?e=&p=AyIGZRprFDJWWA1FBCVbV0IUWVALHFRBEwQAQB1AWQkrL0llF3sIYyJ3VWR9AmUpXkR3TFVpHRkOIgdTE1IQAxMPXRtrFgsWBFISWx0CIjdVGmtebBM3VR1THQMUA1IdXCUCFgNSGFwRABMEVB1bJQUSDmUSWhwHEgdJGF4UAhsBURNrJTIRN2UrWxUyEjcKXwZIMhAGVB9S&t=W1dCFFlQCxxUQRMEAEAdQFkJ', 2, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 17:22:03', '2019-12-13 17:22:03');
 INSERT INTO `navigations` VALUES (5, '优酷网', 3, 'https://www.youku.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 17:24:08', '2019-12-13 17:24:08');
-INSERT INTO `navigations` VALUES (6, '知乎', 9, 'https://www.zhihu.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 17:24:34', '2019-12-13 17:24:34');
 INSERT INTO `navigations` VALUES (7, '苏宁易购', 2, 'https://sugs.suning.com/outstation.htm?p=UFZTRwANAwEdFx4_filmUhBDVRVSEiltYSxQW3RjcCNbSVINYzkoIhwUGBEfHxoYbRdaIhQISRQ8V1UPUVgJGVRXGEJPCEoKWEtSLjo7aUtdHggSCgcmdyY6BwYvNGolDh4aDS5md30JFBgUGQcZE3gXF34XTENacVxSQEVPGFY9QBEHXnRTXE1WSwZocg9GQkpQQ1REE3so', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:01:50', '2020-09-21 18:23:00');
 INSERT INTO `navigations` VALUES (8, '唯品会', 2, 'https://t.vip.com/585OMys', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:02:00', '2019-12-13 18:02:00');
 INSERT INTO `navigations` VALUES (9, '1688', 2, 'https://www.1688.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:02:08', '2020-05-12 14:43:18');
@@ -343,118 +332,16 @@ INSERT INTO `navigations` VALUES (18, '凤凰体育', 5, 'http://sports.ifeng.co
 INSERT INTO `navigations` VALUES (19, '网易体育', 5, 'http://sports.163.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:04:28', '2019-12-13 18:04:28');
 INSERT INTO `navigations` VALUES (20, 'NBA中文网', 5, 'https://china.nba.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:04:41', '2019-12-13 18:04:41');
 INSERT INTO `navigations` VALUES (21, '直播吧', 5, 'https://www.zhibo8.cc/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:04:52', '2019-12-13 18:04:52');
-INSERT INTO `navigations` VALUES (22, '起点中文网', 15, 'https://www.qidian.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:05:03', '2019-12-13 18:05:03');
-INSERT INTO `navigations` VALUES (23, '懒人听书', 15, 'http://www.lrts.me/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:05:16', '2019-12-13 18:05:16');
-INSERT INTO `navigations` VALUES (24, '喜马拉雅', 15, 'https://www.ximalaya.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:05:32', '2019-12-13 18:05:32');
-INSERT INTO `navigations` VALUES (25, '纵横中文网', 15, 'http://www.zongheng.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:05:43', '2019-12-13 18:05:43');
-INSERT INTO `navigations` VALUES (26, '红袖添香', 15, 'https://www.hongxiu.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:05:53', '2019-12-13 18:05:53');
-INSERT INTO `navigations` VALUES (27, 'QQ阅读', 15, 'http://book.qq.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:06:01', '2019-12-13 18:06:01');
-INSERT INTO `navigations` VALUES (28, '东方财富', 14, 'http://www.eastmoney.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:06:16', '2019-12-13 18:06:16');
-INSERT INTO `navigations` VALUES (29, '新浪财经', 14, 'https://finance.sina.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:06:26', '2019-12-13 18:06:26');
-INSERT INTO `navigations` VALUES (30, '雪球', 14, 'https://xueqiu.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:06:37', '2019-12-13 18:06:37');
-INSERT INTO `navigations` VALUES (31, '金融界', 14, 'http://www.jrj.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:06:49', '2019-12-13 18:06:49');
-INSERT INTO `navigations` VALUES (32, '和讯网', 14, 'http://www.hexun.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:07:00', '2019-12-13 18:07:00');
-INSERT INTO `navigations` VALUES (33, '凤凰财经', 14, 'http://finance.ifeng.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:07:10', '2019-12-13 18:07:10');
-INSERT INTO `navigations` VALUES (34, '携程旅游', 13, 'http://hotels.ctrip.com?AllianceID=11175&sid=555450&ouid=&app=0301C00', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:07:21', '2019-12-13 18:07:21');
-INSERT INTO `navigations` VALUES (35, '同程旅游', 13, 'http://www.ly.com?refid=48050718', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:07:30', '2019-12-13 18:07:30');
-INSERT INTO `navigations` VALUES (36, '途牛网', 13, 'http://www.tuniu.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:07:40', '2019-12-13 18:07:40');
-INSERT INTO `navigations` VALUES (37, '去哪儿', 13, 'https://www.qunar.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:07:50', '2019-12-13 18:07:50');
-INSERT INTO `navigations` VALUES (38, '穷游网', 13, 'https://www.qyer.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:08:01', '2019-12-13 18:08:01');
-INSERT INTO `navigations` VALUES (39, '驴妈妈', 13, 'https://union.lvmama.com/tnt_cps/cps/newRedirect2.do?source=75484&lvmamakey=4dMp&isNew=new', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:08:17', '2019-12-13 18:08:17');
 INSERT INTO `navigations` VALUES (40, '新浪新闻', 4, 'https://news.sina.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:08:26', '2019-12-13 18:08:26');
 INSERT INTO `navigations` VALUES (41, '环球网', 4, 'http://www.huanqiu.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:08:38', '2019-12-13 18:08:38');
 INSERT INTO `navigations` VALUES (42, '搜狐新闻', 4, 'http://news.sohu.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:08:49', '2019-12-13 18:08:49');
 INSERT INTO `navigations` VALUES (43, '腾讯门户', 4, 'https://www.qq.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:08:58', '2019-12-13 18:08:58');
 INSERT INTO `navigations` VALUES (44, '凤凰资讯', 4, 'http://news.ifeng.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:09:07', '2019-12-13 18:09:16');
 INSERT INTO `navigations` VALUES (45, '人民网', 4, 'http://www.people.com.cn', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:09:33', '2019-12-13 18:09:33');
-INSERT INTO `navigations` VALUES (46, '汽车之家', 12, 'https://www.autohome.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:09:42', '2019-12-13 18:09:42');
-INSERT INTO `navigations` VALUES (47, '易车网', 12, 'http://www.bitauto.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:09:51', '2019-12-13 18:09:51');
-INSERT INTO `navigations` VALUES (48, '新浪汽车', 12, 'http://auto.sina.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:09:59', '2019-12-13 18:09:59');
-INSERT INTO `navigations` VALUES (49, '爱卡汽车', 12, 'http://www.xcar.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:10:07', '2019-12-13 18:10:07');
-INSERT INTO `navigations` VALUES (50, '太平洋汽车', 12, 'https://www.pcauto.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:10:18', '2019-12-13 18:10:18');
-INSERT INTO `navigations` VALUES (51, '车168', 12, 'https://www.che168.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:10:27', '2019-12-13 18:10:27');
-INSERT INTO `navigations` VALUES (52, '中国移动', 11, 'http://www.10086.cn', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:10:38', '2019-12-13 18:10:38');
-INSERT INTO `navigations` VALUES (53, '中国电信', 11, 'http://www.189.cn', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:10:49', '2019-12-13 18:10:49');
-INSERT INTO `navigations` VALUES (54, '中国联通', 11, 'http://www.10010.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:10:58', '2019-12-13 18:10:58');
-INSERT INTO `navigations` VALUES (55, 'Apple', 11, 'https://www.apple.com/cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:11:08', '2020-11-11 16:34:11');
-INSERT INTO `navigations` VALUES (56, '小米', 11, 'https://www.mi.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:11:16', '2019-12-13 18:11:16');
-INSERT INTO `navigations` VALUES (57, '太平洋手机', 11, 'https://mobile.pconline.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:11:25', '2019-12-13 18:11:25');
-INSERT INTO `navigations` VALUES (58, '华军软件园', 10, 'http://www.onlinedown.net/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:11:38', '2019-12-13 18:11:38');
-INSERT INTO `navigations` VALUES (59, '天空下载', 10, 'http://www.skycn.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:11:47', '2019-12-13 18:11:47');
-INSERT INTO `navigations` VALUES (60, '快科技', 10, 'http://www.mydrivers.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:11:57', '2019-12-13 18:11:57');
-INSERT INTO `navigations` VALUES (61, '中关村下载', 10, 'http://xiazai.zol.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:12:07', '2019-12-13 18:12:07');
-INSERT INTO `navigations` VALUES (62, '太平洋下载', 10, 'https://dl.pconline.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:12:19', '2019-12-13 18:12:19');
-INSERT INTO `navigations` VALUES (63, '多特下载', 10, 'http://www.duote.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:12:30', '2019-12-13 18:12:30');
-INSERT INTO `navigations` VALUES (64, '猫扑', 9, 'http://www.mop.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:12:41', '2019-12-13 18:12:41');
-INSERT INTO `navigations` VALUES (65, 'QQ空间', 9, 'https://qzone.qq.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:12:52', '2019-12-13 18:12:52');
-INSERT INTO `navigations` VALUES (66, '百度贴吧', 9, 'https://tieba.baidu.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:13:49', '2019-12-13 18:13:49');
-INSERT INTO `navigations` VALUES (67, '豆瓣', 9, 'https://www.douban.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:13:58', '2019-12-13 18:13:58');
-INSERT INTO `navigations` VALUES (68, '领英', 9, 'https://www.linkedin.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:14:07', '2019-12-13 18:14:07');
-INSERT INTO `navigations` VALUES (69, '游民星空', 8, 'https://www.gamersky.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:14:17', '2019-12-13 18:14:17');
-INSERT INTO `navigations` VALUES (70, '电玩巴士', 8, 'http://www.tgbus.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:14:26', '2019-12-13 18:14:26');
-INSERT INTO `navigations` VALUES (71, '游侠网', 8, 'http://www.ali213.net/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:14:36', '2019-12-13 18:14:36');
-INSERT INTO `navigations` VALUES (72, '4399小游戏', 8, 'http://www.4399.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:14:46', '2019-12-13 18:14:46');
-INSERT INTO `navigations` VALUES (73, '多玩游戏', 8, 'http://www.duowan.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:14:55', '2019-12-13 18:14:55');
-INSERT INTO `navigations` VALUES (74, '网易游戏', 8, 'http://game.163.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:15:07', '2019-12-13 18:15:07');
-INSERT INTO `navigations` VALUES (75, '大众点评', 7, 'http://www.dianping.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:15:16', '2019-12-13 18:15:16');
-INSERT INTO `navigations` VALUES (76, '链家网', 7, 'https://www.lianjia.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:15:29', '2019-12-13 18:15:29');
-INSERT INTO `navigations` VALUES (77, '下厨房', 7, 'http://www.xiachufang.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:15:40', '2019-12-13 18:15:40');
-INSERT INTO `navigations` VALUES (78, '美团网', 7, 'https://www.meituan.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:15:49', '2019-12-13 18:15:49');
-INSERT INTO `navigations` VALUES (79, '豆果美食', 7, 'https://www.douguo.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:15:59', '2019-12-13 18:15:59');
-INSERT INTO `navigations` VALUES (80, '果壳科技', 7, 'https://www.guokr.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:16:08', '2019-12-13 18:16:08');
-INSERT INTO `navigations` VALUES (82, '招商银行', 6, 'http://www.cmbchina.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:16:27', '2019-12-13 18:16:27');
-INSERT INTO `navigations` VALUES (83, '工商银行', 6, 'http://www.icbc.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:16:37', '2019-12-13 18:16:37');
-INSERT INTO `navigations` VALUES (84, '建设银行', 6, 'http://www.ccb.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:16:56', '2019-12-13 18:16:56');
-INSERT INTO `navigations` VALUES (85, '农业银行', 6, 'http://www.abchina.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:17:08', '2019-12-13 18:17:08');
-INSERT INTO `navigations` VALUES (86, '中国银行', 6, 'http://www.boc.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:17:19', '2019-12-13 18:17:19');
-INSERT INTO `navigations` VALUES (87, '交通银行', 6, 'http://www.bankcomm.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:17:31', '2019-12-13 18:17:31');
-INSERT INTO `navigations` VALUES (88, '随心听', 16, 'http://fm.taihe.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:17:41', '2019-12-13 18:17:41');
-INSERT INTO `navigations` VALUES (89, '网易云音乐', 16, 'https://music.163.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:17:51', '2019-12-13 18:17:51');
-INSERT INTO `navigations` VALUES (90, 'QQ音乐', 16, 'https://y.qq.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:18:00', '2019-12-13 18:18:00');
-INSERT INTO `navigations` VALUES (91, '酷狗', 16, 'http://www.kugou.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:18:09', '2019-12-13 18:18:09');
-INSERT INTO `navigations` VALUES (92, '虾米音乐', 16, 'https://www.xiami.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:18:19', '2019-12-13 18:18:19');
-INSERT INTO `navigations` VALUES (93, '音悦台', 16, 'http://www.yinyuetai.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2019-12-13 18:18:27', '2019-12-13 18:18:27');
-INSERT INTO `navigations` VALUES (97, '稿定设计', 17, 'http://www.gaoding.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-02 10:57:44', '2020-01-02 10:57:44');
-INSERT INTO `navigations` VALUES (98, '站酷', 17, 'https://www.zcool.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-02 11:01:16', '2020-01-02 11:01:16');
-INSERT INTO `navigations` VALUES (99, '来画', 17, 'https://www.laihua.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-02 11:02:00', '2020-01-02 11:02:00');
-INSERT INTO `navigations` VALUES (100, '花瓣', 17, 'https://huaban.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-02 11:03:47', '2020-01-02 11:03:47');
-INSERT INTO `navigations` VALUES (101, '泼辣有图', 17, 'http://www.polayoutu.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-02 11:23:25', '2020-01-02 11:23:25');
-INSERT INTO `navigations` VALUES (102, '微信编辑器', 17, 'https://editor.wxb.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-02 11:36:21', '2020-01-21 01:43:57');
-INSERT INTO `navigations` VALUES (104, 'Github', 18, 'https://github.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-07 11:26:27', '2020-01-07 11:28:47');
-INSERT INTO `navigations` VALUES (105, '码云', 18, 'https://gitee.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-07 11:26:53', '2020-01-07 11:26:53');
-INSERT INTO `navigations` VALUES (106, 'segmentfault', 18, 'https://segmentfault.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-07 11:27:33', '2020-01-07 11:27:33');
-INSERT INTO `navigations` VALUES (107, '小霸王游戏', 19, 'https://www.yikm.net/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-07 11:29:30', '2020-01-07 11:29:44');
-INSERT INTO `navigations` VALUES (108, 'CSDN', 18, 'https://www.csdn.net/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-07 11:30:37', '2020-01-07 11:30:37');
-INSERT INTO `navigations` VALUES (109, '博客园', 18, 'https://www.cnblogs.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-07 11:32:12', '2020-01-07 11:32:12');
-INSERT INTO `navigations` VALUES (110, 'V2EX', 18, 'https://www.v2ex.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-07 11:32:27', '2020-01-07 11:32:27');
-INSERT INTO `navigations` VALUES (111, 'nicetool', 19, 'http://www.nicetool.net/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-07 11:37:39', '2020-01-07 11:37:39');
-INSERT INTO `navigations` VALUES (112, '全历史', 19, 'https://www.allhistory.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-07 11:40:58', '2020-01-07 11:40:58');
-INSERT INTO `navigations` VALUES (113, '重现化学', 19, 'http://www.envisioningchemistry.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-07 11:47:20', '2020-01-07 11:47:20');
-INSERT INTO `navigations` VALUES (114, '考拉媒体', 19, 'https://www.kaolamedia.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-07 11:50:55', '2020-01-07 11:50:55');
-INSERT INTO `navigations` VALUES (115, '智能写作', 19, 'https://getgetai.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-01-07 12:01:01', '2020-01-07 12:01:01');
 INSERT INTO `navigations` VALUES (116, '国美商城', 2, 'http://www.gome.com.cn', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-12 14:45:21', '2020-05-12 14:45:21');
 INSERT INTO `navigations` VALUES (117, 'VIVO 商店', 2, 'https://shop.vivo.com.cn', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-12 14:46:09', '2020-05-12 14:46:09');
 INSERT INTO `navigations` VALUES (118, 'OPPO商城', 2, 'https://www.opposhop.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-12 14:47:11', '2020-05-12 14:47:11');
 INSERT INTO `navigations` VALUES (119, '有货网', 2, 'https://www.yohobuy.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-12 14:48:16', '2020-05-12 14:48:16');
-INSERT INTO `navigations` VALUES (120, '沪江网校', 20, 'https://class.hujiang.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-16 11:14:14', '2020-05-16 11:14:14');
-INSERT INTO `navigations` VALUES (121, '腾讯课堂', 20, 'https://ke.qq.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-16 11:17:05', '2020-05-16 11:17:05');
-INSERT INTO `navigations` VALUES (122, '网易公开课', 20, 'https://open.163.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-16 11:17:28', '2020-05-16 11:17:28');
-INSERT INTO `navigations` VALUES (123, '51自学网', 20, 'https://www.51zxw.net/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-16 11:17:58', '2020-05-16 11:17:58');
-INSERT INTO `navigations` VALUES (124, '慕课网', 20, 'https://www.imooc.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-16 11:18:31', '2020-05-16 11:18:31');
-INSERT INTO `navigations` VALUES (125, '网易云课堂', 20, 'https://study.163.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-16 11:30:12', '2020-05-16 11:30:12');
-INSERT INTO `navigations` VALUES (126, '163邮箱', 21, 'https://mail.163.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-16 11:31:37', '2020-05-16 11:31:37');
-INSERT INTO `navigations` VALUES (127, 'QQ邮箱', 21, 'https://mail.qq.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-16 11:32:06', '2020-05-16 11:32:06');
-INSERT INTO `navigations` VALUES (128, '126邮箱', 21, 'https://mail.126.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-16 11:32:26', '2020-05-16 11:32:26');
-INSERT INTO `navigations` VALUES (129, '新浪邮箱', 21, 'https://mail.sina.com.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-16 11:32:50', '2020-05-16 11:32:50');
-INSERT INTO `navigations` VALUES (130, 'Hotmail', 21, 'https://login.live.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-16 11:33:09', '2020-05-16 11:33:09');
-INSERT INTO `navigations` VALUES (131, '139邮箱', 21, 'https://mail.10086.cn/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-05-16 11:33:30', '2020-05-16 11:33:30');
-INSERT INTO `navigations` VALUES (134, '斗鱼', 22, 'https://www.douyu.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-06-16 17:03:23', '2020-06-16 17:03:23');
-INSERT INTO `navigations` VALUES (135, '虎牙', 22, 'https://www.huya.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-06-16 17:03:38', '2020-06-16 17:03:38');
-INSERT INTO `navigations` VALUES (136, 'YY', 22, 'https://www.yy.com', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-06-16 17:04:04', '2020-06-16 17:04:04');
-INSERT INTO `navigations` VALUES (137, '企鹅电竞', 22, 'https://egame.qq.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-06-16 17:04:20', '2020-06-16 17:04:20');
-INSERT INTO `navigations` VALUES (138, '企鹅直播', 22, 'https://live.qq.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-06-16 17:04:39', '2020-06-16 17:04:39');
-INSERT INTO `navigations` VALUES (139, '花椒直播', 22, 'https://www.huajiao.com/', 0, 0, 1, 0, 'default.jpg', '网址简介', 0, '2020-06-16 17:04:59', '2020-06-16 17:04:59');
-INSERT INTO `navigations` VALUES (140, '龙珠直播', 22, 'http://www.longzhu.com/', 22, 0, 1, 0, 'default.jpg', '网址简介dfg', 0, '2020-06-16 17:05:14', '2022-07-05 15:01:35');
 COMMIT;
 
 -- ----------------------------

@@ -20,6 +20,7 @@
 版本库：[ [gitee](https://gitee.com/dongyao/dycms) | [github](https://github.com/dongyao8/dycms)]
 
 > 使用文档：[2.0文档（完善中）](http://docs.dongyao.ren/dycms-docs)
+> 2.0演示网站：(http://ai.dongyao.ren/nav)
 
 ## 后台部分展示
 > 前端页面当前正在招募合作伙伴一起完善，欢迎推荐加入！

@@ -38966,59 +38966,6 @@ title: Width
 .max-w-prose {
   max-width: 65ch;
 }
-.min-w-none {
-  min-width: none;
-}
-.min-w-0 {
-  min-width: 0rem;
-}
-.min-w-xs {
-  min-width: 20rem;
-}
-.min-w-sm {
-  min-width: 24rem;
-}
-.min-w-md {
-  min-width: 28rem;
-}
-.min-w-lg {
-  min-width: 32rem;
-}
-.min-w-xl {
-  min-width: 36rem;
-}
-.min-w-2xl {
-  min-width: 42rem;
-}
-.min-w-3xl {
-  min-width: 48rem;
-}
-.min-w-4xl {
-  min-width: 56rem;
-}
-.min-w-5xl {
-  min-width: 64rem;
-}
-.min-w-6xl {
-  min-width: 72rem;
-}
-.min-w-7xl {
-  min-width: 80rem;
-}
-.min-w-full {
-  min-width: 100%;
-}
-.min-w-min {
-  min-width: -moz-min-content;
-  min-width: min-content;
-}
-.min-w-max {
-  min-width: -moz-max-content;
-  min-width: max-content;
-}
-.min-w-prose {
-  min-width: 65ch;
-}
 @media (max-width: 768px) {
   .m\:w-px {
     width: 0.0625rem;
@@ -39301,59 +39248,6 @@ title: Width
   }
   .m\:max-w-prose {
     max-width: 65ch;
-  }
-  .m\:min-w-none {
-    min-width: none;
-  }
-  .m\:min-w-0 {
-    min-width: 0rem;
-  }
-  .m\:min-w-xs {
-    min-width: 20rem;
-  }
-  .m\:min-w-sm {
-    min-width: 24rem;
-  }
-  .m\:min-w-md {
-    min-width: 28rem;
-  }
-  .m\:min-w-lg {
-    min-width: 32rem;
-  }
-  .m\:min-w-xl {
-    min-width: 36rem;
-  }
-  .m\:min-w-2xl {
-    min-width: 42rem;
-  }
-  .m\:min-w-3xl {
-    min-width: 48rem;
-  }
-  .m\:min-w-4xl {
-    min-width: 56rem;
-  }
-  .m\:min-w-5xl {
-    min-width: 64rem;
-  }
-  .m\:min-w-6xl {
-    min-width: 72rem;
-  }
-  .m\:min-w-7xl {
-    min-width: 80rem;
-  }
-  .m\:min-w-full {
-    min-width: 100%;
-  }
-  .m\:min-w-min {
-    min-width: -moz-min-content;
-    min-width: min-content;
-  }
-  .m\:min-w-max {
-    min-width: -moz-max-content;
-    min-width: max-content;
-  }
-  .m\:min-w-prose {
-    min-width: 65ch;
   }
 }
 @media (min-width: 769px) {
@@ -39638,59 +39532,6 @@ title: Width
   }
   .pc\:max-w-prose {
     max-width: 65ch;
-  }
-  .pc\:min-w-none {
-    min-width: none;
-  }
-  .pc\:min-w-0 {
-    min-width: 0rem;
-  }
-  .pc\:min-w-xs {
-    min-width: 20rem;
-  }
-  .pc\:min-w-sm {
-    min-width: 24rem;
-  }
-  .pc\:min-w-md {
-    min-width: 28rem;
-  }
-  .pc\:min-w-lg {
-    min-width: 32rem;
-  }
-  .pc\:min-w-xl {
-    min-width: 36rem;
-  }
-  .pc\:min-w-2xl {
-    min-width: 42rem;
-  }
-  .pc\:min-w-3xl {
-    min-width: 48rem;
-  }
-  .pc\:min-w-4xl {
-    min-width: 56rem;
-  }
-  .pc\:min-w-5xl {
-    min-width: 64rem;
-  }
-  .pc\:min-w-6xl {
-    min-width: 72rem;
-  }
-  .pc\:min-w-7xl {
-    min-width: 80rem;
-  }
-  .pc\:min-w-full {
-    min-width: 100%;
-  }
-  .pc\:min-w-min {
-    min-width: -moz-min-content;
-    min-width: min-content;
-  }
-  .pc\:min-w-max {
-    min-width: -moz-max-content;
-    min-width: max-content;
-  }
-  .pc\:min-w-prose {
-    min-width: 65ch;
   }
 }
 /*!markdown

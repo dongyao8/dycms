@@ -57,7 +57,6 @@ amisRequire('amis').registerLocale('de-DE', {
   'Pagination.totalCount': 'total {{total}} items',
   'Date.titleYear': '',
   'Date.titleMonth': '',
-  'Date.titleQuarter': '',
   'Date.titleDate': '',
   'Date.titleTime': '',
   'Date.daysago': 'Vor {{days}} Tag(en)',
@@ -68,7 +67,6 @@ amisRequire('amis').registerLocale('de-DE', {
   'Date.hoursago': 'Vor {{hours}} Stunde(n)',
   'Date.hourslater': '{{hours}} Stunde(n) später',
   'Date.invalid': 'Ungültiges Datum',
-  'Number.invalid': 'Ungültige Zahl',
   'Date.monday': 'Montag',
   'Date.monthsago': 'Vor {{months}} Monat(en)',
   'Date.monthslater': '{{months}} Monat(e) später',
@@ -142,9 +140,9 @@ amisRequire('amis').registerLocale('de-DE', {
   'File.sizeLimit': 'Die maximale Dateigröße ist {{maxSize}}',
   'File.start': 'Hochladen beginnen',
   'File.upload': 'Hochladen',
+  'Image.upload': 'Hochladen',
   'File.uploadFailed': 'Zurückgegebene Daten der Upload-API sind leer',
   'File.uploading': 'Wird hochgeladen...',
-  'File.imageAfterCrop': 'Beschnittenes Bild',
   'FormItem.autoFillLoadFailed':
     'Die Schnittstelle hat einen Fehler zurückgegeben, bitte sorgfältig prüfen',
   'FormItem.autoFillSuggest': 'Referenzdateneingabe',
@@ -158,8 +156,6 @@ amisRequire('amis').registerLocale('de-DE', {
   'Iframe.invalid': 'Ungültige Iframe-URL',
   'Iframe.invalidProtocol':
     'HTTP-URL-Iframe kann nicht in https verwendet werden',
-  'Image.dragTip': 'Zum Sortieren ziehen',
-  'Image.upload': 'Bild hochladen',
   'Image.configError':
     'Es können nur eine Beschneidung oder mehrere festgelegt werden',
   'Image.crop': 'Bild beschneiden',
@@ -184,7 +180,6 @@ amisRequire('amis').registerLocale('de-DE', {
   'Log.collapse': 'Falten',
   'link': 'Link',
   'loading': 'Wird geladen...',
-  'loadingFailed': 'Das Laden ist fehlgeschlagen',
   'LocationPicker.placeholder': 'Wählen Sie einen Ort',
   'Month.placeholder': 'Wählen Sie einen Monat',
   'Nav.sourceError': 'Fehler beim Abrufen des Links',
@@ -219,7 +214,6 @@ amisRequire('amis').registerLocale('de-DE', {
   'Select.createLabel': 'Neue Option',
   'Select.placeholder': 'Auswählen',
   'Select.searchPromptText': 'Eingeben zum Suchen',
-  'Select.selected': 'Ausgewählt',
   'sort': 'Sortieren',
   'SubForm.button': 'Configurieren',
   'SubForm.editDetail': 'Details bearbeiten',
@@ -245,9 +239,6 @@ amisRequire('amis').registerLocale('de-DE', {
   'Table.startSort': 'Klicken, um Sortierung zu starten',
   'Table.valueField': 'valueField muss vorhanden sein',
   'Table.index': 'Index',
-  'Table.add': 'Neu',
-  'Table.addButtonDisabledTip':
-    'Reichen Sie bei der Inhaltsbearbeitung zuerst ein und erstellen Sie dann eine neue Option',
   'Table.toggleColumn': 'Spalten anzeigen',
   'Table.searchFields': 'Abfragefelder setzen',
   'Tag.placeholder': 'Noch kein Tag',
@@ -376,7 +367,6 @@ amisRequire('amis').registerLocale('de-DE', {
   'Condition.formula_placeholder': 'Bitte geben Sie eine Formel ein',
   'Condition.fun_error': 'Funktion ist undefiniert',
   'Condition.configured': 'Konfiguriert',
-  'Condition.isRequired': 'Bedingung kann nicht leer sein',
   'InputTable.uniqueError': 'Column `{{label}}` unique validate failed',
   'Timeline.collapseText': 'Falten',
   'Timeline.expandText': 'Entfalten',
@@ -388,8 +378,6 @@ amisRequire('amis').registerLocale('de-DE', {
   'FormulaEditor.function': 'Funktion',
   'FormulaEditor.invalidData':
     'Überprüfungsfehler, position or reason is {{err}}',
-  'FormulaEditor.invalidValue':
-    'Überprüfungsfehler, reason is Falsches Werteformat',
   'pullRefresh.pullingText': 'Zum Aktualisieren nach unten ziehen...',
   'pullRefresh.loosingText': 'Zum Aktualisieren freigeben...',
   'pullRefresh.loadingText': 'Laden...',
@@ -414,9 +402,6 @@ amisRequire('amis').registerLocale('de-DE', {
   'JSONSchema.description': 'Description',
   'JSONSchema.key': 'Key',
   'JSONSchema.array_items': 'Items',
-  'TimeNow': 'Jetzt',
-  'Steps.step': 'Schritt {{index}}',
-  'FormulaInput.True': 'Treu',
-  'FormulaInput.False': 'Falsch'
+  'TimeNow': 'Jetzt'
 });
 
